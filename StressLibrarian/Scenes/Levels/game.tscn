@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://bt8svyfqkplxn"]
+
+[ext_resource type="Script" uid="uid://cxijb21an62k3" path="res://Scripts/Game.cs" id="1_i10s3"]
+[ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="2_yla1s"]
+[ext_resource type="Texture2D" uid="uid://csk6sic43dc3a" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_nor_gl_1k.png" id="3_osokm"]
+[ext_resource type="Texture2D" uid="uid://ci2lvek34jgjk" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_rough_1k.png" id="4_o86a8"]
+[ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_yla1s"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yla1s"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_osokm"]
+sky_material = SubResource("ProceduralSkyMaterial_yla1s")
+
+[sub_resource type="Environment" id="Environment_o86a8"]
+background_mode = 2
+sky = SubResource("Sky_osokm")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yla1s"]
+albedo_texture = ExtResource("2_yla1s")
+roughness_texture = ExtResource("4_o86a8")
+normal_enabled = true
+normal_texture = ExtResource("3_osokm")
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_i10s3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o86a8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(20, 0, 20)
+material = SubResource("StandardMaterial3D_yla1s")
+
+[node name="Player" parent="." instance=ExtResource("5_yla1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

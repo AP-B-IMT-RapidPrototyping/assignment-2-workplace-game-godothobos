@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0yvu8hc2goqx"]
+
+[ext_resource type="Texture2D" uid="uid://diln3gcr0u231" path="res://Assets/Textures/ShoppingCartPixelated.png" id="1_3etf2"]
+[ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/Player.cs" id="1_40svl"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3etf2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40svl"]
+transparency = 1
+albedo_texture = ExtResource("1_3etf2")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_al8ar"]
+material = SubResource("StandardMaterial3D_40svl")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera")]
+script = ExtResource("1_40svl")
+_camera = NodePath("Camera")
+
+[node name="PlayerBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_j6hkg")
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3etf2")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+fov = 90.0
+
+[node name="ShoppingCart" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 0.17364818, -0.98480785, 0, 0.98480785, 0.17364818, 0, 0.19999993, -0.59999985)
+visible = false
+mesh = SubResource("PlaneMesh_al8ar")
+skeleton = NodePath("../..")
+
+[node name="UI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShoppingCart" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3etf2")
