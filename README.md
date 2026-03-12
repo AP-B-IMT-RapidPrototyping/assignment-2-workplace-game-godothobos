@@ -1,23 +1,57 @@
-# Stress Librarian
-
-## ORIGINAL IDEA: 
-1. You have a cart with books
-2. You have to find the right place for the book
-3. You place the book
-4. Small chance for a customer to spawn in at the start (reception) you have to help out
-5. You have to deliver a certain book to the customer
-6. You can encounter loud clients while putting books away. This increases stress so you have to 'shush' them
-REPEAT!
-If you don't, your stress increases (heartbeat increases) and you flatline
+# Stressed Librarian
 
 
-## ideas below
-Location: library
-Speech bubble when NPC talks (or text bubble following their head using billboard)
-sections show in letters or GTA (SA arrow to show where to put books)
-Tasks are shown top left of screen
-Npc behavior (state machine)
-Different types of tasks 
-Quick timed events for reception NPCs
-PSX graphics
-Nextbots as NPCs
+## Gameplay Mechanics
+
+### Summary
+You play as a librarian with extreme anxiety trying to survive a shift. You have to make sure that the bookshelves aren't empty while managing loud, annoying customers. Keep an eye on your heart rate monitor, if the library gets too loud and your stress becomes unbearable, it's game over.
+
+### Genre: 
+Arcade Time Management
+
+### Target audience: 
+Players who enjoy fast paced arcade games
+
+### Game flow:
+- Start at reception desk
+- Grab box of books (or load your cart)
+- Navigate to correct section in library
+- Place books 
+- Encouter loud or lost customers
+- Resolve their issue to lower stress
+- Repeat
+
+### Look and feel
+PSX style graphics, low poly models, pixelated post processing
+Set in a modern library
+Screen effects are based on amount of stress (red vignette and veins, representing stress)
+
+### Gameplay
+The goal is to get the highest score OR finish a shift. (difficulty meter)
+
+### Mechanics
+- You have a box and there is a shelve, the box type must match the correct shelve type (SCI-FI box goes into SCI-FI shelve)
+- Shushing customers (timed event?)
+- Escort customers, you can encounter lost customers, they will politely ask you where X-type books are located, you must bring the customer to the right place and give you stress as long as they are following you.
+- Sprinting, saves you time but gives you stress
+- The Cart (WIP), acts as mobile inventory, phyiscs based (inspired from R.E.P.O.), can hold X amount of boxes
+
+
+## Story / Immserive design
+
+### Story
+You are a librarian with stress. You must keep the library sorted and quiet, or else you'll breakdown because of the unbearable stress.
+
+### Game art/Audio 
+- PSX style, pixelated post processing
+- Mumbling customers with text bubbles saying what they want
+- Fog or something to block far view
+
+### UI
+- Heart rate monitor/Pumping heart to represent stress level
+- Minimal UI, use world environment instead of UI, like box labels or signs
+
+
+## Level design
+- One library
+- Short tutorial to teach controls
