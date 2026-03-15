@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy53kd20h4anj"]
+
+[ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
+
+[node name="Main Menu" type="Node3D"]
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_qqk0j")

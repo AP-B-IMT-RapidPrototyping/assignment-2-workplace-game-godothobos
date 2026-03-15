@@ -1,13 +1,45 @@
 using Godot;
 using System;
+using System.Net.NetworkInformation;
+using System.Text;
 
 public partial class Player : CharacterBody3D
 {
-    [Export] private float _mouseSensitivity = 0.003f;
+    public enum PlayerState
+    {
+        IDLE,
+        WALKING,
+        SPRINTING,
+        INTERACTED
+    }
+
+
+    /* CAMERA EXPORTS */
     [Export] private Camera3D _camera;
-    
+    [Export] private float _mouseSensitivity = 0.003f;
+    [Export] private float _normalFov = 80f;
+    [Export] private float _sprintingFov = 100f;
+    [Export] private float _changeFovStrength = 10f;
+    [Export] private RayCast3D _playerRayCast;
+    [Export] private Marker3D _holdPointMarker;
+
+
+    /* MOVEMENT EXPORTS */
     [Export] private float _speed = 5.0f;
-    [Export] private float _jumpVelocity = 4.5f;
+    [Export] private float _sprintSpeed = 10.0f;
+    [Export] private float _acceleration = 60.0f;
+    [Export] private float _deceleration = 80.0f;
+
+
+    /* UI EXPORTS */
+    [Export] private Control _playerUI;
+    [Export] private TextureRect _grabUI;
+    [Export] private TextureRect _interactUI;
+
+
+    /* STATE MACHINE */
+    private PlayerState playerState = PlayerState.IDLE;
+    private RigidBody3D picked_object;
 
 
     public override void _Ready()
@@ -21,7 +53,7 @@ public partial class Player : CharacterBody3D
         if (@event is InputEventMouseMotion mouseMotion)
         {
             RotateY(-mouseMotion.Relative.X * _mouseSensitivity);
-            
+
             _camera.RotateX(-mouseMotion.Relative.Y * _mouseSensitivity);
 
             Vector3 cameraRotation = _camera.Rotation;
@@ -30,6 +62,84 @@ public partial class Player : CharacterBody3D
         }
     }
 
+
+    private void HandleInteractionUI()
+    {
+        _grabUI.Visible = false;
+        _interactUI.Visible = false;
+
+        if (picked_object != null)
+            return;
+
+        if (_playerRayCast.IsColliding())
+        {
+            var collider = _playerRayCast.GetCollider() as RigidBody3D;
+            if (collider == null || !IsInstanceValid(collider))
+                return;
+
+            if (collider.IsInGroup("interact_pickup"))
+            {
+                _grabUI.Visible = true;
+            }
+            if (collider.IsInGroup("interact_NPC"))
+            {
+                _interactUI.Visible = true;
+            }
+        }
+    }
+
+    private void HandleInteraction()
+    {
+        if (Input.IsActionJustPressed("interact"))
+        {
+            if (_playerRayCast.IsColliding())
+            {
+                var collider = _playerRayCast.GetCollider() as Node;
+
+                if (collider != null && collider.IsInGroup("interact_pickup") && collider is RigidBody3D)
+                {
+                    GD.Print($"INTERACTION: PICKUP: {collider.Name}");
+                    picked_object = collider as RigidBody3D;
+                }
+                if (collider != null && collider.IsInGroup("interact_NPC"))
+                {
+                    GD.Print($"INTERACTION: NPC: {collider.Name}");
+
+                }
+            }
+        }
+    }
+
+    private void HandleDropHeldItem()
+    {
+        if (Input.IsActionJustPressed("drop"))
+        {
+            if (picked_object != null)
+            {
+                picked_object.GravityScale = 1f;
+                picked_object = null;
+            }
+        }
+
+    }
+
+    private void HandlePickedObject()
+    {
+        if (picked_object == null)
+            return;
+
+        Vector3 a = picked_object.GlobalTransform.Origin;
+        Vector3 b = _holdPointMarker.GlobalTransform.Origin;
+        picked_object.LinearVelocity = (b - a) * 8;
+
+        Vector3 directionToCamera = (_camera.GlobalTransform.Origin - picked_object.GlobalTransform.Origin).Normalized();
+        Vector3 lookAtPosition = picked_object.GlobalTransform.Origin + new Vector3(directionToCamera.X, 0, directionToCamera.Z);
+        picked_object.LookAt(lookAtPosition, Vector3.Up);
+    }
+
+    /* ------------------------- */
+    /* PROCESS && PHYSICS PROCESS*/
+    /* ------------------------- */
     public override void _Process(double delta)
     {
         if (Input.IsActionJustPressed("escape"))
@@ -39,38 +149,64 @@ public partial class Player : CharacterBody3D
     }
 
 
-
     public override void _PhysicsProcess(double delta)
     {
         Vector3 velocity = Velocity;
 
-        // Add the gravity.
+        // Add the gravity
         if (!IsOnFloor())
         {
             velocity += GetGravity() * (float)delta;
         }
 
-        // Handle Jump.
-        if (Input.IsActionJustPressed("jump") && IsOnFloor())
-        {
-            velocity.Y = _jumpVelocity;
-        }
-
         // Get the input direction and handle the movement/deceleration.
         Vector2 inputDir = Input.GetVector("left", "right", "up", "down");
         Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
-        if (direction != Vector3.Zero)
+
+        /* Manage statemachine */
+        if (direction == Vector3.Zero)
         {
-            velocity.X = direction.X * _speed;
-            velocity.Z = direction.Z * _speed;
+            playerState = PlayerState.IDLE;
+        }
+        else if (Input.IsActionPressed("sprint"))
+        {
+            playerState = PlayerState.SPRINTING;
         }
         else
         {
-            velocity.X = Mathf.MoveToward(Velocity.X, 0, _speed);
-            velocity.Z = Mathf.MoveToward(Velocity.Z, 0, _speed);
+            playerState = PlayerState.WALKING;
         }
 
+        /* Use statemachine */
+        float currentSpeed = _speed;
+        float targetFov = _normalFov;
+
+        if (playerState == PlayerState.SPRINTING)
+        {
+            currentSpeed = _sprintSpeed;
+            targetFov = _sprintingFov;
+        }
+
+        Vector3 targetVelocity = direction * currentSpeed;
+        if (direction != Vector3.Zero)
+        {
+            velocity.X = Mathf.MoveToward(velocity.X, targetVelocity.X, _acceleration * (float)delta);
+            velocity.Z = Mathf.MoveToward(velocity.Z, targetVelocity.Z, _acceleration * (float)delta);
+        }
+        else
+        {
+            velocity.X = Mathf.MoveToward(velocity.X, 0, _deceleration * (float)delta);
+            velocity.Z = Mathf.MoveToward(velocity.Z, 0, _deceleration * (float)delta);
+        }
+        _camera.Fov = Mathf.Lerp(_camera.Fov, targetFov, _changeFovStrength * (float)delta);
+
         Velocity = velocity;
+
+        HandleInteractionUI();
+        HandleInteraction();
+        HandlePickedObject();
+        HandleDropHeldItem();
+
         MoveAndSlide();
     }
 
