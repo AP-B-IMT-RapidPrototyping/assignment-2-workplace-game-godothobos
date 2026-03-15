@@ -357,7 +357,7 @@ bus = &"Music"
 
 [node name="UIHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_as8ev")
-volume_db = -2.0
+volume_db = -8.0
 pitch_scale = 3.0
 bus = &"Music"
 
