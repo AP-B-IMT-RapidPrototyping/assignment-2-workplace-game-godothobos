@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf1ru1e6i8y1y"
+path="res://.godot/imported/file_cabinet_smallest.obj-4d11d3335bba4512b07b3996773b7b4c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/file_cabinet_smallest.obj-4d11d3335bba4512b07b3996773b7b4c.mesh"]
+
+source_file="res://Assets/OFFICE/file_cabinets/file_cabinet_smallest.obj"
+dest_files=["res://.godot/imported/file_cabinet_smallest.obj-4d11d3335bba4512b07b3996773b7b4c.mesh", "res://.godot/imported/file_cabinet_smallest.obj-4d11d3335bba4512b07b3996773b7b4c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
