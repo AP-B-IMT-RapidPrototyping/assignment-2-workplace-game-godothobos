@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bt8svyfqkplxn"]
+[gd_scene load_steps=11 format=3 uid="uid://bt8svyfqkplxn"]
 
 [ext_resource type="Script" uid="uid://cxijb21an62k3" path="res://Scripts/SceneScripts/Game.cs" id="1_i10s3"]
 [ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="2_yla1s"]
 [ext_resource type="Texture2D" uid="uid://csk6sic43dc3a" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_nor_gl_1k.png" id="3_osokm"]
 [ext_resource type="Texture2D" uid="uid://ci2lvek34jgjk" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_rough_1k.png" id="4_o86a8"]
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_yla1s"]
+[ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="6_osokm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yla1s"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,8 +40,11 @@ shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="."]
 use_collision = true
-size = Vector3(20, 0, 20)
+size = Vector3(50, 0, 50)
 material = SubResource("StandardMaterial3D_yla1s")
 
 [node name="Player" parent="." instance=ExtResource("5_yla1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="BookBox" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkv00167nj6f8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwb5a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70typ"]
+
+[node name="BookBox" type="RigidBody3D" groups=["interact_pickup"]]
+collision_layer = 12
+
+[node name="TempBoxModel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_rwb5a")
+
+[node name="BoxCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_70typ")
