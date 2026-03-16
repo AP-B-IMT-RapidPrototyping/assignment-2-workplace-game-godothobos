@@ -36,6 +36,21 @@ normal_texture = ExtResource("11_x0b5x")
 uv1_scale = Vector3(0.15, 0.15, 0.15)
 uv1_triplanar = true
 
+[sub_resource type="Animation" id="Animation_5qviw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("topchair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_ucnu3"]
 resource_name = "loop"
 length = 18.0
@@ -52,21 +67,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, -6.2831855, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5qviw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("topchair:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f3cs8"]
@@ -149,7 +149,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(7, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(3, -0.17, 0), Vector3(0, -0.17, 0)]
+"values": [Vector3(3.5, -0.17, 0), Vector3(0, -0.17, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -214,6 +214,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuOptions/ButtonBack:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_juchl"]
 resource_name = "ViewSettings"
@@ -229,6 +241,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-0.008726646, 0.7853982, -0.06981317), Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuOptions/ButtonBack:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_as8ev"]
@@ -340,6 +364,7 @@ shape = SubResource("BoxShape3D_ggkx6")
 
 [node name="ButtonBack" type="MeshInstance3D" parent="MenuOptions"]
 transform = Transform3D(0.4179988, -0.1476361, 0.6659434, 0, 0.7810368, 0.1731517, -0.68211216, -0.0904715, 0.40809056, -3.09, 0.7, 0.185)
+visible = false
 mesh = SubResource("TextMesh_ch2lh")
 
 [node name="BackA3" type="Area3D" parent="MenuOptions/ButtonBack"]

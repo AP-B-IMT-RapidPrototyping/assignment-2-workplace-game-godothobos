@@ -23,7 +23,7 @@ public partial class MenuOptions : Node3D
 
     public override void _Ready()
     {
-        color = new Color(1f, 0f, 0f);
+        color = new Color(0.7f, 0.7f, 0.7f);
 
         // Start button
         var startMaterial = _buttonStart.GetActiveMaterial(0);
@@ -127,8 +127,10 @@ public partial class MenuOptions : Node3D
     private void OnQuitPressed(Node camera, InputEvent @event, Vector3 position, Vector3 normal, int shapeIdx)
     {
         if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)
+        {
             _clickUI.Play();
             GetTree().Quit();
+        }
     }
 
     /* Hover Enter Quit */
@@ -155,7 +157,7 @@ public partial class MenuOptions : Node3D
     {
         if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)
         {
-            _animationManager.Play("ViewBack");
+            _animationManager.PlayBackwards("ViewSettings");
         }
     }
 
