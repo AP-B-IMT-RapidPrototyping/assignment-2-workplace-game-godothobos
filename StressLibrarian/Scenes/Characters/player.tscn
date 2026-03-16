@@ -7,6 +7,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3etf2"]
+radius = 0.4
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_playerUI", "_grabUI", "_interactUI") groups=["player"]]
 collision_layer = 2
@@ -19,6 +20,7 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 
 [node name="PlayerBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.833, 0, 0, 0, 1, 0, 0, 0, 0.833, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_j6hkg")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="."]
@@ -59,7 +61,7 @@ offset_right = 100.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(100, 100)
 texture = ExtResource("2_al8ar")
 
@@ -77,6 +79,6 @@ offset_right = 100.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(100, 100)
 texture = ExtResource("3_gy20a")

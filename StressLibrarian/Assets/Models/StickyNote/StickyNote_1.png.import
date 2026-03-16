@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4yrv5lao2xi"
-path.s3tc="res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"
+uid="uid://dc38i53x64wmq"
+path.s3tc="res://.godot/imported/StickyNote_1.png-f89801b176840464427887245729da9a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "9ab59ece8970e40e22e0df8955069428"
+}
 
 [deps]
 
-source_file="res://Assets/UI/hand grab.png"
-dest_files=["res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"]
+source_file="res://Assets/Models/StickyNote/StickyNote_1.png"
+dest_files=["res://.godot/imported/StickyNote_1.png-f89801b176840464427887245729da9a.s3tc.ctex"]
 
 [params]
 

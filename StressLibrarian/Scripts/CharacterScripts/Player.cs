@@ -26,7 +26,7 @@ public partial class Player : CharacterBody3D
 
     /* MOVEMENT EXPORTS */
     [Export] private float _speed = 5.0f;
-    [Export] private float _sprintSpeed = 10.0f;
+    [Export] private float _sprintSpeed = 8.0f;
     [Export] private float _acceleration = 60.0f;
     [Export] private float _deceleration = 80.0f;
 

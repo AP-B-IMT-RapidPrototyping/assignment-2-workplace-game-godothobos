@@ -37,6 +37,7 @@ import/blender/enabled=false
 interact_pickup=""
 interact_npc=""
 player=""
+bookshelf=""
 
 [input]
 

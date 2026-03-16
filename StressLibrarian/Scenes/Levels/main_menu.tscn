@@ -1,17 +1,17 @@
-[gd_scene load_steps=39 format=3 uid="uid://dy53kd20h4anj"]
+[gd_scene load_steps=41 format=3 uid="uid://dy53kd20h4anj"]
 
+[ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="1_as8ev"]
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
-[ext_resource type="PackedScene" uid="uid://ddfykbskm8df8" path="res://Assets/OFFICE/desks/desk2_alt.fbx" id="2_f0reb"]
+[ext_resource type="Texture2D" uid="uid://bwv5ggh7v8tgq" path="res://Assets/Textures/WoodGate/textures/wooden_gate_nor_gl_1k.png" id="2_ch2lh"]
 [ext_resource type="PackedScene" uid="uid://bkr6b2ayne0ws" path="res://Assets/OFFICE/computers/computer_monitor.glb" id="3_juchl"]
+[ext_resource type="Texture2D" uid="uid://b84ha7y18utrj" path="res://Assets/Textures/WoodGate/textures/wooden_gate_rough_1k.png" id="3_uwu3h"]
 [ext_resource type="PackedScene" uid="uid://cm1iswnkkebjd" path="res://Assets/OFFICE/computers/computer_mouse.glb" id="4_as8ev"]
+[ext_resource type="PackedScene" uid="uid://cwi1f8kwfk2tc" path="res://Assets/OFFICE/desks/desk2.glb" id="4_ch2lh"]
 [ext_resource type="PackedScene" uid="uid://cajo2jnqnjwix" path="res://Assets/OFFICE/computers/computer_keyboard.glb" id="5_ch2lh"]
 [ext_resource type="PackedScene" uid="uid://dljg0f54akxnw" path="res://Assets/OFFICE/computers/computer_tower.glb" id="6_uwu3h"]
 [ext_resource type="PackedScene" uid="uid://dxrk21l2g48nx" path="res://Assets/OFFICE/chairs/MODIFIED_Office_Chair.glb" id="7_ggkx6"]
 [ext_resource type="PackedScene" uid="uid://ky8o0d6jfcym" path="res://Assets/OFFICE/extras/desk_phone.glb" id="8_wlsvp"]
-[ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="10_d1w2i"]
 [ext_resource type="Script" uid="uid://ckc5uftems0to" path="res://Scripts/SceneScripts/MenuOptions.cs" id="11_juchl"]
-[ext_resource type="Texture2D" uid="uid://csk6sic43dc3a" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_nor_gl_1k.png" id="11_x0b5x"]
-[ext_resource type="Texture2D" uid="uid://ci2lvek34jgjk" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_rough_1k.png" id="12_6o04t"]
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="12_f0reb"]
 [ext_resource type="AudioStream" uid="uid://d0clw5vg3n8lk" path="res://Assets/Audio/SoundUI/UI click.mp3" id="13_as8ev"]
 
@@ -28,12 +28,21 @@ sky = SubResource("Sky_juchl")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhd7j"]
-albedo_texture = ExtResource("10_d1w2i")
-roughness_texture = ExtResource("12_6o04t")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ggkx6"]
+load_path = "res://.godot/imported/RedCarpet.jpg-2dbeb1a5f0d2ab78a0eb36c0fe3cbbee.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlsvp"]
+albedo_texture = SubResource("CompressedTexture2D_ggkx6")
+uv1_scale = Vector3(0.08, 0.08, 0.08)
+uv1_offset = Vector3(0, 0, -0.505)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcukj"]
+albedo_texture = ExtResource("1_as8ev")
+roughness_texture = ExtResource("3_uwu3h")
 normal_enabled = true
-normal_texture = ExtResource("11_x0b5x")
-uv1_scale = Vector3(0.15, 0.15, 0.15)
+normal_texture = ExtResource("2_ch2lh")
+uv1_scale = Vector3(0.185, 0.185, 0.185)
 uv1_triplanar = true
 
 [sub_resource type="Animation" id="Animation_5qviw"]
@@ -277,16 +286,43 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_as8ev")
 
-[node name="Floor" type="CSGBox3D" parent="."]
+[node name="Building" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.5)
 use_collision = true
-size = Vector3(50, 0, 50)
-material = SubResource("StandardMaterial3D_bhd7j")
+size = Vector3(50, 0, 89)
+material = SubResource("StandardMaterial3D_wlsvp")
+
+[node name="WallRight" type="CSGBox3D" parent="Building"]
+transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1.0000001, 0, -1.0000001, 0, -4.3711392e-08, -18, 2.8000004, -22.750004)
+use_collision = true
+size = Vector3(88, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_rcukj")
+
+[node name="WallRight2" type="CSGBox3D" parent="Building"]
+transform = Transform3D(-1.0000001, 0, -8.742279e-08, 0, 1.0000001, 0, 8.742279e-08, 0, -1.0000001, 0, 2.8000004, 19.25)
+use_collision = true
+size = Vector3(58.600002, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_rcukj")
+
+[node name="WallRight3" type="CSGBox3D" parent="Building"]
+transform = Transform3D(1.3113419e-07, 0, -1.0000001, 0, 1.0000001, 0, 1.0000001, 0, 1.3113419e-07, 20.999998, 2.8000004, -21.250004)
+use_collision = true
+size = Vector3(89, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_rcukj")
+
+[node name="WallRight4" type="CSGBox3D" parent="Building"]
+transform = Transform3D(1.0000001, 0, 1.7484558e-07, 0, 1.0000001, 0, -1.7484558e-07, 0, 1.0000001, 0, 2.8000004, -61.75)
+use_collision = true
+size = Vector3(46.4, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_rcukj")
 
 [node name="Decoration" type="Node3D" parent="."]
 
 [node name="Desk" type="Node3D" parent="Decoration"]
 
-[node name="desk2_alt" parent="Decoration/Desk" instance=ExtResource("2_f0reb")]
+[node name="desk22" parent="Decoration/Desk" instance=ExtResource("4_ch2lh")]
 
 [node name="computer_monitor2" parent="Decoration/Desk" instance=ExtResource("3_juchl")]
 transform = Transform3D(0.99911696, 0, 0.042015158, 0, 1, 0, -0.042015158, 0, 0.99911696, 0, 0.9, -0.3)

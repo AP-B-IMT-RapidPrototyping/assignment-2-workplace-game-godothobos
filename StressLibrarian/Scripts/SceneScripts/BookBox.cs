@@ -5,13 +5,18 @@ using System.ComponentModel.DataAnnotations;
 public partial class BookBox : RigidBody3D
 {
     [Export] private MeshInstance3D _textMesh;
-    public BookGenre bookGenre;
+    [Export] public BookGenre bookGenre;
+    [Export] public bool Randomize = true;
 
 
     public override void _Ready()
     {
-        var values = Enum.GetValues(typeof(BookGenre));
-        bookGenre = (BookGenre)values.GetValue(GD.RandRange(0, values.Length - 1));
+        if (Randomize)
+        {
+            var values = Enum.GetValues(typeof(BookGenre));
+            bookGenre = (BookGenre)values.GetValue(GD.RandRange(0, values.Length - 1));
+        }
+
         GD.Print($"book: {bookGenre}");
 
         if (_textMesh.Mesh != null)
