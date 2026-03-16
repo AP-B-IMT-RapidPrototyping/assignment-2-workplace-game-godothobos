@@ -1,8 +1,450 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy53kd20h4anj"]
+[gd_scene load_steps=39 format=3 uid="uid://dy53kd20h4anj"]
 
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
+[ext_resource type="PackedScene" uid="uid://ddfykbskm8df8" path="res://Assets/OFFICE/desks/desk2_alt.fbx" id="2_f0reb"]
+[ext_resource type="PackedScene" uid="uid://bkr6b2ayne0ws" path="res://Assets/OFFICE/computers/computer_monitor.glb" id="3_juchl"]
+[ext_resource type="PackedScene" uid="uid://cm1iswnkkebjd" path="res://Assets/OFFICE/computers/computer_mouse.glb" id="4_as8ev"]
+[ext_resource type="PackedScene" uid="uid://cajo2jnqnjwix" path="res://Assets/OFFICE/computers/computer_keyboard.glb" id="5_ch2lh"]
+[ext_resource type="PackedScene" uid="uid://dljg0f54akxnw" path="res://Assets/OFFICE/computers/computer_tower.glb" id="6_uwu3h"]
+[ext_resource type="PackedScene" uid="uid://dxrk21l2g48nx" path="res://Assets/OFFICE/chairs/MODIFIED_Office_Chair.glb" id="7_ggkx6"]
+[ext_resource type="PackedScene" uid="uid://ky8o0d6jfcym" path="res://Assets/OFFICE/extras/desk_phone.glb" id="8_wlsvp"]
+[ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="10_d1w2i"]
+[ext_resource type="Script" uid="uid://ckc5uftems0to" path="res://Scripts/SceneScripts/MenuOptions.cs" id="11_juchl"]
+[ext_resource type="Texture2D" uid="uid://csk6sic43dc3a" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_nor_gl_1k.png" id="11_x0b5x"]
+[ext_resource type="Texture2D" uid="uid://ci2lvek34jgjk" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_rough_1k.png" id="12_6o04t"]
+[ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="12_f0reb"]
+[ext_resource type="AudioStream" uid="uid://d0clw5vg3n8lk" path="res://Assets/Audio/SoundUI/UI click.mp3" id="13_as8ev"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f0reb"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_juchl"]
+sky_material = SubResource("ProceduralSkyMaterial_f0reb")
+
+[sub_resource type="Environment" id="Environment_as8ev"]
+background_mode = 2
+sky = SubResource("Sky_juchl")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhd7j"]
+albedo_texture = ExtResource("10_d1w2i")
+roughness_texture = ExtResource("12_6o04t")
+normal_enabled = true
+normal_texture = ExtResource("11_x0b5x")
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true
+
+[sub_resource type="Animation" id="Animation_5qviw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("topchair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ucnu3"]
+resource_name = "loop"
+length = 18.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("topchair:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3cs8"]
+_data = {
+&"RESET": SubResource("Animation_5qviw"),
+&"loop": SubResource("Animation_ucnu3")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o5t2"]
+billboard_keep_scale = true
+
+[sub_resource type="TextMesh" id="TextMesh_f0reb"]
+material = SubResource("StandardMaterial3D_3o5t2")
+text = "Play"
+font_size = 86
+horizontal_alignment = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ch2lh"]
+size = Vector3(1.8000001, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_juchl"]
+billboard_keep_scale = true
+
+[sub_resource type="TextMesh" id="TextMesh_as8ev"]
+material = SubResource("StandardMaterial3D_juchl")
+text = "Settings"
+font_size = 86
+horizontal_alignment = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uwu3h"]
+size = Vector3(3.4, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch2lh"]
+billboard_keep_scale = true
+
+[sub_resource type="TextMesh" id="TextMesh_uwu3h"]
+material = SubResource("StandardMaterial3D_ch2lh")
+text = "Quit"
+font_size = 86
+horizontal_alignment = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggkx6"]
+size = Vector3(1.8000001, 0.90000004, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as8ev"]
+billboard_keep_scale = true
+
+[sub_resource type="TextMesh" id="TextMesh_ch2lh"]
+material = SubResource("StandardMaterial3D_as8ev")
+text = "Back"
+font_size = 86
+horizontal_alignment = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wlsvp"]
+size = Vector3(2, 0.8, 0.1)
+
+[sub_resource type="Animation" id="Animation_3o5t2"]
+resource_name = "Intro"
+length = 8.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.5, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.201, 0.01), Vector3(1, 1.201, 3.31)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuOptions:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3.5, -0.17, 0), Vector3(0, -0.17, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 4.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f0reb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.201, 0.01)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuOptions:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.17, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuOptions/ButtonBack:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_juchl"]
+resource_name = "ViewSettings"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.008726646, 0.7853982, -0.06981317), Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuOptions/ButtonBack:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_as8ev"]
+resource_name = "ViewStartGame"
+length = 2.0
+step = 1.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_juchl"]
+_data = {
+&"Intro": SubResource("Animation_3o5t2"),
+&"RESET": SubResource("Animation_f0reb"),
+&"ViewSettings": SubResource("Animation_juchl"),
+&"ViewStartGame": SubResource("Animation_as8ev")
+}
 
 [node name="Main Menu" type="Node3D"]
 
-[node name="Music" type="AudioStreamPlayer3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_as8ev")
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(50, 0, 50)
+material = SubResource("StandardMaterial3D_bhd7j")
+
+[node name="Decoration" type="Node3D" parent="."]
+
+[node name="Desk" type="Node3D" parent="Decoration"]
+
+[node name="desk2_alt" parent="Decoration/Desk" instance=ExtResource("2_f0reb")]
+
+[node name="computer_monitor2" parent="Decoration/Desk" instance=ExtResource("3_juchl")]
+transform = Transform3D(0.99911696, 0, 0.042015158, 0, 1, 0, -0.042015158, 0, 0.99911696, 0, 0.9, -0.3)
+
+[node name="computer_mouse2" parent="Decoration/Desk" instance=ExtResource("4_as8ev")]
+transform = Transform3D(0.9680864, 0, -0.25061655, 0, 1, 0, 0.25061655, 0, 0.9680864, 0.4699694, 0.8999999, 0.18334472)
+
+[node name="computer_keyboard2" parent="Decoration/Desk" instance=ExtResource("5_ch2lh")]
+transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, -0.08170201, 0.9, 0.25153506)
+
+[node name="computer_tower2" parent="Decoration/Desk" instance=ExtResource("6_uwu3h")]
+transform = Transform3D(0.9994866, 0, 0.03203877, 0, 1, 0, -0.03203877, 0, 0.9994866, -0.674089, 0.9, -0.059759915)
+
+[node name="MODIFIED_Office_Chair" parent="Decoration/Desk" instance=ExtResource("7_ggkx6")]
+transform = Transform3D(0.9110006, 0, -0.41240495, 0, 1, 0, 0.41240495, 0, 0.9110006, -0.22670496, 0.13001408, 0.9052918)
+
+[node name="bottom" parent="Decoration/Desk/MODIFIED_Office_Chair" index="0"]
+visible = false
+
+[node name="top" parent="Decoration/Desk/MODIFIED_Office_Chair" index="3"]
+visible = false
+
+[node name="ChairAnim" type="AnimationPlayer" parent="Decoration/Desk/MODIFIED_Office_Chair"]
+libraries = {
+&"": SubResource("AnimationLibrary_f3cs8")
+}
+autoplay = "loop"
+
+[node name="desk_phone2" parent="Decoration/Desk" instance=ExtResource("8_wlsvp")]
+transform = Transform3D(0.99418485, 0, -0.107687026, 0, 1, 0, 0.107687026, 0, 0.99418485, 0.7790556, 0.90000004, -0.18110663)
+
+[node name="MenuOptions" type="Node3D" parent="." node_paths=PackedStringArray("_buttonStart", "_buttonSettings", "_buttonQuit", "_buttonBack", "_animationManager", "_hoverUI", "_clickUI")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17, 0)
+script = ExtResource("11_juchl")
+_buttonStart = NodePath("ButtonPlay")
+_buttonSettings = NodePath("ButtonSettings")
+_buttonQuit = NodePath("ButtonQuit")
+_buttonBack = NodePath("ButtonBack")
+_animationManager = NodePath("../AnimationManager")
+_hoverUI = NodePath("../UIHover")
+_clickUI = NodePath("../UIClick")
+
+[node name="ButtonPlay" type="MeshInstance3D" parent="MenuOptions"]
+transform = Transform3D(0.7159475, -0.08333025, -0.34709546, 0, 0.7778959, -0.1867563, 0.35695824, 0.16713463, 0.6961658, 3.6, 2.5, 0)
+mesh = SubResource("TextMesh_f0reb")
+
+[node name="PlayA3" type="Area3D" parent="MenuOptions/ButtonPlay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.125, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonPlay/PlayA3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07499981, 0, 0)
+shape = SubResource("BoxShape3D_ch2lh")
+
+[node name="ButtonSettings" type="MeshInstance3D" parent="MenuOptions"]
+transform = Transform3D(0.7159475, -0.012457663, -0.3567408, 0, 0.7995127, -0.027919596, 0.35695824, 0.024986206, 0.7155114, 3.6, 1.6, 0)
+mesh = SubResource("TextMesh_as8ev")
+
+[node name="SettingsA3" type="Area3D" parent="MenuOptions/ButtonSettings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.625001, -0.12500036, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonSettings/SettingsA3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05000019, 0, 0)
+shape = SubResource("BoxShape3D_uwu3h")
+
+[node name="ButtonQuit" type="MeshInstance3D" parent="MenuOptions"]
+transform = Transform3D(0.7159475, 0.08635602, -0.34635505, 0, 0.7762366, 0.19353752, 0.35695824, -0.17320338, 0.6946808, 3.6, 0.7, 0)
+mesh = SubResource("TextMesh_uwu3h")
+
+[node name="QuitA3" type="Area3D" parent="MenuOptions/ButtonQuit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.12500006, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonQuit/QuitA3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0.049999952, 0)
+shape = SubResource("BoxShape3D_ggkx6")
+
+[node name="ButtonBack" type="MeshInstance3D" parent="MenuOptions"]
+transform = Transform3D(0.4179988, -0.1476361, 0.6659434, 0, 0.7810368, 0.1731517, -0.68211216, -0.0904715, 0.40809056, -3.09, 0.7, 0.185)
+visible = false
+mesh = SubResource("TextMesh_ch2lh")
+
+[node name="BackA3" type="Area3D" parent="MenuOptions/ButtonBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.12500006, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonBack/BackA3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22499943, 0.099999905, 0)
+shape = SubResource("BoxShape3D_wlsvp")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qqk0j")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="UIHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_as8ev")
+volume_db = -8.0
+pitch_scale = 3.0
+bus = &"Music"
+
+[node name="UIClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_as8ev")
+volume_db = -2.0
+bus = &"Music"
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.201, 0.01)
+fov = 50.0
+
+[node name="AnimationManager" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_juchl")
+}
+autoplay = "Intro"
+
+[node name="Intro" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Intro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.06666667, 0.078431375, 0.11372549, 1)
+
+[node name="Title" type="Label" parent="Intro"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -442.0
+offset_top = 21.0
+offset_right = 442.0
+offset_bottom = 125.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("12_f0reb")
+theme_override_font_sizes/font_size = 91
+text = "Stressed Librarian"
+
+[connection signal="input_event" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartPressed"]
+[connection signal="mouse_entered" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartEntered"]
+[connection signal="mouse_exited" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartExited"]
+[connection signal="input_event" from="MenuOptions/ButtonSettings/SettingsA3" to="MenuOptions" method="OnSettingsPressed"]
+[connection signal="mouse_entered" from="MenuOptions/ButtonSettings/SettingsA3" to="MenuOptions" method="OnSettingsEntered"]
+[connection signal="mouse_exited" from="MenuOptions/ButtonSettings/SettingsA3" to="MenuOptions" method="OnSettingsExited"]
+[connection signal="input_event" from="MenuOptions/ButtonQuit/QuitA3" to="MenuOptions" method="OnQuitPressed"]
+[connection signal="mouse_entered" from="MenuOptions/ButtonQuit/QuitA3" to="MenuOptions" method="OnQuitEntered"]
+[connection signal="mouse_exited" from="MenuOptions/ButtonQuit/QuitA3" to="MenuOptions" method="OnQuitExited"]
+[connection signal="input_event" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackPressed"]
+[connection signal="mouse_entered" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackEntered"]
+[connection signal="mouse_exited" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackExited"]
+
+[editable path="Decoration/Desk/MODIFIED_Office_Chair"]

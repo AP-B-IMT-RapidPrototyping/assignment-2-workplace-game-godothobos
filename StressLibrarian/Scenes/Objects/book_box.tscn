@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkv00167nj6f8"]
+[gd_scene load_steps=9 format=3 uid="uid://dkv00167nj6f8"]
 
 [ext_resource type="Script" uid="uid://eh7ti6cd2rsv" path="res://Scripts/SceneScripts/BookBox.cs" id="1_70typ"]
+[ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="2_wt7lm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqkcp"]
 albedo_color = Color(0.40586835, 0.1608482, 0, 1)
@@ -16,13 +17,15 @@ albedo_color = Color(0, 0, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_dqkcp"]
 material = SubResource("StandardMaterial3D_wt7lm")
 text = "GENRE"
+font = ExtResource("2_wt7lm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_70typ"]
 
-[node name="BookBox" type="RigidBody3D" groups=["interact_pickup"]]
+[node name="BookBox" type="RigidBody3D" node_paths=PackedStringArray("_textMesh") groups=["interact_pickup"]]
 collision_layer = 12
 collision_mask = 9
 script = ExtResource("1_70typ")
+_textMesh = NodePath("Model/Box/Text")
 
 [node name="Model" type="Node3D" parent="."]
 
@@ -38,7 +41,7 @@ material = SubResource("StandardMaterial3D_70typ")
 [node name="Text" type="MeshInstance3D" parent="Model/Box"]
 transform = Transform3D(-1.2499999, 0, -2.1855692e-08, 0, 1.3000001, 0, 1.0927846e-07, 0, -0.24999999, 0, 0.3, -0.6)
 mesh = SubResource("TextMesh_dqkcp")
-skeleton = NodePath("")
 
 [node name="BoxCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("BoxShape3D_70typ")

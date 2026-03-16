@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmh63563rk2sf"]
+
+[ext_resource type="Script" uid="uid://d3rhg6cv7fjfs" path="res://Scripts/SceneScripts/InteractBookShelf.cs" id="1_af3il"]
+[ext_resource type="PackedScene" uid="uid://cro2dtp0unao6" path="res://Assets/OFFICE/book_things/book_case_with_back.glb" id="2_2nqer"]
+[ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="3_2nqer"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pk4ww"]
+size = Vector3(2, 2.5, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_umbum"]
+points = PackedVector3Array(-1.0125, 0, -0.24999999, 1.0125, 0, -0.24999999, -1.0125, 0, 0.24999999, -1.0125, 2.5, -0.24999999, 1.0125, 0, 0.24999999, 1.0125, 2.5, -0.24999999, -1.0125, 2.5, 0.24999999, 1.0125, 2.5, 0.24999999)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wt7lm"]
+
+[sub_resource type="TextMesh" id="TextMesh_2nqer"]
+material = SubResource("StandardMaterial3D_wt7lm")
+text = "GENRE"
+font = ExtResource("3_2nqer")
+font_size = 34
+
+[node name="InteractBookShelf" type="Node3D" node_paths=PackedStringArray("_textMesh", "Area3D")]
+script = ExtResource("1_af3il")
+_textMesh = NodePath("Text")
+Area3D = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0.14999998)
+shape = SubResource("BoxShape3D_pk4ww")
+debug_color = Color(0.978188, 0, 0.40193477, 0.41960785)
+
+[node name="book_case_with_back2" parent="." instance=ExtResource("2_2nqer")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="book_case_with_back2/book_case_with_back" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book_case_with_back2/book_case_with_back/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_umbum")
+
+[node name="Text" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2499999, 0, 4.371138e-08, 0, 1.3000001, 0, -2.1855692e-07, 0, 0.24999999, 0, 2.3, 0.39999998)
+mesh = SubResource("TextMesh_2nqer")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnBodyEntered"]
+
+[editable path="book_case_with_back2"]

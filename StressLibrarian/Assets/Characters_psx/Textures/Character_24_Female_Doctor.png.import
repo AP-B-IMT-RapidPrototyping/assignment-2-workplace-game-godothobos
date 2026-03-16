@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci8vax8qbyi3l"
-path.s3tc="res://.godot/imported/Character_24_Female_Doctor.png-a0e0bebc3cf798eb1d07e4317742644f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Character_24_Female_Doctor.png-9852e7e669b51bd7bfd2223cb1330438.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Characters_psx/textures/Character_24_Female_Doctor.png"
-dest_files=["res://.godot/imported/Character_24_Female_Doctor.png-a0e0bebc3cf798eb1d07e4317742644f.s3tc.ctex"]
+source_file="res://Assets/Characters_psx/Textures/Character_24_Female_Doctor.png"
+dest_files=["res://.godot/imported/Character_24_Female_Doctor.png-9852e7e669b51bd7bfd2223cb1330438.s3tc.ctex"]
 
 [params]
 

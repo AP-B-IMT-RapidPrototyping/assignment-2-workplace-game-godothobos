@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djnp6xkyawciv"
-path.s3tc="res://.godot/imported/Character_24_Firefighter.png-1da0da68cfd6ed4f135e09826d4d1829.s3tc.ctex"
+path.s3tc="res://.godot/imported/Character_24_Firefighter.png-ec91910d92bb902765fe0457686eb839.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Characters_psx/textures/Character_24_Firefighter.png"
-dest_files=["res://.godot/imported/Character_24_Firefighter.png-1da0da68cfd6ed4f135e09826d4d1829.s3tc.ctex"]
+source_file="res://Assets/Characters_psx/Textures/Character_24_Firefighter.png"
+dest_files=["res://.godot/imported/Character_24_Firefighter.png-ec91910d92bb902765fe0457686eb839.s3tc.ctex"]
 
 [params]
 

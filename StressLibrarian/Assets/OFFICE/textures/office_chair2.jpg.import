@@ -7,7 +7,7 @@ valid=false
 
 [deps]
 
-source_file="res://Assets/Textures/OFFICE/OFFICE/textures/office_chair2.jpg"
+source_file="res://Assets/OFFICE/textures/office_chair2.jpg"
 
 [params]
 
