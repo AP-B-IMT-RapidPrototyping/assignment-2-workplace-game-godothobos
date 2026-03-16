@@ -1,0 +1,321 @@
+[gd_scene load_steps=19 format=3 uid="uid://jmbcto18oc6l"]
+
+[ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
+[ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="2_idsh5"]
+[ext_resource type="Texture2D" uid="uid://bwv5ggh7v8tgq" path="res://Assets/Textures/WoodGate/textures/wooden_gate_nor_gl_1k.png" id="3_mhlsa"]
+[ext_resource type="Texture2D" uid="uid://b84ha7y18utrj" path="res://Assets/Textures/WoodGate/textures/wooden_gate_rough_1k.png" id="4_l2k66"]
+[ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_tospq"]
+[ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="6_mhlsa"]
+[ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="7_l2k66"]
+[ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="8_l2k66"]
+
+[sub_resource type="Sky" id="Sky_l2k66"]
+
+[sub_resource type="Environment" id="Environment_tospq"]
+background_mode = 2
+sky = SubResource("Sky_l2k66")
+tonemap_mode = 2
+ssr_enabled = true
+ssil_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idsh5"]
+albedo_texture = ExtResource("1_302wg")
+uv1_scale = Vector3(0.08, 0.08, 0.08)
+uv1_offset = Vector3(0, 0, -0.505)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iol1o"]
+albedo_texture = ExtResource("2_idsh5")
+roughness_texture = ExtResource("4_l2k66")
+normal_enabled = true
+normal_texture = ExtResource("3_mhlsa")
+uv1_scale = Vector3(0.185, 0.185, 0.185)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l2k66"]
+size = Vector3(1, 0.2, 2.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tospq"]
+points = PackedVector3Array(0.64, 0.024983324, 1.1, 0.6021613, 0.06916964, 0.076018095, 0.594581, 0.075387135, 0.076018095, 0.5864996, 0.079175934, 0.076018095, 0.5788567, 0.081167474, 0.076018095, 0.5716523, 0.08212276, 0.076018095, 0.56494904, 0.08252755, 0.076018095, 0.5584338, 0.082657084, 0.076018095, 0.5521065, 0.082689464, 0.076018095, 0.5459045, 0.08270565, 0.076018095, 2.9802322e-08, 0.024983324, 1.1, 0.64, -0.025015704, 1.1, 0.64, 0.03498961, -0.91889197, 0.6021613, 0.06916964, 0.006029725, 0.594581, 0.075387135, 0.006029725, 0.5864996, 0.079175934, 0.006029725, 0.5788567, 0.081167474, 0.006029725, 0.5716523, 0.08212276, 0.006029725, 0.56494904, 0.08252755, 0.006029725, 0.5584338, 0.082657084, 0.006029725, 0.5521065, 0.082689464, 0.006029725, 0.5165231, 0.08270565, 0.076018095, 0.5459045, 0.08270565, 0.006029725, 2.9802322e-08, -0.025015704, 1.1, 0.51119816, 0.08270565, 0.075802684, 0.5060611, 0.08270565, 0.07558739, 0.5010493, 0.08270565, 0.07537198, 0.49140173, 0.08270565, 0.07407987, 0.48657793, 0.08270565, 0.073218465, 0.48175412, 0.08270565, 0.071926475, 0.47661707, 0.08270565, 0.070418954, 0.47129208, 0.08270565, 0.06848085, 0.46552858, 0.08270565, 0.06589663, 0.45932654, 0.08270565, 0.06309712, 0.074988276, 0.08252755, -0.12382537, 0.06822242, 0.08212276, -0.12382537, 0.061080683, 0.081167474, -0.12382537, 0.05343777, 0.079175934, -0.12382537, 0.04535633, 0.075387135, -0.12382537, 0.037776064, 0.06916964, -0.12382537, 2.9802322e-08, 0.03498961, -0.91889197, 0.5521065, -0.08270565, 0.076018095, 0.5584338, -0.08268946, 0.076018095, 0.56494904, -0.08254373, 0.076018095, 0.5716523, -0.08213895, 0.076018095, 0.5788567, -0.08119985, 0.076018095, 0.5864996, -0.07919212, 0.076018095, 0.594581, -0.075403325, 0.076018095, 0.6021613, -0.06918583, 0.076018095, 0.64, -0.035005793, -0.91889197, 0.64, 0.03498961, -1.1, 0.18061082, 0.08270565, -0.1808927, 0.45932654, -0.08270565, 0.06309712, 0.46552858, -0.08270565, 0.06589663, 0.47129208, -0.08270565, 0.06848085, 0.47661707, -0.08270565, 0.070418954, 0.48175412, -0.08270565, 0.071926475, 0.48657793, -0.08270565, 0.073218465, 0.49140173, -0.08270565, 0.07407987, 0.5010493, -0.08270565, 0.07537198, 0.5060611, -0.08270565, 0.07558739, 0.51119816, -0.08270565, 0.075802684, 0.5165231, -0.08270565, 0.076018095, 2.9802322e-08, -0.035005793, -0.91889197, 0.037776064, -0.06918583, -0.12382537, 0.04535633, -0.075403325, -0.12382537, 0.05343777, -0.07919212, -0.12382537, 0.061080683, -0.08119985, -0.12382537, 0.06822242, -0.08213895, -0.12382537, 0.074988276, -0.08254373, -0.12382537, 0.09403291, 0.08270565, -0.12382537, 0.08783088, 0.082689464, -0.12382537, 0.08150355, 0.082657084, -0.12382537, 0.074988276, 0.08252755, -0.19402897, 0.06822242, 0.08212276, -0.19402897, 0.061080683, 0.081167474, -0.19402897, 0.05343777, 0.079175934, -0.19402897, 0.04535633, 0.075387135, -0.19402897, 0.037776064, 0.06916964, -0.19402897, 2.9802322e-08, 0.03498961, -1.1, 0.5521065, -0.08270565, 0.006029725, 0.5584338, -0.08268946, 0.006029725, 0.56494904, -0.08254373, 0.006029725, 0.5716523, -0.08213895, 0.006029725, 0.5788567, -0.08119985, 0.006029725, 0.5864996, -0.07919212, 0.006029725, 0.594581, -0.075403325, 0.006029725, 0.6021613, -0.06918583, 0.006029725, 0.64, -0.035005793, -1.1, 0.1001723, 0.08270565, -0.19402897, 0.12341427, 0.08270565, -0.19381362, 0.12873925, 0.08270565, -0.19359827, 0.1338763, 0.08270565, -0.19338292, 0.13888805, 0.08270565, -0.19316757, 0.14853565, 0.08270565, -0.19187546, 0.15329681, 0.08270565, -0.19101411, 0.15818326, 0.08270565, -0.189722, 0.16325766, 0.08270565, -0.18821454, 0.16864528, 0.08270565, -0.18627644, 0.1744088, 0.08270565, -0.18369222, 0.08150355, -0.08268946, -0.12382537, 0.08783088, -0.08270565, -0.12382537, 2.9802322e-08, -0.035005793, -1.1, 0.037776064, -0.06918583, -0.19402897, 0.04535633, -0.075403325, -0.19402897, 0.05343777, -0.07919212, -0.19402897, 0.061080683, -0.08119985, -0.19402897, 0.06822242, -0.08213895, -0.19402897, 0.074988276, -0.08254373, -0.19402897, 0.09403291, 0.08270565, -0.19402897, 0.08783088, 0.082689464, -0.19402897, 0.08150355, 0.082657084, -0.19402897, 0.18061082, -0.08270565, -0.1808927, 0.1744088, -0.08270565, -0.18369222, 0.16864528, -0.08270565, -0.18627644, 0.16325766, -0.08270565, -0.18821454, 0.15818326, -0.08270565, -0.189722, 0.15329681, -0.08270565, -0.19101411, 0.14853565, -0.08270565, -0.19187546, 0.13888805, -0.08270565, -0.19316757, 0.1338763, -0.08270565, -0.19338292, 0.12873925, -0.08270565, -0.19359827, 0.12341427, -0.08270565, -0.19381362, 0.1001723, -0.08270565, -0.19402897, 0.08150355, -0.08268946, -0.19402897, 0.08783088, -0.08270565, -0.19402897)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iol1o"]
+points = PackedVector3Array(0, 0.024983324, 1.1, -0.4593892, 0.08270565, 0.06309712, -0.46559122, 0.08270565, 0.06589663, -0.47135472, 0.08270565, 0.06848085, -0.47674236, 0.08270565, 0.070418954, -0.48181677, 0.08270565, 0.071926475, -0.48670322, 0.08270565, 0.073218465, -0.49146438, 0.08270565, 0.07407987, -0.501112, 0.08270565, 0.07537198, -0.5061237, 0.08270565, 0.07558739, -0.51126075, 0.08270565, 0.075802684, -0.51658577, 0.08270565, 0.076018095, -0.64, 0.024983324, 1.1, 0, -0.025015704, 1.1, -6.264448e-05, 0.03498961, -1.1, -6.264448e-05, 0.03498961, -0.91889197, -0.037838697, 0.06916964, -0.12382537, -0.045418978, 0.075387135, -0.12382537, -0.053500414, 0.079175934, -0.12382537, -0.06114334, 0.081167474, -0.12382537, -0.06834769, 0.08212276, -0.12382537, -0.07505095, 0.08252755, -0.12382537, -0.081566215, 0.082657084, -0.12382537, -0.087893546, 0.082689464, -0.12382537, -0.09409553, 0.08270565, -0.12382537, -0.5459671, 0.08270565, 0.076018095, -0.64, -0.025015704, 1.1, -0.55216914, 0.082689464, 0.076018095, -0.5584965, 0.082657084, 0.076018095, -0.56501174, 0.08252755, 0.076018095, -0.5717776, 0.08212276, 0.076018095, -0.57891935, 0.081167474, 0.076018095, -0.5865623, 0.079175934, 0.076018095, -0.5946437, 0.075387135, 0.076018095, -0.60222393, 0.06916964, 0.076018095, -0.64, 0.03498961, -0.91889197, -0.51658577, -0.08270565, 0.076018095, -0.51126075, -0.08270565, 0.075802684, -0.5061237, -0.08270565, 0.07558739, -0.501112, -0.08270565, 0.07537198, -0.49146438, -0.08270565, 0.07407987, -0.48670322, -0.08270565, 0.073218465, -0.48181677, -0.08270565, 0.071926475, -0.47674236, -0.08270565, 0.070418954, -0.47135472, -0.08270565, 0.06848085, -0.46559122, -0.08270565, 0.06589663, -0.4593892, -0.08270565, 0.06309712, -0.07505095, -0.08254373, -0.12382537, -0.06834769, -0.08213895, -0.12382537, -0.06114334, -0.08119985, -0.12382537, -0.053500414, -0.07919212, -0.12382537, -0.045418978, -0.075403325, -0.12382537, -0.037838697, -0.06918583, -0.12382537, -6.264448e-05, -0.035005793, -0.91889197, -6.264448e-05, -0.035005793, -1.1, -0.64, 0.03498961, -1.1, -0.09409553, 0.08270565, -0.19402897, -0.087893546, 0.082689464, -0.19402897, -0.081566215, 0.082657084, -0.19402897, -0.07505095, 0.08252755, -0.19402897, -0.06834769, 0.08212276, -0.19402897, -0.06114334, 0.081167474, -0.19402897, -0.053500414, 0.079175934, -0.19402897, -0.045418978, 0.075387135, -0.19402897, -0.037838697, 0.06916964, -0.19402897, -0.5459671, 0.08270565, 0.006029725, -0.60222393, -0.06918583, 0.076018095, -0.5946437, -0.075403325, 0.076018095, -0.5865623, -0.07919212, 0.076018095, -0.57891935, -0.08119985, 0.076018095, -0.5717776, -0.08213895, 0.076018095, -0.56501174, -0.08254373, 0.076018095, -0.5584965, -0.08268946, 0.076018095, -0.55216914, -0.08270565, 0.076018095, -0.64, -0.035005793, -0.91889197, -0.55216914, 0.082689464, 0.006029725, -0.5584965, 0.082657084, 0.006029725, -0.56501174, 0.08252755, 0.006029725, -0.5717776, 0.08212276, 0.006029725, -0.57891935, 0.081167474, 0.006029725, -0.5865623, 0.079175934, 0.006029725, -0.5946437, 0.075387135, 0.006029725, -0.60222393, 0.06916964, 0.006029725, -0.087893546, -0.08270565, -0.12382537, -0.081566215, -0.08268946, -0.12382537, -0.07505095, -0.08254373, -0.19402897, -0.06834769, -0.08213895, -0.19402897, -0.06114334, -0.08119985, -0.19402897, -0.053500414, -0.07919212, -0.19402897, -0.045418978, -0.075403325, -0.19402897, -0.037838697, -0.06918583, -0.19402897, -0.087893546, -0.08270565, -0.19402897, -0.64, -0.035005793, -1.1, -0.081566215, -0.08268946, -0.19402897, -0.18067348, 0.08270565, -0.1808927, -0.17447144, 0.08270565, -0.18369222, -0.16870794, 0.08270565, -0.18627644, -0.16338295, 0.08270565, -0.18821454, -0.15824589, 0.08270565, -0.189722, -0.15342209, 0.08270565, -0.19101411, -0.14859828, 0.08270565, -0.19187546, -0.1389507, 0.08270565, -0.19316757, -0.13393891, 0.08270565, -0.19338292, -0.12880188, 0.08270565, -0.19359827, -0.12347692, 0.08270565, -0.19381362, -0.100234926, 0.08270565, -0.19402897, -0.60222393, -0.06918583, 0.006029725, -0.5946437, -0.075403325, 0.006029725, -0.5865623, -0.07919212, 0.006029725, -0.57891935, -0.08119985, 0.006029725, -0.5717776, -0.08213895, 0.006029725, -0.56501174, -0.08254373, 0.006029725, -0.5584965, -0.08268946, 0.006029725, -0.55216914, -0.08270565, 0.006029725, -0.100234926, -0.08270565, -0.19402897, -0.12347692, -0.08270565, -0.19381362, -0.12880188, -0.08270565, -0.19359827, -0.13393891, -0.08270565, -0.19338292, -0.1389507, -0.08270565, -0.19316757, -0.14859828, -0.08270565, -0.19187546, -0.15342209, -0.08270565, -0.19101411, -0.15824589, -0.08270565, -0.189722, -0.16338295, -0.08270565, -0.18821454, -0.16870794, -0.08270565, -0.18627644, -0.17447144, -0.08270565, -0.18369222, -0.18067348, -0.08270565, -0.1808927)
+
+[sub_resource type="Animation" id="Animation_l2k66"]
+resource_name = "Open"
+length = 2.5
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(1.7712016e-07, 1.6230072e-07, -1.6580628)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(1.9121156e-07, -1.6044554e-07, 1.7453293)]
+}
+
+[sub_resource type="Animation" id="Animation_tospq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tospq"]
+_data = {
+&"Open": SubResource("Animation_l2k66"),
+&"RESET": SubResource("Animation_tospq")
+}
+
+[node name="Tutorial" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tospq")
+
+[node name="Hallway" type="Node3D" parent="."]
+transform = Transform3D(0.80999994, 0, 0, 0, 0.80999994, 0, 0, 0, 0.80999994, 0, 0, 0)
+
+[node name="Floor" type="CSGBox3D" parent="Hallway"]
+use_collision = true
+size = Vector3(60, 0, 15)
+material = SubResource("StandardMaterial3D_idsh5")
+
+[node name="Roof" type="CSGBox3D" parent="Hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+use_collision = true
+size = Vector3(60, 0, 15)
+material = SubResource("StandardMaterial3D_idsh5")
+
+[node name="WallLeft" type="CSGBox3D" parent="Hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 3.75)
+use_collision = true
+size = Vector3(60, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallRight" type="CSGBox3D" parent="Hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, -3.75)
+use_collision = true
+size = Vector3(60, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallBack" type="CSGBox3D" parent="Hallway"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30, 2.8, -0.75)
+use_collision = true
+size = Vector3(16.5, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallEnd" type="CSGBox3D" parent="Hallway"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30, 2.8, -0.75)
+use_collision = true
+size = Vector3(16.5, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="Light" type="Node3D" parent="Hallway"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 6.117284, 0)
+
+[node name="Light" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 25, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light2" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light21" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light3" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light31" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light4" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light5" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -15, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Light6" type="SpotLight3D" parent="Hallway/Light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -25, 0, 0)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 70.0
+
+[node name="Door" parent="Hallway" instance=ExtResource("8_l2k66")]
+transform = Transform3D(-1.0602196e-07, 0, 2.4254997, 0, 2.4254997, 0, -2.4254997, 0, -1.0602196e-07, 10.25, 0, 0)
+
+[node name="Left" type="StaticBody3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
+transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
+shape = SubResource("BoxShape3D_l2k66")
+
+[node name="Right" type="StaticBody3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
+transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -5.0821977e-21, 3.112903e-22, 1, 0.38961023, 0, 0.51948047)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
+shape = SubResource("BoxShape3D_l2k66")
+
+[node name="EntranceDoorLeft" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -1.4449999, 0, 1.099707)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tospq")
+
+[node name="EntranceDoorRight" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -0.15499997, 0, 1.099707)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_iol1o")
+
+[node name="DoorAnim" type="AnimationPlayer" parent="Hallway/Door"]
+libraries = {
+&"": SubResource("AnimationLibrary_tospq")
+}
+autoplay = "Open"
+
+[node name="Door2" parent="Hallway" instance=ExtResource("8_l2k66")]
+transform = Transform3D(-1.0602196e-07, 0, 2.4254997, 0, 2.4254997, 0, -2.4254997, 0, -1.0602196e-07, -0.24999984, 0, 0)
+
+[node name="Left" type="StaticBody3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
+transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
+shape = SubResource("BoxShape3D_l2k66")
+
+[node name="Right" type="StaticBody3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
+transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -5.0821977e-21, 3.112903e-22, 1, 0.38961023, 0, 0.51948047)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
+shape = SubResource("BoxShape3D_l2k66")
+
+[node name="EntranceDoorLeft" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -1.4449999, 0, 1.099707)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tospq")
+
+[node name="EntranceDoorRight" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 2.646978e-23, 0, -2.6469778e-23, 1, -0.15499997, 0, 1.099707)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_iol1o")
+
+[node name="DoorAnim" type="AnimationPlayer" parent="Hallway/Door2"]
+libraries = {
+&"": SubResource("AnimationLibrary_tospq")
+}
+
+[node name="Player" parent="." instance=ExtResource("5_tospq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 1, 0)
+
+[node name="InteractBookShelf" parent="." instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1, 4, 0, 2.5)
+
+[node name="ShelfLight" type="SpotLight3D" parent="InteractBookShelf"]
+transform = Transform3D(1, 9.13196e-08, 1.9583555e-07, -9.131961e-08, -0.6427877, 0.7660444, 1.9583555e-07, -0.7660444, -0.6427877, -2.3841858e-07, 4.4, 2.5)
+light_energy = 6.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 30.0
+
+[node name="InteractBookShelf2" parent="." instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 3.1786513e-08, 0, 1, 0, -3.1786513e-08, 0, 1, 4, 0, -2.5)
+
+[node name="ShelfLight" type="SpotLight3D" parent="InteractBookShelf2"]
+transform = Transform3D(-1, -2.4349884e-08, -9.877731e-08, -9.131962e-08, 0.6427876, 0.7660445, 4.4839737e-08, 0.7660445, -0.6427876, 0, 4.4, 2.5)
+light_energy = 6.0
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 30.0
+
+[node name="BookBox" parent="." instance=ExtResource("7_l2k66")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15, 1, 0)
+
+[editable path="Hallway/Door"]
+[editable path="Hallway/Door2"]
