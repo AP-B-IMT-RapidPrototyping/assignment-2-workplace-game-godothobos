@@ -30,6 +30,8 @@ public partial class Player : CharacterBody3D
     [Export] private float _acceleration = 60.0f;
     [Export] private float _deceleration = 80.0f;
 
+    [Export] private float _holdStrength = 26f;
+
 
     /* UI EXPORTS */
     [Export] private Control _playerUI;
@@ -130,7 +132,7 @@ public partial class Player : CharacterBody3D
 
         Vector3 a = picked_object.GlobalTransform.Origin;
         Vector3 b = _holdPointMarker.GlobalTransform.Origin;
-        picked_object.LinearVelocity = (b - a) * 8;
+        picked_object.LinearVelocity = (b - a) * _holdStrength;
 
         Vector3 directionToCamera = (_camera.GlobalTransform.Origin - picked_object.GlobalTransform.Origin).Normalized();
         Vector3 lookAtPosition = picked_object.GlobalTransform.Origin + new Vector3(directionToCamera.X, 0, directionToCamera.Z);

@@ -47,4 +47,19 @@ material = SubResource("StandardMaterial3D_yla1s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="BookBox" parent="." instance=ExtResource("6_osokm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, -8)
+
+[node name="BookBox2" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2, -8)
+
+[node name="BookBox3" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 3, -8)
+
+[node name="BookBox4" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, -8)
+
+[node name="BookBox5" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 5, -8)
+
+[node name="BookBox6" parent="." instance=ExtResource("6_osokm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 6, -8)
