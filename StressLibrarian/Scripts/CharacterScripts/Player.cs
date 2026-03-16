@@ -37,6 +37,8 @@ public partial class Player : CharacterBody3D
     [Export] private Control _playerUI;
     [Export] private TextureRect _grabUI;
     [Export] private TextureRect _interactUI;
+    [Export] private Control _stressView;
+    [Export] private Label _stressLabel;
 
 
     /* STATE MACHINE */
@@ -147,6 +149,15 @@ public partial class Player : CharacterBody3D
         }
     }
 
+
+    private void UpdateStress()
+    {
+        _stressLabel.Text = $"S: {GameManager.stress}";
+
+        float stressToModulate = GameManager.stress / 100;
+        _stressView.Modulate = new Color(1f, 1f, 1f, stressToModulate);
+    }
+
     /* ------------------------- */
     /* PROCESS && PHYSICS PROCESS*/
     /* ------------------------- */
@@ -216,6 +227,8 @@ public partial class Player : CharacterBody3D
         HandleInteraction();
         HandlePickedObject();
         HandleDropHeldItem();
+
+        UpdateStress();
 
         MoveAndSlide();
     }

@@ -16,6 +16,10 @@ run/main_scene="uid://dy53kd20h4anj"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Scripts/Global/GameManager.cs"
+
 [dotnet]
 
 project/assembly_name="Stress Librarian"

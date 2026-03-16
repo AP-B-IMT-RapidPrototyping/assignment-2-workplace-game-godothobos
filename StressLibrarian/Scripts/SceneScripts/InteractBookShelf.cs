@@ -8,6 +8,8 @@ public partial class InteractBookShelf : Node3D
     [Export] public BookGenre shelfGenre;
     [Export] public bool Randomize = true;
 
+    private float _reduceStress = 10f;
+
 
     public override void _Ready()
     {
@@ -90,6 +92,7 @@ public partial class InteractBookShelf : Node3D
             player.HandleForceDropObject(book);
 
         book.QueueFree();
+        GameManager.stress -= _reduceStress;
         FillBooks();
     }
 
