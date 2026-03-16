@@ -139,6 +139,14 @@ public partial class Player : CharacterBody3D
         picked_object.LookAt(lookAtPosition, Vector3.Up);
     }
 
+    public void HandleForceDropObject(RigidBody3D obj)
+    {
+        if (picked_object == obj)
+        {
+            picked_object = null;
+        }
+    }
+
     /* ------------------------- */
     /* PROCESS && PHYSICS PROCESS*/
     /* ------------------------- */

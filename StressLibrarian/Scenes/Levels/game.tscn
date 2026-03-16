@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt8svyfqkplxn"]
+[gd_scene load_steps=12 format=3 uid="uid://bt8svyfqkplxn"]
 
 [ext_resource type="Script" uid="uid://cxijb21an62k3" path="res://Scripts/SceneScripts/Game.cs" id="1_i10s3"]
 [ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="2_yla1s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ci2lvek34jgjk" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_rough_1k.png" id="4_o86a8"]
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_yla1s"]
 [ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="6_osokm"]
+[ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="7_o86a8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yla1s"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -63,3 +64,9 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 5
 
 [node name="BookBox6" parent="." instance=ExtResource("6_osokm")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 6, -8)
+
+[node name="InteractBookShelf" parent="." instance=ExtResource("7_o86a8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, -6)
+
+[node name="InteractBookShelf2" parent="." instance=ExtResource("7_o86a8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, -3)

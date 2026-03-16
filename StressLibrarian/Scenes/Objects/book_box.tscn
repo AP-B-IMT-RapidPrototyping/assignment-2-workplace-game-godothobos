@@ -43,4 +43,5 @@ transform = Transform3D(-1.2499999, 0, -2.1855692e-08, 0, 1.3000001, 0, 1.092784
 mesh = SubResource("TextMesh_dqkcp")
 
 [node name="BoxCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("BoxShape3D_70typ")
