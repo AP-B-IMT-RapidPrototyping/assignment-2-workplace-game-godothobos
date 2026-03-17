@@ -1,10 +1,10 @@
 [gd_scene load_steps=129 format=4 uid="uid://b0kpflec4ydky"]
 
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="1_dqej6"]
-[ext_resource type="MeshLibrary" uid="uid://dy7qie84ys2pg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="2_l0gcx"]
+[ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="2_l0gcx"]
 [ext_resource type="Texture2D" uid="uid://didwgog6e383l" path="res://Assets/Textures/128x128/Wood/Wood_09-128x128.png" id="3_k48ua"]
 [ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="4_jl3u2"]
-[ext_resource type="MeshLibrary" uid="uid://n80umk3ybnw5" path="res://Assets/MeshLibrary/smallbookshelf_fix2.0.tres" id="5_23naa"]
+[ext_resource type="MeshLibrary" uid="uid://bv82xv85sxbwp" path="res://Assets/MeshLibrary/smallbookshelf_fix2.0.tres" id="5_23naa"]
 [ext_resource type="PackedScene" uid="uid://dkcsshtasd7qq" path="res://Assets/OFFICE/desks/desk2_weathered.glb" id="5_l0gcx"]
 [ext_resource type="PackedScene" uid="uid://d35xb14eyr4d" path="res://Assets/OFFICE/couches/armchair_red.glb" id="6_23naa"]
 [ext_resource type="PackedScene" uid="uid://71fepew8vt84" path="res://Assets/OFFICE/chairs/office_chair_fancy.glb" id="7_0nr8p"]
@@ -92,20 +92,20 @@ uv1_triplanar = true
 albedo_texture = ExtResource("3_k48ua")
 uv1_triplanar = true
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jl3u2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k48ua"]
 load_path = "res://.godot/imported/wooden_gate_diff_1k.png-700b43ff69ba195de1241610081e313a.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0gcx"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jl3u2"]
 load_path = "res://.godot/imported/wooden_gate_nor_gl_1k.png-e1f9b1d048ee8eb2d0f28c8ab8878c3c.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_23naa"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0gcx"]
 load_path = "res://.godot/imported/wooden_gate_rough_1k.png-98e946cad6e83fb2b4fa38cc5d8ee42c.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nr8p"]
-albedo_texture = SubResource("CompressedTexture2D_jl3u2")
-roughness_texture = SubResource("CompressedTexture2D_23naa")
+albedo_texture = SubResource("CompressedTexture2D_k48ua")
+roughness_texture = SubResource("CompressedTexture2D_l0gcx")
 normal_enabled = true
-normal_texture = SubResource("CompressedTexture2D_l0gcx")
+normal_texture = SubResource("CompressedTexture2D_jl3u2")
 uv1_scale = Vector3(0.185, 0.185, 0.185)
 uv1_triplanar = true
 
@@ -407,7 +407,6 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
-visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)
