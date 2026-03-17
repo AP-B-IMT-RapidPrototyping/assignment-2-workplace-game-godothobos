@@ -703,7 +703,7 @@ data = {
 }
 
 [node name="Whiteboard" parent="." instance=ExtResource("19_rcukj")]
-transform = Transform3D(0.99046624, 0, 0.13775572, 0, 1, 0, -0.13775572, 0, 0.99046624, -2.596435, -0.7362713, 4.781807)
+transform = Transform3D(0.9904662, 0, 0.1377557, 0, 1, 0, -0.1377557, 0, 0.9904662, -2.596435, -0.7362713, 4.781807)
 
 [node name="Character_Monster_03" parent="." instance=ExtResource("20_d1w2i")]
 transform = Transform3D(0.17567696, 0.119870186, 0.4525138, -0.3023081, 0.39808008, 0.01191266, -0.35741755, -0.2777828, 0.21234252, -10.972021, 0.007849693, -4.148571)

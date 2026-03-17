@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=44 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b84ha7y18utrj" path="res://Assets/Textures/WoodGate/textures/wooden_gate_rough_1k.png" id="4_l2k66"]
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_tospq"]
 [ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="6_mhlsa"]
+[ext_resource type="AudioStream" uid="uid://cje6024h6wq0e" path="res://Assets/Audio/sounds/universfield-creaking-door-03-487855.mp3" id="7_i0v1t"]
 [ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="7_l2k66"]
 [ext_resource type="PackedScene" uid="uid://bjorhglvirvms" path="res://Assets/Models/HangingSign/wall-sign.fbx" id="7_mnia5"]
 [ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="8_l2k66"]
@@ -109,6 +110,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [2.0, 0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Doorcreek_sound:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_sghjv"]
 length = 0.001
@@ -171,6 +184,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [2.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Doorcreek_sound:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qvtqq"]
@@ -404,6 +429,18 @@ tracks/15/keys = {
 "update": 0,
 "values": [4.0, 28.0]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Doorcreek_sound:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_0mdj5"]
 length = 0.001
@@ -599,6 +636,18 @@ tracks/15/keys = {
 "update": 0,
 "values": [4.0]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Doorcreek_sound:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_35mx6"]
 _data = {
@@ -785,7 +834,7 @@ spot_angle = 70.0
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Door1" parent="Level/First" instance=ExtResource("8_l2k66")]
-transform = Transform3D(-1.0602195e-07, 0, 2.4254994, 0, 1.6689973, 0, -2.4254994, 0, -1.0602195e-07, 10.250002, 0, 0)
+transform = Transform3D(-1.0602195e-07, 0, -2.4254994, 0, 1.6689973, 0, 2.4254994, 0, -1.0602195e-07, 10.250002, 0, 0)
 
 [node name="Left" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
@@ -811,7 +860,7 @@ transform = Transform3D(1, 1.030287e-13, 5.446422e-19, -1.030287e-13, 1, 3.11266
 shape = SubResource("BoxShape3D_tospq")
 
 [node name="EntranceDoorRight" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -0.15499997, 0, 1.099707)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 2.646978e-23, 0, -2.6469778e-23, 1, -0.15499997, 0, 1.099707)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
 
@@ -829,6 +878,12 @@ transform = Transform3D(0.41226187, 0, 1.0658141e-12, 0, 0.5991268, 0, -1.065814
 use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="Level/First/Door1"]
+transform = Transform3D(0.5089954, 0, 1.7763568e-15, 0, 0.7397065, 0, -1.7763568e-15, 0, 0.5089954, -8.423029e-09, 0, 0.12712479)
+stream = ExtResource("7_i0v1t")
+volume_db = -5.0
+pitch_scale = 0.4
 
 [node name="HangingSign1" parent="Level/First" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016418, 0, 0, 0, 9.016418, 0, 0, 0, 9.016418, 19.629633, 4.1975317, 0)
@@ -855,7 +910,7 @@ spot_angle = 36.230724
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -3.7037036, 0, 0)
 
 [node name="Door2" parent="Level/Second" instance=ExtResource("8_l2k66")]
-transform = Transform3D(-1.0602194e-07, 0, 2.425499, 0, 1.6689972, 0, -2.425499, 0, -1.0602194e-07, -3.953704, 0, 0)
+transform = Transform3D(-1.0602193e-07, 0, -2.425499, 0, 1.6689972, 0, 2.425499, 0, -1.0602193e-07, -3.953704, 0, 0)
 
 [node name="Left" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
@@ -881,7 +936,7 @@ transform = Transform3D(1, 1.030287e-13, 5.446422e-19, -1.030287e-13, 1, 3.11266
 shape = SubResource("BoxShape3D_tospq")
 
 [node name="EntranceDoorRight" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 2.646978e-23, 0, -2.6469778e-23, 1, -0.15499997, 0, 1.099707)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 2.646978e-23, 0, -2.6469776e-23, 1, -0.15499997, 0, 1.099707)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
 
@@ -899,6 +954,12 @@ transform = Transform3D(0.41225418, 0, 1.4050983e-12, 0, 0.59911555, 0, -1.40509
 use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="Level/Second/Door2"]
+transform = Transform3D(0.50899553, 0, 0, 0, 0.7397066, 0, 0, 0, 0.50899553, 5.2724687e-09, 0, 0.12062001)
+stream = ExtResource("7_i0v1t")
+volume_db = -5.0
+pitch_scale = 0.4
 
 [node name="Bookshelf" type="Node3D" parent="Level/Second"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 3.7037044, 0, 0)

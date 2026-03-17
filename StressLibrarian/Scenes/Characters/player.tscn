@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=9 format=3 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="4_gy20a"]
 [ext_resource type="Texture2D" uid="uid://bvr5ll6itdcsx" path="res://Assets/UI/black2.jpg" id="4_utp2y"]
 [ext_resource type="Texture2D" uid="uid://d00xq2aoik102" path="res://Assets/UI/RedVignette.png" id="5_khnq4"]
-[ext_resource type="AudioStream" uid="uid://b6mnnfneog1qr" path="res://Assets/Audio/freesound_community-footsteps-on-carpet-106597.mp3" id="7_utp2y"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
 
@@ -151,9 +150,3 @@ theme_override_fonts/font = ExtResource("4_gy20a")
 theme_override_font_sizes/font_size = 56
 text = "S: 0123465789"
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.90000004, 0)
-stream = ExtResource("7_utp2y")
-bus = &"SFX"
-parameters/looping = true
