@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn2xqk0peuljj"
-path.s3tc="res://.godot/imported/fullBookshelfReal_books.jpg-9604040b34f063cd5ceb65ac22092b95.s3tc.ctex"
+uid="uid://bi8u6d3dir5c0"
+path.s3tc="res://.godot/imported/fullbookshelf_fix_bookcase.jpg-9c812035ef106016364c00c10f248889.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "5294ab2dd48cb52819e808b486e30f27"
+}
 
 [deps]
 
-source_file="res://Assets/Models/Bookshelf/fullBookshelfReal_books.jpg"
-dest_files=["res://.godot/imported/fullBookshelfReal_books.jpg-9604040b34f063cd5ceb65ac22092b95.s3tc.ctex"]
+source_file="res://Assets/Models/fullbookshelf_fix_bookcase.jpg"
+dest_files=["res://.godot/imported/fullbookshelf_fix_bookcase.jpg-9c812035ef106016364c00c10f248889.s3tc.ctex"]
 
 [params]
 
