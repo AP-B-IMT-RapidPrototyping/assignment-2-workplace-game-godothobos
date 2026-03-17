@@ -90,11 +90,12 @@ billboard_keep_scale = true
 [sub_resource type="TextMesh" id="TextMesh_f0reb"]
 material = SubResource("StandardMaterial3D_3o5t2")
 text = "Play"
+font = ExtResource("12_f0reb")
 font_size = 86
 horizontal_alignment = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ch2lh"]
-size = Vector3(1.8000001, 1, 0.1)
+size = Vector3(1.9, 1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_juchl"]
 billboard_keep_scale = true
@@ -102,11 +103,12 @@ billboard_keep_scale = true
 [sub_resource type="TextMesh" id="TextMesh_as8ev"]
 material = SubResource("StandardMaterial3D_juchl")
 text = "Settings"
+font = ExtResource("12_f0reb")
 font_size = 86
 horizontal_alignment = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uwu3h"]
-size = Vector3(3.4, 1, 0.1)
+size = Vector3(3.7, 1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch2lh"]
 billboard_keep_scale = true
@@ -114,11 +116,12 @@ billboard_keep_scale = true
 [sub_resource type="TextMesh" id="TextMesh_uwu3h"]
 material = SubResource("StandardMaterial3D_ch2lh")
 text = "Quit"
+font = ExtResource("12_f0reb")
 font_size = 86
 horizontal_alignment = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ggkx6"]
-size = Vector3(1.8000001, 0.90000004, 0.1)
+size = Vector3(1.9, 0.90000004, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as8ev"]
 billboard_keep_scale = true
@@ -126,6 +129,7 @@ billboard_keep_scale = true
 [sub_resource type="TextMesh" id="TextMesh_ch2lh"]
 material = SubResource("StandardMaterial3D_as8ev")
 text = "Back"
+font = ExtResource("12_f0reb")
 font_size = 86
 horizontal_alignment = 2
 
@@ -373,7 +377,7 @@ mesh = SubResource("TextMesh_f0reb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.125, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonPlay/PlayA3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07499981, 0, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 4.4703484e-08, 0.99999905, -4.4703484e-08, -5.9604645e-08, 1.4901161e-08, 0.9999999, -0.125, 0, -4.7683716e-07)
 shape = SubResource("BoxShape3D_ch2lh")
 
 [node name="ButtonSettings" type="MeshInstance3D" parent="MenuOptions"]
@@ -384,7 +388,7 @@ mesh = SubResource("TextMesh_as8ev")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.625001, -0.12500036, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonSettings/SettingsA3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05000019, 0, 0)
+transform = Transform3D(1, 4.284084e-08, 8.34465e-07, 9.313226e-10, 1, 1.1175871e-08, -7.748604e-07, -2.9802322e-08, 1, -0.20000029, 0, 0)
 shape = SubResource("BoxShape3D_uwu3h")
 
 [node name="ButtonQuit" type="MeshInstance3D" parent="MenuOptions"]
@@ -395,7 +399,7 @@ mesh = SubResource("TextMesh_uwu3h")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.12500006, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonQuit/QuitA3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0.049999952, 0)
+transform = Transform3D(1, -7.450581e-09, 0, 0, 0.9999985, -3.5762787e-07, 0, 7.4505806e-08, 1, -0.17499971, 0.049999952, -1.1920929e-07)
 shape = SubResource("BoxShape3D_ggkx6")
 
 [node name="ButtonBack" type="MeshInstance3D" parent="MenuOptions"]

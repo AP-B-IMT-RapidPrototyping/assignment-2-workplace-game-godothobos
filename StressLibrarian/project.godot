@@ -14,11 +14,20 @@ config/name="Stress Librarian"
 config/tags=PackedStringArray("ap")
 run/main_scene="uid://dy53kd20h4anj"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+run/max_fps=100
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://Scripts/Global/GameManager.cs"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=4
+window/size/resizable=false
+window/vsync/vsync_mode=2
 
 [dotnet]
 
@@ -97,3 +106,7 @@ drop={
 3d_physics/layer_2="player"
 3d_physics/layer_3="entity"
 3d_physics/layer_4="interact"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

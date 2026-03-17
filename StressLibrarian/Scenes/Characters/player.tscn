@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=9 format=3 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="4_gy20a"]
 [ext_resource type="Texture2D" uid="uid://bvr5ll6itdcsx" path="res://Assets/UI/black2.jpg" id="4_utp2y"]
 [ext_resource type="Texture2D" uid="uid://d00xq2aoik102" path="res://Assets/UI/RedVignette.png" id="5_khnq4"]
-[ext_resource type="Texture2D" uid="uid://dd2l7w4qnd0w1" path="res://Assets/UI/VignetteText.png" id="6_utp2y"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
 
@@ -84,7 +83,6 @@ grow_vertical = 2
 scale = Vector2(1.23, 1.23)
 pivot_offset = Vector2(612, 350)
 mouse_filter = 2
-texture = ExtResource("6_utp2y")
 
 [node name="Dark" type="TextureRect" parent="UI/StressView"]
 modulate = Color(1, 1, 1, 0.34117648)

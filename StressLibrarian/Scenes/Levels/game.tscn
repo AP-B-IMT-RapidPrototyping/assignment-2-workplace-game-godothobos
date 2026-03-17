@@ -29,8 +29,9 @@ normal_texture = ExtResource("3_osokm")
 uv1_scale = Vector3(0.15, 0.15, 0.15)
 uv1_triplanar = true
 
-[node name="Game" type="Node3D"]
+[node name="Game" type="Node3D" node_paths=PackedStringArray("_stressTimer")]
 script = ExtResource("1_i10s3")
+_stressTimer = NodePath("StressTimer")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_o86a8")
