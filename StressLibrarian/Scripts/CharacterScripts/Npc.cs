@@ -257,7 +257,7 @@ public partial class Npc : CharacterBody3D
 
         if ((_state == NPCState.IDLE || _state == NPCState.WANDER) && _actionCooldown <= 0)
         {
-            ChooseNextAction();
+            ChooseNextAction(); 
         }
 
         switch (_state)
