@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=14 format=3 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
@@ -14,15 +14,29 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e2x16"]
 radius = 0.4
+height = 3.2
 
-[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_models")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85o64"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.49411765)
+
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_navAgent", "_models", "_raycastNpc")]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_85o64")
+_navAgent = NodePath("NavigationAgent3D")
 _models = NodePath("Models")
+_raycastNpc = NodePath("NpcRaycast")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="NpcCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_e2x16")
+
+[node name="NpcRaycast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 6)
+collision_mask = 2
 
 [node name="Models" type="Node3D" parent="."]
 
@@ -310,6 +324,10 @@ bones/29/rotation = Quaternion(-0.010016722, 0.0005158436, -0.05638669, 0.998358
 bones/30/rotation = Quaternion(0.34997398, -0.57672435, 0.3407169, 0.654843)
 
 [node name="ActionCooldown" type="Timer" parent="."]
+
+[node name="DELETEME" type="CSGBox3D" parent="."]
+transform = Transform3D(0.21000001, 0, 0, 0, 0.21000001, 0, 0, 0, 0.21000001, 0, 0, 5.9)
+material = SubResource("StandardMaterial3D_85o64")
 
 [editable path="Models/Char1"]
 [editable path="Models/Char2"]
