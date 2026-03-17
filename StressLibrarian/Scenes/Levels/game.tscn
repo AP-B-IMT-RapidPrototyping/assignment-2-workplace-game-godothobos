@@ -29,9 +29,6 @@ normal_texture = ExtResource("3_osokm")
 uv1_scale = Vector3(0.15, 0.15, 0.15)
 uv1_triplanar = true
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o86a8"]
-points = PackedVector3Array(-1.0125, 0, -0.24999999, 1.0125, 0, -0.24999999, -1.0125, 0, 0.24999999, -1.0125, 2.5, -0.24999999, 1.0125, 0, 0.24999999, 1.0125, 2.5, -0.24999999, -1.0125, 2.5, 0.24999999, 1.0125, 2.5, 0.24999999)
-
 [node name="Game" type="Node3D"]
 script = ExtResource("1_i10s3")
 

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://btji4elt5lu2p"]
+
+[ext_resource type="PackedScene" uid="uid://cro2dtp0unao6" path="res://Assets/OFFICE/book_things/book_case_with_back.glb" id="1_qt6bf"]
+[ext_resource type="PackedScene" uid="uid://c7fd7fgrssq3s" path="res://Assets/OFFICE/book_things/books_alt.glb" id="2_umtkv"]
+[ext_resource type="PackedScene" uid="uid://d0asl1bvt7wql" path="res://Assets/OFFICE/book_things/books_alt2.glb" id="3_cp1vp"]
+[ext_resource type="PackedScene" uid="uid://bgyiq6o1cl482" path="res://Assets/OFFICE/book_things/books.glb" id="4_vbtme"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2cqli"]
+points = PackedVector3Array(-1.0125, 0, -0.24999999, 1.0125, 0, -0.24999999, -1.0125, 0, 0.24999999, -1.0125, 2.5, -0.24999999, 1.0125, 0, 0.24999999, 1.0125, 2.5, -0.24999999, -1.0125, 2.5, 0.24999999, 1.0125, 2.5, 0.24999999)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="book_case_with_back2" parent="." instance=ExtResource("1_qt6bf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="book_case_with_back2/book_case_with_back" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book_case_with_back2/book_case_with_back/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2cqli")
+
+[node name="books_alt2" parent="book_case_with_back2" instance=ExtResource("2_umtkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.025, 0)
+
+[node name="books_alt5" parent="book_case_with_back2" instance=ExtResource("2_umtkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.915, 0)
+
+[node name="books_alt4" parent="book_case_with_back2" instance=ExtResource("2_umtkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1.33, 0)
+
+[node name="books_alt3" parent="book_case_with_back2" instance=ExtResource("2_umtkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.65, 0)
+
+[node name="books_alt22" parent="book_case_with_back2" instance=ExtResource("3_cp1vp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.025, 0)
+
+[node name="books_alt24" parent="book_case_with_back2" instance=ExtResource("3_cp1vp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 1.915, 0)
+
+[node name="books_alt23" parent="book_case_with_back2" instance=ExtResource("3_cp1vp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.33, 0)
+
+[node name="books2" parent="book_case_with_back2" instance=ExtResource("4_vbtme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.025, 0)
+
+[node name="books3" parent="book_case_with_back2" instance=ExtResource("4_vbtme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59999996, 0.65000004, 0)
+
+[node name="books4" parent="book_case_with_back2" instance=ExtResource("4_vbtme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.65, 0)
+
+[node name="books5" parent="book_case_with_back2" instance=ExtResource("4_vbtme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.33, 0)
+
+[node name="books6" parent="book_case_with_back2" instance=ExtResource("4_vbtme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.915, 0)
+
+[editable path="book_case_with_back2"]

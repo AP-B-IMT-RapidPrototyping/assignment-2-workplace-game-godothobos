@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg7urksg1jrvg"
-path.s3tc="res://.godot/imported/Wood_15-128x128.png-5b10232541b36e90f53a1efd6c1c199e.s3tc.ctex"
+uid="uid://w0tt82krt4ms"
+path.s3tc="res://.godot/imported/new_bookshelf_Image_0.png-87acb04193beb1bc38dca9705f22b17f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "6439817b777d8925cb00a0faf4a668b1"
+}
 
 [deps]
 
-source_file="res://Assets/Textures/128x128/Wood/Wood_15-128x128.png"
-dest_files=["res://.godot/imported/Wood_15-128x128.png-5b10232541b36e90f53a1efd6c1c199e.s3tc.ctex"]
+source_file="res://Assets/Models/new_bookshelf_Image_0.png"
+dest_files=["res://.godot/imported/new_bookshelf_Image_0.png-87acb04193beb1bc38dca9705f22b17f.s3tc.ctex"]
 
 [params]
 
