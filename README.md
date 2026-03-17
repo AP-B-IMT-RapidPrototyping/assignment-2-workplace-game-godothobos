@@ -32,9 +32,8 @@ The goal is to get the highest score OR finish a shift. (difficulty meter)
 ### Mechanics
 - You have a box and there is a shelve, the box type must match the correct shelve type (SCI-FI box goes into SCI-FI shelve)
 - Shushing customers (timed event?)
-- Escort customers, you can encounter lost customers, they will politely ask you where X-type books are located, you must bring the customer to the right place and give you stress as long as they are following you.
+- You can encounter lost customers, they will *'politely'* ask you where X-type books are located, you must bring the customer to the right place and give you stress as long as they are following you.
 - Sprinting, saves you time but gives you stress
-- The Cart (WIP), acts as mobile inventory, phyiscs based (inspired from R.E.P.O.), can hold X amount of boxes
 
 
 ## Story / Immserive design
