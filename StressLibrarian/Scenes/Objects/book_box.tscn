@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkv00167nj6f8"]
+[gd_scene load_steps=9 format=3 uid="uid://dkv00167nj6f8"]
 
 [ext_resource type="Script" uid="uid://eh7ti6cd2rsv" path="res://Scripts/SceneScripts/BookBox.cs" id="1_70typ"]
 [ext_resource type="PackedScene" uid="uid://ctb5khcwslx2h" path="res://Assets/Models/CardboardBox/CardboardBox.glb" id="2_dqkcp"]
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="2_wt7lm"]
 [ext_resource type="PackedScene" uid="uid://c4bgkki7u77lx" path="res://Assets/Models/StickyNote/StickyNote.glb" id="4_jn6l7"]
+[ext_resource type="AudioStream" uid="uid://e6f4v2cjl3mb" path="res://Assets/Audio/sounds/box/puckup_box_sound.wav" id="5_kqm5l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wt7lm"]
 
@@ -63,5 +64,8 @@ visible = false
 [node name="BoxCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("BoxShape3D_70typ")
+
+[node name="falling_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_kqm5l")
 
 [editable path="Model/StickyNote"]

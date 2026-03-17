@@ -40,6 +40,8 @@ public partial class Player : CharacterBody3D
     [Export] private Control _stressView;
     [Export] private Label _stressLabel;
 
+    /* AUDIO EXPORTS */
+    [Export] private AudioStreamPlayer3D pickupSound;
 
     /* STATE MACHINE */
     private PlayerState playerState = PlayerState.IDLE;
@@ -104,6 +106,8 @@ public partial class Player : CharacterBody3D
                 {
                     GD.Print($"INTERACTION: PICKUP: {collider.Name}");
                     picked_object = collider as RigidBody3D;
+                    if (_grabUI.Visible==true)
+                        pickupSound.Play();
                 }
                 if (collider != null && collider.IsInGroup("interact_NPC"))
                 {

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="5_yla1s"]
 [ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="6_osokm"]
 [ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="7_o86a8"]
-[ext_resource type="PackedScene" uid="uid://dcfbqrap3joop" path="res://Scenes/Characters/npc.tscn" id="8_ce5c8"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/npc.tscn" id="8_ce5c8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yla1s"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
