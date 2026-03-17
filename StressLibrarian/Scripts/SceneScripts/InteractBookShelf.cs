@@ -4,14 +4,55 @@ using System;
 public partial class InteractBookShelf : Node3D
 {
     [Export] private MeshInstance3D _textMesh;
-    [Export] private Area3D Area3D;
-    public BookGenre shelfGenre;
+    [Export] private Node3D _booksFull;
+    [Export] public BookGenre shelfGenre;
+    [Export] public bool Randomize = true;
+
+    private float _reduceStress = 10f;
 
 
     public override void _Ready()
     {
+        AddToGroup("bookshelves");
+
         var values = Enum.GetValues(typeof(BookGenre));
-        shelfGenre = (BookGenre)values.GetValue(GD.RandRange(0, values.Length - 1));
+
+        int shelfCount = GetTree().GetNodesInGroup("bookshelves").Count;
+        int genreCount = values.Length;
+
+        if (Randomize)
+        {
+            if (shelfCount <= genreCount)
+            {
+                bool unique = false;
+
+                while (!unique)
+                {
+                    shelfGenre = (BookGenre)values.GetValue(GD.RandRange(0, genreCount - 1));
+                    unique = true;
+
+                    foreach (Node node in GetTree().GetNodesInGroup("bookshelves"))
+                    {
+                        if (node == this)
+                            continue;
+
+                        if (node is InteractBookShelf shelf)
+                        {
+                            if (shelf.shelfGenre == shelfGenre)
+                            {
+                                unique = false;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                shelfGenre = (BookGenre)values.GetValue(GD.RandRange(0, genreCount -1));
+            }
+        }
+
         GD.Print($"shelf: {shelfGenre}");
 
         if (_textMesh.Mesh != null)
@@ -45,12 +86,14 @@ public partial class InteractBookShelf : Node3D
     private void CorrectBook(BookBox book)
     {
         GD.Print("good boy");
-        
+
         var player = GetTree().GetFirstNodeInGroup("player") as Player;
         if (player != null)
-        player.HandleForceDropObject(book);
-        
+            player.HandleForceDropObject(book);
+
         book.QueueFree();
+        GameManager.stress -= _reduceStress;
+        FillBooks();
     }
 
     private void WrongBook(BookBox book)
@@ -58,4 +101,14 @@ public partial class InteractBookShelf : Node3D
         GD.Print("wrong book");
     }
 
+
+    private void EmptyBooks()
+    {
+        _booksFull.Visible = false;
+    }
+
+    private void FillBooks()
+    {
+        _booksFull.Visible = true;
+    }
 }

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4yrv5lao2xi"
-path.s3tc="res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"
+uid="uid://dx5xt3ie6tj6c"
+path.s3tc="res://.godot/imported/CardboardBox_2.png-6f7b45b576743efc1ac60a5ea5c822a1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "3df4f7fb9e7ba5fd993802729ec515aa"
+}
 
 [deps]
 
-source_file="res://Assets/UI/hand grab.png"
-dest_files=["res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"]
+source_file="res://Assets/Models/CardboardBox/CardboardBox_2.png"
+dest_files=["res://.godot/imported/CardboardBox_2.png-6f7b45b576743efc1ac60a5ea5c822a1.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Assets/Models/CardboardBox_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5wbv44yg2la8"
-path="res://.godot/imported/Character_18_Female_Police.fbx-f2360bc615f7a9f701df24931bc9698b.scn"
+uid="uid://bjorhglvirvms"
+path="res://.godot/imported/wall-sign.fbx-68610e09fd5ca74f86b96e4b5493e932.scn"
 
 [deps]
 
-source_file="res://Assets/OFFICE/Character_18_Female_Police.fbx"
-dest_files=["res://.godot/imported/Character_18_Female_Police.fbx-f2360bc615f7a9f701df24931bc9698b.scn"]
+source_file="res://Assets/Models/HangingSign/wall-sign.fbx"
+dest_files=["res://.godot/imported/wall-sign.fbx-68610e09fd5ca74f86b96e4b5493e932.scn"]
 
 [params]
 

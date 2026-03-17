@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4yrv5lao2xi"
-path.s3tc="res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"
+uid="uid://b8y7cb5g5yqu4"
+path.s3tc="res://.godot/imported/Good.png-d330b44c5328ea63fc28253e168696b6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/UI/hand grab.png"
-dest_files=["res://.godot/imported/hand grab.png-038b1377a2b223c878ed05d0e284c441.s3tc.ctex"]
+source_file="res://Assets/UI/Good.png"
+dest_files=["res://.godot/imported/Good.png-d330b44c5328ea63fc28253e168696b6.s3tc.ctex"]
 
 [params]
 
