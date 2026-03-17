@@ -31,6 +31,11 @@ mesh = SubResource("CapsuleMesh_j6hkg")
 [node name="PlayerCollision" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_3etf2")
 
+[node name="OmniLight" type="OmniLight3D" parent="."]
+light_color = Color(0.83137256, 0.7764706, 0.7411765, 1)
+light_energy = 0.5
+omni_range = 4.0
+
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 fov = 90.0
