@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=4 uid="uid://b0kpflec4ydky"]
+[gd_scene load_steps=131 format=4 uid="uid://b0kpflec4ydky"]
 
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="1_dqej6"]
 [ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="2_l0gcx"]
@@ -47,7 +47,9 @@
 [ext_resource type="PackedScene" uid="uid://dby6tuv675wde" path="res://Assets/OFFICE/carpet_floor/floor_3x3.glb" id="45_s0gnd"]
 [ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="46_kdidu"]
 [ext_resource type="MeshLibrary" uid="uid://cclvr03ds8roq" path="res://Assets/MeshLibrary/SmallEmptyBookshelf.tres" id="49_23naa"]
+[ext_resource type="Script" uid="uid://buuk8cytol5c3" path="res://Scripts/Spawn/BoxSpawn.cs" id="49_jl3u2"]
 [ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="50_23naa"]
+[ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="50_l0gcx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dqej6"]
 sky_top_color = Color(0.5112871, 0.38152397, 0.20931897, 1)
@@ -407,7 +409,6 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
-visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)
@@ -2541,6 +2542,65 @@ transform = Transform3D(1.9841906e-09, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.9
 
 [node name="InteractBookShelf6" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
 transform = Transform3D(8.543858e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 8.543858e-08, 11.375, 0, -25.35)
+
+[node name="BoxSpawnPoints" type="Node3D" parent="."]
+visible = false
+
+[node name="SpawnPoint" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="SpawnPoint2" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="SpawnPoint3" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="SpawnPoint4" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="SpawnPoint5" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="SpawnPoint6" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="BoxSpawnManager" type="Node3D" parent="."]
+script = ExtResource("49_jl3u2")
+
+[node name="Timer" type="Timer" parent="BoxSpawnManager"]
+autostart = true
+
+[node name="Dozen" type="Node3D" parent="."]
+
+[node name="BookBox" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.4000006, 0.70000005, 6.3)
+
+[node name="BookBox2" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.4000006, 0.70000005, -22.400002)
+
+[node name="BookBox3" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6999993, 0.70000005, -9.200002)
+
+[node name="BookBox4" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.799999, 0.70000005, -25.800001)
+
+[node name="BookBox5" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 0.70000005, -43.9)
+
+[node name="BookBox6" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 0.70000005, -31.100002)
+
+[node name="BookBox7" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3, 0.70000005, -29.100002)
+
+[node name="BookBox8" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0.70000005, -13.300002)
+
+[node name="BookBox9" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0.70000005, 1.1999979)
+
+[node name="BookBox10" parent="Dozen" instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59999955, 0.70000005, -9.000002)
 
 [editable path="Map/NavigationRegion3D/Building/Objects/desk2_weathered6"]
 [editable path="Map/NavigationRegion3D/Building/Objects/desk2_weathered8"]
