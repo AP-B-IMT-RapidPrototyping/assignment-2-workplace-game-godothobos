@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dy53kd20h4anj"]
+[gd_scene load_steps=42 format=3 uid="uid://dy53kd20h4anj"]
 
 [ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="1_as8ev"]
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://ckc5uftems0to" path="res://Scripts/SceneScripts/MenuOptions.cs" id="11_juchl"]
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="12_f0reb"]
 [ext_resource type="AudioStream" uid="uid://d0clw5vg3n8lk" path="res://Assets/Audio/SoundUI/UI click.mp3" id="13_as8ev"]
+[ext_resource type="Script" uid="uid://dq840dda486a6" path="res://Scripts/SceneScripts/AskTutorial.cs" id="15_ch2lh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f0reb"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -150,7 +151,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(4.5, 7.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.201, 0.01), Vector3(1, 1.201, 3.31)]
+"values": [Vector3(0, 1.201, 0.01), Vector3(1, 1.201, 3.8)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -239,6 +240,30 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AskTutorial:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AskTutorial:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_juchl"]
 resource_name = "ViewSettings"
@@ -268,17 +293,40 @@ tracks/1/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="Animation" id="Animation_as8ev"]
-resource_name = "ViewStartGame"
-length = 2.0
+[sub_resource type="Animation" id="Animation_ch2lh"]
+resource_name = "ViewPlay"
 step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AskTutorial:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AskTutorial:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_juchl"]
 _data = {
 &"Intro": SubResource("Animation_3o5t2"),
 &"RESET": SubResource("Animation_f0reb"),
-&"ViewSettings": SubResource("Animation_juchl"),
-&"ViewStartGame": SubResource("Animation_as8ev")
+&"ViewPlay": SubResource("Animation_ch2lh"),
+&"ViewSettings": SubResource("Animation_juchl")
 }
 
 [node name="Main Menu" type="Node3D"]
@@ -403,7 +451,7 @@ transform = Transform3D(1, -7.450581e-09, 0, 0, 0.9999985, -3.5762787e-07, 0, 7.
 shape = SubResource("BoxShape3D_ggkx6")
 
 [node name="ButtonBack" type="MeshInstance3D" parent="MenuOptions"]
-transform = Transform3D(0.4179988, -0.1476361, 0.6659434, 0, 0.7810368, 0.1731517, -0.68211216, -0.0904715, 0.40809056, -3.09, 0.7, 0.185)
+transform = Transform3D(0.35640317, -0.097155124, 0.7096037, 0.009100889, 0.7931558, 0.10402363, -0.71616614, -0.038270406, 0.35445938, -2.3079987, 0.7, 1.3671122)
 visible = false
 mesh = SubResource("TextMesh_ch2lh")
 
@@ -474,6 +522,76 @@ theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 91
 text = "Stressed Librarian"
 
+[node name="AskTutorial" type="Control" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("15_ch2lh")
+
+[node name="Background" type="ColorRect" parent="AskTutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.40392157)
+
+[node name="Question" type="Label" parent="AskTutorial"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -373.0
+offset_top = 45.0
+offset_right = 373.0
+offset_bottom = 186.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("12_f0reb")
+theme_override_font_sizes/font_size = 60
+text = "Do you want to play
+the tutorial first?"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="AskTutorial"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -38.5
+offset_right = 350.0
+offset_bottom = 51.5
+grow_vertical = 2
+pivot_offset = Vector2(75, 45)
+theme_override_fonts/font = ExtResource("12_f0reb")
+theme_override_font_sizes/font_size = 60
+text = "Yes"
+
+[node name="Tutorial" type="Button" parent="AskTutorial"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -45.0
+offset_right = -200.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(75, 45)
+theme_override_fonts/font = ExtResource("12_f0reb")
+theme_override_font_sizes/font_size = 60
+text = "No"
+
 [connection signal="input_event" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartPressed"]
 [connection signal="mouse_entered" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartEntered"]
 [connection signal="mouse_exited" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartExited"]
@@ -486,5 +604,7 @@ text = "Stressed Librarian"
 [connection signal="input_event" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackPressed"]
 [connection signal="mouse_entered" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackEntered"]
 [connection signal="mouse_exited" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackExited"]
+[connection signal="pressed" from="AskTutorial/Play" to="AskTutorial" method="OnYesPressed"]
+[connection signal="pressed" from="AskTutorial/Tutorial" to="AskTutorial" method="OnNoPressed"]
 
 [editable path="Decoration/Desk/MODIFIED_Office_Chair"]

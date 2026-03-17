@@ -16,6 +16,7 @@ public partial class MenuOptions : Node3D
 
     private Color color;
 
+    [Export] private Control _askTutorial;
     [Export] private AnimationPlayer _animationManager;
     [Export] private AudioStreamPlayer _hoverUI;
     [Export] private AudioStreamPlayer _clickUI;
@@ -70,8 +71,7 @@ public partial class MenuOptions : Node3D
         if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)
         {
             _clickUI.Play();
-            _animationManager.Play("ViewStartGame");
-            GetTree().ChangeSceneToFile("res://scenes/levels/game.tscn");
+            _animationManager.Play("ViewPlay");
         }
     }
 
