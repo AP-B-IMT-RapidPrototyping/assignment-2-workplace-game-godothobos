@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt8svyfqkplxn"]
+[gd_scene load_steps=14 format=3 uid="uid://bt8svyfqkplxn"]
 
 [ext_resource type="Script" uid="uid://bhlc50vl6jnju" path="res://Scripts/SceneScripts/Game.cs" id="1_i10s3"]
 [ext_resource type="Texture2D" uid="uid://drvhsd5m2lj23" path="res://Assets/Textures/plank_flooring_04_1k/textures/plank_flooring_04_diff_1k.png" id="2_yla1s"]
@@ -22,6 +22,11 @@ sky = SubResource("Sky_osokm")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_ce5c8"]
+vertices = PackedVector3Array(-3.75, 0.5, -7.5, -3, 0.5, -7.75, -3, 0.5, -24.5, -24.5, 0.5, -24.5, -24.5, 0.5, -6.25, -3.75, 0.5, -6, -2, 0.5, -7.5, -2, 0.5, -5.75, 2.25, 0.5, -5.75, 2.25, 0.5, -7.5, 3.25, 0.5, -7.75, 3.25, 0.5, -24.5, 4, 0.5, -7.5, 24.5, 0.5, -5.5, 24.5, 0.5, -24.5, 4, 0.5, -5.5, -24.5, 0.5, 6.25, -3.75, 0.5, 6, -2, 0.5, 5.75, 2.25, 0.5, 5.75, 4, 0.5, 5.5, 24.5, 0.5, 5.5, 4, 0.5, 7.5, 3.25, 0.5, 7.75, 3.25, 0.5, 24.5, 24.5, 0.5, 24.5, 2.25, 0.5, 7.5, -2, 0.5, 7.5, -3, 0.5, 7.75, -3, 0.5, 24.5, -3.75, 0.5, 7.5, -24.5, 0.5, 24.5)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(9, 8, 6), PackedInt32Array(6, 8, 7), PackedInt32Array(6, 1, 9), PackedInt32Array(9, 1, 10), PackedInt32Array(10, 1, 2), PackedInt32Array(10, 2, 11), PackedInt32Array(10, 11, 12), PackedInt32Array(12, 11, 14), PackedInt32Array(12, 14, 13), PackedInt32Array(13, 15, 12), PackedInt32Array(17, 16, 5), PackedInt32Array(5, 16, 4), PackedInt32Array(7, 8, 18), PackedInt32Array(18, 8, 19), PackedInt32Array(15, 13, 20), PackedInt32Array(20, 13, 21), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(25, 22, 21), PackedInt32Array(22, 20, 21), PackedInt32Array(27, 18, 26), PackedInt32Array(26, 18, 19), PackedInt32Array(26, 23, 27), PackedInt32Array(27, 23, 28), PackedInt32Array(28, 23, 24), PackedInt32Array(28, 24, 29), PackedInt32Array(28, 29, 30), PackedInt32Array(30, 29, 31), PackedInt32Array(30, 31, 16), PackedInt32Array(16, 17, 30)]
+agent_max_climb = 0.05
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yla1s"]
 albedo_texture = ExtResource("2_yla1s")
 roughness_texture = ExtResource("4_o86a8")
@@ -44,44 +49,46 @@ shadow_enabled = true
 [node name="StressTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="Floor" type="CSGBox3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ce5c8")
+
+[node name="Map" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="Floor" type="CSGBox3D" parent="NavigationRegion3D/Map"]
 use_collision = true
 size = Vector3(50, 0, 50)
 material = SubResource("StandardMaterial3D_yla1s")
 
-[node name="Player" parent="." instance=ExtResource("5_yla1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="BookShelves" type="Node3D" parent="NavigationRegion3D/Map"]
 
-[node name="BookShelves" type="Node3D" parent="."]
-
-[node name="InteractBookShelf" parent="BookShelves" groups=["interact_npc"] instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf" parent="NavigationRegion3D/Map/BookShelves" groups=["interact_npc"] instance=ExtResource("7_o86a8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -6)
 
-[node name="InteractBookShelf2" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf2" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -3)
 
-[node name="InteractBookShelf3" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf3" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 0)
 
-[node name="InteractBookShelf4" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf4" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 3)
 
-[node name="InteractBookShelf5" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf5" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 6)
 
-[node name="InteractBookShelf6" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf6" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3.0000005, 0, 6)
 
-[node name="InteractBookShelf7" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf7" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3.0000002, 0, 3)
 
-[node name="InteractBookShelf8" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf8" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3, 0, 0)
 
-[node name="InteractBookShelf9" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf9" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2.9999998, 0, -3)
 
-[node name="InteractBookShelf10" parent="BookShelves" instance=ExtResource("7_o86a8")]
+[node name="InteractBookShelf10" parent="NavigationRegion3D/Map/BookShelves" instance=ExtResource("7_o86a8")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2.9999995, 0, -6)
 
 [node name="BookBoxes" type="Node3D" parent="."]
@@ -131,7 +138,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 
 [node name="BookBox15" parent="BookBoxes" instance=ExtResource("6_osokm")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 3, -11)
 
-[node name="NPC" parent="." instance=ExtResource("8_ce5c8")]
+[node name="Player" parent="." instance=ExtResource("5_yla1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="NPC" parent="." node_paths=PackedStringArray("_navRegion") instance=ExtResource("8_ce5c8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6)
+_navRegion = NodePath("../NavigationRegion3D")
 
 [connection signal="timeout" from="StressTimer" to="." method="OnStressTimerTimeout"]

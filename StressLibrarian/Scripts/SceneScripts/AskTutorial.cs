@@ -10,6 +10,6 @@ public partial class AskTutorial : Control
 
     private void OnNoPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/game.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/levels/Library.tscn");
     }
 }
