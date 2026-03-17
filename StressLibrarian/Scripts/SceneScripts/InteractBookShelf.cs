@@ -92,7 +92,7 @@ public partial class InteractBookShelf : Node3D
             player.HandleForceDropObject(book);
 
         book.QueueFree();
-        GameManager.stress -= _reduceStress;
+        GameManager.Stress -= _reduceStress;
         FillBooks();
     }
 

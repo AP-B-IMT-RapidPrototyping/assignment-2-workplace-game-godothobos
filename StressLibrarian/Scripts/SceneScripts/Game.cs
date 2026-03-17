@@ -8,6 +8,6 @@ public partial class Game : Node3D
 
     private void OnStressTimerTimeout()
     {
-        GameManager.stress++;
+        GameManager.Stress++;
     }
 }

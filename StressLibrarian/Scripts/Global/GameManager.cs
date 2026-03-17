@@ -3,7 +3,13 @@ using System;
 
 public partial class GameManager : Node
 {
-    public static float stress = 0;
+    public static float Stress = 0;
+    public static float Difficulty = 0;
+
+    public static int ActiveLoudNPC = 0;
+    public static int ActiveLoudNPCMax = 3;
+    public static int ActiveAskNPC = 0;
+    public static int ActiveAskNPCMax = 1;
 
 
     private void OnDead()
@@ -13,13 +19,17 @@ public partial class GameManager : Node
 
     public override void _PhysicsProcess(double delta)
     {
-        if (stress >= 100)
+        if (Stress >= 100)
         {
-            stress = 100;
+            Stress = 100;
             OnDead();
         }
 
-        if (stress <= 0)
-            stress = 0;
+        if (Stress <= 0)
+            Stress = 0;
+
+
+        if (Difficulty >= 100)
+            Difficulty = 100;
     }
 }

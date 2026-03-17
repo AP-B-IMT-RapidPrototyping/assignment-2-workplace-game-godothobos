@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=43 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="8_sghjv"]
 [ext_resource type="Texture2D" uid="uid://b8y7cb5g5yqu4" path="res://Assets/UI/Good.png" id="10_mnia5"]
 [ext_resource type="Texture2D" uid="uid://cyov4x08gw852" path="res://Assets/UI/Bad.png" id="11_sghjv"]
+[ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="12_qvtqq"]
 
 [sub_resource type="Sky" id="Sky_l2k66"]
 
@@ -209,7 +210,7 @@ material = SubResource("StandardMaterial3D_mj38t")
 
 [sub_resource type="Animation" id="Animation_i0v1t"]
 resource_name = "Open2"
-length = 3.0
+length = 8.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -262,7 +263,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../InteractBookShelf/ShelfLight:light_energy")
+tracks/4/path = NodePath("../Bookshelf/InteractBookShelf/ShelfLight:light_energy")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -274,7 +275,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../InteractBookShelf2/ShelfLight:light_energy")
+tracks/5/path = NodePath("../Bookshelf/InteractBookShelf2/ShelfLight:light_energy")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -282,6 +283,126 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [6.0, 0.5]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Third/LightsShelves/Light10:spot_angle")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Third/LightsShelves/Light:spot_angle")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Third/LightsShelves/Light2:spot_angle")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Third/LightsShelves/Light3:spot_angle")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../Third/LightsShelves/Light4:spot_angle")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../Third/LightsShelves/Light5:spot_angle")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../Third/LightsShelves/Light6:spot_angle")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../Third/LightsShelves/Light7:spot_angle")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../Third/LightsShelves/Light8:spot_angle")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../Third/LightsShelves/Light9:spot_angle")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(3, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 28.0]
 }
 
 [sub_resource type="Animation" id="Animation_0mdj5"]
@@ -337,7 +458,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../InteractBookShelf/ShelfLight:light_energy")
+tracks/4/path = NodePath("../Bookshelf/InteractBookShelf/ShelfLight:light_energy")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -349,7 +470,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../InteractBookShelf2/ShelfLight:light_energy")
+tracks/5/path = NodePath("../Bookshelf/InteractBookShelf2/ShelfLight:light_energy")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -357,6 +478,126 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [6.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Third/LightsShelves/Light10:spot_angle")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Third/LightsShelves/Light:spot_angle")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Third/LightsShelves/Light2:spot_angle")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Third/LightsShelves/Light3:spot_angle")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../Third/LightsShelves/Light4:spot_angle")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../Third/LightsShelves/Light5:spot_angle")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../Third/LightsShelves/Light6:spot_angle")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../Third/LightsShelves/Light7:spot_angle")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../Third/LightsShelves/Light8:spot_angle")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../Third/LightsShelves/Light9:spot_angle")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_35mx6"]
@@ -370,9 +611,9 @@ albedo_color = Color(0, 0.44705883, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_0mdj5"]
 material = SubResource("StandardMaterial3D_i0v1t")
-text = "A+A"
+text = "HORROR→HORROR"
 font = ExtResource("8_sghjv")
-font_size = 127
+font_size = 52
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvtqq"]
 transparency = 1
@@ -386,9 +627,9 @@ albedo_color = Color(0.6156863, 0, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_sghjv"]
 material = SubResource("StandardMaterial3D_mnia5")
-text = "A+B"
+text = "HORROR↛SCIFI"
 font = ExtResource("8_sghjv")
-font_size = 127
+font_size = 52
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35mx6"]
 transparency = 1
@@ -413,15 +654,16 @@ transform = Transform3D(0.80999994, 0, 0, 0, 0.80999994, 0, 0, 0, 0.80999994, 0,
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Floor" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -20.500006, 0, 0)
 use_collision = true
-size = Vector3(60, 0, 15)
+size = Vector3(101, 0, 33.600002)
 material = SubResource("StandardMaterial3D_idsh5")
 
 [node name="Roof" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, 5.0061736, 0)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -18.000004, 5.0061736, 0)
+visible = false
 use_collision = true
-size = Vector3(60, 0, 15)
+size = Vector3(96, 0, 22)
 material = SubResource("StandardMaterial3D_idsh5")
 
 [node name="WallLeft" type="CSGBox3D" parent="Level/Building"]
@@ -431,7 +673,7 @@ size = Vector3(60, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallRight" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 2.8000004, -3.7500005)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, 2.8000007, -3.7500005)
 use_collision = true
 size = Vector3(60, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
@@ -442,10 +684,34 @@ use_collision = true
 size = Vector3(16.5, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallEnd" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-4.3711395e-08, 0, 1.0000001, 0, 1.0000001, 0, -1.0000001, 0, -4.3711395e-08, -30.000004, 2.8000004, -0.75000006)
+[node name="WallThirdBack" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, 7.0075183)
 use_collision = true
-size = Vector3(16.5, 5.6, 0.5)
+size = Vector3(7, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallThirdBack2" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, -7.0095687)
+use_collision = true
+size = Vector3(7, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallThirdRight" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -47.412, 2.8, -10.296296)
+use_collision = true
+size = Vector3(35.8, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallThirdLeft" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -47.412, 2.8, 10.296296)
+use_collision = true
+size = Vector3(35.8, 5.6, 0.5)
+material = SubResource("StandardMaterial3D_iol1o")
+
+[node name="WallThirdEnd" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -65.061386, 2.8, -0.030248923)
+use_collision = true
+size = Vector3(21.1, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="Light" type="Node3D" parent="Level/Building"]
@@ -634,23 +900,26 @@ use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="InteractBookShelf" parent="Level/Second" instance=ExtResource("6_mhlsa")]
-transform = Transform3D(-1.2345679, 0, -1.4717196e-07, 0, 1.2345679, 0, 1.4717196e-07, 0, -1.2345679, 4.9382715, 0, 3.0864196)
+[node name="Bookshelf" type="Node3D" parent="Level/Second"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 3.7037044, 0, 0)
+
+[node name="InteractBookShelf" parent="Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1.2345676, 0, -1.4717193e-07, 0, 1.2345676, 0, 1.4717193e-07, 0, -1.2345676, 1.234567, 0, 3.086419)
 Randomize = false
 
-[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/InteractBookShelf"]
+[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/Bookshelf/InteractBookShelf"]
 transform = Transform3D(1, 9.13196e-08, 1.9583555e-07, -9.131961e-08, -0.6427877, 0.7660444, 1.9583555e-07, -0.7660444, -0.6427877, -2.3841858e-07, 4.4, 2.5)
 light_energy = 6.0
 spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 30.0
 
-[node name="InteractBookShelf2" parent="Level/Second" instance=ExtResource("6_mhlsa")]
-transform = Transform3D(1.2345679, 0, 3.9242607e-08, 0, 1.2345679, 0, -3.9242607e-08, 0, 1.2345679, 4.9382715, 0, -3.0864196)
+[node name="InteractBookShelf2" parent="Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1.2345676, 0, 3.92426e-08, 0, 1.2345676, 0, -3.92426e-08, 0, 1.2345676, 1.234567, 0, -3.086419)
 shelfGenre = 2
 Randomize = false
 
-[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/InteractBookShelf2"]
+[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/Bookshelf/InteractBookShelf2"]
 transform = Transform3D(-1, -2.4349884e-08, -9.877731e-08, -9.131962e-08, 0.6427876, 0.7660445, 4.4839737e-08, 0.7660445, -0.6427876, 0, 4.4, 2.5)
 light_energy = 6.0
 spot_range = 10.0
@@ -661,12 +930,12 @@ spot_angle = 30.0
 transform = Transform3D(9.016416, 0, 0, 0, 9.016416, 0, 0, 0, 9.016416, 6.0493813, 4.19753, 0)
 
 [node name="Text" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
-transform = Transform3D(-2.1815894e-09, 0, 0.08484515, 0, 0.04990891, 0, -0.04990891, 0, -3.7087018e-09, 0.0036757588, -0.013692141, -0.027384885)
+transform = Transform3D(-1.9197988e-09, 0, 0.08484515, 0, 0.04990891, 0, -0.04391984, 0, -3.7087018e-09, 0.0036757588, -0.02126488, 1.0201671e-08)
 mesh = SubResource("TextMesh_0mdj5")
 skeleton = NodePath("../../../First")
 
 [node name="UI" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
-transform = Transform3D(-1.1103383e-09, 0.025401583, 0, 1.1103383e-09, 4.8534432e-17, -0.025401583, -0.025401583, -1.1103383e-09, -1.1103383e-09, 0.00568223, -0.014273047, 0.054769777)
+transform = Transform3D(-5.995827e-10, 0.013716858, 0, 5.995827e-10, 2.6208594e-17, -0.013716858, -0.013716858, -5.995827e-10, -5.995827e-10, 0.00568223, 0.0048101246, -2.0403341e-08)
 mesh = SubResource("PlaneMesh_i0v1t")
 
 [node name="UI3" type="MeshInstance3D" parent="Level/Second/HangingSign2/UI"]
@@ -674,12 +943,12 @@ mesh = SubResource("PlaneMesh_i0v1t")
 skeleton = NodePath("../..")
 
 [node name="Text2" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
-transform = Transform3D(-2.1815894e-09, 0, 0.08484515, 0, 0.04990891, 0, -0.04990891, 0, -3.7087018e-09, 0.0036757588, -0.068461955, -0.027384885)
+transform = Transform3D(-1.923301e-09, 0, 0.085, 0, 0.05, 0, -0.044, 0, -3.715468e-09, 0.0036757588, -0.052690268, 1.2242003e-08)
 mesh = SubResource("TextMesh_sghjv")
 skeleton = NodePath("../../../First")
 
 [node name="UI2" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
-transform = Transform3D(-1.1103383e-09, 0.025401583, 0, 1.1103383e-09, 4.8534432e-17, -0.025401583, -0.025401583, -1.1103383e-09, -1.1103383e-09, 0.00568223, -0.06298521, 0.054769777)
+transform = Transform3D(-6.119594e-10, 0.014000002, -6.119594e-10, 0, -6.119594e-10, -0.014000002, -0.014000002, -6.119594e-10, 2.6749597e-17, 0.00568223, -0.078703135, -2.0403341e-08)
 mesh = SubResource("PlaneMesh_ku8a2")
 
 [node name="UI3" type="MeshInstance3D" parent="Level/Second/HangingSign2/UI2"]
@@ -692,6 +961,145 @@ spot_range = 2.0
 spot_angle = 36.230724
 
 [node name="Third" type="Node3D" parent="Level"]
+
+[node name="Bookshelf" type="Node3D" parent="Level/Third"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -50.617283, 0, 0)
+
+[node name="InteractBookShelf" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.839508, 0, -5.6790133)
+
+[node name="InteractBookShelf2" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8888855, 0, -5.6790133)
+
+[node name="InteractBookShelf3" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.320984, 0, -5.6790133)
+
+[node name="InteractBookShelf4" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12346268, 0, -5.6790133)
+
+[node name="InteractBookShelf5" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1975403, 0, -5.6790133)
+
+[node name="InteractBookShelf6" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, -4.148155, 0, 5.8024707)
+
+[node name="InteractBookShelf7" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, -0.19753647, 0, 5.8024707)
+
+[node name="InteractBookShelf8" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 4.370365, 0, 5.802471)
+
+[node name="InteractBookShelf9" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 8.8148155, 0, 5.802471)
+
+[node name="InteractBookShelf10" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 12.888889, 0, 5.802471)
+
+[node name="BookshelfGrid" type="GridMap" parent="Level/Third"]
+transform = Transform3D(-4.371139e-08, 0, 0.9999995, 0, 0.9999995, 0, -0.9999995, 0, -4.371139e-08, -28.39506, 0, 5.1851845)
+mesh_library = ExtResource("12_qvtqq")
+cell_size = Vector3(0.25, 0.25, 0.25)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(20, 65489, 0, 12, 65489, 0, 28, 65489, 0, 12, 65487, 655360, 20, 65487, 655360, 28, 65487, 655360, 20, 65475, 0, 12, 65475, 0, 12, 65473, 655360, 20, 65473, 655360, 28, 65473, 655360, 28, 65475, 0, 20, 65439, 655360, 28, 65439, 655360, 12, 65439, 655360, 12, 65441, 0, 20, 65441, 0, 28, 65441, 0, 12, 65453, 655360, 28, 65453, 655360, 28, 65455, 0, 20, 65455, 0, 12, 65455, 0, 20, 65453, 655360, 30, 65503, 655360, 38, 65503, 655360, 43, 65498, 1441792, 43, 65482, 1441792, 43, 65474, 1441792, 38, 65425, 0, 43, 65430, 1441792, 43, 65438, 1441792, 43, 65446, 1441792, 43, 65454, 1441792, 30, 65425, 0, 65533, 65430, 1048576, 2, 65425, 0, 10, 65425, 0, 65533, 65438, 1048576, 65533, 65446, 1048576, 65533, 65454, 1048576, 65533, 65498, 1048576, 2, 65503, 655360, 10, 65503, 655360, 65533, 65490, 1048576, 65533, 65482, 1048576, 65533, 65474, 1048576, 30, 65505, 0, 38, 65505, 0, 43, 65490, 1441792)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="LightsShelves" type="Node3D" parent="Level/Third"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -46.914, 6.117, 0)
+
+[node name="Light" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.197529, 0, -4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light2" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.24691, 0, -4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light3" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.6790085, 0, -4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light4" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.7654343, 0, -4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light5" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.839508, 0, -4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light6" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.197529, 0, 4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light7" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.24691, 0, 4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light8" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.6790085, 0, 4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light9" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.7654343, 0, 4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Light10" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.839508, 0, 4.6913586)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 4.0
+
+[node name="Lights" type="Node3D" parent="Level/Third"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.117, 0)
 
 [node name="Player" parent="." instance=ExtResource("5_tospq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 1, 0)

@@ -152,9 +152,9 @@ public partial class Player : CharacterBody3D
 
     private void UpdateStress()
     {
-        _stressLabel.Text = $"S: {GameManager.stress}";
+        _stressLabel.Text = $"S: {GameManager.Stress}";
 
-        float stressToModulate = GameManager.stress / 100;
+        float stressToModulate = GameManager.Stress / 100;
         _stressView.Modulate = new Color(1f, 1f, 1f, stressToModulate);
     }
 
