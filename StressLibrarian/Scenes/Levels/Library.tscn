@@ -722,7 +722,10 @@ transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 23
 shape = SubResource("ConvexPolygonShape3D_2iy40")
 
 [node name="floor_corner_round2" parent="Building/Objects" instance=ExtResource("15_js8ju")]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 13.075001, 0.1, -37.36)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 13.075, 0.01, -37.36)
+
+[node name="floor_corner_round" parent="Building/Objects/floor_corner_round2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Building/Objects/floor_corner_round2/floor_corner_round" index="0"]
 
@@ -821,7 +824,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.8
 shape = SubResource("ConvexPolygonShape3D_8evyu")
 
 [node name="office_chair_orange2" parent="Building/Objects" instance=ExtResource("18_o4a6f")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 19.243782, 0.3, -17.090193)
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 19.243782, 0.20000002, -17.090193)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Building/Objects/office_chair_orange2/office_chair_orange" index="0"]
 
@@ -831,13 +834,16 @@ shape = SubResource("ConvexPolygonShape3D_giufy")
 [node name="office_chair_orange3" parent="Building/Objects" instance=ExtResource("18_o4a6f")]
 transform = Transform3D(-0.7071068, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.7071068, 18.440094, 0.3, -18.374434)
 
+[node name="office_chair_orange" parent="Building/Objects/office_chair_orange3" index="0"]
+transform = Transform3D(1.0811245, 0, 0, 0, 1.0591832, 0, 0, 0, 1.0591834, 0, -0.099999994, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Building/Objects/office_chair_orange3/office_chair_orange" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Building/Objects/office_chair_orange3/office_chair_orange/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k11vb")
 
 [node name="office_chair_orange4" parent="Building/Objects" instance=ExtResource("18_o4a6f")]
-transform = Transform3D(0.7071069, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071069, 16.884459, 0.3, -17.101643)
+transform = Transform3D(0.7071069, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071069, 16.884459, 0.20000002, -17.101643)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Building/Objects/office_chair_orange4/office_chair_orange" index="0"]
 
@@ -845,7 +851,7 @@ transform = Transform3D(0.7071069, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.70710
 shape = SubResource("ConvexPolygonShape3D_hoq2r")
 
 [node name="office_chair_orange5" parent="Building/Objects" instance=ExtResource("18_o4a6f")]
-transform = Transform3D(-0.49999985, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999985, 15.470244, 0.3, -18.515856)
+transform = Transform3D(-0.49999985, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999985, 15.470244, 0.20000002, -18.515856)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Building/Objects/office_chair_orange5/office_chair_orange" index="0"]
 
@@ -1371,22 +1377,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7000003, 0.90000004, 4.2000
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7000003, 0.90000004, 4.0000005)
 
 [node name="elastic_ball3" parent="Building/Props" instance=ExtResource("32_8a1pf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 1, -14.099999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0.95000005, -14.1)
 
 [node name="paper_stack_large5" parent="Building/Props" instance=ExtResource("33_sqk4e")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -1.9482362, 1, -14.806815)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -1.9482362, 0.9, -14.806815)
 
 [node name="pen22" parent="Building/Props" instance=ExtResource("39_qc4to")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -14.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.9, -14.4)
 
 [node name="pen23" parent="Building/Props" instance=ExtResource("39_qc4to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.90000004, -11.599999)
 
 [node name="paper_stack3" parent="Building/Props" instance=ExtResource("31_ckm5n")]
-transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -2.0776458, 1, -12.289778)
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -2.0776458, 0.9, -12.289778)
 
 [node name="paper_stack4" parent="Building/Props" instance=ExtResource("31_ckm5n")]
-transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -2.0223541, 1, -11.910222)
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -2.0223541, 0.9, -11.910222)
 
 [node name="paper_stack_large6" parent="Building/Props" instance=ExtResource("33_sqk4e")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -2, 0.90000004, -9.6)
@@ -1678,109 +1684,109 @@ material = SubResource("StandardMaterial3D_088yt")
 [node name="Carpets" type="Node3D" parent="Building"]
 
 [node name="floor_2x22" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 0.1, -16.800001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 0.01, -16.8)
 
 [node name="floor_2x23" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0.1, -16.800001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0.01, -16.8)
 
 [node name="floor_2x24" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6, 0.1, -16.800001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6, 0.01, -16.8)
 
 [node name="floor_corner_round_half2" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0.1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0.01, -5)
 
 [node name="floor_corner_round_half4" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.5, 0.1, -5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.5, 0.01, -5)
 
 [node name="floor_corner_round_half5" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.5, 0.1, -5)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.5, 0.01, -5)
 
 [node name="floor_corner_round_half3" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.5, 0.1, -5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.5, 0.01, -5)
 
 [node name="floor_corner_round_half6" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.090001, 0.1, -30.35)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -30.35)
 
 [node name="floor_corner_round_half10" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.699999, 0.1, -35.46)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.7, 0.01, -35.46)
 
 [node name="floor_corner_round_half12" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -7.699999, 0.1, -32.66)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
 
 [node name="floor_corner_round_half13" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -7.699999, 0.1, -32.66)
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -7.7, 0.01, -32.66)
 
 [node name="floor_corner_round_half8" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 13.090001, 0.1, -28.95)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
 
 [node name="floor_corner_round_half9" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 13.090001, 0.1, -28.95)
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 13.09, 0.01, -28.95)
 
 [node name="floor_corner_round_half7" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.090001, 0.1, -30.35)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -30.35)
 
 [node name="floor_corner_round_half11" parent="Building/Carpets" instance=ExtResource("44_0u1be")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.6999984, 0.1, -35.46)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -35.46)
 
 [node name="floor_2x25" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.1, -28.95)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -28.95)
 
 [node name="floor_2x27" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.8964815, 0.1, -26.822462)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.896, 0.01, -26.822)
 
 [node name="floor_2x26" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.1, -28.95)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
 
 [node name="floor_2x28" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.6999993, 0.1, -34.06)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -34.06)
 
 [node name="floor_2x29" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -6.299999, 0.1, -34.06)
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -6.3, 0.01, -34.06)
 
 [node name="floor_2x30" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -6.299999, 0.1, -32.66)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -6.3, 0.01, -32.66)
 
 [node name="floor_2x31" parent="Building/Carpets" instance=ExtResource("43_aiu1q")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.6999993, 0.1, -32.66)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
 
 [node name="floor_3x32" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.1, -31.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.01, -31.9)
 
 [node name="floor_3x33" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.1, -27.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.01, -27.9)
 
 [node name="floor_corner_round5" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(-1.9670125e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.9670125e-08, 13.075001, 0.1, -37.36)
+transform = Transform3D(-1.9670125e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.9670125e-08, 13.075, 0.01, -37.36)
 
 [node name="floor_corner_round3" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(-1.9670125e-08, 0, -0.45, 0, 0.45, 0, 0.45, 0, -1.9670125e-08, 13.075001, 0.1, -37.36)
+transform = Transform3D(-1.9670125e-08, 0, -0.45, 0, 0.45, 0, 0.45, 0, -1.9670125e-08, 13.075, 0.01, -37.36)
 
 [node name="floor_corner_round4" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(-0.45, 0, 3.934025e-08, 0, 0.45, 0, -3.934025e-08, 0, -0.45, 13.075001, 0.1, -37.36)
+transform = Transform3D(-0.45, 0, 3.934025e-08, 0, 0.45, 0, -3.934025e-08, 0, -0.45, 13.075, 0.01, -37.36)
 
 [node name="floor_corner_round2" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0.1, -44.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0.01, -44.8)
 
 [node name="floor_corner_round6" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.7, 0.1, -44.8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.7, 0.01, -44.8)
 
 [node name="floor_corner_round7" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.7, 0.1, -44.8)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.7, 0.01, -44.8)
 
 [node name="floor_corner_round8" parent="Building/Carpets" instance=ExtResource("15_js8ju")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1.7, 0.1, -44.8)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1.7, 0.01, -44.8)
 
 [node name="floor_3x34" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6, 0.1, -43)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6, 0.01, -43)
 
 [node name="floor_3x36" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.400001, 0.1, -8.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4, 0.01, -8.9)
 
 [node name="floor_3x37" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.400001, 0.1, -11.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4, 0.01, -11.9)
 
 [node name="floor_3x35" parent="Building/Carpets" instance=ExtResource("45_s0gnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0.1, -43)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0.01, -43)
 
 [node name="Door" parent="Building" instance=ExtResource("46_kdidu")]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -0.99999905, 0, 1.7059879)
@@ -1820,7 +1826,19 @@ shape = SubResource("BoxShape3D_dqej6")
 [node name="Lights" type="Node3D" parent="Building"]
 
 [node name="Light1" type="SpotLight3D" parent="Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.6, 3.8000002, -2.3)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.6, 3.8000002, 0.20000005)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light51" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.6, 3.8000002, -4.3999996)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -1843,8 +1861,68 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light31" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 23.3, 3.8000002, 1)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light46" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 23.3, 3.8000002, -9.2)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light36" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 14.299999, 3.8000002, 1)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light4" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12, 3.8000002, -11.9)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light27" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12, 3.8000002, -17.4)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light37" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3, 3.8000002, -18.699999)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -1867,8 +1945,56 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light34" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1999998, 3.8000002, -9.4)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light33" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1999998, 3.8000002, -13.9)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light6" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.1000004, 3.8000002, -13.599999)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light28" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.6, 3.9, -10.599999)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light49" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.7000003, 3.9, -10.599999)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -1891,8 +2017,80 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light48" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.0000005, 3.8000002, -25.399998)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light50" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.3, 3.8000002, -25.399998)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light8" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 17.800001, 3.8000002, -17.699999)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light45" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.300001, 3.8000002, -17.699999)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light44" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.6, 3.8000002, -17.699999)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light32" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 17.800001, 3.8000002, -13.099998)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light47" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 14.700001, 3.8000002, -9.599998)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -1927,8 +2125,32 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light30" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 17.6, 3.8000002, -24)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light11" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.7, 3.8000002, -33.5)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light42" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.7, 3.8000002, -37)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -1975,6 +2197,42 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light39" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -9.900002, 3.8000002, -25.799997)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light38" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.6000009, 3.8000002, -25.799997)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light40" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.6000009, 3.8000002, -35.799995)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light15" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -11.600001, 3.8000002, -44.6)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
@@ -2011,6 +2269,18 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light41" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999999, 3.8000002, -43.899998)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light18" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15.799999, 3.8000002, -43.899998)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
@@ -2035,6 +2305,18 @@ spot_range = 10.0
 spot_attenuation = 0.75
 spot_angle = 70.0
 
+[node name="Light29" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 21.8, 3.8000002, -43.899998)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Light20" type="SpotLight3D" parent="Building/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.299999, 3.8000002, -45.699997)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
@@ -2048,7 +2330,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light21" type="SpotLight3D" parent="Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.0999994, 3.8000002, -38.199997)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.499999, 3.8000002, -33.999996)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2096,7 +2378,19 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light25" type="SpotLight3D" parent="Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.699999, 3.8000002, -33.999996)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.699999, 3.8000002, -36.891808)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light43" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.699999, 3.8000002, -30.891808)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2120,7 +2414,31 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light2" type="SpotLight3D" parent="Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3, 3.8000002, -2)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3, 3.8000002, 5)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light35" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3, 3.8000002, -0.100000024)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light52" type="SpotLight3D" parent="Building/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3, 3.8000002, -4.5)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
