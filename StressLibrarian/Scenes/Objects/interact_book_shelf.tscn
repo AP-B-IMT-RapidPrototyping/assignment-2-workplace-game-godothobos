@@ -22,10 +22,11 @@ text = "GENRE"
 font = ExtResource("3_2nqer")
 font_size = 34
 
-[node name="InteractBookShelf" type="Node3D" node_paths=PackedStringArray("_textMesh", "_booksFull") groups=["bookshelf"]]
+[node name="InteractBookShelf" type="Node3D" node_paths=PackedStringArray("_textMesh", "_booksFull", "fillSound") groups=["bookshelf"]]
 script = ExtResource("1_af3il")
 _textMesh = NodePath("Text")
 _booksFull = NodePath("BooksFull")
+fillSound = NodePath("Shelf_fill_sound")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 12

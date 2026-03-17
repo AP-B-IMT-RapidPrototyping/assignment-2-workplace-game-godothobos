@@ -407,6 +407,7 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
+visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)

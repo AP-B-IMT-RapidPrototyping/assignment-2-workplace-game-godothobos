@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=10 format=3 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -6,13 +6,14 @@
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="4_gy20a"]
 [ext_resource type="Texture2D" uid="uid://bvr5ll6itdcsx" path="res://Assets/UI/black2.jpg" id="4_utp2y"]
 [ext_resource type="Texture2D" uid="uid://d00xq2aoik102" path="res://Assets/UI/RedVignette.png" id="5_khnq4"]
+[ext_resource type="AudioStream" uid="uid://e6f4v2cjl3mb" path="res://Assets/Audio/sounds/box/puckup_box_sound.wav" id="7_gdgf0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3etf2"]
 radius = 0.4
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel") groups=["player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "pickupSound") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_40svl")
 _camera = NodePath("Camera")
@@ -23,6 +24,7 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 _stressView = NodePath("UI/StressView")
 _stressLabel = NodePath("UI/StressLabel")
+pickupSound = NodePath("pickup_sound")
 
 [node name="PlayerBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.833, 0, 0, 0, 1, 0, 0, 0, 0.833, 0, 0, 0)
@@ -150,3 +152,6 @@ theme_override_fonts/font = ExtResource("4_gy20a")
 theme_override_font_sizes/font_size = 56
 text = "S: 0123465789"
 vertical_alignment = 1
+
+[node name="pickup_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_gdgf0")

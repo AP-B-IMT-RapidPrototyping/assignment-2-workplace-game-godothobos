@@ -7,6 +7,7 @@ public partial class InteractBookShelf : Node3D
     [Export] private Node3D _booksFull;
     [Export] public BookGenre shelfGenre;
     [Export] public bool Randomize = true;
+    [Export] private AudioStreamPlayer3D fillSound;
 
     private float _reduceStress = 10f;
 
@@ -92,6 +93,7 @@ public partial class InteractBookShelf : Node3D
             player.HandleForceDropObject(book);
 
         book.QueueFree();
+        fillSound.Play();
         GameManager.Stress -= _reduceStress;
         FillBooks();
     }
