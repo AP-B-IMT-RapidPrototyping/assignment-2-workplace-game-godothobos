@@ -6,7 +6,9 @@ public partial class GameManager : Node
     public static float Stress = 0;
     public static float Difficulty = 0;
 
-    public static int _boxHighScore = 0;
+    public static int _timeAlive = 0;
+    public static int _highScore = 0;
+    public static int _npcHelped = 0;
 
     public static int ActiveLoudNPC = 0;
     public static int ActiveLoudNPCMax = 3;
@@ -16,7 +18,7 @@ public partial class GameManager : Node
 
     private void OnDead()
     {
-        GetTree().Quit();
+        GetTree().ChangeSceneToFile("res://scenes/levels/death.tscn");
     }
 
     public override void _PhysicsProcess(double delta)
