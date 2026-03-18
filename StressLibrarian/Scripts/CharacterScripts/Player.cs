@@ -112,7 +112,6 @@ public partial class Player : CharacterBody3D
                 if (collider != null && collider.IsInGroup("interact_NPC"))
                 {
                     GD.Print($"INTERACTION: NPC: {collider.Name}");
-
                 }
             }
         }

@@ -95,6 +95,7 @@ public partial class InteractBookShelf : Node3D
         book.QueueFree();
         fillSound.Play();
         GameManager.Stress -= _reduceStress;
+        GameManager._boxHighScore++;
         FillBooks();
     }
 
