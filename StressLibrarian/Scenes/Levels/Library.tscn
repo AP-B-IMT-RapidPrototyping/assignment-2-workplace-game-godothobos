@@ -2609,8 +2609,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4.6)
 script = ExtResource("49_jl3u2")
 _SpawnPoint = [NodePath("../BoxSpawnPoints/SpawnPoint"), NodePath("../BoxSpawnPoints/SpawnPoint2"), NodePath("../BoxSpawnPoints/SpawnPoint3"), NodePath("../BoxSpawnPoints/SpawnPoint4")]
 book_box = ExtResource("50_l0gcx")
-SpawnDelayMin = 10.0
-SpawnDelayMax = 30.0
+SpawnDelayMin = 1.0
+SpawnDelayMax = 2.0
 
 [node name="BookBox" parent="." instance=ExtResource("50_l0gcx")]
 transform = Transform3D(1.39090695e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 1.39090695e-08, 5.2, 0.70000005, 6.2)

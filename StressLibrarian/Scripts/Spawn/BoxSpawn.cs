@@ -6,8 +6,8 @@ public partial class BoxSpawn : Node
     [Export] private Array<Marker3D> _SpawnPoint = new Array<Marker3D>();
     [Export] private PackedScene book_box;
 
-    [Export] public float SpawnDelayMin = 2f;
-    [Export] public float SpawnDelayMax = 5f;
+    [Export] public float SpawnDelayMin = 10f;
+    [Export] public float SpawnDelayMax = 30f;
 
     private Dictionary<Marker3D, Node3D> _spawnedBoxes = new Dictionary<Marker3D, Node3D>();
     private Dictionary<Marker3D, Timer> _timers = new Dictionary<Marker3D, Timer>();
