@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dy53kd20h4anj"]
+[gd_scene load_steps=54 format=3 uid="uid://dy53kd20h4anj"]
 
 [ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="1_as8ev"]
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
@@ -45,6 +45,27 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.025
 volumetric_fog_albedo = Color(0.2784314, 0.18431373, 0.007843138, 1)
 volumetric_fog_emission = Color(0.2784314, 0.18431373, 0.007843138, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0b5x"]
+albedo_texture = ExtResource("16_wlsvp")
+uv1_triplanar = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jl3u2"]
+load_path = "res://.godot/imported/wooden_gate_diff_1k.png-700b43ff69ba195de1241610081e313a.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0gcx"]
+load_path = "res://.godot/imported/wooden_gate_nor_gl_1k.png-e1f9b1d048ee8eb2d0f28c8ab8878c3c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_23naa"]
+load_path = "res://.godot/imported/wooden_gate_rough_1k.png-98e946cad6e83fb2b4fa38cc5d8ee42c.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o04t"]
+albedo_texture = SubResource("CompressedTexture2D_jl3u2")
+roughness_texture = SubResource("CompressedTexture2D_23naa")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_l0gcx")
+uv1_scale = Vector3(0.185, 0.185, 0.185)
+uv1_triplanar = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ggkx6"]
 load_path = "res://.godot/imported/RedCarpet.jpg-2dbeb1a5f0d2ab78a0eb36c0fe3cbbee.s3tc.ctex"
@@ -153,6 +174,19 @@ horizontal_alignment = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wlsvp"]
 size = Vector3(2, 0.8, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1w2i"]
+albedo_color = Color(0, 0, 0, 1)
+billboard_keep_scale = true
+
+[sub_resource type="TextMesh" id="TextMesh_x0b5x"]
+material = SubResource("StandardMaterial3D_d1w2i")
+text = "did you
+really expect
+settings?"
+font = ExtResource("12_f0reb")
+font_size = 86
+horizontal_alignment = 0
 
 [sub_resource type="Animation" id="Animation_3o5t2"]
 resource_name = "Intro"
@@ -346,27 +380,6 @@ _data = {
 &"ViewSettings": SubResource("Animation_juchl")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0b5x"]
-albedo_texture = ExtResource("16_wlsvp")
-uv1_triplanar = true
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jl3u2"]
-load_path = "res://.godot/imported/wooden_gate_diff_1k.png-700b43ff69ba195de1241610081e313a.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0gcx"]
-load_path = "res://.godot/imported/wooden_gate_nor_gl_1k.png-e1f9b1d048ee8eb2d0f28c8ab8878c3c.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_23naa"]
-load_path = "res://.godot/imported/wooden_gate_rough_1k.png-98e946cad6e83fb2b4fa38cc5d8ee42c.s3tc.ctex"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o04t"]
-albedo_texture = SubResource("CompressedTexture2D_jl3u2")
-roughness_texture = SubResource("CompressedTexture2D_23naa")
-normal_enabled = true
-normal_texture = SubResource("CompressedTexture2D_l0gcx")
-uv1_scale = Vector3(0.185, 0.185, 0.185)
-uv1_triplanar = true
-
 [node name="Main Menu" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -376,55 +389,14 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_d1w2i")
 
-[node name="Light9" type="SpotLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, 0.9827552)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light12" type="SpotLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.16934946, 4.3080014e-08, -0.9855561, 0.9855561, -7.402498e-09, 0.16934946, 2.3874994e-15, -1, -4.371139e-08, -4.908695, 2.7256227, 4.6741257)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light10" type="SpotLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, -7.9634523)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light11" type="SpotLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, -13.346106)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
 [node name="Building" type="Node3D" parent="."]
+
+[node name="Roof" type="CSGBox3D" parent="Building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1543713, 5.398922, -5.4681396)
+material_override = SubResource("StandardMaterial3D_x0b5x")
+use_collision = true
+size = Vector3(47.310547, 0.001, 53.93628)
+material = SubResource("StandardMaterial3D_6o04t")
 
 [node name="Floor" type="CSGBox3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.9089355)
@@ -456,7 +428,66 @@ use_collision = true
 size = Vector3(46.4, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_rcukj")
 
+[node name="Light9" type="SpotLight3D" parent="Building"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, 0.9827552)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light12" type="SpotLight3D" parent="Building"]
+transform = Transform3D(0.16934946, 4.3080014e-08, -0.9855561, 0.9855561, -7.4024955e-09, 0.16934946, 2.3874994e-15, -1, -4.3711378e-08, -4.908695, 2.7256227, 4.6741257)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light10" type="SpotLight3D" parent="Building"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, -7.9634523)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
+[node name="Light11" type="SpotLight3D" parent="Building"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.6420541, 3.8000002, -13.346106)
+light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+spot_range = 10.0
+spot_attenuation = 0.75
+spot_angle = 70.0
+
 [node name="Decoration" type="Node3D" parent="."]
+
+[node name="Bob" parent="Decoration" instance=ExtResource("20_d1w2i")]
+transform = Transform3D(0.17567696, 0.119870186, 0.4525138, -0.3023081, 0.39808008, 0.01191266, -0.35741755, -0.2777828, 0.21234252, -10.972021, 0.007849693, -4.148571)
+
+[node name="Skeleton3D" parent="Decoration/Bob" index="0"]
+bones/7/rotation = Quaternion(-0.576, -0.714, 0.713, -0.381)
+bones/8/rotation = Quaternion(0.522, -0.502, -0.043, 0.953)
+bones/9/rotation = Quaternion(1.547, 0.001, 0.18, 0.984)
+bones/10/rotation = Quaternion(-0.214, 1.234, 0.079, 0.997)
+bones/12/rotation = Quaternion(0.485, 0, 0, 1)
+bones/13/rotation = Quaternion(0.975, 0, 0, 1)
 
 [node name="Desk" type="Node3D" parent="Decoration"]
 
@@ -491,6 +522,26 @@ autoplay = "loop"
 
 [node name="desk_phone2" parent="Decoration/Desk" instance=ExtResource("8_wlsvp")]
 transform = Transform3D(0.99418485, 0, -0.107687026, 0, 1, 0, 0.107687026, 0, 0.99418485, 0.7790556, 0.90000004, -0.18110663)
+
+[node name="volle_boekenkast" type="GridMap" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
+mesh_library = ExtResource("17_rcukj")
+cell_size = Vector3(0.25, 0.25, 0.25)
+data = {
+"cells": PackedInt32Array(65528, 65500, 0, 65528, 65488, 0, 65528, 65476, 0, 65520, 65500, 0, 65512, 65500, 0, 65504, 65500, 0, 65496, 65500, 0, 65480, 65500, 0, 65488, 65500, 0, 65520, 65488, 0, 65512, 65488, 0, 65504, 65488, 0, 65496, 65488, 0, 65488, 65488, 0, 65480, 65488, 0, 65520, 65476, 0, 65512, 65476, 0, 65504, 65476, 0, 65496, 65476, 0, 65488, 65476, 0, 65480, 65476, 0, 65527, 65464, 0, 65519, 65464, 0, 65511, 65464, 0, 65503, 65464, 0, 65495, 65464, 0, 65487, 65464, 0, 65479, 65464, 0, 65471, 65464, 0, 65472, 65476, 0, 65472, 65500, 0, 65472, 65488, 0, 65527, 65452, 0, 65519, 65452, 0, 65511, 65452, 0, 65503, 65452, 0, 65495, 65452, 0, 65487, 65452, 0, 65479, 65452, 0, 65471, 65452, 0, 65527, 65440, 0, 65527, 65428, 0, 65527, 65418, 0, 16, 65488, 0, 16, 65476, 0, 16, 65464, 0, 16, 65452, 0, 16, 65440, 0, 16, 65428, 0, 16, 65416, 0, 72, 65500, 0, 64, 65500, 0, 56, 65500, 0, 48, 65500, 0, 16, 65500, 0, 32, 65500, 0, 24, 65500, 0, 65494, 65527, 1048576, 65494, 65535, 1048576, 65494, 7, 1048576, 65494, 15, 1048576, 65494, 23, 1048576, 65494, 31, 1048576, 65494, 39, 1048576, 65494, 47, 1048576, 65494, 65519, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="lege_boekenkast" type="GridMap" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
+mesh_library = ExtResource("18_d1w2i")
+cell_size = Vector3(0.25, 0.25, 0.25)
+data = {
+"cells": PackedInt32Array(40, 65500, 0)
+}
+
+[node name="Whiteboard" parent="Decoration" instance=ExtResource("19_rcukj")]
+transform = Transform3D(0.990268, 0, 0.13917309, 0, 1, 0, -0.13917309, 0, 0.990268, -2.596435, -0.7362713, 4.781807)
 
 [node name="MenuOptions" type="Node3D" parent="." node_paths=PackedStringArray("_buttonStart", "_buttonSettings", "_buttonQuit", "_buttonBack", "_animationManager", "_hoverUI", "_clickUI")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17, 0)
@@ -547,6 +598,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.12500006, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MenuOptions/ButtonBack/BackA3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22499943, 0.099999905, 0)
 shape = SubResource("BoxShape3D_wlsvp")
+
+[node name="Settings" type="Node3D" parent="MenuOptions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 5)
+
+[node name="TEXT" type="MeshInstance3D" parent="MenuOptions/Settings"]
+transform = Transform3D(-0.05566926, 0, 0.3961072, 0, 0.39999995, 0, -0.3961072, 0, -0.05566926, -0.20000005, 1.9, 0.9999995)
+mesh = SubResource("TextMesh_x0b5x")
+skeleton = NodePath("../..")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qqk0j")
@@ -608,7 +667,7 @@ theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 91
 text = "Stressed Librarian"
 
-[node name="AskTutorial" type="Control" parent="."]
+[node name="AskTutorial" type="Control" parent="." node_paths=PackedStringArray("_animationManager")]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
@@ -619,6 +678,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("15_ch2lh")
+_animationManager = NodePath("../AnimationManager")
 
 [node name="Background" type="ColorRect" parent="AskTutorial"]
 layout_mode = 1
@@ -678,43 +738,23 @@ theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 60
 text = "No"
 
-[node name="Roof" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1543713, 5.398922, -5.4681396)
-material_override = SubResource("StandardMaterial3D_x0b5x")
-use_collision = true
-size = Vector3(47.310547, 0.001, 53.93628)
-material = SubResource("StandardMaterial3D_6o04t")
-
-[node name="volle_boekenkast" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
-mesh_library = ExtResource("17_rcukj")
-cell_size = Vector3(0.25, 0.25, 0.25)
-data = {
-"cells": PackedInt32Array(65528, 65500, 0, 65528, 65488, 0, 65528, 65476, 0, 65520, 65500, 0, 65512, 65500, 0, 65504, 65500, 0, 65496, 65500, 0, 65480, 65500, 0, 65488, 65500, 0, 65520, 65488, 0, 65512, 65488, 0, 65504, 65488, 0, 65496, 65488, 0, 65488, 65488, 0, 65480, 65488, 0, 65520, 65476, 0, 65512, 65476, 0, 65504, 65476, 0, 65496, 65476, 0, 65488, 65476, 0, 65480, 65476, 0, 65527, 65464, 0, 65519, 65464, 0, 65511, 65464, 0, 65503, 65464, 0, 65495, 65464, 0, 65487, 65464, 0, 65479, 65464, 0, 65471, 65464, 0, 65472, 65476, 0, 65472, 65500, 0, 65472, 65488, 0, 65527, 65452, 0, 65519, 65452, 0, 65511, 65452, 0, 65503, 65452, 0, 65495, 65452, 0, 65487, 65452, 0, 65479, 65452, 0, 65471, 65452, 0, 65527, 65440, 0, 65527, 65428, 0, 65527, 65418, 0, 16, 65488, 0, 16, 65476, 0, 16, 65464, 0, 16, 65452, 0, 16, 65440, 0, 16, 65428, 0, 16, 65416, 0, 72, 65500, 0, 64, 65500, 0, 56, 65500, 0, 48, 65500, 0, 16, 65500, 0, 32, 65500, 0, 24, 65500, 0, 65494, 65527, 1048576, 65494, 65535, 1048576, 65494, 7, 1048576, 65494, 15, 1048576, 65494, 23, 1048576, 65494, 31, 1048576, 65494, 39, 1048576, 65494, 47, 1048576, 65494, 65519, 1048576)
-}
-metadata/_editor_floor_ = Vector3(0, 0, 0)
-
-[node name="lege_boekenkast" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
-mesh_library = ExtResource("18_d1w2i")
-cell_size = Vector3(0.25, 0.25, 0.25)
-data = {
-"cells": PackedInt32Array(40, 65500, 0)
-}
-
-[node name="Whiteboard" parent="." instance=ExtResource("19_rcukj")]
-transform = Transform3D(0.9904662, 0, 0.1377557, 0, 1, 0, -0.1377557, 0, 0.9904662, -2.596435, -0.7362713, 4.781807)
-
-[node name="Character_Monster_03" parent="." instance=ExtResource("20_d1w2i")]
-transform = Transform3D(0.17567696, 0.119870186, 0.4525138, -0.3023081, 0.39808008, 0.01191266, -0.35741755, -0.2777828, 0.21234252, -10.972021, 0.007849693, -4.148571)
-
-[node name="Skeleton3D" parent="Character_Monster_03" index="0"]
-bones/7/rotation = Quaternion(-0.576, -0.714, 0.713, -0.381)
-bones/8/rotation = Quaternion(0.522, -0.502, -0.043, 0.953)
-bones/9/rotation = Quaternion(1.547, 0.001, 0.18, 0.984)
-bones/10/rotation = Quaternion(-0.214, 1.234, 0.079, 0.997)
-bones/12/rotation = Quaternion(0.485, 0, 0, 1)
-bones/13/rotation = Quaternion(0.975, 0, 0, 1)
+[node name="Back" type="Button" parent="AskTutorial"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -190.0
+offset_right = 75.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(75, 45)
+theme_override_fonts/font = ExtResource("12_f0reb")
+theme_override_font_sizes/font_size = 60
+text = "Back"
 
 [connection signal="input_event" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartPressed"]
 [connection signal="mouse_entered" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartEntered"]
@@ -730,6 +770,7 @@ bones/13/rotation = Quaternion(0.975, 0, 0, 1)
 [connection signal="mouse_exited" from="MenuOptions/ButtonBack/BackA3" to="MenuOptions" method="OnBackExited"]
 [connection signal="pressed" from="AskTutorial/Play" to="AskTutorial" method="OnYesPressed"]
 [connection signal="pressed" from="AskTutorial/Tutorial" to="AskTutorial" method="OnNoPressed"]
+[connection signal="pressed" from="AskTutorial/Back" to="AskTutorial" method="OnBackPressed"]
 
+[editable path="Decoration/Bob"]
 [editable path="Decoration/Desk/MODIFIED_Office_Chair"]
-[editable path="Character_Monster_03"]

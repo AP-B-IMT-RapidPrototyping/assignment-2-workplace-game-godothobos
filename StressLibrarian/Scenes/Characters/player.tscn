@@ -13,7 +13,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3etf2"]
 radius = 0.4
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "pickupSound") groups=["player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_40svl")
 _camera = NodePath("Camera")
@@ -24,7 +24,6 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 _stressView = NodePath("UI/StressView")
 _stressLabel = NodePath("UI/StressLabel")
-pickupSound = NodePath("pickup_sound")
 
 [node name="PlayerBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.833, 0, 0, 0, 1, 0, 0, 0, 0.833, 0, 0, 0)
@@ -47,7 +46,7 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 13
 
 [node name="HoldPointMarker" type="Marker3D" parent="Camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, -1.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, -1.4)
 
 [node name="UI" type="Control" parent="."]
 process_mode = 3

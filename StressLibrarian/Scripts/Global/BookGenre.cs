@@ -13,6 +13,6 @@ public enum BookGenre
     Adventure,
     Math,
     Science,
-    Fordnite
+    Mystery
 }
 

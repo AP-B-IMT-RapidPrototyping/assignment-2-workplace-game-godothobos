@@ -3,6 +3,8 @@ using System;
 
 public partial class AskTutorial : Control
 {
+    [Export] AnimationPlayer _animationManager;
+
     private void OnYesPressed()
     {
         GetTree().ChangeSceneToFile("res://scenes/levels/tutorial.tscn");
@@ -11,5 +13,10 @@ public partial class AskTutorial : Control
     private void OnNoPressed()
     {
         GetTree().ChangeSceneToFile("res://scenes/levels/Library.tscn");
+    }
+
+    private void OnBackPressed()
+    {
+        _animationManager.PlayBackwards("ViewPlay");
     }
 }
