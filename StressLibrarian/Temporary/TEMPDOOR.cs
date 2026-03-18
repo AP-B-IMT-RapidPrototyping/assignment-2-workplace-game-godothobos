@@ -7,6 +7,7 @@ public partial class TEMPDOOR : Area3D
     {
         if (body.IsInGroup("player"))
         {
+            Input.MouseMode = Input.MouseModeEnum.Visible;
             GetTree().ChangeSceneToFile("res://scenes/levels/main_menu.tscn");
         }
     }
