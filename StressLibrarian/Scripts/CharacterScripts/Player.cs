@@ -18,7 +18,7 @@ public partial class Player : CharacterBody3D
     [Export] private Camera3D _camera;
     [Export] private float _mouseSensitivity = 0.003f;
     [Export] private float _normalFov = 80f;
-    [Export] private float _sprintingFov = 100f;
+    [Export] private float _sprintingFov = 90f;
     [Export] private float _changeFovStrength = 10f;
     [Export] private RayCast3D _playerRayCast;
     [Export] private Marker3D _holdPointMarker;
@@ -26,7 +26,7 @@ public partial class Player : CharacterBody3D
 
     /* MOVEMENT EXPORTS */
     [Export] private float _speed = 5.0f;
-    [Export] private float _sprintSpeed = 8.0f;
+    [Export] private float _sprintSpeed = 7.0f;
     [Export] private float _acceleration = 60.0f;
     [Export] private float _deceleration = 80.0f;
 

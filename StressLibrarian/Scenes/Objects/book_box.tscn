@@ -67,5 +67,6 @@ shape = SubResource("BoxShape3D_70typ")
 
 [node name="falling_sound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_kqm5l")
+volume_db = 2.0
 
 [editable path="Model/StickyNote"]

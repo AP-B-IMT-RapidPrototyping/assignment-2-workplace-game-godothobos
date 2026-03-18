@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=53 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://b8y7cb5g5yqu4" path="res://Assets/UI/Good.png" id="10_mnia5"]
 [ext_resource type="Texture2D" uid="uid://cyov4x08gw852" path="res://Assets/UI/Bad.png" id="11_sghjv"]
 [ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="12_qvtqq"]
-[ext_resource type="Script" uid="uid://cwkxerfjrnpxi" path="res://Temporary/TEMPDOOR.cs" id="15_35mx6"]
 
 [sub_resource type="Sky" id="Sky_l2k66"]
 
@@ -722,29 +721,6 @@ albedo_texture = ExtResource("11_sghjv")
 [sub_resource type="PlaneMesh" id="PlaneMesh_ku8a2"]
 material = SubResource("StandardMaterial3D_35mx6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7wr3"]
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 1.8
-
-[sub_resource type="TextMesh" id="TextMesh_o863f"]
-material = SubResource("StandardMaterial3D_w7wr3")
-text = "tutorial isn't finished,
-just pick up boxes and put
-them in correct shelf.
-walk through this door
-if you're done. ->"
-font_size = 56
-horizontal_alignment = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfmmv"]
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 53.5
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0mdj5"]
-size = Vector3(0.6, 2.9, 1.9)
-
 [node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "bookBox")]
 script = ExtResource("1_tospq")
 _door1 = NodePath("Level/First/Door1/DoorAnim")
@@ -1249,34 +1225,12 @@ spot_angle = 4.0
 [node name="Lights" type="Node3D" parent="Level/Third"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.117, 0)
 
-[node name="TEMPORARY" type="Node3D" parent="Level/Third"]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -60.49382, 0, 0)
-
-[node name="text" type="MeshInstance3D" parent="Level/Third/TEMPORARY"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.4691315, 2.4691365, 4.938273)
-mesh = SubResource("TextMesh_o863f")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Level/Third/TEMPORARY"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4691353, 1.4438281, -4.611731)
-size = Vector3(0.4, 2.9, 1.9)
-material = SubResource("StandardMaterial3D_qfmmv")
-
-[node name="door" type="Area3D" parent="Level/Third/TEMPORARY/CSGBox3D"]
-collision_mask = 2
-script = ExtResource("15_35mx6")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/TEMPORARY/CSGBox3D/door"]
-shape = SubResource("BoxShape3D_0mdj5")
-debug_color = Color(0.9607843, 0, 0.52156866, 0.62352943)
-
 [node name="Player" parent="." instance=ExtResource("5_tospq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31, 1, 0)
 
 [node name="BookBox" parent="." instance=ExtResource("7_l2k66")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23, 1, 0)
 Randomize = false
-
-[connection signal="body_entered" from="Level/Third/TEMPORARY/CSGBox3D/door" to="Level/Third/TEMPORARY/CSGBox3D/door" method="OnBodyEntered"]
 
 [editable path="Level/First/Door1"]
 [editable path="Level/Second/Door2"]

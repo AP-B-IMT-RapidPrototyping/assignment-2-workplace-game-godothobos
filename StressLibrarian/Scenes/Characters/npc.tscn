@@ -22,7 +22,7 @@ albedo_color = Color(1, 0, 0, 0.49411765)
 
 [node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_navAgent", "_models", "_raycastNpc")]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 0
 script = ExtResource("1_85o64")
 _navAgent = NodePath("NavigationAgent3D")
 _models = NodePath("Models")

@@ -599,13 +599,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.12500006, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22499943, 0.099999905, 0)
 shape = SubResource("BoxShape3D_wlsvp")
 
-[node name="Settings" type="Node3D" parent="MenuOptions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 5)
+[node name="Settings" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, -0.07, 5)
 
-[node name="TEXT" type="MeshInstance3D" parent="MenuOptions/Settings"]
+[node name="TEXT" type="MeshInstance3D" parent="Settings"]
 transform = Transform3D(-0.05566926, 0, 0.3961072, 0, 0.39999995, 0, -0.3961072, 0, -0.05566926, -0.20000005, 1.9, 0.9999995)
 mesh = SubResource("TextMesh_x0b5x")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../MenuOptions")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qqk0j")
@@ -615,7 +615,7 @@ bus = &"Music"
 
 [node name="UIHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_as8ev")
-volume_db = -8.0
+volume_db = -20.0
 pitch_scale = 3.0
 bus = &"Music"
 
@@ -755,15 +755,6 @@ pivot_offset = Vector2(75, 45)
 theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 64
 text = "Back"
-
-[node name="TEMP" type="Label" parent="AskTutorial"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 632.0
-offset_right = 790.0
-offset_bottom = 723.0
-theme_override_font_sizes/font_size = 36
-text = "CLICK YES IF YOURE NEW"
 
 [connection signal="input_event" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartPressed"]
 [connection signal="mouse_entered" from="MenuOptions/ButtonPlay/PlayA3" to="MenuOptions" method="OnStartEntered"]

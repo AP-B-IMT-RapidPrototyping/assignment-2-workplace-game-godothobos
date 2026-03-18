@@ -33,8 +33,8 @@ public partial class Npc : CharacterBody3D
 
     private Vector3 _wanderTarget;
 
-    private float _moveSpeed = 4f;
-    private float _sprintSpeed = 10f;
+    private float _moveSpeed = 6f;
+    private float _sprintSpeed = 9f;
 
 
 
