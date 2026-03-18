@@ -22,7 +22,7 @@ public partial class Stats : Control
         {
             (_timeAlive, "Time alive: ", GameManager._timeAlive),
             (_highScore, "Highscore: ", GameManager._highScore),
-            (_npcHelped, "Helped clients: ", GameManager._npcHelped),
+            (_npcHelped, "Helped clients: ", GameManager._npcHelped)
         };
 
         /* clear text */

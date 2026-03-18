@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=4 uid="uid://dpwu82mmriwgl"]
+[gd_scene load_steps=136 format=4 uid="uid://dpwu82mmriwgl"]
 
 [ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="1_6pkia"]
 [ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="2_nlbba"]
@@ -49,19 +49,32 @@
 [ext_resource type="PackedScene" uid="uid://dby6tuv675wde" path="res://Assets/OFFICE/carpet_floor/floor_3x3.glb" id="45_0xc4s"]
 [ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="46_8hjpy"]
 [ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="47_ivdik"]
+[ext_resource type="Script" uid="uid://brymhgnn7vole" path="res://Scripts/SceneScripts/DeathOptions.cs" id="50_nlbba"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_21chu"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nlbba"]
+sky_top_color = Color(0.5112871, 0.38152397, 0.20931897, 1)
+sky_horizon_color = Color(0.49081504, 0.3315746, 0, 1)
+ground_bottom_color = Color(0.13403323, 0.110636376, 0.084307976, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_yo2ah"]
-sky_material = SubResource("ProceduralSkyMaterial_21chu")
+[sub_resource type="Sky" id="Sky_vbr0b"]
+sky_material = SubResource("ProceduralSkyMaterial_nlbba")
 
-[sub_resource type="Environment" id="Environment_u1ri5"]
+[sub_resource type="Environment" id="Environment_7w1nm"]
 background_mode = 2
-sky = SubResource("Sky_yo2ah")
-tonemap_mode = 2
+sky = SubResource("Sky_vbr0b")
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
+fog_light_color = Color(0.2783101, 0.18530422, 0.008054368, 1)
+fog_density = 0.0045
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.025
+volumetric_fog_albedo = Color(0.2784314, 0.18431373, 0.007843138, 1)
+volumetric_fog_emission = Color(0.2784314, 0.18431373, 0.007843138, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0nr8p"]
 load_path = "res://.godot/imported/RedCarpet.jpg-2dbeb1a5f0d2ab78a0eb36c0fe3cbbee.s3tc.ctex"
@@ -348,6 +361,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/UI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_gpyba"]
 resource_name = "fade"
@@ -364,6 +389,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0.25490198), Color(0, 0, 0, 0.25490198), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/UI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j7ive"]
@@ -442,7 +479,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_u1ri5")
+environment = SubResource("Environment_7w1nm")
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -485,7 +522,6 @@ material = SubResource("StandardMaterial3D_i5m2e")
 
 [node name="Roof" type="CSGBox3D" parent="Map/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
-visible = false
 material_override = SubResource("StandardMaterial3D_np5kd")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)
@@ -2644,6 +2680,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="WaitToShowStats" type="Timer" parent="Control"]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
 [node name="Color" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -2651,12 +2692,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
-
-[node name="WaitToShowStats" type="Timer" parent="Control"]
-wait_time = 7.0
-one_shot = true
-autostart = true
 
 [node name="Stats" type="Control" parent="Control" node_paths=PackedStringArray("_timeAlive", "_highScore", "_npcHelped", "_showTextSFX", "_countNumberSFX")]
 layout_mode = 1
@@ -2665,6 +2702,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("8_j7ive")
 _timeAlive = NodePath("TimeAlive")
 _highScore = NodePath("HighScore")
@@ -2691,6 +2729,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_gpyba")
 theme_override_font_sizes/font_size = 56
+text = "TEXT TEXT TEXT TEXT"
 vertical_alignment = 1
 
 [node name="HighScore" type="Label" parent="Control/Stats"]
@@ -2708,6 +2747,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_gpyba")
 theme_override_font_sizes/font_size = 56
+text = "TEXT TEXT TEXT TEXT "
 vertical_alignment = 1
 
 [node name="NpcsHelped" type="Label" parent="Control/Stats"]
@@ -2725,9 +2765,38 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_gpyba")
 theme_override_font_sizes/font_size = 56
+text = "TEXT TEXT TEXT TEXT "
 vertical_alignment = 1
 
+[node name="UI" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("50_nlbba")
+
+[node name="MainMenu" type="Button" parent="Control/UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -170.0
+offset_right = 140.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_gpyba")
+theme_override_font_sizes/font_size = 56
+text = "Main Menu"
+
 [connection signal="timeout" from="Control/WaitToShowStats" to="Control/Stats" method="ShowStats"]
+[connection signal="pressed" from="Control/UI/MainMenu" to="Control/UI" method="OnMenuPressed"]
 
 [editable path="Map/Building/Objects/desk2_weathered6"]
 [editable path="Map/Building/Objects/desk2_weathered8"]

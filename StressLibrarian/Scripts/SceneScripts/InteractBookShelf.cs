@@ -86,8 +86,6 @@ public partial class InteractBookShelf : Node3D
 
     private void CorrectBook(BookBox book)
     {
-        GD.Print("good boy");
-
         var player = GetTree().GetFirstNodeInGroup("player") as Player;
         if (player != null)
             player.HandleForceDropObject(book);
@@ -101,7 +99,7 @@ public partial class InteractBookShelf : Node3D
 
     private void WrongBook(BookBox book)
     {
-        GD.Print("wrong book");
+        
     }
 
 

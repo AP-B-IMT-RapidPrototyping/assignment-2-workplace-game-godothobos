@@ -15,17 +15,29 @@ public partial class GameManager : Node
     public static int ActiveAskNPC = 0;
     public static int ActiveAskNPCMax = 1;
 
+    private bool _isDead = false;
+
 
     private void OnDead()
     {
         GetTree().ChangeSceneToFile("res://scenes/levels/death.tscn");
     }
 
+    public static void ResetGame()
+    {
+        Stress = 0;
+        Difficulty = 0;
+
+        ActiveLoudNPC = 0;
+        ActiveAskNPC = 0;
+    }
+
     public override void _PhysicsProcess(double delta)
     {
-        if (Stress >= 100)
+        if (!_isDead && Stress >= 100)
         {
-            Stress = 100;
+            _isDead = true;
+            Stress = 0;
             OnDead();
         }
 

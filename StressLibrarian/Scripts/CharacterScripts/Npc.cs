@@ -218,15 +218,9 @@ public partial class Npc : CharacterBody3D
 
         MoveNPC(delta);
 
-        if (_raycastNpc.IsColliding())
+        if (_navAgent.IsNavigationFinished())
         {
-            var collider = _raycastNpc.GetCollider();
-            if (collider == _player)
-            {
-                GD.Print($"{Name} sniffed player.");
-                Velocity = Vector3.Zero;
-                SetState(NPCState.IDLE);
-            }
+            SetState(NPCState.IDLE);
         }
     }
 
@@ -257,7 +251,7 @@ public partial class Npc : CharacterBody3D
 
         if ((_state == NPCState.IDLE || _state == NPCState.WANDER) && _actionCooldown <= 0)
         {
-            ChooseNextAction(); 
+            ChooseNextAction();
         }
 
         switch (_state)
