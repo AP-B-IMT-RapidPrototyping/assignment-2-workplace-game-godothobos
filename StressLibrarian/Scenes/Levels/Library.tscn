@@ -415,6 +415,7 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
+visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)
@@ -578,6 +579,9 @@ shape = SubResource("ConvexPolygonShape3D_v0p6d")
 [node name="beanbag_green3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 2.374118, 0, -16.596592)
 
+[node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green3" index="0"]
+transform = Transform3D(-0.033639923, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639923, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green3/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -600,7 +604,7 @@ shape = SubResource("ConvexPolygonShape3D_muvd7")
 transform = Transform3D(0.8191519, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.8191519, -14.052602, 0, -14.031183)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green9" index="0"]
-transform = Transform3D(0.08351077, 0, -0.6673378, 0, 0.67254275, 0, 0.6673378, 0, 0.08351077, -0.000117812306, 0, 0.46931803)
+transform = Transform3D(0.08351079, 0, -0.6673378, 0, 0.67254275, 0, 0.6673378, 0, 0.08351079, -0.00011777878, -0.1, 0.4693184)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green9/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -612,7 +616,7 @@ shape = SubResource("ConvexPolygonShape3D_muvd7")
 transform = Transform3D(-0.3420202, 0, 0.93969244, 0, 1, 0, -0.93969244, 0, -0.3420202, -14.10182, 0, -10.0521555)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green10" index="0"]
-transform = Transform3D(0.08351077, 0, -0.6673378, 0, 0.67254275, 0, 0.6673378, 0, 0.08351077, -0.000117812306, 0, 0.46931803)
+transform = Transform3D(0.083510816, 0, -0.6673378, 0, 0.67254275, 0, 0.6673378, 0, 0.083510816, -0.000118255615, -0.1, 0.46931934)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green10/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -623,6 +627,9 @@ shape = SubResource("ConvexPolygonShape3D_muvd7")
 [node name="beanbag_green4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
 transform = Transform3D(0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660253, 9.943877, 0, -26.59653)
 
+[node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green4" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639938, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green4/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -632,6 +639,9 @@ shape = SubResource("ConvexPolygonShape3D_1mmcj")
 [node name="beanbag_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 10, 0, -9)
 
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue4" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639938, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue4/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -640,6 +650,9 @@ shape = SubResource("ConvexPolygonShape3D_ncrww")
 
 [node name="beanbag_blue5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(0.8660255, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.8660255, 0.40436465, 0, -26.779871)
+
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue5" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639938, 0, -0.1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue5/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -829,6 +842,9 @@ shape = SubResource("ConvexPolygonShape3D_urrsm")
 [node name="beanbag_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, 17.436604, 0, -1.1633974)
 
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue2" index="0"]
+transform = Transform3D(-0.033639967, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639967, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue2/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -838,6 +854,9 @@ shape = SubResource("ConvexPolygonShape3D_y3fxk")
 [node name="beanbag_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, 18.740192, 0, -28.650002)
 
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue3" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639938, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue3/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -846,6 +865,9 @@ shape = SubResource("ConvexPolygonShape3D_onppw")
 
 [node name="beanbag_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 21.2, 0, -34.100002)
+
+[node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green2" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639938, 0, -0.1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green2/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -1046,7 +1068,7 @@ shape = SubResource("ConvexPolygonShape3D_b3hvt")
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 18.35426, 0, -45.43793)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue6" index="0"]
-transform = Transform3D(-0.033639934, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639934, 0.0671701, 0, 0.0033639935)
+transform = Transform3D(-0.033639923, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639923, 0.06716919, -0.1, 0.003364563)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue6/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -1057,6 +1079,9 @@ shape = SubResource("ConvexPolygonShape3D_5gmt2")
 [node name="beanbag_blue7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(-0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, -0.9659258, 19.472353, 0, -42.25869)
 
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue7" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639938, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue7/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -1065,6 +1090,9 @@ shape = SubResource("ConvexPolygonShape3D_deswt")
 
 [node name="beanbag_blue8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
 transform = Transform3D(-0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, -0.9659258, 16.534822, 0, -42.403328)
+
+[node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue8" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639938, 0, -0.1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue8/beanbag_blue" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -1075,6 +1103,9 @@ shape = SubResource("ConvexPolygonShape3D_deswt")
 [node name="beanbag_green5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 13.5, 0, -42.4)
 
+[node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green5" index="0"]
+transform = Transform3D(-0.033639938, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639938, 0, -0.1, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green5/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
@@ -1083,6 +1114,9 @@ shape = SubResource("ConvexPolygonShape3D_1uo2d")
 
 [node name="beanbag_green6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 12.259526, 0, -45.484028)
+
+[node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green6" index="0"]
+transform = Transform3D(-0.033639923, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639923, 0, -0.1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green6/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -1094,7 +1128,7 @@ shape = SubResource("ConvexPolygonShape3D_xayvi")
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 15.390241, 0, -45.391155)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green7" index="0"]
-transform = Transform3D(-0.033639934, 0, -0.67170095, 0, 0.67254275, 0, 0.67170095, 0, -0.033639934, 0.0671701, 0, 0.0033639935)
+transform = Transform3D(-0.033639923, 0, -0.671701, 0, 0.67254275, 0, 0.671701, 0, -0.033639923, 0.06716919, -0.1, 0.0033607483)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green7/beanbag_green" index="0"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -2549,64 +2583,37 @@ transform = Transform3D(1.9841906e-09, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.9
 [node name="InteractBookShelf6" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
 transform = Transform3D(8.543858e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 8.543858e-08, 11.375, 0, -25.35)
 
+[node name="book_boxes" type="Node3D" parent="Map/NavigationRegion3D"]
+
 [node name="BoxSpawnPoints" type="Node3D" parent="."]
-visible = false
 
 [node name="SpawnPoint" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1, 0.5, 1)
 
 [node name="SpawnPoint2" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.59999996, 2.1000001)
 
 [node name="SpawnPoint3" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9, 0.4, 0)
 
 [node name="SpawnPoint4" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="SpawnPoint5" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
 
 [node name="SpawnPoint6" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4.6)
 
-[node name="BoxSpawnManager" type="Node3D" parent="."]
+[node name="BoxSpawnManager" type="Node3D" parent="." node_paths=PackedStringArray("_SpawnPoint")]
 script = ExtResource("49_jl3u2")
+_SpawnPoint = [NodePath("../BoxSpawnPoints/SpawnPoint"), NodePath("../BoxSpawnPoints/SpawnPoint2"), NodePath("../BoxSpawnPoints/SpawnPoint3"), NodePath("../BoxSpawnPoints/SpawnPoint4")]
+book_box = ExtResource("50_l0gcx")
+SpawnDelayMin = 10.0
+SpawnDelayMax = 30.0
 
-[node name="Timer" type="Timer" parent="BoxSpawnManager"]
-autostart = true
-
-[node name="Boxes" type="Node3D" parent="."]
-
-[node name="BookBox" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.4000006, 0.70000005, 6.3)
-
-[node name="BookBox2" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.4000006, 0.70000005, -22.400002)
-
-[node name="BookBox3" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6999993, 0.70000005, -9.200002)
-
-[node name="BookBox4" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.799999, 0.70000005, -25.800001)
-
-[node name="BookBox5" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 0.70000005, -43.9)
-
-[node name="BookBox6" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 0.70000005, -31.100002)
-
-[node name="BookBox7" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3, 0.70000005, -29.100002)
-
-[node name="BookBox8" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0.70000005, -13.300002)
-
-[node name="BookBox9" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0.70000005, 1.1999979)
-
-[node name="BookBox10" parent="Boxes" instance=ExtResource("50_l0gcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59999955, 0.70000005, -9.000002)
+[node name="BookBox" parent="." instance=ExtResource("50_l0gcx")]
+transform = Transform3D(1.39090695e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 1.39090695e-08, 5.2, 0.70000005, 6.2)
 
 [connection signal="timeout" from="StressTimer" to="." method="OnStressTimerTimeout"]
 
