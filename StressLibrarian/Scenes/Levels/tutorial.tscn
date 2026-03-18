@@ -768,7 +768,6 @@ material = SubResource("StandardMaterial3D_idsh5")
 
 [node name="Roof" type="CSGBox3D" parent="Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -18.000004, 5.500001, 0)
-visible = false
 use_collision = true
 size = Vector3(96, 0, 22)
 material = SubResource("StandardMaterial3D_wdaxu")
