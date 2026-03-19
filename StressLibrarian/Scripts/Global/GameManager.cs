@@ -8,6 +8,7 @@ public partial class GameManager : Node
 
     public static int _timeAlive = 0;
     public static int _highScore = 0;
+    public static int _npcShushed = 0;
     public static int _npcHelped = 0;
 
     public static int ActiveLoudNPC = 0;

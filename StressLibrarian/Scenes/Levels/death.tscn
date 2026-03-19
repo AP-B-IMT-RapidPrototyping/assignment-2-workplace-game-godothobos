@@ -2695,7 +2695,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Stats" type="Control" parent="Control" node_paths=PackedStringArray("_timeAlive", "_highScore", "_npcHelped", "_showTextSFX", "_countNumberSFX")]
+[node name="Stats" type="Control" parent="Control" node_paths=PackedStringArray("_timeAlive", "_highScore", "_npcShushed", "_npcHelped", "_showTextSFX", "_countNumberSFX")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2706,6 +2706,7 @@ mouse_filter = 2
 script = ExtResource("8_j7ive")
 _timeAlive = NodePath("TimeAlive")
 _highScore = NodePath("HighScore")
+_npcShushed = NodePath("NpcShushed")
 _npcHelped = NodePath("NpcsHelped")
 _showTextSFX = NodePath("ShowText")
 _countNumberSFX = NodePath("CountNumber")
@@ -2750,7 +2751,7 @@ theme_override_font_sizes/font_size = 56
 text = "TEXT TEXT TEXT TEXT "
 vertical_alignment = 1
 
-[node name="NpcsHelped" type="Label" parent="Control/Stats"]
+[node name="NpcShushed" type="Label" parent="Control/Stats"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2761,6 +2762,24 @@ offset_left = -490.0
 offset_top = -32.0
 offset_right = 210.0
 offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_gpyba")
+theme_override_font_sizes/font_size = 56
+text = "TEXT TEXT TEXT TEXT "
+vertical_alignment = 1
+
+[node name="NpcsHelped" type="Label" parent="Control/Stats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = 71.0
+offset_right = 210.0
+offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_gpyba")
