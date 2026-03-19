@@ -81,7 +81,6 @@ public partial class InteractBookShelf : Node3D
                 }
             }
         }
-        GD.Print("ok");
     }
 
     private void CorrectBook(BookBox book)
