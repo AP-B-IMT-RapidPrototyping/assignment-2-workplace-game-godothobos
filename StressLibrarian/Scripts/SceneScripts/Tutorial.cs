@@ -9,15 +9,23 @@ public partial class Tutorial : Node3D
     [Export] private AnimationPlayer _lightEnding;
     [Export] private AnimationPlayer _doorEnding;
     [Export] private RigidBody3D _bookBox;
+    [Export] private AudioStreamPlayer3D _bellRing;
 
     private bool _firstDoor = false;
     private bool _secondDoor = false;
     private bool _thirdDoor = false;
+    private bool _endingAlreadyPlayed = false;
     private int _lastPickupCount;
 
 
     private async void PlayEnding()
     {
+        if (!_thirdDoor || _endingAlreadyPlayed)
+        {
+            return;
+        }
+        _endingAlreadyPlayed = true;
+        _bellRing.Playing = false;
         _lightEnding.Play("Play");
 
         await ToSignal(_lightEnding, AnimationPlayer.SignalName.AnimationFinished);
@@ -55,9 +63,8 @@ public partial class Tutorial : Node3D
         {
             if (_thirdDoor)
                 return;
-
+            _bellRing.Playing = true;
             _thirdDoor = true;
-            PlayEnding(); /* this should play if the player is looking at the door. (check discordw) */
         }
     }
 
