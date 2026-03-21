@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dy53kd20h4anj"]
+[gd_scene load_steps=56 format=3 uid="uid://dy53kd20h4anj"]
 
 [ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="1_as8ev"]
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="1_qqk0j"]
@@ -20,6 +20,8 @@
 [ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="18_d1w2i"]
 [ext_resource type="PackedScene" uid="uid://cxywmaoybf0ex" path="res://Assets/Models/WhiteBoard/low_poly_whiteboard.glb" id="19_rcukj"]
 [ext_resource type="PackedScene" uid="uid://cgimrqucjxxe4" path="res://Assets/Characters_psx/Models/Killers/Character_Monster_03.fbx" id="20_d1w2i"]
+[ext_resource type="PackedScene" uid="uid://jmbcto18oc6l" path="res://Scenes/Levels/tutorial.tscn" id="21_6o04t"]
+[ext_resource type="PackedScene" uid="uid://b0kpflec4ydky" path="res://Scenes/Levels/library.tscn" id="22_ucnu3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wlsvp"]
 sky_top_color = Color(0.5112871, 0.38152397, 0.20931897, 1)
@@ -382,10 +384,6 @@ _data = {
 
 [node name="Main Menu" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_d1w2i")
 
@@ -679,6 +677,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("15_ch2lh")
 _animationManager = NodePath("../AnimationManager")
+_tutorialScene = ExtResource("21_6o04t")
+_libraryScene = ExtResource("22_ucnu3")
 
 [node name="Background" type="ColorRect" parent="AskTutorial"]
 layout_mode = 1

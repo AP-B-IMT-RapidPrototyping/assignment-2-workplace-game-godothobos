@@ -1,56 +1,57 @@
-[gd_scene load_steps=132 format=4 uid="uid://b0kpflec4ydky"]
+[gd_scene load_steps=133 format=4 uid="uid://b0kpflec4ydky"]
 
-[ext_resource type="Script" uid="uid://ccsnd4mvhlvlx" path="res://Scripts/SceneScripts/Library.cs" id="1_23naa"]
-[ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="1_dqej6"]
-[ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="2_l0gcx"]
-[ext_resource type="Texture2D" uid="uid://didwgog6e383l" path="res://Assets/Textures/128x128/Wood/Wood_09-128x128.png" id="3_k48ua"]
-[ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="4_jl3u2"]
-[ext_resource type="MeshLibrary" uid="uid://bv82xv85sxbwp" path="res://Assets/MeshLibrary/smallbookshelf_fix2.0.tres" id="5_23naa"]
-[ext_resource type="PackedScene" uid="uid://dkcsshtasd7qq" path="res://Assets/OFFICE/desks/desk2_weathered.glb" id="5_l0gcx"]
-[ext_resource type="PackedScene" uid="uid://d35xb14eyr4d" path="res://Assets/OFFICE/couches/armchair_red.glb" id="6_23naa"]
-[ext_resource type="PackedScene" uid="uid://71fepew8vt84" path="res://Assets/OFFICE/chairs/office_chair_fancy.glb" id="7_0nr8p"]
-[ext_resource type="PackedScene" uid="uid://cfg84drkdffs3" path="res://Assets/OFFICE/desks/desk1_alt4.glb" id="8_oouob"]
-[ext_resource type="PackedScene" uid="uid://dtm4bepj5akgr" path="res://Assets/OFFICE/couches/beanbag_green.glb" id="9_n67k7"]
-[ext_resource type="PackedScene" uid="uid://b7sx0mlmo5ek0" path="res://Assets/OFFICE/couches/beanbag_blue.glb" id="10_ha5t3"]
-[ext_resource type="Texture2D" uid="uid://g5sjr56qlkjx" path="res://Assets/OFFICE/desks/desk1_alt4_desk_1.jpg" id="11_tv8b4"]
-[ext_resource type="PackedScene" uid="uid://b3x3yapg6jvhy" path="res://Assets/OFFICE/extras/water_cooler_bottle_attached.glb" id="12_vebfw"]
-[ext_resource type="PackedScene" uid="uid://bt7ghfklph67q" path="res://Assets/OFFICE/extras/coffee_machine.glb" id="13_xlngv"]
-[ext_resource type="PackedScene" uid="uid://c4bna2osfmkla" path="res://Assets/OFFICE/couches/armchair_blue.glb" id="14_2iy40"]
-[ext_resource type="PackedScene" uid="uid://cgclj7lrmtu3t" path="res://Assets/OFFICE/carpet_floor/floor_corner_round.glb" id="15_js8ju"]
-[ext_resource type="PackedScene" uid="uid://cl88o3vfvvdwh" path="res://Assets/OFFICE/couches/couch_red.001.glb" id="16_bik5a"]
-[ext_resource type="PackedScene" uid="uid://dirfmi5jx27om" path="res://Assets/OFFICE/couches/armchair_green.glb" id="17_6mv2o"]
-[ext_resource type="PackedScene" uid="uid://bneq3apto0mle" path="res://Assets/OFFICE/chairs/office_chair_orange.glb" id="18_o4a6f"]
-[ext_resource type="PackedScene" uid="uid://blhqs2n0fjcm1" path="res://Assets/OFFICE/desks/desk1_alt_weathered.glb" id="19_w3tah"]
-[ext_resource type="PackedScene" uid="uid://b48ewel2wsjgn" path="res://Assets/OFFICE/couches/couch_large_red.glb" id="21_i8aek"]
-[ext_resource type="PackedScene" uid="uid://mn1ucxr8f1gs" path="res://Assets/OFFICE/couches/couch_large_green.glb" id="22_1rwai"]
-[ext_resource type="PackedScene" uid="uid://dat5cqjjksl1m" path="res://Assets/OFFICE/couches/couch_large_blue.glb" id="23_c7fj2"]
-[ext_resource type="PackedScene" uid="uid://b5hfrlre1ho0y" path="res://Assets/OFFICE/chairs/office_chair_blue.glb" id="24_dwlv2"]
-[ext_resource type="PackedScene" uid="uid://cxjg2a60t4i2k" path="res://Assets/OFFICE/desks/desk1.glb" id="25_oyf7t"]
-[ext_resource type="PackedScene" uid="uid://cm8fntqdmj38b" path="res://Assets/OFFICE/file_cabinets/file_cabinet_small.glb" id="26_gfbxi"]
-[ext_resource type="PackedScene" uid="uid://77ijmlqbxcxv" path="res://Assets/OFFICE/couches/couch_blue.glb" id="27_3da1w"]
-[ext_resource type="PackedScene" uid="uid://cwhqh1p282tus" path="res://Assets/OFFICE/dividers/divider_black.glb" id="28_xbnbm"]
-[ext_resource type="PackedScene" uid="uid://bhlm2c3hvpnd3" path="res://Assets/OFFICE/file_cabinets/file_cabinet_larger.glb" id="29_ci12t"]
-[ext_resource type="PackedScene" uid="uid://ds8pccdrcs2sr" path="res://Assets/OFFICE/chairs/office_chair_alt.glb" id="30_a7uy5"]
-[ext_resource type="PackedScene" uid="uid://b3m7eyf0kh7mq" path="res://Assets/OFFICE/stationary/paper_stack.glb" id="31_ckm5n"]
-[ext_resource type="PackedScene" uid="uid://csqil4n0ndn08" path="res://Assets/OFFICE/stationary/elastic_ball.glb" id="32_8a1pf"]
-[ext_resource type="PackedScene" uid="uid://bw3y1qngrwsfg" path="res://Assets/OFFICE/stationary/paper_stack_large.glb" id="33_sqk4e"]
-[ext_resource type="PackedScene" uid="uid://cajo2jnqnjwix" path="res://Assets/OFFICE/computers/computer_keyboard.glb" id="34_n1g2j"]
-[ext_resource type="PackedScene" uid="uid://bpyhwatpippes" path="res://Assets/OFFICE/computers/computer_tower_alt.glb" id="35_e2l4b"]
-[ext_resource type="PackedScene" uid="uid://cm1iswnkkebjd" path="res://Assets/OFFICE/computers/computer_mouse.glb" id="36_53w7y"]
-[ext_resource type="PackedScene" uid="uid://bkr6b2ayne0ws" path="res://Assets/OFFICE/computers/computer_monitor.glb" id="37_n1pnv"]
-[ext_resource type="PackedScene" uid="uid://wsrgsdipfxc4" path="res://Assets/OFFICE/extras/desk_phone_with_cable.glb" id="38_kq7qe"]
-[ext_resource type="PackedScene" uid="uid://dylfjsp5dp8yh" path="res://Assets/OFFICE/stationary/pen2.glb" id="39_qc4to"]
-[ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="40_22jcm"]
-[ext_resource type="Texture2D" uid="uid://bwv5ggh7v8tgq" path="res://Assets/Textures/WoodGate/textures/wooden_gate_nor_gl_1k.png" id="41_lfi5n"]
-[ext_resource type="Texture2D" uid="uid://b84ha7y18utrj" path="res://Assets/Textures/WoodGate/textures/wooden_gate_rough_1k.png" id="42_tcgps"]
-[ext_resource type="PackedScene" uid="uid://dahc2j857s24a" path="res://Assets/OFFICE/carpet_floor/floor_2x2.glb" id="43_aiu1q"]
-[ext_resource type="PackedScene" uid="uid://bayl2typi1qpk" path="res://Assets/OFFICE/carpet_floor/floor_corner_round_half.glb" id="44_0u1be"]
-[ext_resource type="PackedScene" uid="uid://dby6tuv675wde" path="res://Assets/OFFICE/carpet_floor/floor_3x3.glb" id="45_s0gnd"]
-[ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="46_kdidu"]
-[ext_resource type="MeshLibrary" uid="uid://cclvr03ds8roq" path="res://Assets/MeshLibrary/SmallEmptyBookshelf.tres" id="49_23naa"]
-[ext_resource type="Script" uid="uid://buuk8cytol5c3" path="res://Scripts/Spawn/BoxSpawn.cs" id="49_jl3u2"]
-[ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="50_23naa"]
-[ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="50_l0gcx"]
+[ext_resource type="Script" uid="uid://ccsnd4mvhlvlx" path="res://Scripts/SceneScripts/Library.cs" id="1_v6w10"]
+[ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="2_u0u76"]
+[ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="3_3liie"]
+[ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="4_fso4l"]
+[ext_resource type="MeshLibrary" uid="uid://bv82xv85sxbwp" path="res://Assets/MeshLibrary/smallbookshelf_fix2.0.tres" id="5_srp1s"]
+[ext_resource type="MeshLibrary" uid="uid://cclvr03ds8roq" path="res://Assets/MeshLibrary/SmallEmptyBookshelf.tres" id="6_85hpw"]
+[ext_resource type="Texture2D" uid="uid://didwgog6e383l" path="res://Assets/Textures/128x128/Wood/Wood_09-128x128.png" id="7_dshhg"]
+[ext_resource type="PackedScene" uid="uid://dkcsshtasd7qq" path="res://Assets/OFFICE/desks/desk2_weathered.glb" id="8_eaoj4"]
+[ext_resource type="PackedScene" uid="uid://d35xb14eyr4d" path="res://Assets/OFFICE/couches/armchair_red.glb" id="9_sw2ak"]
+[ext_resource type="PackedScene" uid="uid://71fepew8vt84" path="res://Assets/OFFICE/chairs/office_chair_fancy.glb" id="10_rgybr"]
+[ext_resource type="PackedScene" uid="uid://cfg84drkdffs3" path="res://Assets/OFFICE/desks/desk1_alt4.glb" id="11_xuiuc"]
+[ext_resource type="PackedScene" uid="uid://dtm4bepj5akgr" path="res://Assets/OFFICE/couches/beanbag_green.glb" id="12_owuim"]
+[ext_resource type="PackedScene" uid="uid://b7sx0mlmo5ek0" path="res://Assets/OFFICE/couches/beanbag_blue.glb" id="13_n7yhb"]
+[ext_resource type="Texture2D" uid="uid://g5sjr56qlkjx" path="res://Assets/OFFICE/desks/desk1_alt4_desk_1.jpg" id="14_8xb4q"]
+[ext_resource type="PackedScene" uid="uid://b3x3yapg6jvhy" path="res://Assets/OFFICE/extras/water_cooler_bottle_attached.glb" id="15_17l7m"]
+[ext_resource type="PackedScene" uid="uid://bt7ghfklph67q" path="res://Assets/OFFICE/extras/coffee_machine.glb" id="16_w2lit"]
+[ext_resource type="PackedScene" uid="uid://c4bna2osfmkla" path="res://Assets/OFFICE/couches/armchair_blue.glb" id="17_gurb8"]
+[ext_resource type="PackedScene" uid="uid://cgclj7lrmtu3t" path="res://Assets/OFFICE/carpet_floor/floor_corner_round.glb" id="18_ytqeb"]
+[ext_resource type="PackedScene" uid="uid://cl88o3vfvvdwh" path="res://Assets/OFFICE/couches/couch_red.001.glb" id="19_jjqxx"]
+[ext_resource type="PackedScene" uid="uid://dirfmi5jx27om" path="res://Assets/OFFICE/couches/armchair_green.glb" id="20_teypl"]
+[ext_resource type="PackedScene" uid="uid://bneq3apto0mle" path="res://Assets/OFFICE/chairs/office_chair_orange.glb" id="21_33baf"]
+[ext_resource type="PackedScene" uid="uid://blhqs2n0fjcm1" path="res://Assets/OFFICE/desks/desk1_alt_weathered.glb" id="22_ellyj"]
+[ext_resource type="PackedScene" uid="uid://b48ewel2wsjgn" path="res://Assets/OFFICE/couches/couch_large_red.glb" id="23_mob46"]
+[ext_resource type="PackedScene" uid="uid://mn1ucxr8f1gs" path="res://Assets/OFFICE/couches/couch_large_green.glb" id="24_jaiwp"]
+[ext_resource type="PackedScene" uid="uid://dat5cqjjksl1m" path="res://Assets/OFFICE/couches/couch_large_blue.glb" id="25_y46w8"]
+[ext_resource type="PackedScene" uid="uid://b5hfrlre1ho0y" path="res://Assets/OFFICE/chairs/office_chair_blue.glb" id="26_mc465"]
+[ext_resource type="PackedScene" uid="uid://cxjg2a60t4i2k" path="res://Assets/OFFICE/desks/desk1.glb" id="27_t358t"]
+[ext_resource type="PackedScene" uid="uid://cm8fntqdmj38b" path="res://Assets/OFFICE/file_cabinets/file_cabinet_small.glb" id="28_8enqw"]
+[ext_resource type="PackedScene" uid="uid://77ijmlqbxcxv" path="res://Assets/OFFICE/couches/couch_blue.glb" id="29_e27cl"]
+[ext_resource type="PackedScene" uid="uid://cwhqh1p282tus" path="res://Assets/OFFICE/dividers/divider_black.glb" id="30_axtoe"]
+[ext_resource type="PackedScene" uid="uid://bhlm2c3hvpnd3" path="res://Assets/OFFICE/file_cabinets/file_cabinet_larger.glb" id="31_6pid4"]
+[ext_resource type="PackedScene" uid="uid://ds8pccdrcs2sr" path="res://Assets/OFFICE/chairs/office_chair_alt.glb" id="32_khklt"]
+[ext_resource type="PackedScene" uid="uid://b3m7eyf0kh7mq" path="res://Assets/OFFICE/stationary/paper_stack.glb" id="33_0ay4y"]
+[ext_resource type="PackedScene" uid="uid://csqil4n0ndn08" path="res://Assets/OFFICE/stationary/elastic_ball.glb" id="34_4cxfv"]
+[ext_resource type="PackedScene" uid="uid://bw3y1qngrwsfg" path="res://Assets/OFFICE/stationary/paper_stack_large.glb" id="35_g5qnu"]
+[ext_resource type="PackedScene" uid="uid://cajo2jnqnjwix" path="res://Assets/OFFICE/computers/computer_keyboard.glb" id="36_amb4n"]
+[ext_resource type="PackedScene" uid="uid://bpyhwatpippes" path="res://Assets/OFFICE/computers/computer_tower_alt.glb" id="37_vdp61"]
+[ext_resource type="PackedScene" uid="uid://cm1iswnkkebjd" path="res://Assets/OFFICE/computers/computer_mouse.glb" id="38_bkt3n"]
+[ext_resource type="PackedScene" uid="uid://bkr6b2ayne0ws" path="res://Assets/OFFICE/computers/computer_monitor.glb" id="39_r7tow"]
+[ext_resource type="PackedScene" uid="uid://wsrgsdipfxc4" path="res://Assets/OFFICE/extras/desk_phone_with_cable.glb" id="40_ttce5"]
+[ext_resource type="PackedScene" uid="uid://dylfjsp5dp8yh" path="res://Assets/OFFICE/stationary/pen2.glb" id="41_c2oqv"]
+[ext_resource type="Texture2D" uid="uid://blfqokjv11vl7" path="res://Assets/Textures/WoodGate/textures/wooden_gate_diff_1k.png" id="42_a6siv"]
+[ext_resource type="Texture2D" uid="uid://bwv5ggh7v8tgq" path="res://Assets/Textures/WoodGate/textures/wooden_gate_nor_gl_1k.png" id="43_clnei"]
+[ext_resource type="Texture2D" uid="uid://b84ha7y18utrj" path="res://Assets/Textures/WoodGate/textures/wooden_gate_rough_1k.png" id="44_idck2"]
+[ext_resource type="PackedScene" uid="uid://dahc2j857s24a" path="res://Assets/OFFICE/carpet_floor/floor_2x2.glb" id="45_38e3g"]
+[ext_resource type="PackedScene" uid="uid://bayl2typi1qpk" path="res://Assets/OFFICE/carpet_floor/floor_corner_round_half.glb" id="46_80clb"]
+[ext_resource type="PackedScene" uid="uid://dby6tuv675wde" path="res://Assets/OFFICE/carpet_floor/floor_3x3.glb" id="47_ot2rd"]
+[ext_resource type="PackedScene" uid="uid://c8iw6tomgx30t" path="res://Assets/Models/WoodDoubleDoor/WoodDoubleDoor.glb" id="48_j2xan"]
+[ext_resource type="PackedScene" uid="uid://bmh63563rk2sf" path="res://Scenes/Objects/interact_book_shelf.tscn" id="49_x1rj4"]
+[ext_resource type="Script" uid="uid://buuk8cytol5c3" path="res://Scripts/Spawn/BoxSpawn.cs" id="50_bcuux"]
+[ext_resource type="PackedScene" uid="uid://dkv00167nj6f8" path="res://Scenes/Objects/book_box.tscn" id="51_enacg"]
+[ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="52_u0u76"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dqej6"]
 sky_top_color = Color(0.5112871, 0.38152397, 0.20931897, 1)
@@ -92,7 +93,7 @@ uv1_offset = Vector3(0, 0, -0.505)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7ixm"]
-albedo_texture = ExtResource("3_k48ua")
+albedo_texture = ExtResource("7_dshhg")
 uv1_triplanar = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0nr8p"]
@@ -145,7 +146,7 @@ points = PackedVector3Array(1.0452876, 0, -0.64209044, 1.0452876, 0.8911104, -0.
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18p8g"]
 resource_name = "desk_1"
 cull_mode = 2
-albedo_texture = ExtResource("11_tv8b4")
+albedo_texture = ExtResource("14_8xb4q")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ha5t3"]
@@ -340,10 +341,10 @@ points = PackedVector3Array(-0.37371987, -0.09824992, 0.10655105, -0.24245378, -
 points = PackedVector3Array(-0.37371987, -0.09824992, 0.10655105, -0.24245378, -0.08260709, -0.304207, -0.23822418, -0.12892613, -0.2991385, -0.35264605, -0.1395917, 0.10051051, -0.368303, -0.09824992, 0.12571421, -0.20698448, 0.89405406, 0.29922408, -0.20698448, 0.8958825, 0.27943605, -0.22152838, 0.3483834, -0.2501197, -0.22709365, -0.08260709, -0.316913, -0.22286405, -0.12892613, -0.31177506, -0.20891377, -0.13705227, -0.26352, 0.19156283, -0.14050588, -0.2794893, -0.3472292, -0.1395917, 0.11967367, -0.013684213, -0.12892613, 0.38261157, -0.013610005, -0.08250551, 0.38927704, -0.23176847, 0.67820334, 0.29130888, -0.00032758713, 0.86165106, 0.35254765, -0.00032758713, 0.88704526, 0.3487289, -0.00032758713, 0.895273, 0.3246361, -0.00032758713, 0.89720297, 0.30484807, 0.20632935, 0.89476514, 0.27943605, 0.18792683, 0.8857248, 0.26673007, -0.188582, 0.8857248, 0.26673007, -0.19859949, 0.37956747, -0.23380323, 0.22087324, 0.3483834, -0.2501197, 0.22525126, -0.08616228, -0.32003742, -0.20038037, -0.04410947, -0.31163618, 0.22102165, -0.1324813, -0.3149689, -0.19347943, -0.13705227, -0.27615657, 0.20692295, -0.14050588, -0.2667833, 0.32809734, -0.13796645, 0.11703527, 0.0060539246, -0.13695069, 0.33637005, -0.0139068365, -0.13695069, 0.33650893, 0.006276548, -0.12892613, 0.38254213, 0.006276548, -0.08250551, 0.38913816, 0.20632935, 0.89405406, 0.29922408, 0.38434362, -0.08352128, 0.11217505, 0.19794434, 0.37956747, -0.23380323, 0.24061137, -0.08616228, -0.3073314, 0.23638177, -0.1324813, -0.3022629, 0.3335142, -0.13796645, 0.09787211, 0.37796217, -0.1299419, 0.1103698, 0.3725453, -0.1299419, 0.12953296, 0.3788526, -0.08352128, 0.13133818, 0.23111331, 0.67820334, 0.29130888)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_088yt"]
-albedo_texture = ExtResource("40_22jcm")
-roughness_texture = ExtResource("42_tcgps")
+albedo_texture = ExtResource("42_a6siv")
+roughness_texture = ExtResource("44_idck2")
 normal_enabled = true
-normal_texture = ExtResource("41_lfi5n")
+normal_texture = ExtResource("43_clnei")
 uv1_scale = Vector3(0.185, 0.185, 0.185)
 uv1_triplanar = true
 
@@ -354,7 +355,7 @@ size = Vector3(1, 0.2, 2.4)
 size = Vector3(0.6664063, 0.2, 2.2)
 
 [node name="Library" type="Node3D" node_paths=PackedStringArray("_stressTimer")]
-script = ExtResource("1_23naa")
+script = ExtResource("1_v6w10")
 _stressTimer = NodePath("StressTimer")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -366,10 +367,10 @@ light_color = Color(0.967519, 0.87495536, 0.76633126, 1)
 light_energy = 0.15
 
 [node name="StressTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 0.3
 autostart = true
 
-[node name="Player" parent="." instance=ExtResource("1_dqej6")]
+[node name="Player" parent="." instance=ExtResource("2_u0u76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68484807, 1, 6.807815)
 
 [node name="Map" type="Node3D" parent="."]
@@ -380,7 +381,7 @@ navigation_mesh = SubResource("NavigationMesh_k48ua")
 [node name="GridMaps" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="FullBookshelfGrid" type="GridMap" parent="Map/NavigationRegion3D/GridMaps"]
-mesh_library = ExtResource("2_l0gcx")
+mesh_library = ExtResource("3_3liie")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_y = false
 data = {
@@ -389,12 +390,12 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="BookshelfGrid" type="GridMap" parent="Map/NavigationRegion3D/GridMaps"]
-mesh_library = ExtResource("4_jl3u2")
+mesh_library = ExtResource("4_fso4l")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_y = false
 
 [node name="SmallFullBookshelfGrid" type="GridMap" parent="Map/NavigationRegion3D/GridMaps"]
-mesh_library = ExtResource("5_23naa")
+mesh_library = ExtResource("5_srp1s")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_y = false
 data = {
@@ -402,7 +403,7 @@ data = {
 }
 
 [node name="SmallEmptyBookshelfGrid" type="GridMap" parent="Map/NavigationRegion3D/GridMaps"]
-mesh_library = ExtResource("49_23naa")
+mesh_library = ExtResource("6_85hpw")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_y = false
 
@@ -424,7 +425,7 @@ material = SubResource("StandardMaterial3D_0nr8p")
 
 [node name="Objects" type="Node3D" parent="Map/NavigationRegion3D/Building"]
 
-[node name="desk2_weathered6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9.2, 0, -0.9000001)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered6" index="0"]
@@ -435,7 +436,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered6/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.7999997, 0, -0.9000008)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered8" index="0"]
@@ -446,7 +447,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered8/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9.2, 0, -3.3000002)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered5" index="0"]
@@ -457,7 +458,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered5/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.7999997, 0, -3.300001)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered7" index="0"]
@@ -468,7 +469,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered7/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.9, 0, -3.5)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered4" index="0"]
@@ -479,7 +480,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered4/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 0, -3.5000002)
 
 [node name="desk2_weathered" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered9" index="0"]
@@ -490,7 +491,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered9/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.9, 0, -1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered2/desk2_weathered" index="0"]
@@ -498,7 +499,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.9,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered2/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="desk2_weathered3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("5_l0gcx")]
+[node name="desk2_weathered3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_eaoj4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 0, -1.0000002)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered3/desk2_weathered" index="0"]
@@ -506,7 +507,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk2_weathered3/desk2_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gvdec")
 
-[node name="armchair_red2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("6_23naa")]
+[node name="armchair_red2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_sw2ak")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.7, 0, -29.300001)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_red2/armchair_red" index="0"]
@@ -515,7 +516,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_red2/armchair_red/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_e3pq1")
 
-[node name="office_chair_fancy3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("7_0nr8p")]
+[node name="office_chair_fancy3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_rgybr")]
 transform = Transform3D(-0.17364822, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.17364822, 9.9, 0.2, -37.7)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy3/office_chair_fancy" index="0"]
@@ -524,7 +525,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy3/office_chair_fancy/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5thf6")
 
-[node name="office_chair_fancy4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("7_0nr8p")]
+[node name="office_chair_fancy4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_rgybr")]
 transform = Transform3D(-0.17364822, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.17364822, -4.3535748, 0.2, -14.878178)
 
 [node name="office_chair_fancy" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy4" index="0"]
@@ -536,7 +537,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy4/office_chair_fancy/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5thf6")
 
-[node name="office_chair_fancy5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("7_0nr8p")]
+[node name="office_chair_fancy5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_rgybr")]
 transform = Transform3D(-0.9396927, 0, 0.34202003, 0, 1, 0, -0.34202003, 0, -0.9396927, -4.415647, 0.2, -11.199069)
 
 [node name="office_chair_fancy" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy5" index="0"]
@@ -548,7 +549,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy5/office_chair_fancy/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5thf6")
 
-[node name="office_chair_fancy6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("7_0nr8p")]
+[node name="office_chair_fancy6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_rgybr")]
 transform = Transform3D(-0.0871557, 0, -0.99619466, 0, 1, 0, 0.99619466, 0, -0.0871557, -2.3562005, 0.2, -7.7502427)
 
 [node name="office_chair_fancy" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy6" index="0"]
@@ -560,7 +561,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy6/office_chair_fancy/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5thf6")
 
-[node name="office_chair_fancy2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("7_0nr8p")]
+[node name="office_chair_fancy2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_rgybr")]
 transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 9.31056, 0.2, -29.578508)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy2/office_chair_fancy" index="0"]
@@ -569,7 +570,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_fancy2/office_chair_fancy/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_mlg6u")
 
-[node name="desk1_alt43" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_oouob")]
+[node name="desk1_alt43" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("11_xuiuc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.3, 0, -29.500002)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt43/desk1_alt4" index="0"]
@@ -577,7 +578,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.3,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt43/desk1_alt4/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_v0p6d")
 
-[node name="beanbag_green3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 2.374118, 0, -16.596592)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green3" index="0"]
@@ -589,7 +590,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green3/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_muvd7")
 
-[node name="beanbag_green8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(-0.70710677, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710677, -7.889715, 0, -23.992113)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green8" index="0"]
@@ -601,7 +602,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green8/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_muvd7")
 
-[node name="beanbag_green9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(0.8191519, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.8191519, -14.052602, 0, -14.031183)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green9" index="0"]
@@ -613,7 +614,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green9/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_muvd7")
 
-[node name="beanbag_green10" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green10" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(-0.3420202, 0, 0.93969244, 0, 1, 0, -0.93969244, 0, -0.3420202, -14.10182, 0, -10.0521555)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green10" index="0"]
@@ -625,7 +626,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green10/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_muvd7")
 
-[node name="beanbag_green4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660253, 9.943877, 0, -26.59653)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green4" index="0"]
@@ -637,7 +638,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green4/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_1mmcj")
 
-[node name="beanbag_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 10, 0, -9)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue4" index="0"]
@@ -649,7 +650,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue4/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ncrww")
 
-[node name="beanbag_blue5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(0.8660255, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.8660255, 0.40436465, 0, -26.779871)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue5" index="0"]
@@ -661,7 +662,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue5/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_amodc")
 
-[node name="desk1_alt42" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_oouob")]
+[node name="desk1_alt42" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("11_xuiuc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.3, 0, -37.800003)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt42/desk1_alt4" index="0"]
@@ -669,7 +670,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.3,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt42/desk1_alt4/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uqp4f")
 
-[node name="desk1_alt44" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_oouob")]
+[node name="desk1_alt44" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("11_xuiuc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.999998, 0, -14.700003)
 
 [node name="desk1_alt4" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt44" index="0"]
@@ -680,7 +681,7 @@ transform = Transform3D(0.9961947, 0, -0.08715574, 0, 1, 0, 0.08715574, 0, 0.996
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt44/desk1_alt4/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uqp4f")
 
-[node name="desk1_alt45" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_oouob")]
+[node name="desk1_alt45" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("11_xuiuc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9999981, 0, -12.000002)
 
 [node name="desk1_alt4" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt45" index="0"]
@@ -692,7 +693,7 @@ mesh = SubResource("ArrayMesh_v7fhd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt45/desk1_alt4/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uqp4f")
 
-[node name="desk1_alt46" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("8_oouob")]
+[node name="desk1_alt46" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("11_xuiuc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9999982, 0, -9.200003)
 
 [node name="desk1_alt4" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt46" index="0"]
@@ -704,7 +705,7 @@ mesh = SubResource("ArrayMesh_v7fhd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt46/desk1_alt4/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uqp4f")
 
-[node name="water_cooler_bottle_attached3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_vebfw")]
+[node name="water_cooler_bottle_attached3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("15_17l7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 0, -28.1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached3/water_cooler_bottle_attached" index="0"]
@@ -712,7 +713,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 0, -28.1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached3/water_cooler_bottle_attached/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_mvlke")
 
-[node name="coffee_machine3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_xlngv")]
+[node name="coffee_machine3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_w2lit")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -38.2)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine3/coffee_machine" index="0"]
@@ -720,7 +721,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -38.2)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine3/coffee_machine/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_d42ld")
 
-[node name="armchair_blue" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 13.376795, 0, -37.813396)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue/armchair_blue" index="0"]
@@ -729,7 +730,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_xlngv")
 
-[node name="armchair_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -9.623205, 0, -45.813396)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue3/armchair_blue" index="0"]
@@ -738,7 +739,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue3/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_n67k7")
 
-[node name="armchair_blue5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(0.70710677, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.70710677, -10.852404, 0, -14.776815)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue5/armchair_blue" index="0"]
@@ -747,7 +748,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue5/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ha5t3")
 
-[node name="armchair_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(0.25881898, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, 0.25881898, -13.68083, 0, -11.948388)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue6/armchair_blue" index="0"]
@@ -756,7 +757,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue6/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_tv8b4")
 
-[node name="armchair_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -12.623205, 0, -45.813396)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue4/armchair_blue" index="0"]
@@ -765,7 +766,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue4/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_vebfw")
 
-[node name="armchair_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("14_2iy40")]
+[node name="armchair_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_gurb8")]
 transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 23.476795, 0, -40.111473)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue2/armchair_blue" index="0"]
@@ -774,7 +775,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_blue2/armchair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_2iy40")
 
-[node name="floor_corner_round2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 13.075, 0.01, -37.36)
 
 [node name="floor_corner_round" parent="Map/NavigationRegion3D/Building/Objects/floor_corner_round2" index="0"]
@@ -785,7 +786,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/floor_corner_round2/floor_corner_round/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_g5wy1")
 
-[node name="couch_red_0012" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_bik5a")]
+[node name="couch_red_0012" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("19_jjqxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1, 0, -38.2)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0012/couch_red_001" index="0"]
@@ -793,7 +794,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1, 0, -38.2)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0012/couch_red_001/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hmi08")
 
-[node name="couch_red_0013" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_bik5a")]
+[node name="couch_red_0013" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("19_jjqxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2999997, 0, -47.8)
 
 [node name="couch_red_001" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0013" index="0"]
@@ -804,7 +805,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0013/couch_red_001/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hmi08")
 
-[node name="armchair_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_6mv2o")]
+[node name="armchair_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("20_teypl")]
 transform = Transform3D(0.81915206, 0, -0.57357645, 0, 1, 0, 0.57357645, 0, 0.81915206, 13.729164, 0, -31.343975)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green2/armchair_green" index="0"]
@@ -813,7 +814,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green2/armchair_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_urrsm")
 
-[node name="armchair_green3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_6mv2o")]
+[node name="armchair_green3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("20_teypl")]
 transform = Transform3D(0.81915206, 0, -0.57357645, 0, 1, 0, 0.57357645, 0, 0.81915206, -0.28572863, 0, -46.89495)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green3/armchair_green" index="0"]
@@ -822,7 +823,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green3/armchair_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_urrsm")
 
-[node name="armchair_green4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_6mv2o")]
+[node name="armchair_green4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("20_teypl")]
 transform = Transform3D(-0.3420202, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, -0.3420202, 0.2675901, 0, -44.46152)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green4/armchair_green" index="0"]
@@ -831,7 +832,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green4/armchair_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_urrsm")
 
-[node name="armchair_green5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("17_6mv2o")]
+[node name="armchair_green5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("20_teypl")]
 transform = Transform3D(0.5735764, 0, 0.8191521, 0, 1, 0, -0.8191521, 0, 0.5735764, -3.2205486, 0, -46.700375)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green5/armchair_green" index="0"]
@@ -840,7 +841,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/armchair_green5/armchair_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_urrsm")
 
-[node name="beanbag_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, 17.436604, 0, -1.1633974)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue2" index="0"]
@@ -852,7 +853,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue2/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_y3fxk")
 
-[node name="beanbag_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, 18.740192, 0, -28.650002)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue3" index="0"]
@@ -864,7 +865,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue3/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_onppw")
 
-[node name="beanbag_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 21.2, 0, -34.100002)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green2" index="0"]
@@ -876,7 +877,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green2/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_rpq5v")
 
-[node name="water_cooler_bottle_attached2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_vebfw")]
+[node name="water_cooler_bottle_attached2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("15_17l7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1, 0, -0.1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached2/water_cooler_bottle_attached" index="0"]
@@ -884,7 +885,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1, 0, -0.1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached2/water_cooler_bottle_attached/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_1j3e8")
 
-[node name="coffee_machine2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_xlngv")]
+[node name="coffee_machine2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_w2lit")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.8, 0, -0.9999998)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine2/coffee_machine" index="0"]
@@ -892,7 +893,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine2/coffee_machine/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_8evyu")
 
-[node name="office_chair_orange2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("18_o4a6f")]
+[node name="office_chair_orange2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_33baf")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 19.243782, 0.20000002, -17.090193)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange2/office_chair_orange" index="0"]
@@ -901,7 +902,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange2/office_chair_orange/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_giufy")
 
-[node name="office_chair_orange3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("18_o4a6f")]
+[node name="office_chair_orange3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_33baf")]
 transform = Transform3D(-0.7071068, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.7071068, 18.440094, 0.3, -18.374434)
 
 [node name="office_chair_orange" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange3" index="0"]
@@ -913,7 +914,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange3/office_chair_orange/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k11vb")
 
-[node name="office_chair_orange4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("18_o4a6f")]
+[node name="office_chair_orange4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_33baf")]
 transform = Transform3D(0.7071069, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071069, 16.884459, 0.20000002, -17.101643)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange4/office_chair_orange" index="0"]
@@ -922,7 +923,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange4/office_chair_orange/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hoq2r")
 
-[node name="office_chair_orange5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("18_o4a6f")]
+[node name="office_chair_orange5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_33baf")]
 transform = Transform3D(-0.49999985, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999985, 15.470244, 0.20000002, -18.515856)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange5/office_chair_orange" index="0"]
@@ -931,7 +932,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_orange5/office_chair_orange/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uhcra")
 
-[node name="desk1_alt_weathered2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("19_w3tah")]
+[node name="desk1_alt_weathered2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("22_ellyj")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 17.717157, 0, -17.717157)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt_weathered2/desk1_alt_weathered" index="0"]
@@ -939,7 +940,7 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk1_alt_weathered2/desk1_alt_weathered/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_3o6mo")
 
-[node name="couch_large_red2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_i8aek")]
+[node name="couch_large_red2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("23_mob46")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.9, 0, -5.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red" index="0"]
@@ -947,7 +948,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.9
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_3tsjr")
 
-[node name="couch_large_green2" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("22_1rwai")]
+[node name="couch_large_green2" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("24_jaiwp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3, 0, -24.599998)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_green2/couch_large_green" index="0"]
@@ -955,7 +956,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3, 0, -24.599998)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_green2/couch_large_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_l0gcx")
 
-[node name="couch_large_green3" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("22_1rwai")]
+[node name="couch_large_green3" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("24_jaiwp")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.399999, 0, -26.099998)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_green3/couch_large_green" index="0"]
@@ -963,7 +964,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.39
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_green3/couch_large_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_23naa")
 
-[node name="couch_large_blue2" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("23_c7fj2")]
+[node name="couch_large_blue2" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("25_y46w8")]
 transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -5.9604645e-08, 31.146448, 0, -23.646442)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_blue2/couch_large_blue" index="0"]
@@ -971,7 +972,7 @@ transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_blue2/couch_large_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_0nr8p")
 
-[node name="couch_large_blue3" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("23_c7fj2")]
+[node name="couch_large_blue3" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D" instance=ExtResource("25_y46w8")]
 transform = Transform3D(1.4702741e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.4702741e-07, 3.3464506, 0, -27.546444)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_blue3/couch_large_blue" index="0"]
@@ -979,7 +980,7 @@ transform = Transform3D(1.4702741e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red2/couch_large_red/StaticBody3D/couch_large_blue3/couch_large_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_oouob")
 
-[node name="couch_large_red3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("21_i8aek")]
+[node name="couch_large_red3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("23_mob46")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0, -7.6)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red3/couch_large_red" index="0"]
@@ -987,7 +988,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0, -7.6)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_large_red3/couch_large_red/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_088yt")
 
-[node name="office_chair_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 6.922354, 0.2, -3.2897778)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue2/office_chair_blue" index="0"]
@@ -996,7 +997,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue2/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(-0.42261836, 0, 0.9063077, 0, 1, 0, -0.9063077, 0, -0.42261836, 10.159712, 0.2, -3.530642)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue3/office_chair_blue" index="0"]
@@ -1005,7 +1006,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue3/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(-0.49999994, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.49999994, 4.8491497, 0.2, -1.0629828)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue4/office_chair_blue" index="0"]
@@ -1014,7 +1015,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue4/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(0.9659257, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, 0.9659257, 4.855054, 0.2, -3.2915282)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue6/office_chair_blue" index="0"]
@@ -1023,7 +1024,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue6/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(-1.1920929e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -1.1920929e-07, 7.4005866, 0.2, -0.97993207)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue7/office_chair_blue" index="0"]
@@ -1032,7 +1033,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue7/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 1.5591655, 0.2, -1.1213541)
 
 [node name="office_chair_blue" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue9" index="0"]
@@ -1044,7 +1045,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue9/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue10" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue10" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(0.08715561, 0, -0.9961946, 0, 1, 0, 0.9961946, 0, 0.08715561, 1.4706633, 0.2, -3.3523562)
 
 [node name="office_chair_blue" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue10" index="0"]
@@ -1056,7 +1057,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue10/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="office_chair_blue8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("24_dwlv2")]
+[node name="office_chair_blue8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_mc465")]
 transform = Transform3D(-0.8660254, 0, -0.4999997, 0, 1, 0, 0.4999997, 0, -0.8660254, 10.273791, 0.2, -0.9067266)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue8/office_chair_blue" index="0"]
@@ -1065,7 +1066,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_blue8/office_chair_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_b3hvt")
 
-[node name="beanbag_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 18.35426, 0, -45.43793)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue6" index="0"]
@@ -1077,7 +1078,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue6/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5gmt2")
 
-[node name="beanbag_blue7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(-0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, -0.9659258, 19.472353, 0, -42.25869)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue7" index="0"]
@@ -1089,7 +1090,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue7/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_deswt")
 
-[node name="beanbag_blue8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("10_ha5t3")]
+[node name="beanbag_blue8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_n7yhb")]
 transform = Transform3D(-0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, -0.9659258, 16.534822, 0, -42.403328)
 
 [node name="beanbag_blue" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue8" index="0"]
@@ -1101,7 +1102,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_blue8/beanbag_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_deswt")
 
-[node name="beanbag_green5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 13.5, 0, -42.4)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green5" index="0"]
@@ -1113,7 +1114,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green5/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_1uo2d")
 
-[node name="beanbag_green6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 12.259526, 0, -45.484028)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green6" index="0"]
@@ -1125,7 +1126,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green6/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_xayvi")
 
-[node name="beanbag_green7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("9_n67k7")]
+[node name="beanbag_green7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_owuim")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 15.390241, 0, -45.391155)
 
 [node name="beanbag_green" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green7" index="0"]
@@ -1137,7 +1138,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/beanbag_green7/beanbag_green/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_xayvi")
 
-[node name="desk12" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("25_oyf7t")]
+[node name="desk12" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("27_t358t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3999996, 0, 4.2000003)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk12/desk1" index="0"]
@@ -1145,7 +1146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3999996, 0, 4.2000003)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk12/desk1/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_reh8t")
 
-[node name="desk13" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("25_oyf7t")]
+[node name="desk13" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("27_t358t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.2000003)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/desk13/desk1" index="0"]
@@ -1153,7 +1154,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.2000003)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/desk13/desk1/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_q37yq")
 
-[node name="file_cabinet_small2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_gfbxi")]
+[node name="file_cabinet_small2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_8enqw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, 3.9)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small2/file_cabinet_small" index="0"]
@@ -1161,7 +1162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, 3.9)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small2/file_cabinet_small/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_humj2")
 
-[node name="file_cabinet_small4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_gfbxi")]
+[node name="file_cabinet_small4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_8enqw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8, 0, 3.9)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small4/file_cabinet_small" index="0"]
@@ -1169,7 +1170,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8, 0, 3.9)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small4/file_cabinet_small/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_e6xfj")
 
-[node name="file_cabinet_small5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_gfbxi")]
+[node name="file_cabinet_small5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_8enqw")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.8, 0, 5.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small5/file_cabinet_small" index="0"]
@@ -1177,7 +1178,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.8,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small5/file_cabinet_small/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_e6xfj")
 
-[node name="file_cabinet_small6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_gfbxi")]
+[node name="file_cabinet_small6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_8enqw")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.8, 0, 6.3)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small6/file_cabinet_small" index="0"]
@@ -1185,7 +1186,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.8,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small6/file_cabinet_small/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_e6xfj")
 
-[node name="file_cabinet_small3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("26_gfbxi")]
+[node name="file_cabinet_small3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_8enqw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, 3.9)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small3/file_cabinet_small" index="0"]
@@ -1193,7 +1194,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, 3.9)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_small3/file_cabinet_small/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ldb7q")
 
-[node name="coffee_machine4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_xlngv")]
+[node name="coffee_machine4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_w2lit")]
 transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, -14.699999, 0, -41.34)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine4/coffee_machine" index="0"]
@@ -1201,7 +1202,7 @@ transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine4/coffee_machine/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_1k8y0")
 
-[node name="couch_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("27_3da1w")]
+[node name="couch_blue2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_e27cl")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23.4, 0, -17.8)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_blue2/couch_blue" index="0"]
@@ -1210,7 +1211,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_blue2/couch_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_jv8vk")
 
-[node name="couch_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("27_3da1w")]
+[node name="couch_blue3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_e27cl")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.7, 0, 2.3999999)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_blue3/couch_blue" index="0"]
@@ -1219,7 +1220,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_blue3/couch_blue/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_jv8vk")
 
-[node name="divider_black2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_xbnbm")]
+[node name="divider_black2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("30_axtoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -13.299999)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/divider_black2/divider_black" index="0"]
@@ -1227,7 +1228,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -13.299999)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/divider_black2/divider_black/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_qopvu")
 
-[node name="divider_black3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("28_xbnbm")]
+[node name="divider_black3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("30_axtoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -10.599999)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/divider_black3/divider_black" index="0"]
@@ -1235,7 +1236,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -10.599999)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/divider_black3/divider_black/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_jdr48")
 
-[node name="file_cabinet_larger2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.2, 0, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger2/file_cabinet_larger" index="0"]
@@ -1243,7 +1244,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.2,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger2/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_516gf")
 
-[node name="file_cabinet_larger3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.7, 0, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger3/file_cabinet_larger" index="0"]
@@ -1251,7 +1252,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.7,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger3/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_r47fu")
 
-[node name="file_cabinet_larger6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger6" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.7, 1.05, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger6/file_cabinet_larger" index="0"]
@@ -1259,7 +1260,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.7,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger6/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_j1ej0")
 
-[node name="file_cabinet_larger8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger8" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.2, 1.05, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger8/file_cabinet_larger" index="0"]
@@ -1267,7 +1268,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.2,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger8/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_vcydt")
 
-[node name="file_cabinet_larger9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger9" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.6999998, 1.05, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger9/file_cabinet_larger" index="0"]
@@ -1275,7 +1276,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.69
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger9/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_dxem4")
 
-[node name="file_cabinet_larger7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger7" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.2, 1.05, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger7/file_cabinet_larger" index="0"]
@@ -1283,7 +1284,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.2,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger7/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_unqoi")
 
-[node name="file_cabinet_larger4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.1999993, 0, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger4/file_cabinet_larger" index="0"]
@@ -1291,7 +1292,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.19
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger4/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_dmcqe")
 
-[node name="file_cabinet_larger5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("29_ci12t")]
+[node name="file_cabinet_larger5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("31_6pid4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.6999993, 0, 7.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger5/file_cabinet_larger" index="0"]
@@ -1299,7 +1300,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.69
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/file_cabinet_larger5/file_cabinet_larger/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_adr36")
 
-[node name="water_cooler_bottle_attached4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("12_vebfw")]
+[node name="water_cooler_bottle_attached4" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("15_17l7m")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -9.999999, 0, -20)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached4/water_cooler_bottle_attached" index="0"]
@@ -1307,7 +1308,7 @@ transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -9.9
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/water_cooler_bottle_attached4/water_cooler_bottle_attached/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_t15fq")
 
-[node name="coffee_machine5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("13_xlngv")]
+[node name="coffee_machine5" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("16_w2lit")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -8.899999, 0, -19.6)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine5/coffee_machine" index="0"]
@@ -1315,7 +1316,7 @@ transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -8.8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/coffee_machine5/coffee_machine/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hak47")
 
-[node name="office_chair_alt2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("30_a7uy5")]
+[node name="office_chair_alt2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("32_khklt")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 6.3, 0.2, 5.226795)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_alt2/office_chair_alt" index="0"]
@@ -1324,7 +1325,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_alt2/office_chair_alt/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_3iyn2")
 
-[node name="office_chair_alt3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("30_a7uy5")]
+[node name="office_chair_alt3" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("32_khklt")]
 transform = Transform3D(-0.258819, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.258819, 4.0265284, 0.2, 5.278924)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/office_chair_alt3/office_chair_alt" index="0"]
@@ -1335,175 +1336,175 @@ shape = SubResource("ConvexPolygonShape3D_7dthy")
 
 [node name="Props" type="Node3D" parent="Map/NavigationRegion3D/Building"]
 
-[node name="paper_stack2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("31_ckm5n")]
+[node name="paper_stack2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_0ay4y")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 8.423205, 0.9, -29.186604)
 
-[node name="elastic_ball2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("32_8a1pf")]
+[node name="elastic_ball2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_4cxfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 1, -29.7)
 
-[node name="paper_stack5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("31_ckm5n")]
+[node name="paper_stack5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_0ay4y")]
 transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, 8.4, 0.90000004, -38.141415)
 
-[node name="paper_stack_large3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_sqk4e")]
+[node name="paper_stack_large3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_g5qnu")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 8.400001, 0.90000004, -37.3)
 
-[node name="paper_stack_large2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_sqk4e")]
+[node name="paper_stack_large2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_g5qnu")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 7.9, 0.9, -4.173205)
 
-[node name="paper_stack_large4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_sqk4e")]
+[node name="paper_stack_large4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_g5qnu")]
 transform = Transform3D(0.6427876, 0, 0.7660445, 0, 1, 0, -0.7660445, 0, 0.6427876, 2.7351139, 0.9, -0.3069887)
 
-[node name="computer_keyboard2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.7, 0.9, -3.4)
 
-[node name="computer_keyboard6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2999995, 0.9, -3.4000003)
 
-[node name="computer_keyboard3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.7, 0.9, -1)
 
-[node name="computer_keyboard10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3999996, 0.9, 4.5)
 
-[node name="computer_keyboard7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2999997, 0.9, -1.0000002)
 
-[node name="computer_keyboard4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.4, 0.9, -0.99999994)
 
-[node name="computer_keyboard8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999995, 0.9, -0.9999997)
 
-[node name="computer_keyboard11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999998, 0.9, 4.5000005)
 
-[node name="computer_keyboard5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.4, 0.9, -3.4)
 
-[node name="computer_keyboard9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_n1g2j")]
+[node name="computer_keyboard9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_amb4n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999995, 0.9, -3.3999999)
 
-[node name="computer_tower_alt2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.1, 0.9, -2.5)
 
-[node name="computer_tower_alt8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7000003, 0.9, -2.5000002)
 
-[node name="computer_tower_alt3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.1, 0.9, -1.9)
 
-[node name="computer_tower_alt11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3000007, 0.9, 4.0000005)
 
-[node name="computer_tower_alt7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7000003, 0.9, -1.9000002)
 
-[node name="computer_tower_alt4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0.9, -1.9)
 
-[node name="computer_tower_alt6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.6, 0.9, -1.9000007)
 
-[node name="computer_tower_alt10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.0999992, 0.9, 3.9999995)
 
-[node name="computer_tower_alt5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0.9, -2.5)
 
-[node name="computer_tower_alt9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_e2l4b")]
+[node name="computer_tower_alt9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_vdp61")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3.6, 0.9, -2.5000007)
 
-[node name="computer_mouse2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.7, 0.9, -2.9)
 
-[node name="computer_mouse6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2999997, 0.9, -2.9000003)
 
-[node name="computer_mouse3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.7, 0.9, -0.5)
 
-[node name="computer_mouse10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9, 0.9, 4.5)
 
-[node name="computer_mouse7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2999997, 0.9, -0.50000024)
 
-[node name="computer_mouse4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.4, 0.9, -1.5)
 
-[node name="computer_mouse8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999995, 0.9, -1.4999998)
 
-[node name="computer_mouse11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.9, 4.5)
 
-[node name="computer_mouse5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.4, 0.9, -3.9)
 
-[node name="computer_mouse9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("36_53w7y")]
+[node name="computer_mouse9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_bkt3n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999995, 0.9, -3.8999999)
 
-[node name="computer_monitor2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.2, 0.8999999, -3.4)
 
-[node name="computer_monitor9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor9" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7999997, 0.8999999, -3.4000003)
 
-[node name="computer_monitor5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.2, 0.8999999, -1.0000001)
 
-[node name="computer_monitor10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor10" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3999996, 0.8999999, 3.9999998)
 
-[node name="computer_monitor8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor8" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7999997, 0.8999999, -1.0000004)
 
-[node name="computer_monitor3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.9, 0.8999999, -3.4)
 
-[node name="computer_monitor6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.4999995, 0.8999999, -3.3999999)
 
-[node name="computer_monitor4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.9, 0.8999999, -1)
 
-[node name="computer_monitor7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor7" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.4999995, 0.8999999, -0.99999976)
 
-[node name="computer_monitor11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("37_n1pnv")]
+[node name="computer_monitor11" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_r7tow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999998, 0.8999999, 4.000001)
 
-[node name="desk_phone_with_cable2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_kq7qe")]
+[node name="desk_phone_with_cable2" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("40_ttce5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7000003, 0.90000004, 4.2000003)
 
-[node name="desk_phone_with_cable3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("38_kq7qe")]
+[node name="desk_phone_with_cable3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("40_ttce5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7000003, 0.90000004, 4.0000005)
 
-[node name="elastic_ball3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("32_8a1pf")]
+[node name="elastic_ball3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_4cxfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0.95000005, -14.1)
 
-[node name="paper_stack_large5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_sqk4e")]
+[node name="paper_stack_large5" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_g5qnu")]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -1.9482362, 0.9, -14.806815)
 
-[node name="pen22" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_qc4to")]
+[node name="pen22" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("41_c2oqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.9, -14.4)
 
-[node name="pen23" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("39_qc4to")]
+[node name="pen23" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("41_c2oqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.90000004, -11.599999)
 
-[node name="paper_stack3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("31_ckm5n")]
+[node name="paper_stack3" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_0ay4y")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -2.0776458, 0.9, -12.289778)
 
-[node name="paper_stack4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("31_ckm5n")]
+[node name="paper_stack4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_0ay4y")]
 transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -2.0223541, 0.9, -11.910222)
 
-[node name="paper_stack_large6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_sqk4e")]
+[node name="paper_stack_large6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("35_g5qnu")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -2, 0.90000004, -9.6)
 
-[node name="paper_stack6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("31_ckm5n")]
+[node name="paper_stack6" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("33_0ay4y")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0.90000004, -9)
 
-[node name="elastic_ball4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("32_8a1pf")]
+[node name="elastic_ball4" parent="Map/NavigationRegion3D/Building/Props" instance=ExtResource("34_4cxfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
 
 [node name="Walls" type="Node3D" parent="Map/NavigationRegion3D/Building"]
@@ -1786,112 +1787,112 @@ material = SubResource("StandardMaterial3D_088yt")
 
 [node name="Carpets" type="Node3D" parent="Map/NavigationRegion3D/Building"]
 
-[node name="floor_2x22" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x22" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 0.01, -16.8)
 
-[node name="floor_2x23" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x23" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0.01, -16.8)
 
-[node name="floor_2x24" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x24" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6, 0.01, -16.8)
 
-[node name="floor_corner_round_half2" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half2" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0.01, -5)
 
-[node name="floor_corner_round_half4" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half4" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.5, 0.01, -5)
 
-[node name="floor_corner_round_half5" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half5" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.5, 0.01, -5)
 
-[node name="floor_corner_round_half3" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half3" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.5, 0.01, -5)
 
-[node name="floor_corner_round_half6" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half6" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -30.35)
 
-[node name="floor_corner_round_half10" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half10" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.7, 0.01, -35.46)
 
-[node name="floor_corner_round_half12" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half12" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
 
-[node name="floor_corner_round_half13" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half13" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -7.7, 0.01, -32.66)
 
-[node name="floor_corner_round_half8" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half8" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
 
-[node name="floor_corner_round_half9" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half9" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 13.09, 0.01, -28.95)
 
-[node name="floor_corner_round_half7" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half7" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -30.35)
 
-[node name="floor_corner_round_half11" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("44_0u1be")]
+[node name="floor_corner_round_half11" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -35.46)
 
-[node name="floor_2x25" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x25" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -28.95)
 
-[node name="floor_2x27" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x27" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.896, 0.01, -26.822)
 
-[node name="floor_2x26" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x26" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
 
-[node name="floor_2x28" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x28" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -34.06)
 
-[node name="floor_2x29" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x29" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -6.3, 0.01, -34.06)
 
-[node name="floor_2x30" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x30" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -6.3, 0.01, -32.66)
 
-[node name="floor_2x31" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("43_aiu1q")]
+[node name="floor_2x31" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
 
-[node name="floor_3x32" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x32" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.01, -31.9)
 
-[node name="floor_3x33" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x33" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.01, -27.9)
 
-[node name="floor_corner_round5" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round5" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(-1.9670125e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.9670125e-08, 13.075, 0.01, -37.36)
 
-[node name="floor_corner_round3" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round3" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(-1.9670125e-08, 0, -0.45, 0, 0.45, 0, 0.45, 0, -1.9670125e-08, 13.075, 0.01, -37.36)
 
-[node name="floor_corner_round4" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round4" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(-0.45, 0, 3.934025e-08, 0, 0.45, 0, -3.934025e-08, 0, -0.45, 13.075, 0.01, -37.36)
 
-[node name="floor_corner_round2" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round2" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0.01, -44.8)
 
-[node name="floor_corner_round6" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round6" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.7, 0.01, -44.8)
 
-[node name="floor_corner_round7" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round7" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.7, 0.01, -44.8)
 
-[node name="floor_corner_round8" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("15_js8ju")]
+[node name="floor_corner_round8" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("18_ytqeb")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1.7, 0.01, -44.8)
 
-[node name="floor_3x34" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x34" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6, 0.01, -43)
 
-[node name="floor_3x36" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x36" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4, 0.01, -8.9)
 
-[node name="floor_3x37" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x37" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4, 0.01, -11.9)
 
-[node name="floor_3x35" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_s0gnd")]
+[node name="floor_3x35" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0.01, -43)
 
-[node name="Door" parent="Map/NavigationRegion3D/Building" instance=ExtResource("46_kdidu")]
+[node name="Door" parent="Map/NavigationRegion3D/Building" instance=ExtResource("48_j2xan")]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -0.99999905, 0, 1.7059879)
 
 [node name="Left" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Door/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
@@ -2554,34 +2555,34 @@ spot_angle = 70.0
 
 [node name="InteractBookshelves" type="Node3D" parent="Map/NavigationRegion3D"]
 
-[node name="InteractBookShelf" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.1, 0, 2.875)
 
-[node name="InteractBookShelf8" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf8" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.1000004, 0, -12.125)
 
-[node name="InteractBookShelf9" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf9" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.6000004, 0, -31.125)
 
-[node name="InteractBookShelf10" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf10" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1.6000004, 0, -48.125)
 
-[node name="InteractBookShelf7" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf7" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 19.1, 0, -48.125)
 
-[node name="InteractBookShelf2" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf2" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(-8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -8.940697e-08, -15.625, 0, -16.85)
 
-[node name="InteractBookShelf4" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf4" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(-8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -8.940697e-08, -15.625, 0, -44.85)
 
-[node name="InteractBookShelf5" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf5" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(1.7682972e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.7682972e-07, -5.625, 0, -33.85)
 
-[node name="InteractBookShelf3" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf3" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(1.9841906e-09, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.9841906e-09, 21.875, 0, -5.3500004)
 
-[node name="InteractBookShelf6" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("50_23naa")]
+[node name="InteractBookShelf6" parent="Map/NavigationRegion3D/InteractBookshelves" instance=ExtResource("49_x1rj4")]
 transform = Transform3D(8.543858e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 8.543858e-08, 11.375, 0, -25.35)
 
 [node name="book_boxes" type="Node3D" parent="Map/NavigationRegion3D"]
@@ -2607,14 +2608,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4.6)
 
 [node name="BoxSpawnManager" type="Node3D" parent="." node_paths=PackedStringArray("_SpawnPoint")]
-script = ExtResource("49_jl3u2")
+script = ExtResource("50_bcuux")
 _SpawnPoint = [NodePath("../BoxSpawnPoints/SpawnPoint"), NodePath("../BoxSpawnPoints/SpawnPoint2"), NodePath("../BoxSpawnPoints/SpawnPoint3"), NodePath("../BoxSpawnPoints/SpawnPoint4")]
-book_box = ExtResource("50_l0gcx")
+book_box = ExtResource("51_enacg")
 SpawnDelayMin = 1.0
 SpawnDelayMax = 2.0
 
-[node name="BookBox" parent="." instance=ExtResource("50_l0gcx")]
+[node name="BookBox" parent="." instance=ExtResource("51_enacg")]
 transform = Transform3D(1.39090695e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 1.39090695e-08, 5.2, 0.70000005, 6.2)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("52_u0u76")
+volume_db = -25.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="StressTimer" to="." method="OnStressTimerTimeout"]
 

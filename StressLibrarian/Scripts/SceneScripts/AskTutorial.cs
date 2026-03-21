@@ -3,18 +3,21 @@ using System;
 
 public partial class AskTutorial : Control
 {
-    [Export] AnimationPlayer _animationManager;
+    [Export] private AnimationPlayer _animationManager;
+
+    [Export] private PackedScene _tutorialScene;
+    [Export] private PackedScene _libraryScene;
 
     private void OnYesPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/tutorial.tscn");
         GameManager.ResetGame();
+        GetTree().ChangeSceneToPacked(_tutorialScene);
     }
 
     private void OnNoPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/Library.tscn");
         GameManager.ResetGame();
+        GetTree().ChangeSceneToPacked(_libraryScene);
     }
 
     private void OnBackPressed()

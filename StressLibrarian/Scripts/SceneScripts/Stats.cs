@@ -13,6 +13,7 @@ public partial class Stats : Control
 
     [Export] private AudioStreamPlayer _showTextSFX;
     [Export] private AudioStreamPlayer _countNumberSFX;
+    [Export] private AudioStreamPlayer _countNumberLowSFX;
 
     private float _delayBetween = 0.4f;
     private float _countDuration = 0.8f;
@@ -45,6 +46,7 @@ public partial class Stats : Control
         foreach (var stat in stats)
         {
             stat.label.Text = stat.text;
+            _showTextSFX.Play();
             await Wait(_delayBetween);
         }
 
@@ -61,7 +63,7 @@ public partial class Stats : Control
 
     private async Task CountUp(Label label, string prefix, int target, bool isTime)
     {
-        int current = 0;
+        int previous = -1;
         float active = 0f;
 
         while (active < _countDuration)
@@ -71,7 +73,21 @@ public partial class Stats : Control
             active += (float)GetProcessDeltaTime();
             float t = Mathf.Clamp(active / _countDuration, 0f, 1f);
 
-            current = (int)Mathf.Lerp(0, target, t);
+            int current = (int)Mathf.Lerp(0, target, t);
+
+            if (current != previous)
+            {
+                previous = current;
+
+                if (target == 0)
+                {
+                    _countNumberLowSFX.Play();
+                }
+                else
+                {
+                    _countNumberSFX.Play();
+                }
+            }
 
             if (isTime)
             {
@@ -81,17 +97,15 @@ public partial class Stats : Control
             {
                 label.Text = prefix + current.ToString();
             }
-
-            _countNumberSFX.Play();
         }
 
         if (isTime)
         {
-            label.Text = prefix + TimeSpan.FromSeconds(current).ToString(@"hh\:mm\:ss");
+            label.Text = prefix + TimeSpan.FromSeconds(target).ToString(@"hh\:mm\:ss");
         }
         else
         {
-            label.Text = prefix + current.ToString();
+            label.Text = prefix + target.ToString();
         }
     }
 

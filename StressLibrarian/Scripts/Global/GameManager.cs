@@ -3,6 +3,7 @@ using System;
 
 public partial class GameManager : Node
 {
+
     public static float Stress = 0;
     public static float Difficulty = 0;
 
@@ -19,9 +20,12 @@ public partial class GameManager : Node
     private bool _isDead = false;
 
 
+    [Export] private PackedScene _deathScene = GD.Load<PackedScene>("res://scenes/levels/death.tscn");
+
+
     private void OnDead()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/death.tscn");
+        GetTree().ChangeSceneToPacked(_deathScene);
     }
 
     public static void ResetGame()

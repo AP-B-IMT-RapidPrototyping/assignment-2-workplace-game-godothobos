@@ -3,6 +3,7 @@ using System;
 
 public partial class DeathOptions : Control
 {
+    [Export] private PackedScene _mainMenu;
     public override void _Ready()
     {
         Input.MouseMode = Input.MouseModeEnum.Visible;
@@ -11,6 +12,6 @@ public partial class DeathOptions : Control
 
     private void OnMenuPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/main_menu.tscn");
+        GetTree().ChangeSceneToPacked(_mainMenu);
     }
 }

@@ -16,6 +16,7 @@ public partial class Tutorial : Node3D
     private bool _secondDoor = false;
     private bool _thirdDoor = false;
     private bool _lightsAlreadyPlayed = false;
+    private bool _knockAlreadyPlayed = false;
     private bool _doorOpenAlreadyPlayed = false;
     private bool _canNpcCome = false;
     private int _lastPickupCount;
@@ -38,8 +39,20 @@ public partial class Tutorial : Node3D
         _lightEnding.Play("Play");
 
         await ToSignal(_lightEnding, AnimationPlayer.SignalName.AnimationFinished);
-        _doorKnock.Play("Play");
-        _canNpcCome = true;
+    }
+
+    private void PlayKnocking(Node3D body)
+    {
+        if (!_thirdDoor || _knockAlreadyPlayed)
+            return;
+
+        GD.Print("DOOR KNOCKING");
+        if (body is Player)
+        {
+            _doorKnock.Play("Play");
+            _canNpcCome = true;
+            _knockAlreadyPlayed = true;
+        }
     }
 
     private void NpcEntrance(Node3D body)
@@ -50,7 +63,7 @@ public partial class Tutorial : Node3D
 
         if (body is Player)
             _doorOpen.Play("Play");
-            _doorOpenAlreadyPlayed = true;
+        _doorOpenAlreadyPlayed = true;
     }
 
     public override void _PhysicsProcess(double delta)
@@ -67,7 +80,7 @@ public partial class Tutorial : Node3D
 
             _firstDoor = true;
             _door1.Play("Open1");
-        GD.Print("D1");
+            GD.Print("D1");
         }
 
         int currentCount = GetTree().GetNodesInGroup("interact_pickup").Count;
@@ -78,7 +91,7 @@ public partial class Tutorial : Node3D
 
             _secondDoor = true;
             _door2.Play("Open2");
-        GD.Print("D2");
+            GD.Print("D2");
         }
         _lastPickupCount = currentCount;
 
@@ -88,7 +101,7 @@ public partial class Tutorial : Node3D
                 return;
 
             _thirdDoor = true;
-        GD.Print("D3");
+            GD.Print("D3");
         }
     }
 
