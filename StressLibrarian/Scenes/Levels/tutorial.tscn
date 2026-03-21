@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=74 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -50,6 +50,23 @@ albedo_texture = SubResource("CompressedTexture2D_0mdj5")
 roughness_texture = SubResource("CompressedTexture2D_mj38t")
 normal_enabled = true
 normal_texture = SubResource("CompressedTexture2D_35mx6")
+uv1_scale = Vector3(0.185, 0.185, 0.185)
+uv1_triplanar = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8n3fx"]
+load_path = "res://.godot/imported/wooden_gate_diff_1k.png-700b43ff69ba195de1241610081e313a.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wdaxu"]
+load_path = "res://.godot/imported/wooden_gate_nor_gl_1k.png-e1f9b1d048ee8eb2d0f28c8ab8878c3c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w7wr3"]
+load_path = "res://.godot/imported/wooden_gate_rough_1k.png-98e946cad6e83fb2b4fa38cc5d8ee42c.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o863f"]
+albedo_texture = SubResource("CompressedTexture2D_8n3fx")
+roughness_texture = SubResource("CompressedTexture2D_w7wr3")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_wdaxu")
 uv1_scale = Vector3(0.185, 0.185, 0.185)
 uv1_triplanar = true
 
@@ -724,6 +741,9 @@ albedo_texture = ExtResource("11_sghjv")
 [sub_resource type="PlaneMesh" id="PlaneMesh_ku8a2"]
 material = SubResource("StandardMaterial3D_35mx6")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mj38t"]
+size = Vector3(6, 4, 10)
+
 [sub_resource type="Animation" id="Animation_mj38t"]
 resource_name = "Play"
 length = 8.0
@@ -747,10 +767,10 @@ tracks/1/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.050093863, 0.055461064, 0.22005512, 0.37749305, 0.3864384, 0.5796575, 0.71562666, 0.724572, 0.8641192, 1.0501821, 1.0591274, 1.2165653, 2.157139, 2.1841624),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.050093863, 0.055461064, 0.22005512, 0.37749305, 0.3864384, 0.5796575, 0.71562666, 0.724572, 0.8641192, 1.0501821, 1.0591274, 1.2165653),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.038397245, 0.012217305, -0.17453292), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.040142573, 0.0017453292, -0.2268928), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.082030475, 0.05235988, -0.31415927), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.040142573, 0.0715585, -0.43109632), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.06981317, 0.10471976, -2.120575)]
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.038397245, 0.012217305, -0.17453292), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.040142573, 0.0017453292, -0.2268928), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.082030475, 0.05235988, -0.31415927), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.040142573, 0.0715585, -0.43109632), Vector3(-2.646978e-23, 0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -759,22 +779,10 @@ tracks/2/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.050093863, 0.055461064, 0.22005512, 0.37749305, 0.3864384, 0.5796575, 0.71562666, 0.724572, 0.8641192, 1.0501821, 1.0591274, 1.2165653, 2.157139, 2.1841624),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.050093863, 0.055461064, 0.22005512, 0.37749305, 0.3864384, 0.5796575, 0.71562666, 0.724572, 0.8641192, 1.0501821, 1.0591274, 1.2165653),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(-0.038397245, -0.012217305, 0.17453292), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(-0.036651913, -0.02094395, 0.20071286), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.017453292, 0.04363323, 0.31066862), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.03141593, 0.019198623, 0.26005405), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.20071286, -0.14835298, 2.443461)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Door3/DoorBreak:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(2.1272001),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(-0.038397245, -0.012217305, 0.17453292), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(-0.036651913, -0.02094395, 0.20071286), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.017453292, 0.04363323, 0.31066862), Vector3(-2.646978e-23, 0, 0), Vector3(-2.646978e-23, 0, 0), Vector3(0.03141593, 0.019198623, 0.26005405), Vector3(-2.646978e-23, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_8n3fx"]
@@ -815,18 +823,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(-2.646978e-23, 0, 0)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Door3/DoorBreak:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wdaxu"]
 _data = {
@@ -834,9 +830,95 @@ _data = {
 &"RESET": SubResource("Animation_8n3fx")
 }
 
+[sub_resource type="Animation" id="Animation_w7wr3"]
+resource_name = "Play"
+length = 8.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.029938936, 0.05696225),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(0.06981317, 0.10471976, -2.120575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.029938936, 0.05696225),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0), Vector3(0.20071286, -0.14835298, 2.443461)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door3/DoorBreak:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_o863f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.646978e-23, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door3/DoorBreak:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfmmv"]
+_data = {
+&"Play": SubResource("Animation_w7wr3"),
+&"RESET": SubResource("Animation_o863f")
+}
+
 [sub_resource type="Animation" id="Animation_35mx6"]
 resource_name = "PlayEnding"
-length = 4.5
+length = 3.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -845,7 +927,7 @@ tracks/0/path = NodePath("Light:spot_angle")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 4.5),
+"times": PackedFloat32Array(0.03, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 40.0]
@@ -857,22 +939,22 @@ tracks/1/path = NodePath("Light:light_energy")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1.8000002, 2.33, 3, 3.918069, 3.9308147, 4.099369, 4.1155577, 4.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.03, 0.33000016, 0.8599999, 1.53, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.245, 4.03, 3.61, 3.61, 0.0, 0.0, 4.0, 4.0]
+"values": [0.0, 0.245, 4.03, 3.61, 4.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Light2:light_energy")
+tracks/2/path = NodePath("../../BookBox7:collision_mask")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.11),
+"times": PackedFloat32Array(0, 0.06),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
+"update": 1,
+"values": [137, 9]
 }
 
 [sub_resource type="Animation" id="Animation_ku8a2"]
@@ -904,14 +986,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Light2:light_energy")
+tracks/2/path = NodePath("../../BookBox7:collision_mask")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"update": 1,
+"values": [137]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mj38t"]
@@ -936,14 +1018,13 @@ albedo_texture = ExtResource("16_mj38t")
 [sub_resource type="PlaneMesh" id="PlaneMesh_ckfad"]
 material = SubResource("StandardMaterial3D_qfmmv")
 
-[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorEnding", "_bookBox", "_bellRing")]
+[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorKnock", "_doorOpen")]
 script = ExtResource("1_tospq")
 _door1 = NodePath("Level/First/Door1/DoorAnim")
 _door2 = NodePath("Level/Second/Door2/DoorAnim")
 _lightEnding = NodePath("Level/Third/LightEnding")
-_doorEnding = NodePath("Level/Third/DoorEnding")
-_bookBox = NodePath("BookBox")
-_bellRing = NodePath("Level/Third/Door3/BellRing")
+_doorKnock = NodePath("Level/Third/DoorKnock")
+_doorOpen = NodePath("Level/Third/DoorOpen")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tospq")
@@ -957,74 +1038,83 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0,
 [node name="Floor" type="CSGBox3D" parent="Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -14.500005, 0, 0)
 use_collision = true
-size = Vector3(119, 0, 21.5)
+size = Vector3(119, 0, 15)
 material = SubResource("StandardMaterial3D_idsh5")
 
 [node name="Roof" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -18.000004, 5.500001, 0)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -16.500006, 5.500001, 0)
+visible = false
 use_collision = true
-size = Vector3(96, 0, 22)
+size = Vector3(97, 0, 13)
 material = SubResource("StandardMaterial3D_wdaxu")
 
-[node name="WallLeft" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 7.000002, 2.8000007, 3.7500005)
+[node name="RoofSmallEnding" type="CSGBox3D" parent="Level/Building/Roof"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -53.500004, 0, 0)
 use_collision = true
-size = Vector3(74, 5.6, 0.5)
+collision_layer = 128
+collision_mask = 131
+size = Vector3(10, 0, 13)
+material = SubResource("StandardMaterial3D_o863f")
+
+[node name="WallLeft" type="CSGBox3D" parent="Level/Building"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 1.0000006, 2.8000007, 3.7500005)
+use_collision = true
+size = Vector3(62, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallRight" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 7.000002, 2.8000007, -3.7500005)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 1.0000002, 2.8000007, -3.7500005)
 use_collision = true
-size = Vector3(74, 5.6, 0.5)
+size = Vector3(62, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallBack" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, 43.580254, 2.8000007, -0.75000006)
+transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, 31.234577, 2.8000007, 0.25000018)
 use_collision = true
-size = Vector3(16.5, 5.6, 0.5)
+size = Vector3(8, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdBack" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, 7.0075183)
+transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, 5.0075173)
 use_collision = true
-size = Vector3(7, 5.6, 0.5)
+size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdBack2" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, -7.0095687)
+transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, -5.009569)
 use_collision = true
-size = Vector3(7, 5.6, 0.5)
+size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdRight" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -52.01201, 2.8, -10.296296)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -52.012012, 2.8, -6.098765)
 use_collision = true
 size = Vector3(45, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdLeft" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -52.01201, 2.8, 10.296297)
+transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -52.012012, 2.8, 6.222223)
 use_collision = true
 size = Vector3(45, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdEndLeft" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -73.70336, 2.8, 7.019753)
+transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -73.70336, 2.8, 5.0197535)
 use_collision = true
-size = Vector3(7, 5.6, 0.5)
+size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdEndRight" type="CSGBox3D" parent="Level/Building"]
-transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -73.70336, 2.8, -7.016671)
+transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -73.70336, 2.8, -4.9666715)
 use_collision = true
-size = Vector3(7.1, 5.6, 0.5)
+size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="Light" type="Node3D" parent="Level/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1296296, 0)
 
 [node name="Light" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 25, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.65432, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1032,7 +1122,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light7" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, 34.87655, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 22.530869, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1040,7 +1130,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light2" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.6543198, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1048,7 +1138,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light21" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 15, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.6543198, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1056,7 +1146,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light3" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.345681, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1064,7 +1154,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light31" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.345681, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1072,15 +1162,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="Light4" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5, 0, 0)
-light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
-light_energy = 2.0
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 70.0
-
-[node name="Light5" type="SpotLight3D" parent="Level/Building/Light"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -15, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -17.34568, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
 spot_range = 10.0
@@ -1096,7 +1178,7 @@ spot_attenuation = 0.5
 spot_angle = 70.0
 
 [node name="First" type="Node3D" parent="Level"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -12.345676, 0, 0)
 
 [node name="Door1" parent="Level/First" instance=ExtResource("8_l2k66")]
 transform = Transform3D(-1.0602195e-07, 0, -2.4254994, 0, 1.6689973, 0, 2.4254994, 0, -1.0602195e-07, 10.250002, 0, 0)
@@ -1148,6 +1230,7 @@ material = SubResource("StandardMaterial3D_iol1o")
 transform = Transform3D(0.5089954, 0, 1.7763568e-15, 0, 0.7397065, 0, -1.7763568e-15, 0, 0.5089954, -8.423029e-09, 0, 0.12712479)
 stream = ExtResource("7_i0v1t")
 volume_db = -15.0
+max_db = -10.0
 pitch_scale = 0.4
 
 [node name="HangingSign1" parent="Level/First" instance=ExtResource("7_mnia5")]
@@ -1194,7 +1277,7 @@ spot_range = 2.0
 spot_angle = 36.230724
 
 [node name="Second" type="Node3D" parent="Level"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -3.7037036, 0, 0)
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -16.049377, 0, 0)
 
 [node name="Door2" parent="Level/Second" instance=ExtResource("8_l2k66")]
 transform = Transform3D(-1.0602193e-07, 0, -2.425499, 0, 1.6689972, 0, 2.425499, 0, -1.0602193e-07, -3.953704, 0, 0)
@@ -1246,6 +1329,7 @@ material = SubResource("StandardMaterial3D_iol1o")
 transform = Transform3D(0.50899553, 0, 0, 0, 0.7397066, 0, 0, 0, 0.50899553, 5.2724687e-09, 0, 0.12062001)
 stream = ExtResource("7_i0v1t")
 volume_db = -15.0
+max_db = -10.0
 pitch_scale = 0.4
 
 [node name="Bookshelf" type="Node3D" parent="Level/Second"]
@@ -1255,24 +1339,10 @@ transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 3.703
 transform = Transform3D(-1.2345676, 0, -1.4717193e-07, 0, 1.2345676, 0, 1.4717193e-07, 0, -1.2345676, 1.234567, 0, 3.086419)
 Randomize = false
 
-[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/Bookshelf/InteractBookShelf"]
-transform = Transform3D(1, 9.13196e-08, 1.9583555e-07, -9.131961e-08, -0.6427877, 0.7660444, 1.9583555e-07, -0.7660444, -0.6427877, -2.3841858e-07, 4.4, 2.5)
-light_energy = 6.0
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 30.0
-
 [node name="InteractBookShelf2" parent="Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1.2345676, 0, 3.92426e-08, 0, 1.2345676, 0, -3.92426e-08, 0, 1.2345676, 1.234567, 0, -3.086419)
 shelfGenre = 2
 Randomize = false
-
-[node name="ShelfLight" type="SpotLight3D" parent="Level/Second/Bookshelf/InteractBookShelf2"]
-transform = Transform3D(-1, -2.4349884e-08, -9.877731e-08, -9.131962e-08, 0.6427876, 0.7660445, 4.4839737e-08, 0.7660445, -0.6427876, 0, 4.4, 2.5)
-light_energy = 6.0
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 30.0
 
 [node name="HangingSign2" parent="Level/Second" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016416, 0, 0, 0, 9.016416, 0, 0, 0, 9.016416, 6.0493813, 4.19753, 0)
@@ -1351,25 +1421,26 @@ use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="BellRing" type="AudioStreamPlayer3D" parent="Level/Third/Door3"]
-transform = Transform3D(0.5089958, 0, -3.5527137e-15, 0, 0.7397069, 0, 3.5527137e-15, 0, 0.5089958, 5.2724545e-09, 1.086761, 0.12062073)
-volume_db = -5.0
-
 [node name="DoorKnock" type="AudioStreamPlayer3D" parent="Level/Third/Door3"]
 transform = Transform3D(0.5089958, 0, -1.7763568e-15, 0, 0.7397069, 0, 1.7763568e-15, 0, 0.5089958, 5.2724545e-09, 1.086761, 0.12062073)
 stream = ExtResource("15_35mx6")
-volume_db = -5.0
+unit_size = 20.0
+max_db = 1.0
+bus = &"SFX"
 
 [node name="DoorBreak" type="AudioStreamPlayer3D" parent="Level/Third/Door3"]
 transform = Transform3D(0.5089958, 0, -1.7763568e-15, 0, 0.7397069, 0, 1.7763568e-15, 0, 0.5089958, 5.2724545e-09, 1.086761, 0.12062073)
 stream = ExtResource("16_ku8a2")
 volume_db = -5.0
+unit_size = 20.0
+max_db = 0.0
+bus = &"SFX"
 
-[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="Level/Third/Door3"]
-transform = Transform3D(-1.0406071e-08, 0, 0.23806316, 0, 0.34596938, 0, -0.23806316, 0, -1.0406071e-08, 2.3406983e-09, 1.1835308, 0.053552628)
+[node name="VOSEnding" type="VisibleOnScreenNotifier3D" parent="Level/Third/Door3"]
+transform = Transform3D(-3.1218212e-09, 0, 0.07141895, 0, 0.10379082, 0, -0.07141895, 0, -3.1218212e-09, 2.3406983e-09, 1.1835308, 0.053554535)
 
 [node name="Light" type="SpotLight3D" parent="Level/Third"]
-transform = Transform3D(0.21438037, -4.459381e-08, 1.2158121, -1.2158121, -5.3144827e-08, 0.21438038, 4.459381e-08, -1.2345679, -5.314483e-08, -62.222134, 3.1540363, 0)
+transform = Transform3D(0.1736481, -3.6120987e-08, 0.9848078, -0.9848078, -4.3047315e-08, 0.1736481, 3.6120987e-08, -1, -4.3047315e-08, -62.222134, 3.1540363, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -1378,21 +1449,20 @@ spot_attenuation = 0.5
 spot_angle = 0.0
 spot_angle_attenuation = 1.51571
 
-[node name="Light2" type="SpotLight3D" parent="Level/Third"]
-transform = Transform3D(1.2345679, 0, 0, 0, -5.3964676e-08, 1.2345679, 0, -1.2345679, -5.3964676e-08, -69.13614, 6.1169987, 0)
-light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
-light_energy = 0.0
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 33.25
-spot_angle_attenuation = 3.1383579
-
 [node name="Lights" type="Node3D" parent="Level/Third"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 6.1169996, 0)
 
 [node name="Light2" type="SpotLight3D" parent="Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -33.271595, 0, -4.938271)
+light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 17.1
+spot_angle_attenuation = 3.1383579
+
+[node name="Light8" type="SpotLight3D" parent="Level/Third/Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -34.506165, 0, 1.1773759e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
 spot_range = 10.0
@@ -1410,7 +1480,7 @@ spot_angle = 17.1
 spot_angle_attenuation = 3.1383579
 
 [node name="Light4" type="SpotLight3D" parent="Level/Third/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -44.382698, 0, -7.407407)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -51.29628, 0, -1.3580235)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
 spot_range = 10.0
@@ -1445,9 +1515,22 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 3.1383579
 
-[node name="DoorEnding" type="AnimationPlayer" parent="Level/Third"]
+[node name="WithinEndingReach" type="Area3D" parent="Level/Third"]
+transform = Transform3D(1.2345679, 0, 0, 0, 1.2345679, 0, 0, 0, 1.2345679, -70.37037, 1.2345679, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/WithinEndingReach"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_mj38t")
+
+[node name="DoorKnock" type="AnimationPlayer" parent="Level/Third"]
 libraries = {
 &"": SubResource("AnimationLibrary_wdaxu")
+}
+
+[node name="DoorOpen" type="AnimationPlayer" parent="Level/Third"]
+libraries = {
+&"": SubResource("AnimationLibrary_qfmmv")
 }
 
 [node name="LightEnding" type="AnimationPlayer" parent="Level/Third"]
@@ -1608,11 +1691,14 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
+[node name="Fourth" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 1, 0)
+
 [node name="Player" parent="." instance=ExtResource("5_tospq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 1, 0)
 
 [node name="BookBox" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13, 1, 0)
 Randomize = false
 
 [node name="BookBox2" parent="." instance=ExtResource("7_l2k66")]
@@ -1631,16 +1717,23 @@ bookGenre = 3
 Randomize = false
 
 [node name="BookBox5" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-0.9659258, 0, -0.258819, 0, 0.99999994, 0, 0.258819, 0, -0.9659258, -35.999996, 0.99999994, -6)
-bookGenre = 9
+transform = Transform3D(-0.9659258, 0, -0.258819, 0, 0.99999994, 0, 0.258819, 0, -0.9659258, -41.599995, 0.99999994, -1.1)
+bookGenre = 7
 Randomize = false
 
 [node name="BookBox6" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 0.9999999, 0, 0.99999994, 0, -5.9604645e-08, -55.999996, 0.99999994, 0)
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 0.9999999, 0, 0.99999994, 0, -5.9604645e-08, -27.999996, 0.99999994, 0)
 bookGenre = 9
 Randomize = false
 
-[connection signal="screen_entered" from="Level/Third/Door3/VisibleOnScreenNotifier3D" to="." method="PlayEnding"]
+[node name="BookBox7" parent="." instance=ExtResource("7_l2k66")]
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 0.9999999, 0, 0.99999994, 0, -5.9604645e-08, -56.999996, 6, 0)
+collision_mask = 137
+bookGenre = 9
+Randomize = false
+
+[connection signal="screen_entered" from="Level/Third/Door3/VOSEnding" to="." method="PlayLightEnding"]
+[connection signal="body_entered" from="Level/Third/WithinEndingReach" to="." method="NpcEntrance"]
 
 [editable path="Level/First/Door1"]
 [editable path="Level/Second/Door2"]

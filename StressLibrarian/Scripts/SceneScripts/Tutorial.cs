@@ -7,34 +7,55 @@ public partial class Tutorial : Node3D
     [Export] private AnimationPlayer _door1;
     [Export] private AnimationPlayer _door2;
     [Export] private AnimationPlayer _lightEnding;
-    [Export] private AnimationPlayer _doorEnding;
+    [Export] private AnimationPlayer _doorKnock;
+    [Export] private AnimationPlayer _doorOpen;
     [Export] private RigidBody3D _bookBox;
-    [Export] private AudioStreamPlayer3D _bellRing;
+
 
     private bool _firstDoor = false;
     private bool _secondDoor = false;
     private bool _thirdDoor = false;
-    private bool _endingAlreadyPlayed = false;
+    private bool _lightsAlreadyPlayed = false;
+    private bool _doorOpenAlreadyPlayed = false;
+    private bool _canNpcCome = false;
     private int _lastPickupCount;
 
 
-    private async void PlayEnding()
+    public override void _Ready()
     {
-        if (!_thirdDoor || _endingAlreadyPlayed)
+        _lastPickupCount = GetTree().GetNodesInGroup("interact_pickup").Count;
+    }
+
+
+    private async void PlayLightEnding()
+    {
+        if (!_thirdDoor || _lightsAlreadyPlayed)
         {
             return;
         }
-        _endingAlreadyPlayed = true;
-        _bellRing.Playing = false;
+        GD.Print("LIGHT ENDING");
+        _lightsAlreadyPlayed = true;
         _lightEnding.Play("Play");
 
         await ToSignal(_lightEnding, AnimationPlayer.SignalName.AnimationFinished);
-        _doorEnding.Play("Play");
+        _doorKnock.Play("Play");
+        _canNpcCome = true;
+    }
+
+    private void NpcEntrance(Node3D body)
+    {
+        if (!_canNpcCome || _doorOpenAlreadyPlayed)
+            return;
+        GD.Print("NPC ENTRANCE");
+
+        if (body is Player)
+            _doorOpen.Play("Play");
+            _doorOpenAlreadyPlayed = true;
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        if (_firstDoor && _secondDoor && _thirdDoor)
+        if (_firstDoor && _secondDoor && _thirdDoor && _lightsAlreadyPlayed)
         {
             return;
         }
@@ -46,6 +67,7 @@ public partial class Tutorial : Node3D
 
             _firstDoor = true;
             _door1.Play("Open1");
+        GD.Print("D1");
         }
 
         int currentCount = GetTree().GetNodesInGroup("interact_pickup").Count;
@@ -56,15 +78,17 @@ public partial class Tutorial : Node3D
 
             _secondDoor = true;
             _door2.Play("Open2");
+        GD.Print("D2");
         }
         _lastPickupCount = currentCount;
 
-        if (!_thirdDoor && GetTree().GetNodesInGroup("interact_pickup").Count == 1)
+        if (!_thirdDoor && GetTree().GetNodesInGroup("interact_pickup").Count <= 1)
         {
             if (_thirdDoor)
                 return;
-            _bellRing.Playing = true;
+
             _thirdDoor = true;
+        GD.Print("D3");
         }
     }
 
