@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=4 uid="uid://dpwu82mmriwgl"]
+[gd_scene load_steps=141 format=4 uid="uid://dpwu82mmriwgl"]
 
 [ext_resource type="MeshLibrary" uid="uid://dg6iv54ej87cg" path="res://Assets/MeshLibrary/bookshelf_fix2.0.tres" id="1_6pkia"]
 [ext_resource type="MeshLibrary" uid="uid://c223ajhx8bqmq" path="res://Assets/MeshLibrary/bookshelf.tres" id="2_nlbba"]
@@ -53,6 +53,7 @@
 [ext_resource type="AudioStream" uid="uid://8ytbrrb7ssmi" path="res://Assets/Audio/sounds/Ding.mp3" id="50_g0vum"]
 [ext_resource type="Script" uid="uid://brymhgnn7vole" path="res://Scripts/SceneScripts/DeathOptions.cs" id="50_nlbba"]
 [ext_resource type="PackedScene" uid="uid://dy53kd20h4anj" path="res://Scenes/Levels/main_menu.tscn" id="53_g0vum"]
+[ext_resource type="PackedScene" uid="uid://b0kpflec4ydky" path="res://Scenes/Levels/library.tscn" id="54_0byqq"]
 [ext_resource type="AudioStream" uid="uid://vis2nqds6dcp" path="res://Assets/Audio/Music/CrushinBits.mp3" id="54_m1bdi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nlbba"]
@@ -2723,7 +2724,6 @@ pitch_scale = 1.5
 
 [node name="CountNumber" type="AudioStreamPlayer" parent="Control/Stats"]
 stream = ExtResource("50_g0vum")
-volume_db = 5.0
 
 [node name="CountNumberLow" type="AudioStreamPlayer" parent="Control/Stats"]
 stream = ExtResource("50_g0vum")
@@ -2812,6 +2812,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("50_nlbba")
 _mainMenu = ExtResource("53_g0vum")
+_retry = ExtResource("54_0byqq")
 
 [node name="MainMenu" type="Button" parent="Control/UI"]
 layout_mode = 1
@@ -2820,9 +2821,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -140.0
+offset_left = -390.0
 offset_top = -170.0
-offset_right = 140.0
+offset_right = -109.999695
 offset_bottom = -98.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -2830,15 +2831,34 @@ theme_override_fonts/font = ExtResource("8_gpyba")
 theme_override_font_sizes/font_size = 56
 text = "Main Menu"
 
+[node name="Retry" type="Button" parent="Control/UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = -170.0
+offset_right = 390.00024
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_gpyba")
+theme_override_font_sizes/font_size = 56
+text = "Retry"
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("54_m1bdi")
 volume_db = -25.0
 pitch_scale = 0.75
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [connection signal="timeout" from="Control/WaitToShowStats" to="Control/Stats" method="ShowStats"]
 [connection signal="pressed" from="Control/UI/MainMenu" to="Control/UI" method="OnMenuPressed"]
+[connection signal="pressed" from="Control/UI/Retry" to="Control/UI" method="OnRetryPressed"]
 
 [editable path="Map/Building/Objects/desk2_weathered6"]
 [editable path="Map/Building/Objects/desk2_weathered8"]

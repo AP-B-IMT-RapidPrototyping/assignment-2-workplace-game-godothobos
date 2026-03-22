@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=18 format=3 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
@@ -11,22 +11,64 @@
 [ext_resource type="PackedScene" uid="uid://clmc75a0tk8fw" path="res://Assets/Characters_psx/Models/Female/Character_Female_08.fbx" id="9_ud82m"]
 [ext_resource type="PackedScene" uid="uid://cess5bbncjard" path="res://Assets/Characters_psx/Models/Female/Character_Female_09.fbx" id="10_vfvyv"]
 [ext_resource type="PackedScene" uid="uid://bqh4qomiaafkb" path="res://Assets/Characters_psx/Models/Female/Character_Female_15.fbx" id="11_lpotm"]
+[ext_resource type="AudioStream" uid="uid://cbs7lqoova7tc" path="res://Assets/Audio/sounds/soundreality-door-knock-175164.mp3" id="12_4ik2k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e2x16"]
-radius = 0.4
+radius = 0.6
 height = 3.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85o64"]
 transparency = 1
 albedo_color = Color(1, 0, 0, 0.49411765)
 
-[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_navAgent", "_models", "_raycastNpc")]
-collision_layer = 4
+[sub_resource type="Animation" id="Animation_4ik2k"]
+resource_name = "Play"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 1.97, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_0dw1j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0dw1j"]
+_data = {
+&"Play": SubResource("Animation_4ik2k"),
+&"RESET": SubResource("Animation_0dw1j")
+}
+
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_navAgent", "_models", "_raycastNpc", "_askAnimation", "_loudSFX", "_requestedGenreLabel") groups=["interact_npc"]]
+collision_layer = 12
 collision_mask = 0
 script = ExtResource("1_85o64")
 _navAgent = NodePath("NavigationAgent3D")
 _models = NodePath("Models")
 _raycastNpc = NodePath("NpcRaycast")
+_askAnimation = NodePath("AskAnimation")
+_loudSFX = NodePath("Loud")
+_requestedGenreLabel = NodePath("RequestedGenre")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -323,11 +365,42 @@ bones/28/rotation = Quaternion(0.00010528254, 0.004970842, 0.99990225, -0.013071
 bones/29/rotation = Quaternion(-0.010016722, 0.0005158436, -0.05638669, 0.9983587)
 bones/30/rotation = Quaternion(0.34997398, -0.57672435, 0.3407169, 0.654843)
 
-[node name="ActionCooldown" type="Timer" parent="."]
-
 [node name="DELETEME" type="CSGBox3D" parent="."]
 transform = Transform3D(0.21000001, 0, 0, 0, 0.21000001, 0, 0, 0, 0.21000001, 0, 0, 5.9)
 material = SubResource("StandardMaterial3D_85o64")
+
+[node name="Loud" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.4)
+stream = ExtResource("12_4ik2k")
+unit_size = 2.5
+max_db = 0.0
+parameters/looping = true
+
+[node name="AskAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0dw1j")
+}
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
+
+[node name="RequestedGenre" type="Label" parent="."]
+visible = false
+offset_left = 121.0
+offset_top = 579.0
+offset_right = 1125.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 66
+text = "AAAAAAAAAAAAAAAAAAAAAAA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StressTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="StressTimer" to="." method="ExtraStress"]
 
 [editable path="Models/Char1"]
 [editable path="Models/Char2"]

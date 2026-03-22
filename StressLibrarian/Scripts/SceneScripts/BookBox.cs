@@ -17,7 +17,7 @@ public partial class BookBox : RigidBody3D
             bookGenre = (BookGenre)values.GetValue(GD.RandRange(0, values.Length - 1));
         }
 
-        GD.Print($"book: {bookGenre}");
+        /* GD.Print($"book: {bookGenre}"); */
 
         if (_textMesh.Mesh != null)
         {

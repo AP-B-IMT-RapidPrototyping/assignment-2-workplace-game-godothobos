@@ -2,6 +2,8 @@ using Godot;
 using System;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
+using System.Transactions;
 
 public partial class Npc : CharacterBody3D
 {
@@ -30,11 +32,24 @@ public partial class Npc : CharacterBody3D
     private float _actionCooldown;
     [Export] private float _baseCooldown = 5f;
     [Export] private float _minCooldown = 5f;
+    private float _spawnLock = 0f;
+
+    private float _askTimer = 0f;
+    [Export] private float _askTimerMax = 16f;
+    private float _loudExtraStress = 0f;
+
+    [Export] private AnimationPlayer _askAnimation;
+
+    [Export] private AudioStreamPlayer3D _loudSFX;
 
     private Vector3 _wanderTarget;
 
     private float _moveSpeed = 6f;
     private float _sprintSpeed = 9f;
+
+    public BookGenre RequestedGenre;
+    [Export] private Label _requestedGenreLabel;
+    private bool _playerReachedCorrectBookshelf = false;
 
 
 
@@ -42,10 +57,29 @@ public partial class Npc : CharacterBody3D
     {
         GetRandomModel();
 
+        _spawnLock = (float)GD.RandRange(2f, 5f);
+
         _state = NPCState.IDLE;
         _player = GetTree().GetFirstNodeInGroup("player") as CharacterBody3D;
+        _actionCooldown = (float)GD.RandRange(1f, 6f);
+    }
 
-        ResetCooldown();
+    private void ExtraStress()
+    {
+        if (_state == NPCState.LOUD)
+        {
+            _loudExtraStress++;
+            if (_loudExtraStress >= 2)
+            {
+                GameManager.Stress++;
+                _loudExtraStress = 0;
+            }
+        }
+
+        if (_state == NPCState.ASKPLAYER && _isFollowingPlayer)
+        {
+            GameManager.Stress += 2;
+        }
     }
 
     private void MoveNPC(double delta)
@@ -69,7 +103,7 @@ public partial class Npc : CharacterBody3D
     private void GetRandomModel()
     {
         int count = _models.GetChildCount();
-        int chosen = GD.RandRange(0, count);
+        int chosen = GD.RandRange(0, count - 1);
 
         for (int i = 0; i < count; i++)
         {
@@ -85,7 +119,7 @@ public partial class Npc : CharacterBody3D
     {
         float min = 4f;
         float max = 9f;
-        _actionCooldown = Mathf.Lerp(min, max, GD.Randf());
+        _actionCooldown = (float)GD.RandRange(_baseCooldown, _baseCooldown * 2.5f) + GD.Randf() * 2;
     }
 
     private void ChooseNextAction()
@@ -96,10 +130,16 @@ public partial class Npc : CharacterBody3D
         {
             newState = (NPCState)GD.RandRange(0, 4);
 
-            if (newState == NPCState.LOUD && GameManager.ActiveLoudNPC >= GameManager.ActiveLoudNPCMax)
+            if (newState == NPCState.LOUD &&
+            (GameManager.ActiveLoudNPC >= GameManager.ActiveLoudNPCMax
+            || GameManager.LoudGlobalCooldown > 0
+            || GameManager.LoudSpawnDelay > 0))
                 continue;
 
-            if (newState == NPCState.ASKPLAYER && (GameManager.ActiveAskNPC >= GameManager.ActiveAskNPCMax || _askCooldown >= 0))
+            if (newState == NPCState.ASKPLAYER &&
+            (GameManager.ActiveAskNPC >= GameManager.ActiveAskNPCMax
+            || _askCooldown > 0
+            || GameManager.AskGlobalCooldown > 0))
                 continue;
 
             break;
@@ -113,22 +153,31 @@ public partial class Npc : CharacterBody3D
     {
         /* exit old states */
         if (_state == NPCState.LOUD)
+        {
             GameManager.ActiveLoudNPC--;
+            if (_loudSFX.Playing == true)
+                _loudSFX.Playing = false;
+        }
 
         if (_state == NPCState.ASKPLAYER)
             GameManager.ActiveAskNPC--;
 
+
         /* enter new state */
         if (newState == NPCState.LOUD)
+        {
             GameManager.ActiveLoudNPC++;
+            GameManager.LoudSpawnDelay = (float)GD.RandRange(3f, 11f);
+        }
 
         if (newState == NPCState.ASKPLAYER)
+        {
             GameManager.ActiveAskNPC++;
+            _askTimer = _askTimerMax;
+        }
 
         _state = newState;
         ResetCooldown();
-
-        GD.Print($"{Name} is now {_state}.");
     }
 
     private Vector3 GetRandomNavLocation()
@@ -156,34 +205,73 @@ public partial class Npc : CharacterBody3D
         return _player.GlobalPosition + offset;
     }
 
-    private void AskOnReachPlayer()
+    private async void AskOnPlayerReached()
     {
-        GD.Print($"{Name} has reached player.");
+        _askTimer = _askTimerMax;
+
+        if (_player is Player player)
+        {
+            player.SetInteracting(true);
+        }
+
+        /* NPC asks player where to go */
+        RequestedGenre = (BookGenre)GD.RandRange(0, Enum.GetValues(typeof(BookGenre)).Length - 1);
+
+        if (_requestedGenreLabel.Visible == false)
+        {
+            _requestedGenreLabel.Visible = true;
+            GameManager.Stress -= 5;
+        }
+
+        _requestedGenreLabel.Text = $"{RequestedGenre}";
+        _askAnimation.Play("Play");
+
+        await ToSignal(_askAnimation, AnimationPlayer.SignalName.AnimationFinished);
         _isFollowingPlayer = true;
+
+        if (_player is Player player2)
+        {
+            player2.SetInteracting(false);
+        }
     }
 
-    private void AskFollowPlayerUntilReached(double delta)
+    private void AskFollowPlayerToBookshelf(double delta)
     {
-        /* follow player until destination is reached */
         if (_player == null)
             return;
+
 
         _navAgent.TargetPosition = _player.GlobalPosition;
 
         MoveNPC(delta);
 
-        if (true)
+        if (_playerReachedCorrectBookshelf)
         {
-            GD.Print($"{Name} task complete.");
             _isFollowingPlayer = false;
+            _playerReachedCorrectBookshelf = false;
             _askCooldown = 10f;
             SetState(NPCState.IDLE);
         }
     }
 
+    public void OnPlayerReachedCorrectShelf(BookGenre genre)
+    {
+        if (_state != NPCState.ASKPLAYER)
+            return;
+
+        if (genre == RequestedGenre)
+        {
+            _playerReachedCorrectBookshelf = true;
+            _requestedGenreLabel.Visible = false;
+
+            GameManager._npcHelped++;
+            GameManager.Stress -= 10;
+            GameManager.AskGlobalCooldown = (float)GD.RandRange(16f, 40f);
+        }
+    }
+
     private void DoMoveToTarget(double delta) /* long live AI */
     {
-        GD.Print($"{Name} is moving.");
         if (_wanderTarget == Vector3.Zero || GlobalPosition.DistanceTo(_wanderTarget) < 0.5f)
         {
             _wanderTarget = GetRandomNavLocation();
@@ -194,21 +282,18 @@ public partial class Npc : CharacterBody3D
 
         if (_navAgent.IsNavigationFinished())
         {
-            _state = NPCState.IDLE;
+            SetState(NPCState.IDLE);
         }
     }
 
-    private void DoNoise(double delta)
+    private void DoLoud(double delta)
     {
-        GD.Print($"{Name} is loud.");
-
-        GD.Print($"{Name} has been silenced.");
-        SetState(NPCState.IDLE);
+        if (_loudSFX.Playing == false)
+            _loudSFX.Playing = true;
     }
 
     private void DoSniffPlayer(double delta)
     {
-        GD.Print($"{Name} is sniffing.");
 
         if (_player == null)
             return;
@@ -226,8 +311,6 @@ public partial class Npc : CharacterBody3D
 
     private void DoMoveToPlayer(double delta)
     {
-        GD.Print($"{Name} is asking.");
-
         if (_player == null)
             return;
 
@@ -235,23 +318,66 @@ public partial class Npc : CharacterBody3D
 
         MoveNPC(delta);
 
-        if (GlobalPosition.DistanceTo(_player.GlobalPosition) <= _askStopDistance)
+        if (!_isFollowingPlayer && GlobalPosition.DistanceTo(_player.GlobalPosition) <= _askStopDistance)
         {
-            AskOnReachPlayer();
+            AskOnPlayerReached();
         }
     }
 
+    public void Interact(Player player)
+    {
+        switch (_state)
+        {
+            case NPCState.LOUD:
+                SetState(NPCState.IDLE);
+                _loudSFX.Playing = false;
 
+                GameManager.Stress -= 10;
+                GameManager._npcShushed++;
+                GameManager.LoudGlobalCooldown = (float)GD.RandRange(15f, 35f);
+
+                break;
+
+            default:
+                break;
+        }
+    }
 
     public override void _PhysicsProcess(double delta)
     {
-        _actionCooldown -= (float)delta;
+        if (GetTree().CurrentScene.Name == "Tutorial")
+        {
+            return;
+        }
+
+
+
+        if (_spawnLock > 0f)
+        {
+            _spawnLock -= (float)delta;
+        }
+        else
+        {
+            _actionCooldown -= (float)delta;
+        }
+
         if (_askCooldown > 0f)
             _askCooldown -= (float)delta;
 
         if ((_state == NPCState.IDLE || _state == NPCState.WANDER) && _actionCooldown <= 0)
         {
             ChooseNextAction();
+        }
+
+        if (_state == NPCState.ASKPLAYER && !_isFollowingPlayer)
+        {
+            _askTimer -= (float)delta;
+
+            if (_askTimer <= 0)
+            {
+                GameManager.AskGlobalCooldown = (float)GD.RandRange(14f, 30f);
+                SetState(NPCState.IDLE);
+            }
         }
 
         switch (_state)
@@ -263,14 +389,14 @@ public partial class Npc : CharacterBody3D
                 DoMoveToTarget(delta);
                 break;
             case NPCState.LOUD:
-                DoNoise(delta);
+                DoLoud(delta);
                 break;
             case NPCState.SNIFFPLAYER:
                 DoSniffPlayer(delta);
                 break;
             case NPCState.ASKPLAYER:
                 if (_isFollowingPlayer)
-                    AskFollowPlayerUntilReached(delta);
+                    AskFollowPlayerToBookshelf(delta);
                 else
                     DoMoveToPlayer(delta);
                 break;

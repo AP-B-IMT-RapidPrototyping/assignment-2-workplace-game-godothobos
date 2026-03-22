@@ -9,9 +9,9 @@ public partial class Player : CharacterBody3D
     {
         IDLE,
         WALKING,
-        SPRINTING,
-        INTERACTED
+        SPRINTING
     }
+    bool _isInteracting = false;
 
 
     /* CAMERA EXPORTS */
@@ -68,6 +68,11 @@ public partial class Player : CharacterBody3D
         }
     }
 
+    private void ExtraStress()
+    {
+        if (playerState == PlayerState.SPRINTING)
+            GameManager.Stress++;
+    }
 
     private void HandleInteractionUI()
     {
@@ -106,11 +111,15 @@ public partial class Player : CharacterBody3D
                 {
                     GD.Print($"INTERACTION: PICKUP: {collider.Name}");
                     picked_object = collider as RigidBody3D;
-                    if (_grabUI.Visible==true)
+                    if (_grabUI.Visible == true)
                         pickupSound.Play();
                 }
-                if (collider != null && collider.IsInGroup("interact_NPC"))
+                if (collider != null && collider.IsInGroup("interact_npc"))
                 {
+                    if (collider is Npc npc)
+                    {
+                        npc.Interact(this);
+                    }
                     GD.Print($"INTERACTION: NPC: {collider.Name}");
                 }
             }
@@ -159,6 +168,11 @@ public partial class Player : CharacterBody3D
 
         float stressToModulate = GameManager.Stress / 100;
         _stressView.Modulate = new Color(1f, 1f, 1f, stressToModulate);
+    }
+
+    public void SetInteracting(bool value)
+    {
+        _isInteracting = value;
     }
 
     /* ------------------------- */
@@ -233,7 +247,8 @@ public partial class Player : CharacterBody3D
 
         UpdateStress();
 
-        MoveAndSlide();
+        if (!_isInteracting)
+            MoveAndSlide();
     }
 
 }

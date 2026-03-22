@@ -4,6 +4,7 @@ using System;
 public partial class DeathOptions : Control
 {
     [Export] private PackedScene _mainMenu;
+    [Export] private PackedScene _retry;
     public override void _Ready()
     {
         Input.MouseMode = Input.MouseModeEnum.Visible;
@@ -13,5 +14,9 @@ public partial class DeathOptions : Control
     private void OnMenuPressed()
     {
         GetTree().ChangeSceneToPacked(_mainMenu);
+    }
+    private void OnRetryPressed()
+    {
+        GetTree().ChangeSceneToPacked(_retry);
     }
 }

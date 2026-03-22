@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmh63563rk2sf"]
+[gd_scene load_steps=13 format=3 uid="uid://bmh63563rk2sf"]
 
 [ext_resource type="Script" uid="uid://d3rhg6cv7fjfs" path="res://Scripts/SceneScripts/InteractBookShelf.cs" id="1_af3il"]
 [ext_resource type="PackedScene" uid="uid://cro2dtp0unao6" path="res://Assets/OFFICE/book_things/book_case_with_back.glb" id="2_2nqer"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pk4ww"]
 size = Vector3(2, 2.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30s43"]
+size = Vector3(2, 2.5, 1.4)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_umbum"]
 points = PackedVector3Array(-1.0125, 0, -0.24999999, 1.0125, 0, -0.24999999, -1.0125, 0, 0.24999999, -1.0125, 2.5, -0.24999999, 1.0125, 0, 0.24999999, 1.0125, 2.5, -0.24999999, -1.0125, 2.5, 0.24999999, 1.0125, 2.5, 0.24999999)
@@ -35,6 +38,14 @@ collision_mask = 12
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0.14999998)
 shape = SubResource("BoxShape3D_pk4ww")
 debug_color = Color(0.978188, 0, 0.40193477, 0.41960785)
+
+[node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0.35000002)
+shape = SubResource("BoxShape3D_30s43")
 
 [node name="EmptyBookShelf" parent="." instance=ExtResource("2_2nqer")]
 
@@ -84,6 +95,7 @@ mesh = SubResource("TextMesh_2nqer")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3000001, 0)
 stream = ExtResource("7_30s43")
 
-[connection signal="body_entered" from="Area3D" to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="Area3D" to="." method="OnBodyEnteredBooks"]
+[connection signal="body_entered" from="Area3D2" to="." method="OnBodyEnteredPlayer"]
 
 [editable path="EmptyBookShelf"]

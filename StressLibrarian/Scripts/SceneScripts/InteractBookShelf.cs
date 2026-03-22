@@ -50,11 +50,11 @@ public partial class InteractBookShelf : Node3D
             }
             else
             {
-                shelfGenre = (BookGenre)values.GetValue(GD.RandRange(0, genreCount -1));
+                shelfGenre = (BookGenre)values.GetValue(GD.RandRange(0, genreCount - 1));
             }
         }
 
-        GD.Print($"shelf: {shelfGenre}");
+        /* GD.Print($"shelf: {shelfGenre}"); */
 
         if (_textMesh.Mesh != null)
         {
@@ -67,7 +67,22 @@ public partial class InteractBookShelf : Node3D
         }
     }
 
-    private void OnBodyEntered(RigidBody3D body)
+    private void OnBodyEnteredPlayer(Node3D body)
+    {
+        if (!body.IsInGroup("player"))
+            return;
+
+
+        foreach (Node node in GetTree().GetNodesInGroup("interact_npc"))
+        {
+            if (node is Npc npc)
+            {
+                npc.OnPlayerReachedCorrectShelf(shelfGenre);
+            }
+        }
+    }
+
+    private void OnBodyEnteredBooks(Node3D body)
     {
         if (body.IsInGroup("interact_pickup"))
         {
@@ -98,7 +113,7 @@ public partial class InteractBookShelf : Node3D
 
     private void WrongBook(BookBox book)
     {
-        
+
     }
 
 

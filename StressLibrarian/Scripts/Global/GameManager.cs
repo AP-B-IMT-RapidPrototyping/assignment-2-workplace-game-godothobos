@@ -3,20 +3,25 @@ using System;
 
 public partial class GameManager : Node
 {
-
+    /* GAME */
     public static float Stress = 0;
-    public static float Difficulty = 0;
 
+    /* STATS */
     public static int _timeAlive = 0;
     public static int _highScore = 0;
     public static int _npcShushed = 0;
     public static int _npcHelped = 0;
 
+    /* NPC MANAGER */
+    public static float LoudGlobalCooldown = 0f;
+    public static float LoudSpawnDelay = 0f;
     public static int ActiveLoudNPC = 0;
     public static int ActiveLoudNPCMax = 3;
+    public static float AskGlobalCooldown = 0f;
     public static int ActiveAskNPC = 0;
     public static int ActiveAskNPCMax = 1;
 
+    /* PLAYER MANAGER */
     private bool _isDead = false;
 
 
@@ -31,7 +36,6 @@ public partial class GameManager : Node
     public static void ResetGame()
     {
         Stress = 0;
-        Difficulty = 0;
 
         ActiveLoudNPC = 0;
         ActiveAskNPC = 0;
@@ -49,8 +53,13 @@ public partial class GameManager : Node
         if (Stress <= 0)
             Stress = 0;
 
+        if (LoudGlobalCooldown > 0f)
+            LoudGlobalCooldown -= (float)delta;
+        
+        if (LoudSpawnDelay > 0)
+            LoudSpawnDelay -= (float)delta;
 
-        if (Difficulty >= 100)
-            Difficulty = 100;
+        if (AskGlobalCooldown > 0f)
+            AskGlobalCooldown -= (float)delta;
     }
 }
