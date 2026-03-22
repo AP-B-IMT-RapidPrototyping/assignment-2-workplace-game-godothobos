@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=4 uid="uid://b0kpflec4ydky"]
+[gd_scene load_steps=131 format=4 uid="uid://b0kpflec4ydky"]
 
 [ext_resource type="Script" uid="uid://ccsnd4mvhlvlx" path="res://Scripts/SceneScripts/Library.cs" id="1_v6w10"]
 [ext_resource type="PackedScene" uid="uid://c0yvu8hc2goqx" path="res://Scenes/Characters/player.tscn" id="2_u0u76"]
@@ -206,6 +206,9 @@ points = PackedVector3Array(0, 0, -3, 0, 0, 0, 1.9998043, 0, -2.0000978, 3, 0, 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hmi08"]
 points = PackedVector3Array(-1.1204146, 1.0702496, -0.71663225, -1.0918885, 0.07421268, -0.71663225, -1.096716, 0.07421268, -0.54279524, -1.1201952, 0.9451615, -0.531847, -1.1208534, 1.0877526, -0.69927526, 1.1201952, 1.0702496, -0.71663225, -1.0240843, 0, -0.4881875, 1.0916691, 0.07421268, -0.71663225, -1.096716, 0.07421268, 0.62626517, -1.1201952, 0.9451615, 0.62626517, -1.1208534, 1.0877526, -0.5602858, -0.899667, 1.1696665, -0.39112183, -0.89944756, 1.1560142, -0.5550787, -0.89944756, 1.1469127, -0.5763076, 0.010093808, 1.1625487, -0.5763076, 0.8191359, 1.1783013, -0.5550787, 1.1208534, 1.0877526, -0.69927526, 1.1199758, 0.9451615, -0.531847, 1.0964966, 0.07421268, -0.54279524, -1.0240843, 0, 0.5111749, 1.023865, 0, -0.4881875, -1.076309, 0.09521627, 0.64736056, 1.0964966, 0.07421268, 0.62626517, -1.0989103, 0.9368768, 0.64736056, -1.092108, 0.9740998, 0.62626517, 0.010093808, 1.1853025, -0.39112183, 0.010093808, 1.1716502, -0.5550787, 0.8191359, 1.1920704, -0.39112183, 0.8709216, 1.1681496, -0.5550787, 0.8709216, 1.1819186, -0.39112183, 1.1208534, 1.0877526, -0.5602858, 1.1199758, 0.9451615, 0.62626517, 1.023865, 0, 0.5111749, 1.0760896, 0.09521627, 0.64736056, -1.0831113, 0.9529795, 0.64736056, 1.0918887, 0.9740998, 0.62626517, 1.098691, 0.9368768, 0.64736056, 1.082892, 0.9529795, 0.64736056)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_srp1s"]
+size = Vector3(2.2, 1.5, 1.2)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_urrsm"]
 points = PackedVector3Array(-0.69971526, 1.0702496, -0.71663225, -0.67110157, 0.07421268, -0.71663225, -0.6760302, 0.07421268, -0.54279524, -0.69944143, 0.9451615, -0.531847, -0.700126, 1.0877526, -0.69927526, 0.6979763, 1.0702496, -0.71663225, -0.60333216, 0, -0.4881875, 0.6693625, 0.07421268, -0.71663225, -0.6760302, 0.07421268, 0.62626517, -0.69944143, 0.9451615, 0.62626517, -0.700126, 1.0877526, -0.5602858, -0.45670396, 1.1853025, -0.39098832, -0.45656705, 1.1716502, -0.5550787, -0.45643014, 1.1625487, -0.5763076, 0.40526742, 1.1783013, -0.5550787, 0.69852394, 1.0877526, -0.69927526, 0.69770247, 0.9451615, -0.531847, 0.6742912, 0.07421268, -0.54279524, -0.60333216, 0, 0.5111749, 0.6015932, 0, -0.4881875, -0.65549403, 0.09521627, 0.64736056, 0.6742912, 0.07421268, 0.62626517, -0.67808384, 0.9368768, 0.64736056, -0.66247636, 0.9529795, 0.64736056, -0.6712384, 0.9740998, 0.62626517, 0.40513057, 1.1920704, -0.39098832, 0.4604413, 1.1682663, -0.5550787, 0.46030432, 1.1819186, -0.39098832, 0.69852394, 1.0877526, -0.5602858, 0.69770247, 0.9451615, 0.62626517, 0.6015932, 0, 0.5111749, 0.653755, 0.09521627, 0.64736056, 0.66073734, 0.9529795, 0.64736056, 0.66949946, 0.9740998, 0.62626517, 0.4759118, 1.1748008, -0.39045423, 0.6763448, 0.9368768, 0.64736056)
 
@@ -369,7 +372,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68484807, 1, 6.807815)
 navigation_mesh = SubResource("NavigationMesh_k48ua")
 
 [node name="GridMaps" type="Node3D" parent="Map/NavigationRegion3D"]
-visible = false
 
 [node name="FullBookshelfGrid" type="GridMap" parent="Map/NavigationRegion3D/GridMaps"]
 mesh_library = ExtResource("3_3liie")
@@ -408,7 +410,6 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.7951207, -16)
-visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(50, 1.9050962, 75)
@@ -807,7 +808,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0013/couch_red_001" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/NavigationRegion3D/Building/Objects/couch_red_0013/couch_red_001/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_hmi08")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_srp1s")
 
 [node name="armchair_green2" parent="Map/NavigationRegion3D/Building/Objects" instance=ExtResource("20_teypl")]
 transform = Transform3D(0.81915206, 0, -0.57357645, 0, 1, 0, 0.57357645, 0, 0.81915206, 13.729164, 0, -31.343975)
@@ -1517,7 +1519,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
 
 [node name="Walls" type="Node3D" parent="Map/NavigationRegion3D/Building"]
-visible = false
 
 [node name="WallRight" type="CSGBox3D" parent="Map/NavigationRegion3D/Building/Walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.399998, 2, -39.15)
