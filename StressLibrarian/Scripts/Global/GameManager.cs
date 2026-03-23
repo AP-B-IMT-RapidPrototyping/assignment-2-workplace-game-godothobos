@@ -22,7 +22,7 @@ public partial class GameManager : Node
     public static int ActiveAskNPCMax = 1;
 
     /* PLAYER MANAGER */
-    private bool _isDead = false;
+    private static bool _isDead = false;
 
 
     [Export] private PackedScene _deathScene = GD.Load<PackedScene>("res://scenes/levels/death.tscn");
@@ -37,8 +37,15 @@ public partial class GameManager : Node
     {
         Stress = 0;
 
+        _timeAlive = 0;
+        _highScore = 0;
+        _npcShushed = 0;
+        _npcHelped = 0;
+
         ActiveLoudNPC = 0;
         ActiveAskNPC = 0;
+
+        _isDead = false;
     }
 
     public override void _PhysicsProcess(double delta)

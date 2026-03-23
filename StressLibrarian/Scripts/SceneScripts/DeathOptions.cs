@@ -17,6 +17,7 @@ public partial class DeathOptions : Control
     }
     private void OnRetryPressed()
     {
+        GameManager.ResetGame();
         GetTree().ChangeSceneToPacked(_retry);
     }
 }
