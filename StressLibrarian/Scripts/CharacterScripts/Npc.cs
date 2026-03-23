@@ -57,7 +57,7 @@ public partial class Npc : CharacterBody3D
     {
         GetRandomModel();
 
-        _spawnLock = (float)GD.RandRange(2f, 5f);
+        _spawnLock = (float)GD.RandRange(30f, 40f);
 
         _state = NPCState.IDLE;
         _player = GetTree().GetFirstNodeInGroup("player") as CharacterBody3D;
