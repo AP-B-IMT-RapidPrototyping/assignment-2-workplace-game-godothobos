@@ -78,7 +78,7 @@ public partial class Npc : CharacterBody3D
 
         if (_state == NPCState.ASKPLAYER && _isFollowingPlayer)
         {
-            GameManager.Stress += 2;
+            GameManager.Stress += 1;
         }
     }
 
