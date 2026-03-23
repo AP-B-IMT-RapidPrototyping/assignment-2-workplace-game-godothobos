@@ -265,7 +265,7 @@ public partial class Npc : CharacterBody3D
             _requestedGenreLabel.Visible = false;
 
             GameManager._npcHelped++;
-            GameManager.Stress -= 10;
+            GameManager.Stress -= 25;
             GameManager.AskGlobalCooldown = (float)GD.RandRange(16f, 40f);
         }
     }
@@ -332,7 +332,7 @@ public partial class Npc : CharacterBody3D
                 SetState(NPCState.IDLE);
                 _loudSFX.Playing = false;
 
-                GameManager.Stress -= 10;
+                GameManager.Stress -= 7;
                 GameManager._npcShushed++;
                 GameManager.LoudGlobalCooldown = (float)GD.RandRange(15f, 35f);
 

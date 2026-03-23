@@ -9,7 +9,7 @@ public partial class InteractBookShelf : Node3D
     [Export] public bool Randomize = true;
     [Export] private AudioStreamPlayer3D fillSound;
 
-    private float _reduceStress = 10f;
+    private float _reduceStress = 15f;
 
 
     public override void _Ready()
