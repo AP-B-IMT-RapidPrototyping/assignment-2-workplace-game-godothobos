@@ -1882,6 +1882,27 @@ material = SubResource("StandardMaterial3D_088yt")
 [node name="floor_2x22" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 0.01, -16.8)
 
+[node name="floor_2x47" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -19.3)
+
+[node name="floor_2x48" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -21.3)
+
+[node name="floor_2x49" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -23.3)
+
+[node name="floor_2x50" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -25.3)
+
+[node name="floor_2x51" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -27.3)
+
+[node name="floor_2x52" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -29.3)
+
+[node name="floor_2x53" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7, 0.01, -31.3)
+
 [node name="floor_2x23" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0.01, -16.8)
 
@@ -1907,13 +1928,13 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -30.35)
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.7, 0.01, -35.46)
 
 [node name="floor_corner_round_half12" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -14.800001, 0.01, -34.66)
 
 [node name="floor_corner_round_half13" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -7.7, 0.01, -32.66)
 
 [node name="floor_corner_round_half8" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 15.89, 0.01, -43.15)
 
 [node name="floor_corner_round_half9" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
 transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 13.09, 0.01, -28.95)
@@ -1922,7 +1943,7 @@ transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -30.35)
 
 [node name="floor_corner_round_half11" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -35.46)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -37.46)
 
 [node name="floor_2x25" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -28.95)
@@ -1931,19 +1952,169 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.09, 0.01, -28.95)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.896, 0.01, -26.822)
 
 [node name="floor_2x26" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 18.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half14" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.89, 0.01, -44.55)
+
+[node name="floor_corner_round_half15" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
+
+[node name="floor_corner_round_half16" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 15.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half17" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 15.89, 0.01, -44.55)
+
+[node name="floor_2x32" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half22" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 18.89, 0.01, -43.15)
+
+[node name="floor_2x36" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 15.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half23" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 18.89, 0.01, -44.55)
+
+[node name="floor_corner_round_half24" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 18.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half25" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 18.89, 0.01, -44.55)
+
+[node name="floor_2x37" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 18.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half18" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 12.89, 0.01, -43.15)
+
+[node name="floor_2x34" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 12.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half19" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.89, 0.01, -44.55)
+
+[node name="floor_corner_round_half20" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 12.89, 0.01, -43.15)
+
+[node name="floor_corner_round_half21" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 12.89, 0.01, -44.55)
+
+[node name="floor_2x35" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.89, 0.01, -43.15)
+
+[node name="floor_2x33" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 13.09, 0.01, -28.95)
 
 [node name="floor_2x28" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -34.06)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -36.06)
 
 [node name="floor_2x29" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
-transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -6.3, 0.01, -34.06)
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -13.400002, 0.01, -36.06)
 
 [node name="floor_2x30" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
-transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -6.3, 0.01, -32.66)
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -13.400002, 0.01, -34.66)
 
 [node name="floor_2x31" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.7000008, 0.01, -22.16)
+
+[node name="floor_corner_round_half26" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -14.800001, 0.01, -26.859999)
+
+[node name="floor_corner_round_half27" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
+
+[node name="floor_corner_round_half28" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -14.800001, 0.01, -34.66)
+
+[node name="floor_corner_round_half29" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 6.5, 0.01, -22.16)
+
+[node name="floor_2x38" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.1000023, 0.01, -22.16)
+
+[node name="floor_2x39" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, -1.2239188e-07, 0, 0.7, 0, 1.2239188e-07, 0, 0.7, 5.1000023, 0.01, -20.76)
+
+[node name="floor_2x40" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -6.3, 0.01, -32.66)
+
+[node name="floor_corner_round_half34" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 6.5, 0.01, -22.16)
+
+[node name="floor_corner_round_half35" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, 3.7000008, 0.01, -22.16)
+
+[node name="floor_2x46" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
 transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -32.66)
+
+[node name="floor_corner_round_half36" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 3.7000008, 0.01, -22.16)
+
+[node name="floor_corner_round_half37" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -35.46)
+
+[node name="floor_2x54" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -7.7, 0.01, -34.06)
+
+[node name="floor_2x55" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -6.3, 0.01, -34.06)
+
+[node name="floor_2x56" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.7000008, 0.01, -20.76)
+
+[node name="floor_2x57" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.7000008, 0.01, -13.66)
+
+[node name="floor_corner_round_half38" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 6.5, 0.01, -13.66)
+
+[node name="floor_2x58" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.1000023, 0.01, -13.66)
+
+[node name="floor_2x59" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, -1.2239188e-07, 0, 0.7, 0, 1.2239188e-07, 0, 0.7, 5.1000023, 0.01, -12.26)
+
+[node name="floor_corner_round_half39" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 6.5, 0.01, -13.66)
+
+[node name="floor_corner_round_half40" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, 3.7000008, 0.01, -13.66)
+
+[node name="floor_corner_round_half41" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, 3.7000008, 0.01, -13.66)
+
+[node name="floor_2x60" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.7000008, 0.01, -12.26)
+
+[node name="floor_2x41" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -34.66)
+
+[node name="floor_corner_round_half30" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -14.800001, 0.01, -24.06)
+
+[node name="floor_corner_round_half31" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -26.859999)
+
+[node name="floor_2x42" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -25.460001)
+
+[node name="floor_2x43" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(9.179391e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 9.179391e-08, -13.400002, 0.01, -25.460001)
+
+[node name="floor_2x44" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -13.400002, 0.01, -24.06)
+
+[node name="floor_corner_round_half32" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -14.800001, 0.01, -37.46)
+
+[node name="floor_corner_round_half33" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("46_80clb")]
+transform = Transform3D(-0.7, 0, 6.119594e-08, 0, 0.7, 0, -6.119594e-08, 0, -0.7, -14.800001, 0.01, -24.06)
+
+[node name="floor_2x45" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("45_38e3g")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, -14.800001, 0.01, -24.06)
 
 [node name="floor_3x32" parent="Map/NavigationRegion3D/Building/Carpets" instance=ExtResource("47_ot2rd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1, 0.01, -31.9)
@@ -2274,7 +2445,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light55" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 31.600002, 3.8000002, -17.699999)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 31.600002, 3.8000002, -19.3)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2286,7 +2457,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light59" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 31.600002, 3.8000002, -24.6)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 31.600002, 3.8000002, -26.4)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2298,7 +2469,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light62" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 31.600002, 3.8000002, -32)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.500004, 3.8000002, -32)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2310,7 +2481,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light58" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26.300001, 3.8000002, -17.699999)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26.300001, 3.8000002, -19.3)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2322,43 +2493,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light60" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26.300001, 3.8000002, -24.599998)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light61" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26.300001, 3.8000002, -31.8)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light56" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.500002, 3.8000002, -21.199999)
-light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
-light_energy = 10.0
-light_volumetric_fog_energy = 16.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 20.0
-spot_range = 10.0
-spot_attenuation = 0.75
-spot_angle = 70.0
-
-[node name="Light57" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.500002, 3.8000002, -27.999998)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 26.300001, 3.8000002, -26.3)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2466,7 +2601,7 @@ spot_attenuation = 0.75
 spot_angle = 70.0
 
 [node name="Light13" type="SpotLight3D" parent="Map/NavigationRegion3D/Building/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.800001, 3.8000002, -33.899998)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -8.300001, 3.8000002, -34.6)
 light_color = Color(0.829675, 0.77742594, 0.7393779, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 16.0
@@ -2817,29 +2952,45 @@ transform = Transform3D(-1.7286135e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -1
 [node name="BoxSpawnPoints" type="Node3D" parent="."]
 
 [node name="SpawnPoint" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1000004, 0.5, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.5, 1.5999999)
 
 [node name="SpawnPoint2" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0.59999996, -12.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8, 0.59999996, -9.900001)
 
 [node name="SpawnPoint3" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1, 0.4, -18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7, 0.4, -9.5)
 
 [node name="SpawnPoint4" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1, 1, -34.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9, 1, -31.199999)
 
 [node name="SpawnPoint5" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.199999, 0.5, -44)
 
 [node name="SpawnPoint6" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0.5, -43.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0.5, -45.1)
+
+[node name="SpawnPoint7" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.900002, 0.5, -21.199997)
+
+[node name="SpawnPoint8" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0.5, -4.199999)
+
+[node name="SpawnPoint9" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8999996, 0.5, -28.699999)
+
+[node name="SpawnPoint10" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0.5, -22.299997)
+
+[node name="SpawnPoint11" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.300001, 0.5, -25.799997)
+
+[node name="SpawnPoint12" type="Marker3D" parent="BoxSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.800001, 0.5, -37.199993)
 
 [node name="BoxSpawnManager" type="Node3D" parent="." node_paths=PackedStringArray("_SpawnPoint")]
 script = ExtResource("50_bcuux")
-_SpawnPoint = [NodePath("../BoxSpawnPoints/SpawnPoint"), NodePath("../BoxSpawnPoints/SpawnPoint2"), NodePath("../BoxSpawnPoints/SpawnPoint3"), NodePath("../BoxSpawnPoints/SpawnPoint4")]
+_SpawnPoint = [NodePath("../BoxSpawnPoints/SpawnPoint"), NodePath("../BoxSpawnPoints/SpawnPoint2"), NodePath("../BoxSpawnPoints/SpawnPoint3"), NodePath("../BoxSpawnPoints/SpawnPoint4"), NodePath("../BoxSpawnPoints/SpawnPoint5"), NodePath("../BoxSpawnPoints/SpawnPoint6")]
 book_box = ExtResource("51_enacg")
-SpawnDelayMin = 1.0
-SpawnDelayMax = 2.0
 
 [node name="BookBox" parent="." instance=ExtResource("51_enacg")]
 transform = Transform3D(-0.8660255, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660255, 1.6999996, 0.70000005, 1.4999996)
