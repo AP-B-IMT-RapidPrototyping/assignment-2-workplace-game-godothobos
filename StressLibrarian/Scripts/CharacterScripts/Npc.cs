@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Transactions;
 
@@ -16,16 +17,28 @@ public partial class Npc : CharacterBody3D
         ASKPLAYER
     }
 
+    string[] sentences =
+    {
+        "Darling, where can I find the {RequestedGenre} books?",
+        "WHERE. IS. {RequestedGenre}?",
+        "Where can I find {RequestedGenre}?",
+        "Please, help me find {RequestedGenre}.",
+        "I'm looking for {RequestedGenre}!",
+        "WHERE THE F.. FLIP IS {RequestedGenre}?",
+        "I've been looking EVERYWHERE for {RequestedGenre}!"
+    };
 
     [Export] private NavigationAgent3D _navAgent;
     [Export] private NavigationRegion3D _navRegion;
     [Export] private Node3D _models;
+    [Export] private int _chosenModel;
     [Export] private RayCast3D _raycastNpc;
     [Export] private float _sniffMinRadius = 3f;
     [Export] private float _sniffMaxRadius = 6f;
     [Export] private float _askStopDistance = 1.5f;
     private float _askCooldown = 0f;
     private bool _isFollowingPlayer = false;
+    private bool _isAsking = false;
 
     private NPCState _state;
     private CharacterBody3D _player;
@@ -57,7 +70,7 @@ public partial class Npc : CharacterBody3D
     {
         GetRandomModel();
 
-        _spawnLock = (float)GD.RandRange(1f, 2f);
+        _spawnLock = (float)GD.RandRange(30f, 45f);
 
         _state = NPCState.IDLE;
         _player = GetTree().GetFirstNodeInGroup("player") as CharacterBody3D;
@@ -113,6 +126,13 @@ public partial class Npc : CharacterBody3D
             if (i != chosen)
                 model.QueueFree();
         }
+
+        _chosenModel = chosen;
+    }
+
+    public int GetChosenModel()
+    {
+        return _chosenModel;
     }
 
     private void ResetCooldown()
@@ -207,11 +227,14 @@ public partial class Npc : CharacterBody3D
 
     private async void AskOnPlayerReached()
     {
+        _isAsking = true;
+
         _askTimer = _askTimerMax;
 
         if (_player is Player player)
         {
-            player.SetInteracting(true);
+            Visible = false;
+            player.StartNpcInteraction(this);
         }
 
         /* NPC asks player where to go */
@@ -223,17 +246,25 @@ public partial class Npc : CharacterBody3D
             GameManager.Stress -= 5;
         }
 
-        _requestedGenreLabel.Text = $"{RequestedGenre}";
+
+        int index = (int)GD.RandRange(0, sentences.Length - 1);
+        string chosen = sentences[index];
+        _requestedGenreLabel.Text = chosen.Replace("{RequestedGenre}", RequestedGenre.ToString().ToUpper());
+
         _askAnimation.Play("Play");
 
         await ToSignal(_askAnimation, AnimationPlayer.SignalName.AnimationFinished);
+        _isAsking = false;
         _isFollowingPlayer = true;
 
         if (_player is Player player2)
         {
-            player2.SetInteracting(false);
+            Visible = true;
+            player2.EndNpcInteraction();
         }
     }
+
+
 
     private void AskFollowPlayerToBookshelf(double delta)
     {
@@ -318,7 +349,7 @@ public partial class Npc : CharacterBody3D
 
         MoveNPC(delta);
 
-        if (!_isFollowingPlayer && GlobalPosition.DistanceTo(_player.GlobalPosition) <= _askStopDistance)
+        if (!_isFollowingPlayer && !_isAsking && GlobalPosition.DistanceTo(_player.GlobalPosition) <= _askStopDistance)
         {
             AskOnPlayerReached();
         }
@@ -349,7 +380,6 @@ public partial class Npc : CharacterBody3D
         {
             return;
         }
-
 
 
         if (_spawnLock > 0f)

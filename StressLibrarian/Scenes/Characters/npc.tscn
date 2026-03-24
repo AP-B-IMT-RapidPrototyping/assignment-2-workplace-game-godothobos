@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=19 format=3 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cess5bbncjard" path="res://Assets/Characters_psx/Models/Female/Character_Female_09.fbx" id="10_vfvyv"]
 [ext_resource type="PackedScene" uid="uid://bqh4qomiaafkb" path="res://Assets/Characters_psx/Models/Female/Character_Female_15.fbx" id="11_lpotm"]
 [ext_resource type="AudioStream" uid="uid://cbs7lqoova7tc" path="res://Assets/Audio/sounds/soundreality-door-knock-175164.mp3" id="12_4ik2k"]
+[ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="13_0dw1j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e2x16"]
 radius = 0.6
@@ -25,33 +26,9 @@ albedo_color = Color(1, 0, 0, 0.49411765)
 resource_name = "Play"
 length = 2.0
 step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGBox3D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 1.97, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [false, true, true, false]
-}
 
 [sub_resource type="Animation" id="Animation_0dw1j"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGBox3D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0dw1j"]
 _data = {
@@ -381,18 +358,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_0dw1j")
 }
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-visible = false
-
 [node name="RequestedGenre" type="Label" parent="."]
 visible = false
-offset_left = 121.0
-offset_top = 579.0
-offset_right = 1125.0
-offset_bottom = 670.0
-theme_override_font_sizes/font_size = 66
-text = "AAAAAAAAAAAAAAAAAAAAAAA"
+offset_left = 83.0
+offset_top = 573.0
+offset_right = 1163.0
+offset_bottom = 691.105
+theme_override_fonts/font = ExtResource("13_0dw1j")
+theme_override_font_sizes/font_size = 41
+text = "YOU SHOULDN'T BE SEEING THIS..."
 horizontal_alignment = 1
 vertical_alignment = 1
 

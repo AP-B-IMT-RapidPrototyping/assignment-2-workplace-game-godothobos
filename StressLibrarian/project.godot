@@ -26,7 +26,7 @@ GameManager="*res://Scripts/Global/GameManager.cs"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
-window/vsync/vsync_mode=2
+window/vsync/vsync_mode=0
 
 [dotnet]
 

@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 public partial class Player : CharacterBody3D
@@ -11,7 +12,7 @@ public partial class Player : CharacterBody3D
         WALKING,
         SPRINTING
     }
-    bool _isInteracting = false;
+    bool _blockMovement = false;
 
 
     /* CAMERA EXPORTS */
@@ -33,7 +34,6 @@ public partial class Player : CharacterBody3D
 
     [Export] private float _holdStrength = 26f;
 
-
     /* UI EXPORTS */
     [Export] private Control _playerUI;
     [Export] private TextureRect _grabUI;
@@ -41,8 +41,10 @@ public partial class Player : CharacterBody3D
     [Export] private Control _stressView;
     [Export] private Label _stressLabel;
 
-    /* AUDIO EXPORTS */
+    /* VISUAL EXPORTS */
     [Export] private AudioStreamPlayer3D pickupSound;
+    [Export] private AnimationPlayer _npcJumpscare;
+    [Export] private Node3D _fakeNpcModels;
 
     /* STATE MACHINE */
     private PlayerState playerState = PlayerState.IDLE;
@@ -69,34 +71,34 @@ public partial class Player : CharacterBody3D
         }
     }
 
- private Node3D FindShelf(BookGenre genre)
-{
-    foreach (Node node in GetTree().GetNodesInGroup("bookshelves"))
+    private Node3D FindShelf(BookGenre genre)
     {
-        if (node is InteractBookShelf shelf)
+        foreach (Node node in GetTree().GetNodesInGroup("bookshelves"))
         {
-            if (shelf.shelfGenre == genre)
+            if (node is InteractBookShelf shelf)
             {
-                return shelf.GetNode<Node3D>("ArrowMarker");
+                if (shelf.shelfGenre == genre)
+                {
+                    return shelf.GetNode<Node3D>("ArrowMarker");
+                }
             }
         }
+        return null;
     }
-    return null;
-}
- 
+
     private void UpdateDirectionArrow()
-{
-    // Not holding a book
-    if (picked_object == null || picked_object is not BookBox book)
     {
-        _directionArrow.Target = null;
-        return;
+        // Not holding a book
+        if (picked_object == null || picked_object is not BookBox book)
+        {
+            _directionArrow.Target = null;
+            return;
+        }
+
+        Node3D targetShelf = FindShelf(book.bookGenre);
+
+        _directionArrow.Target = targetShelf;
     }
-
-    Node3D targetShelf = FindShelf(book.bookGenre);
-
-    _directionArrow.Target = targetShelf;
-}
 
     private void ExtraStress()
     {
@@ -200,9 +202,44 @@ public partial class Player : CharacterBody3D
         _stressView.Modulate = new Color(1f, 1f, 1f, stressToModulate);
     }
 
-    public void SetInteracting(bool value)
+    public void BlockMovement(bool value, bool type)
     {
-        _isInteracting = value;
+        _blockMovement = value;
+    }
+
+    private void SetupFakeModel(int index)
+    {
+        for (int i = 0; i < _fakeNpcModels.GetChildCount(); i++)
+        {
+            var model = _fakeNpcModels.GetChild<Node3D>(i);
+            model.Visible = (i == index);
+        }
+    }
+
+    private void HideFakeNpc()
+    {
+        for (int i = 0; i < _fakeNpcModels.GetChildCount(); i++)
+        {
+            _fakeNpcModels.GetChild<Node3D>(i).Visible = false;
+        }
+    }
+
+    public void StartNpcInteraction(Npc npc)
+    {
+        _blockMovement = true;
+
+        int modelIndex = npc.GetChosenModel();
+        SetupFakeModel(modelIndex);
+
+        _npcJumpscare.Play("play");
+    }
+
+    public void EndNpcInteraction()
+    {
+        _blockMovement = false;
+        _npcJumpscare.PlayBackwards("play");
+
+        HideFakeNpc();
     }
 
     /* ------------------------- */
@@ -274,10 +311,10 @@ public partial class Player : CharacterBody3D
         HandleInteraction();
         HandlePickedObject();
         HandleDropHeldItem();
-        UpdateDirectionArrow(); 
+        UpdateDirectionArrow();
         UpdateStress();
 
-        if (!_isInteracting)
+        if (!_blockMovement)
             MoveAndSlide();
     }
 
