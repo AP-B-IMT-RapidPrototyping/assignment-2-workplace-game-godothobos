@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=33 format=4 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -24,6 +24,13 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3etf2"]
 radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnx77"]
+transparency = 1
+albedo_color = Color(0.047058824, 0.047058824, 0.047058824, 0.4392157)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hy8lp"]
+material = SubResource("StandardMaterial3D_jnx77")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo8ps"]
 resource_name = "Material.001"
@@ -208,10 +215,16 @@ _fakeNpcModels = NodePath("Camera/Models")
 
 [node name="PlayerBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.833, 0, 0, 0, 1, 0, 0, 0, 0.833, 0, 0, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_j6hkg")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_3etf2")
+
+[node name="FakeShadow" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, -0.004500006, 0, 0, 0, 0.6, 0, -1, 0)
+layers = 2
+mesh = SubResource("CapsuleMesh_hy8lp")
 
 [node name="OmniLight" type="OmniLight3D" parent="."]
 light_color = Color(0.83137256, 0.7764706, 0.7411765, 1)
