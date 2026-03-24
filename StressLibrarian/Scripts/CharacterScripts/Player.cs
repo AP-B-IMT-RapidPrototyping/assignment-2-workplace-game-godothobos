@@ -22,6 +22,7 @@ public partial class Player : CharacterBody3D
     [Export] private float _changeFovStrength = 10f;
     [Export] private RayCast3D _playerRayCast;
     [Export] private Marker3D _holdPointMarker;
+    [Export] private DirectionArrow _directionArrow;
 
 
     /* MOVEMENT EXPORTS */
@@ -67,6 +68,35 @@ public partial class Player : CharacterBody3D
             _camera.Rotation = cameraRotation;
         }
     }
+
+ private Node3D FindShelf(BookGenre genre)
+{
+    foreach (Node node in GetTree().GetNodesInGroup("bookshelves"))
+    {
+        if (node is InteractBookShelf shelf)
+        {
+            if (shelf.shelfGenre == genre)
+            {
+                return shelf.GetNode<Node3D>("ArrowMarker");
+            }
+        }
+    }
+    return null;
+}
+ 
+    private void UpdateDirectionArrow()
+{
+    // Not holding a book
+    if (picked_object == null || picked_object is not BookBox book)
+    {
+        _directionArrow.Target = null;
+        return;
+    }
+
+    Node3D targetShelf = FindShelf(book.bookGenre);
+
+    _directionArrow.Target = targetShelf;
+}
 
     private void ExtraStress()
     {
@@ -244,7 +274,7 @@ public partial class Player : CharacterBody3D
         HandleInteraction();
         HandlePickedObject();
         HandleDropHeldItem();
-
+        UpdateDirectionArrow(); 
         UpdateStress();
 
         if (!_isInteracting)

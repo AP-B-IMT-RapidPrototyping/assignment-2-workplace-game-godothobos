@@ -108,6 +108,9 @@ spot_attenuation = 0.9
 spot_angle = 49.862988
 spot_angle_attenuation = 2.1435473
 
+[node name="ArrowMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3000001, 0)
+
 [connection signal="body_entered" from="Area3D" to="." method="OnBodyEnteredBooks"]
 [connection signal="body_entered" from="Area3D2" to="." method="OnBodyEnteredPlayer"]
 
