@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
+using System.Net;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -17,7 +18,21 @@ public partial class Npc : CharacterBody3D
         ASKPLAYER
     }
 
-    string[] sentences =
+    private enum TutorialStep
+    {
+        NONE,
+        LOUD,
+        EXPLAIN,
+        ASK,
+        FOLLOW,
+        DONE
+    }
+
+    private TutorialStep _tutorialStep = TutorialStep.NONE;
+    private bool _isTutorial = false;
+    private bool _tutorialBusy = false;
+
+    private string[] sentences =
     {
         "Darling, where can I find the {RequestedGenre} books?",
         "WHERE. IS. {RequestedGenre}?",
@@ -27,6 +42,31 @@ public partial class Npc : CharacterBody3D
         "WHERE THE F.. FLIP IS {RequestedGenre}?",
         "I've been looking EVERYWHERE for {RequestedGenre}!"
     };
+
+    private string[] tutorialDialogue =
+    {
+        "I haven't seen you before...",
+        "So you're the new librarian.",
+        "Listen carefully.",
+
+        "Customers can get loud.",
+        "When they do, silence them with [E].",
+
+        "Some customers will get lost.",
+        "Guide them to the correct bookshelf.",
+
+        "Helping them decreases stress.",
+        "Too much stress... and you're done.",
+
+        "Keep the library quiet.",
+        "Keep it organized.",
+
+        "Let's try it."
+    };
+
+    private int _dialogueIndex = 0;
+    private bool _isInDialogue = false;
+
 
     [Export] private NavigationAgent3D _navAgent;
     [Export] private NavigationRegion3D _navRegion;
@@ -68,6 +108,11 @@ public partial class Npc : CharacterBody3D
 
     public override void _Ready()
     {
+        if (GetTree().CurrentScene.Name == "Tutorial")
+        {
+            _isTutorial = true;
+        }
+
         GetRandomModel();
 
         _spawnLock = (float)GD.RandRange(30f, 45f);
@@ -77,6 +122,100 @@ public partial class Npc : CharacterBody3D
         _actionCooldown = (float)GD.RandRange(1f, 6f);
     }
 
+
+    /* -------- */
+    /* TUTORIAL */
+    /* -------- */
+    public void StartTutorial()
+    {
+        _tutorialStep = TutorialStep.LOUD;
+        SetState(NPCState.LOUD);
+    }
+
+    /*  EXPLAIN LOUD
+        LOUD
+        EXPLAIN ASK
+        ASK
+        EXPLAIN STRESS
+        DIE*/
+    private void RunTutorial(double delta)
+    {
+        if (_tutorialStep == TutorialStep.DONE)
+            return;
+
+        switch (_tutorialStep)
+        {
+            case TutorialStep.LOUD:
+                DoLoud(delta);
+                break;
+
+            case TutorialStep.EXPLAIN:
+                break;
+
+            case TutorialStep.ASK:
+                if (_isFollowingPlayer)
+                    AskFollowPlayerToBookshelf(delta);
+                else
+                    DoMoveToPlayer(delta);
+                break;
+        }
+    }
+
+    private async void ExplainStress()
+    {
+        _dialogueIndex = 0;
+        _isInDialogue = true;
+
+        if (_player is Player player)
+        {
+            Visible = false;
+            player.StartNpcInteraction(this);
+        }
+    }
+
+    private void ShowCurrentDialogue()
+    {
+        _requestedGenreLabel.Visible = true;
+        _requestedGenreLabel.Text = tutorialDialogue[_dialogueIndex] + "\n\n[E]";
+    }
+
+    private void StartDialogue()
+    {
+        _dialogueIndex = 0;
+        _isInDialogue = true;
+
+        if (_player is Player player)
+        {
+            Visible = false;
+            player.StartNpcInteraction(this);
+        }
+
+        ShowCurrentDialogue();
+    }
+
+    private void EndDialogue()
+    {
+        _isInDialogue = false;
+        _isFollowingPlayer = false;
+        _isAsking = false;
+
+        _navAgent.TargetPosition = Vector3.Zero;
+
+        if (_player is Player player)
+        {
+            Visible = true;
+            player.EndNpcInteraction();
+        }
+
+        _requestedGenreLabel.Visible = false;
+
+        _tutorialStep = TutorialStep.ASK;
+        SetState(NPCState.ASKPLAYER);
+    }
+
+    /* -------------------- */
+    /* EVERY FUNCTION LOLOL */
+    /* -------------------- */
     private void ExtraStress()
     {
         if (_state == NPCState.LOUD)
@@ -137,8 +276,6 @@ public partial class Npc : CharacterBody3D
 
     private void ResetCooldown()
     {
-        float min = 4f;
-        float max = 9f;
         _actionCooldown = (float)GD.RandRange(_baseCooldown, _baseCooldown * 2.5f) + GD.Randf() * 2;
     }
 
@@ -171,6 +308,9 @@ public partial class Npc : CharacterBody3D
 
     private void SetState(NPCState newState)
     {
+        if (_isTutorial && _tutorialStep == TutorialStep.DONE)
+            return;
+
         /* exit old states */
         if (_state == NPCState.LOUD)
         {
@@ -268,9 +408,8 @@ public partial class Npc : CharacterBody3D
 
     private void AskFollowPlayerToBookshelf(double delta)
     {
-        if (_player == null)
+        if (_player == null || !_isFollowingPlayer)
             return;
-
 
         _navAgent.TargetPosition = _player.GlobalPosition;
 
@@ -281,6 +420,16 @@ public partial class Npc : CharacterBody3D
             _isFollowingPlayer = false;
             _playerReachedCorrectBookshelf = false;
             _askCooldown = 10f;
+
+            if (_isTutorial)
+            {
+                _tutorialStep = TutorialStep.DONE;
+
+                ((Tutorial)GetTree().CurrentScene).EndTutorial();
+
+                _requestedGenreLabel.Text = "Thanks, head on to the last door. And goodluck!\n\n[E]";
+            }
+
             SetState(NPCState.IDLE);
         }
     }
@@ -289,7 +438,7 @@ public partial class Npc : CharacterBody3D
     {
         if (_state != NPCState.ASKPLAYER)
             return;
-
+        
         if (genre == RequestedGenre)
         {
             _playerReachedCorrectBookshelf = true;
@@ -342,6 +491,9 @@ public partial class Npc : CharacterBody3D
 
     private void DoMoveToPlayer(double delta)
     {
+        if (_isTutorial && _tutorialStep == TutorialStep.DONE)
+            return;
+
         if (_player == null)
             return;
 
@@ -357,6 +509,38 @@ public partial class Npc : CharacterBody3D
 
     public void Interact(Player player)
     {
+        if (_isTutorial)
+        {
+            if (_tutorialStep == TutorialStep.LOUD)
+            {
+                _loudSFX.Playing = false;
+                SetState(NPCState.IDLE);
+
+                _tutorialStep = TutorialStep.EXPLAIN;
+                StartDialogue();
+                return;
+            }
+        }
+
+        if (_isTutorial && _tutorialStep == TutorialStep.EXPLAIN)
+        {
+            if (_isInDialogue)
+            {
+                _dialogueIndex++;
+
+                if (_dialogueIndex >= tutorialDialogue.Length)
+                {
+                    EndDialogue();
+                }
+                else
+                {
+                    ShowCurrentDialogue();
+                }
+            }
+            return;
+        }
+
+
         switch (_state)
         {
             case NPCState.LOUD:
@@ -378,6 +562,7 @@ public partial class Npc : CharacterBody3D
     {
         if (GetTree().CurrentScene.Name == "Tutorial")
         {
+            RunTutorial(delta);
             return;
         }
 

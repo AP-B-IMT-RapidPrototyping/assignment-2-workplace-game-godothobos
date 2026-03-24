@@ -4,12 +4,17 @@ using System.Threading.Tasks;
 
 public partial class Tutorial : Node3D
 {
+    [Export] private PackedScene _mainMenu = GD.Load<PackedScene>("res://Scenes/Levels/main_menu.tscn");
+
     [Export] private AnimationPlayer _door1;
     [Export] private AnimationPlayer _door2;
     [Export] private AnimationPlayer _lightEnding;
     [Export] private AnimationPlayer _doorKnock;
     [Export] private AnimationPlayer _doorOpen;
+    [Export] private AnimationPlayer _ending;
+    [Export] private AnimationPlayer _endingFade;
     [Export] private RigidBody3D _bookBox;
+    [Export] private Npc _npc;
 
 
     private bool _firstDoor = false;
@@ -17,7 +22,8 @@ public partial class Tutorial : Node3D
     private bool _thirdDoor = false;
     private bool _lightsAlreadyPlayed = false;
     private bool _knockAlreadyPlayed = false;
-    private bool _doorOpenAlreadyPlayed = false;
+    public bool _doorOpenAlreadyPlayed = false;
+    public bool _endingAvailable = false;
     private bool _canNpcCome = false;
     private int _lastPickupCount;
 
@@ -64,6 +70,29 @@ public partial class Tutorial : Node3D
         if (body is Player)
             _doorOpen.Play("Play");
         _doorOpenAlreadyPlayed = true;
+
+        _npc.StartTutorial();
+    }
+
+    public void EndTutorial()
+    {
+        _ending.Play("play");
+        _endingAvailable = true;
+    }
+
+    private async void EndingEntrance(Node3D body)
+    {
+        GD.Print(_mainMenu);
+        if (!_endingAvailable)
+            return;
+
+        if (body is Player)
+        {
+            _endingFade.Play("play");
+
+            await ToSignal(_endingFade, AnimationPlayer.SignalName.AnimationFinished);
+            GetTree().ChangeSceneToPacked(_mainMenu);
+        }
     }
 
     public override void _PhysicsProcess(double delta)

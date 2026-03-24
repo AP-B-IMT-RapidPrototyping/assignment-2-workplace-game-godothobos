@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=85 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -30,6 +30,11 @@ tonemap_mode = 2
 ssr_enabled = true
 ssil_enabled = true
 glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_8n3fx"]
+vertices = PackedVector3Array(-82.12005, 0.70000005, -0.07500315, -80.12005, 0.70000005, -0.07500315, -79.87005, 0.70000005, -0.82500315, -78.12005, 0.70000005, -0.82500315, -77.87005, 0.70000005, -0.07500315, -75.62005, 0.70000005, -0.07500315, -75.62005, 0.70000005, -3.5750031, -73.62005, 0.70000005, -3.8250031, -73.87005, 0.70000005, -5.575003, -82.12005, 0.70000005, -5.575003, -50.62005, 0.70000005, -3.8250031, -50.62005, 0.70000005, -5.575003, -23.370049, 0.70000005, -5.575003, -23.370049, 0.70000005, -3.8250031, 26.129951, 0.70000005, -3.8250031, 26.129951, 0.70000005, -5.575003, -75.62005, 5.2, -4.825003, -75.62005, 5.2, 4.924997, 25.629951, 5.2, 4.924997, 25.629951, 5.2, -4.825003, -50.87005, 0.70000005, -2.0750031, -50.87005, 0.70000005, 2.1749969, -49.12005, 0.70000005, 2.1749969, -49.12005, 0.70000005, -2.0750031, -48.87005, 0.70000005, -4.075003, -24.870049, 0.70000005, 2.1749969, -22.870049, 0.70000005, 2.1749969, -22.870049, 0.70000005, -2.3250031, -24.870049, 0.70000005, -2.3250031, -48.87005, 0.70000005, 4.174997, -25.120049, 0.70000005, 4.174997, -25.120049, 0.70000005, -4.075003, -17.120049, 0.70000005, 2.1749969, -17.120049, 0.70000005, -2.3250031, -8.8700485, 0.70000005, 1.6749969, -8.8700485, 0.70000005, -1.5750031, -10.3700485, 0.70000005, -1.5750031, -10.3700485, 0.70000005, 1.6749969, -10.6200485, 0.70000005, 2.1749969, -10.6200485, 0.70000005, -2.3250031, -15.3700485, 0.70000005, -2.3250031, -15.3700485, 0.70000005, 2.1749969, -7.6200485, 0.70000005, 1.6749969, -7.6200485, 0.70000005, -1.5750031, -7.3700485, 0.70000005, 2.1749969, -2.6200485, 0.70000005, 2.1749969, -2.6200485, 0.70000005, -2.3250031, -7.3700485, 0.70000005, -2.3250031, -0.8700485, 0.70000005, -2.3250031, -0.8700485, 0.70000005, 2.1749969, 24.379951, 0.70000005, 2.1749969, 24.379951, 0.70000005, -2.3250031, -72.62005, 0.70000005, 0.67499685, -73.87005, 0.70000005, 0.42499685, -73.87005, 0.70000005, 2.1749969, -73.87005, 0.70000005, -2.0750031, -73.87005, 0.70000005, -0.57500315, -72.37005, 0.70000005, -0.57500315, -73.87005, 0.70000005, 5.674997, -73.62005, 0.70000005, 3.9249969, -75.62005, 0.70000005, 3.6749969, -79.62005, 0.70000005, 0.92499685, -78.37005, 0.70000005, 0.92499685, -82.12005, 0.70000005, 5.674997, -50.62005, 0.70000005, 5.674997, -50.62005, 0.70000005, 3.9249969, -23.370049, 0.70000005, 3.9249969, -23.370049, 0.70000005, 5.674997, 26.129951, 0.70000005, 5.674997, 26.129951, 0.70000005, 3.9249969)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 6), PackedInt32Array(0, 9, 2), PackedInt32Array(2, 9, 6), PackedInt32Array(6, 9, 8), PackedInt32Array(6, 3, 2), PackedInt32Array(10, 7, 11), PackedInt32Array(11, 7, 8), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(19, 18, 16), PackedInt32Array(16, 18, 17), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(22, 23, 24), PackedInt32Array(28, 27, 25), PackedInt32Array(25, 27, 26), PackedInt32Array(22, 24, 29), PackedInt32Array(29, 24, 31), PackedInt32Array(29, 31, 25), PackedInt32Array(29, 25, 30), PackedInt32Array(31, 28, 25), PackedInt32Array(27, 33, 26), PackedInt32Array(26, 33, 32), PackedInt32Array(37, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(37, 38, 36), PackedInt32Array(36, 38, 39), PackedInt32Array(39, 38, 41), PackedInt32Array(39, 41, 40), PackedInt32Array(43, 42, 35), PackedInt32Array(35, 42, 34), PackedInt32Array(42, 43, 44), PackedInt32Array(44, 43, 47), PackedInt32Array(44, 47, 46), PackedInt32Array(44, 46, 45), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(54, 53, 52), PackedInt32Array(56, 55, 57), PackedInt32Array(57, 55, 20), PackedInt32Array(54, 52, 21), PackedInt32Array(57, 20, 52), PackedInt32Array(52, 20, 21), PackedInt32Array(60, 59, 58), PackedInt32Array(0, 1, 61), PackedInt32Array(4, 5, 62), PackedInt32Array(62, 5, 60), PackedInt32Array(0, 61, 63), PackedInt32Array(63, 61, 60), PackedInt32Array(63, 60, 58), PackedInt32Array(61, 62, 60), PackedInt32Array(65, 64, 59), PackedInt32Array(59, 64, 58), PackedInt32Array(69, 68, 66), PackedInt32Array(66, 68, 67)]
+cell_height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idsh5"]
 albedo_texture = ExtResource("1_302wg")
@@ -741,7 +746,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../../BookBox7:collision_mask")
+tracks/2/path = NodePath("../../../BookBox7:collision_mask")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -816,7 +821,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../../BookBox7:collision_mask")
+tracks/2/path = NodePath("../../../BookBox7:collision_mask")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1064,34 +1069,179 @@ _data = {
 &"RESET": SubResource("Animation_o863f")
 }
 
+[sub_resource type="Animation" id="Animation_wdaxu"]
+resource_name = "play"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndingGate:mesh:material:albedo_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EndingGate:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EndingGate/Area3D:collision_mask")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_oowow"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndingGate:mesh:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EndingGate:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EndingGate/Area3D:collision_mask")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7wr3"]
+_data = {
+&"RESET": SubResource("Animation_oowow"),
+&"play": SubResource("Animation_wdaxu")
+}
+
+[sub_resource type="Animation" id="Animation_qfmmv"]
+resource_name = "play"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Fade/ColorRect:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ckfad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Fade/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oowow"]
+_data = {
+&"RESET": SubResource("Animation_ckfad"),
+&"play": SubResource("Animation_qfmmv")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckfad"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_oowow"]
+material = SubResource("StandardMaterial3D_ckfad")
+size = Vector3(0.2, 6, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a8vmy"]
+size = Vector3(0.2, 6, 9)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_mj38t"]
 size = Vector3(6, 4, 10)
 
-[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorKnock", "_doorOpen", "_bookBox")]
+[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorKnock", "_doorOpen", "_ending", "_endingFade", "_bookBox", "_npc")]
 script = ExtResource("1_tospq")
-_door1 = NodePath("Level/First/Door1/DoorAnim")
-_door2 = NodePath("Level/Second/Door2/DoorAnim")
-_lightEnding = NodePath("Level/Third/LightEnding")
-_doorKnock = NodePath("Level/Third/DoorKnock")
-_doorOpen = NodePath("Level/Third/DoorOpen")
+_door1 = NodePath("NavigationRegion3D/Level/First/Door1/DoorAnim")
+_door2 = NodePath("NavigationRegion3D/Level/Second/Door2/DoorAnim")
+_lightEnding = NodePath("NavigationRegion3D/Level/Third/LightEnding")
+_doorKnock = NodePath("NavigationRegion3D/Level/Third/DoorKnock")
+_doorOpen = NodePath("NavigationRegion3D/Level/Third/DoorOpen")
+_ending = NodePath("NavigationRegion3D/Level/Third/Ending")
+_endingFade = NodePath("NavigationRegion3D/Level/Third/EndingFade")
 _bookBox = NodePath("BookBox")
+_npc = NodePath("NavigationRegion3D/Level/Third/NPC")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tospq")
 
-[node name="Level" type="Node3D" parent="."]
-transform = Transform3D(0.80999994, 0, 0, 0, 0.80999994, 0, 0, 0, 0.80999994, 0, 0, 0)
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_8n3fx")
 
-[node name="Building" type="Node3D" parent="Level"]
+[node name="Level" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(0.81000024, 0, 0, 0, 0.81000024, 0, 0, 0, 0.81000024, 0, 0, 0)
+
+[node name="Building" type="Node3D" parent="NavigationRegion3D/Level"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
-[node name="Floor" type="CSGBox3D" parent="Level/Building"]
+[node name="Floor" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -34.50001, 0, 0)
 use_collision = true
 size = Vector3(135, 0, 15)
 material = SubResource("StandardMaterial3D_idsh5")
 
-[node name="RoofSmallEnding" type="CSGBox3D" parent="Level/Building"]
+[node name="RoofSmallEnding" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000004, -88.88894, 5.500001, 0)
 use_collision = true
 collision_layer = 128
@@ -1099,82 +1249,82 @@ collision_mask = 131
 size = Vector3(10, 0, 13)
 material = SubResource("StandardMaterial3D_o863f")
 
-[node name="Roof" type="CSGBox3D" parent="Level/Building"]
+[node name="Roof" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -25.950014, 5.500001, 0)
 use_collision = true
 size = Vector3(115.9, 0, 13)
 material = SubResource("StandardMaterial3D_wdaxu")
 
-[node name="WallLeft" type="CSGBox3D" parent="Level/Building"]
+[node name="WallLeft" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 1.0000006, 2.8000007, 3.7500005)
 use_collision = true
 size = Vector3(62, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallRight" type="CSGBox3D" parent="Level/Building"]
+[node name="WallRight" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 1.0000002, 2.8000007, -3.7500005)
 use_collision = true
 size = Vector3(62, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallBack" type="CSGBox3D" parent="Level/Building"]
+[node name="WallBack" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, 31.234577, 2.8000007, 0.25000018)
 use_collision = true
 size = Vector3(8, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdBack" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdBack" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, 5.0075173)
 use_collision = true
 size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdBack2" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdBack2" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(-4.3711395e-08, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -4.3711395e-08, -30.000004, 2.8000007, -5.009569)
 use_collision = true
 size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdRight" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdRight" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -45.512012, 2.8, -6.098765)
 use_collision = true
 size = Vector3(32, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdLeft" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdLeft" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -45.512012, 2.8, 6.222223)
 use_collision = true
 size = Vector3(32, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdLeft2" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdLeft2" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -77.11203, 2.8, 3.7530913)
 use_collision = true
 size = Vector3(31, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdRight2" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdRight2" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -77.11203, 2.8, -3.7172327)
 use_collision = true
 size = Vector3(31, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdEndLeft2" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdEndLeft2" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -61.357685, 2.8, 5.0197535)
 use_collision = true
 size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="WallThirdEndRight2" type="CSGBox3D" parent="Level/Building"]
+[node name="WallThirdEndRight2" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(-2.1855703e-07, 0, 1.0000002, 0, 1.0000002, 0, -1.0000002, 0, -2.1855703e-07, -61.357685, 2.8, -4.9666715)
 use_collision = true
 size = Vector3(3, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="Light" type="Node3D" parent="Level/Building"]
+[node name="Light" type="Node3D" parent="NavigationRegion3D/Level/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1296296, 0)
 
-[node name="Light" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.65432, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1182,7 +1332,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light7" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light7" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 22.530869, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1190,7 +1340,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light2" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.6543198, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1198,7 +1348,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light21" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light21" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.6543198, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1206,7 +1356,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light3" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light3" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.345681, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1214,7 +1364,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light31" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light31" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.345681, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1222,7 +1372,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light4" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light4" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -17.34568, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1230,7 +1380,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="Light6" type="SpotLight3D" parent="Level/Building/Light"]
+[node name="Light6" type="SpotLight3D" parent="NavigationRegion3D/Level/Building/Light"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -25, 0, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1238,230 +1388,231 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 70.0
 
-[node name="First" type="Node3D" parent="Level"]
+[node name="First" type="Node3D" parent="NavigationRegion3D/Level"]
 transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -12.345676, 0, 0)
 
-[node name="Door1" parent="Level/First" instance=ExtResource("8_l2k66")]
+[node name="Door1" parent="NavigationRegion3D/Level/First" instance=ExtResource("8_l2k66")]
 transform = Transform3D(-1.0602195e-07, 0, -2.4254994, 0, 1.6689973, 0, 2.4254994, 0, -1.0602195e-07, 10.250002, 0, 0)
 
-[node name="Left" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
+[node name="Left" type="StaticBody3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="Right" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
+[node name="Right" type="StaticBody3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -5.0821977e-21, 3.112903e-22, 1, 0.38961023, 0, 0.51948047)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="EntranceDoorLeft" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
+[node name="EntranceDoorLeft" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -1.4449999, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(1, 1.030287e-13, 5.446422e-19, -1.030287e-13, 1, 3.1126644e-22, -1.6093626e-20, 3.1128949e-22, 1, 0.3189457, 0, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="EntranceDoorRight" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
+[node name="EntranceDoorRight" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 2.646978e-23, 0, -2.6469778e-23, 1, -0.15499997, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/First/Door1/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(1, 1.030287e-13, 5.7174724e-19, -1.030287e-13, 1, 3.1126525e-22, -1.6093626e-20, 3.1128949e-22, 1, -0.29184884, 0, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="DoorAnim" type="AnimationPlayer" parent="Level/First/Door1"]
+[node name="DoorAnim" type="AnimationPlayer" parent="NavigationRegion3D/Level/First/Door1"]
 libraries = {
 &"": SubResource("AnimationLibrary_qvtqq")
 }
 
-[node name="WallDoor" type="CSGBox3D" parent="Level/First/Door1"]
+[node name="WallDoor" type="CSGBox3D" parent="NavigationRegion3D/Level/First/Door1"]
 transform = Transform3D(0.41226187, 0, 1.0658141e-12, 0, 0.5991268, 0, -1.0658141e-12, 0, 0.41226187, 7.0120323e-06, 2.8759313, -0.0012741089)
 use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="Level/First/Door1"]
+[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Level/First/Door1"]
 transform = Transform3D(0.5089954, 0, 1.7763568e-15, 0, 0.7397065, 0, -1.7763568e-15, 0, 0.5089954, -8.423029e-09, 0, 0.12712479)
 stream = ExtResource("7_i0v1t")
 volume_db = -15.0
 max_db = -10.0
 pitch_scale = 0.4
 
-[node name="HangingSign1" parent="Level/First" instance=ExtResource("7_mnia5")]
+[node name="HangingSign1" parent="NavigationRegion3D/Level/First" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016418, 0, 0, 0, 9.016418, 0, 0, 0, 9.016418, 29.50618, 4.1975317, 0)
 
-[node name="Text" type="MeshInstance3D" parent="Level/First/HangingSign1"]
+[node name="Text" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign1"]
 transform = Transform3D(-3.6359817e-09, 0, 0.083181515, 0, 0.083181515, 0, -0.083181515, 0, -3.6359817e-09, 0.0036756992, -0.041077048, -0.027384883)
 mesh = SubResource("TextMesh_qvtqq")
 skeleton = NodePath("../..")
 
-[node name="UI" type="MeshInstance3D" parent="Level/First/HangingSign1"]
+[node name="UI" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign1"]
 transform = Transform3D(-1.9827466e-09, 0.04535996, 0, 1.9827466e-09, 8.666861e-17, -0.04535996, -0.04535996, -1.9827466e-09, -1.9827466e-09, 0.00568223, -0.041077286, 0.05476976)
 mesh = SubResource("PlaneMesh_35mx6")
 
-[node name="UI2" type="MeshInstance3D" parent="Level/First/HangingSign1"]
+[node name="UI2" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign1"]
 transform = Transform3D(-1.9156638e-09, 0.043825287, 0, 1.9156638e-09, 8.3736334e-17, -0.043825287, -0.043825287, -1.9156638e-09, -1.9156638e-09, 0.00568223, -0.041077286, 0.054769754)
 mesh = SubResource("PlaneMesh_8n3fx")
 
-[node name="Light" type="SpotLight3D" parent="Level/First/HangingSign1"]
+[node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/First/HangingSign1"]
 transform = Transform3D(-1.2802779e-08, -0.70710665, 0.7071069, -3.090862e-08, 0.7071069, 0.70710665, -1, -1.2802769e-08, -3.0908623e-08, 0.12323189, 0.09584707, 0)
 spot_range = 2.0
 spot_angle = 36.230724
 
-[node name="HangingSign2" parent="Level/First" instance=ExtResource("7_mnia5")]
+[node name="HangingSign2" parent="NavigationRegion3D/Level/First" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016418, 0, 0, 0, 9.016418, 0, 0, 0, 9.016418, 19.629635, 4.1975317, 0)
 
-[node name="Text" type="MeshInstance3D" parent="Level/First/HangingSign2"]
+[node name="Text" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign2"]
 transform = Transform3D(-3.6359815e-09, 0, 0.083181515, 0, 0.083181515, 0, -0.083181515, 0, -3.6359815e-09, 0.0036756992, -0.041077048, -0.041077323)
 mesh = SubResource("TextMesh_mj38t")
 skeleton = NodePath("../..")
 
-[node name="UI" type="MeshInstance3D" parent="Level/First/HangingSign2"]
+[node name="UI" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign2"]
 transform = Transform3D(-1.5861972e-09, 0.036287963, 0, 1.5861972e-09, 6.933488e-17, -0.036287963, -0.036287963, -1.5861972e-09, -1.5861972e-09, 0.00568223, -0.041077346, 0.054769754)
 mesh = SubResource("PlaneMesh_wdaxu")
 
-[node name="UI2" type="MeshInstance3D" parent="Level/First/HangingSign2/UI"]
+[node name="UI2" type="MeshInstance3D" parent="NavigationRegion3D/Level/First/HangingSign2/UI"]
 transform = Transform3D(1, -7.1054274e-15, -7.1054274e-15, 7.1054274e-15, 1, 2.1175824e-22, 7.1054274e-15, 4.2351647e-22, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_wdaxu")
 skeleton = NodePath("../..")
 
-[node name="Light" type="SpotLight3D" parent="Level/First/HangingSign2"]
+[node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/First/HangingSign2"]
 transform = Transform3D(-1.2802779e-08, -0.70710665, 0.7071069, -3.090862e-08, 0.7071069, 0.70710665, -1, -1.2802769e-08, -3.0908623e-08, 0.12323189, 0.09584707, 0)
 spot_range = 2.0
 spot_angle = 36.230724
 
-[node name="Second" type="Node3D" parent="Level"]
+[node name="Second" type="Node3D" parent="NavigationRegion3D/Level"]
 transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -16.049377, 0, 0)
 
-[node name="Door2" parent="Level/Second" instance=ExtResource("8_l2k66")]
+[node name="Door2" parent="NavigationRegion3D/Level/Second" instance=ExtResource("8_l2k66")]
 transform = Transform3D(-1.0602193e-07, 0, -2.425499, 0, 1.6689972, 0, 2.425499, 0, -1.0602193e-07, -3.953704, 0, 0)
 
-[node name="Left" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
+[node name="Left" type="StaticBody3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="Right" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
+[node name="Right" type="StaticBody3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -5.0821977e-21, 3.112903e-22, 1, 0.38961023, 0, 0.51948047)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="EntranceDoorLeft" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
+[node name="EntranceDoorLeft" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, -1.4449999, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(1, 1.030287e-13, 5.446422e-19, -1.030287e-13, 1, 3.1126644e-22, -1.6093626e-20, 3.1128949e-22, 1, 0.3189457, 0, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="EntranceDoorRight" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
+[node name="EntranceDoorRight" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 2.646978e-23, 0, -2.6469776e-23, 1, -0.15499997, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Second/Door2/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(0.99999994, 9.947598e-14, 5.446422e-19, -9.947598e-14, 0.99999994, 3.112664e-22, -1.5246593e-20, 3.112894e-22, 0.9999999, -0.2918489, 3.7252903e-08, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="DoorAnim" type="AnimationPlayer" parent="Level/Second/Door2"]
+[node name="DoorAnim" type="AnimationPlayer" parent="NavigationRegion3D/Level/Second/Door2"]
 libraries = {
 &"": SubResource("AnimationLibrary_35mx6")
 }
 
-[node name="WallDoor2" type="CSGBox3D" parent="Level/Second/Door2"]
+[node name="WallDoor2" type="CSGBox3D" parent="NavigationRegion3D/Level/Second/Door2"]
 transform = Transform3D(0.41225418, 0, 1.4050983e-12, 0, 0.59911555, 0, -1.4050983e-12, 0, 0.41225418, 7.0096885e-06, 2.8759277, 0.010946102)
 use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="Level/Second/Door2"]
+[node name="Doorcreek_sound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Level/Second/Door2"]
 transform = Transform3D(0.50899553, 0, 0, 0, 0.7397066, 0, 0, 0, 0.50899553, 5.2724687e-09, 0, 0.12062001)
 stream = ExtResource("7_i0v1t")
 volume_db = -15.0
 max_db = -10.0
 pitch_scale = 0.4
 
-[node name="Bookshelf" type="Node3D" parent="Level/Second"]
+[node name="Bookshelf" type="Node3D" parent="NavigationRegion3D/Level/Second"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 3.7037044, 0, 0)
 
-[node name="InteractBookShelf" parent="Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf" parent="NavigationRegion3D/Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1.2345676, 0, -1.4717193e-07, 0, 1.2345676, 0, 1.4717193e-07, 0, -1.2345676, 1.234567, 0, 3.086419)
 Randomize = false
 
-[node name="InteractBookShelf2" parent="Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf2" parent="NavigationRegion3D/Level/Second/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1.2345676, 0, 3.92426e-08, 0, 1.2345676, 0, -3.92426e-08, 0, 1.2345676, 1.234567, 0, -3.086419)
 shelfGenre = 2
 Randomize = false
 
-[node name="HangingSign2" parent="Level/Second" instance=ExtResource("7_mnia5")]
+[node name="HangingSign2" parent="NavigationRegion3D/Level/Second" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016416, 0, 0, 0, 9.016416, 0, 0, 0, 9.016416, 6.0493813, 4.19753, 0)
 
-[node name="Text" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
+[node name="Text" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2"]
 transform = Transform3D(-1.9197988e-09, 0, 0.08484515, 0, 0.04990891, 0, -0.04391984, 0, -3.7087018e-09, 0.0036757588, -0.02126488, 1.0201671e-08)
 mesh = SubResource("TextMesh_0mdj5")
 skeleton = NodePath("../../../First")
 
-[node name="UI" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
+[node name="UI" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2"]
 transform = Transform3D(-5.995827e-10, 0.013716858, 0, 5.995827e-10, 2.6208594e-17, -0.013716858, -0.013716858, -5.995827e-10, -5.995827e-10, 0.00568223, 0.0048101246, -2.0403341e-08)
 mesh = SubResource("PlaneMesh_i0v1t")
 
-[node name="UI3" type="MeshInstance3D" parent="Level/Second/HangingSign2/UI"]
+[node name="UI3" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2/UI"]
 mesh = SubResource("PlaneMesh_i0v1t")
 skeleton = NodePath("../..")
 
-[node name="Text2" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
+[node name="Text2" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2"]
 transform = Transform3D(-1.923301e-09, 0, 0.085, 0, 0.05, 0, -0.044, 0, -3.715468e-09, 0.0036757588, -0.052690268, 1.2242003e-08)
 mesh = SubResource("TextMesh_sghjv")
 skeleton = NodePath("../../../First")
 
-[node name="UI2" type="MeshInstance3D" parent="Level/Second/HangingSign2"]
+[node name="UI2" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2"]
 transform = Transform3D(-6.119594e-10, 0.014000002, -6.119594e-10, 0, -6.119594e-10, -0.014000002, -0.014000002, -6.119594e-10, 2.6749597e-17, 0.00568223, -0.078703135, -2.0403341e-08)
 mesh = SubResource("PlaneMesh_ku8a2")
 
-[node name="UI3" type="MeshInstance3D" parent="Level/Second/HangingSign2/UI2"]
+[node name="UI3" type="MeshInstance3D" parent="NavigationRegion3D/Level/Second/HangingSign2/UI2"]
 mesh = SubResource("PlaneMesh_ku8a2")
 skeleton = NodePath("../..")
 
-[node name="Light2" type="SpotLight3D" parent="Level/Second/HangingSign2"]
+[node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Second/HangingSign2"]
 transform = Transform3D(-1.2802779e-08, -0.70710665, 0.7071069, -3.090862e-08, 0.7071069, 0.70710665, -1, -1.2802769e-08, -3.0908623e-08, 0.123232126, 0.09584719, -9.72907e-16)
 spot_range = 2.0
 spot_angle = 36.230724
 
-[node name="Third" type="Node3D" parent="Level"]
+[node name="Third" type="Node3D" parent="NavigationRegion3D/Level"]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
 
-[node name="HangingSign3" parent="Level/Third" instance=ExtResource("7_mnia5")]
+[node name="HangingSign3" parent="NavigationRegion3D/Level/Third" instance=ExtResource("7_mnia5")]
 transform = Transform3D(9.016408, 0, 0, 0, 9.016408, 0, 0, 0, 9.016408, -29.999989, 4.197526, 0)
 
-[node name="Text" type="MeshInstance3D" parent="Level/Third/HangingSign3"]
+[node name="Text" type="MeshInstance3D" parent="NavigationRegion3D/Level/Third/HangingSign3"]
 transform = Transform3D(-3.282856e-09, 0, 0.14508519, 0, 0.08534423, 0, -0.075102925, 0, -6.34188e-09, 0.0036752224, -0.038749546, -0.029178195)
 mesh = SubResource("TextMesh_o863f")
 skeleton = NodePath("../../../First")
 
-[node name="UI" type="MeshInstance3D" parent="Level/Third/HangingSign3"]
+[node name="UI" type="MeshInstance3D" parent="NavigationRegion3D/Level/Third/HangingSign3"]
 transform = Transform3D(-1.3190821e-09, 0.03017709, 0, 1.3190821e-09, 5.765891e-17, -0.03017709, -0.03017709, -1.3190821e-09, -1.3190821e-09, 0.0056819916, -0.036262453, 0.061707247)
 mesh = SubResource("PlaneMesh_ckfad")
 
-[node name="Light2" type="SpotLight3D" parent="Level/Third/HangingSign3"]
+[node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/HangingSign3"]
 transform = Transform3D(-1.2802779e-08, -0.70710665, 0.7071069, -3.090862e-08, 0.7071069, 0.70710665, -1, -1.2802769e-08, -3.0908623e-08, 0.123232126, 0.09584719, -9.72907e-16)
 spot_range = 2.0
 spot_angle = 36.230724
 
-[node name="Lights" type="Node3D" parent="Level/Third"]
+[node name="Lights" type="Node3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 5.13, 0)
 
-[node name="Light2" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -33.271595, 0, -4.938271)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1470,7 +1621,7 @@ spot_attenuation = 0.5
 spot_angle = 17.1
 spot_angle_attenuation = 3.1383579
 
-[node name="Light8" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light8" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -34.506165, 0, 1.1773759e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1479,7 +1630,7 @@ spot_attenuation = 0.5
 spot_angle = 17.1
 spot_angle_attenuation = 3.1383579
 
-[node name="Light3" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light3" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -43.148136, 0, 2.4691367)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1488,7 +1639,7 @@ spot_attenuation = 0.5
 spot_angle = 17.1
 spot_angle_attenuation = 3.1383579
 
-[node name="Light4" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light4" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -51.29628, 0, -1.3580235)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1497,7 +1648,7 @@ spot_attenuation = 0.5
 spot_angle = 17.1
 spot_angle_attenuation = 3.1383579
 
-[node name="Light5" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light5" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -52.654285, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1506,7 +1657,7 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 3.1383579
 
-[node name="Light6" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light6" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -44.012306, 0, 1.4717192e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1515,7 +1666,7 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 3.1383579
 
-[node name="Light7" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light7" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -35.37033, 0, 1.4717191e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
@@ -1524,7 +1675,7 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 3.1383579
 
-[node name="Light9" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light9" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -61.296272, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 0.0
@@ -1534,7 +1685,7 @@ spot_attenuation = 0.8
 spot_angle = 40.0
 spot_angle_attenuation = 6.7272015
 
-[node name="Light10" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light10" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -69.93825, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 0.0
@@ -1544,7 +1695,7 @@ spot_attenuation = 0.8
 spot_angle = 40.0
 spot_angle_attenuation = 6.7272015
 
-[node name="Light11" type="SpotLight3D" parent="Level/Third/Lights"]
+[node name="Light11" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -78.58022, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 0.0
@@ -1554,10 +1705,10 @@ spot_attenuation = 0.8
 spot_angle = 40.0
 spot_angle_attenuation = 6.7272015
 
-[node name="LightsShelves" type="Node3D" parent="Level/Third"]
+[node name="LightsShelves" type="Node3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -46.913998, 5.1299996, 0)
 
-[node name="Light" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.197529, 0, -4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1566,7 +1717,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light2" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.24691, 0, -4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1575,7 +1726,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light3" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light3" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.6790085, 0, -4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1584,7 +1735,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light4" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light4" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.7654343, 0, -4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1593,7 +1744,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light5" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light5" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.839508, 0, -4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1602,7 +1753,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light6" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light6" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.197529, 0, 4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1611,7 +1762,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light7" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light7" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.24691, 0, 4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1620,7 +1771,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light8" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light8" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.6790085, 0, 4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1629,7 +1780,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light9" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light9" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.7654343, 0, 4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1638,7 +1789,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="Light10" type="SpotLight3D" parent="Level/Third/LightsShelves"]
+[node name="Light10" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/LightsShelves"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.839508, 0, 4.6913586)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 2.0
@@ -1647,7 +1798,7 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 4.0
 
-[node name="BookshelfGrid" type="GridMap" parent="Level/Third"]
+[node name="BookshelfGrid" type="GridMap" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(-4.371139e-08, 0, 0.9999994, 0, 0.9999994, 0, -0.9999994, 0, -4.371139e-08, -28.395054, -2.8395057, 5.1851845)
 mesh_library = ExtResource("12_qvtqq")
 cell_size = Vector3(0.25, 0.25, 0.25)
@@ -1657,88 +1808,107 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Bookshelf" type="Node3D" parent="Level/Third"]
+[node name="Bookshelf" type="Node3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -50.61728, 0, 0)
 
-[node name="InteractBookShelf" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.839508, 0, -5.6790133)
+shelfGenre = 7
+Randomize = false
 
-[node name="InteractBookShelf2" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf2" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8888855, 0, -5.6790133)
+shelfGenre = 8
+Randomize = false
 
-[node name="InteractBookShelf3" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf3" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.320984, 0, -5.6790133)
+shelfGenre = 9
+Randomize = false
 
-[node name="InteractBookShelf4" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf4" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12346268, 0, -5.6790133)
+shelfGenre = 2
+Randomize = false
 
-[node name="InteractBookShelf5" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf5" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1975403, 0, -5.6790133)
+Randomize = false
 
-[node name="InteractBookShelf6" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf6" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, -4.148155, 0, 5.8024707)
+shelfGenre = 6
+Randomize = false
 
-[node name="InteractBookShelf7" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf7" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, -0.19753647, 0, 5.8024707)
+shelfGenre = 5
+Randomize = false
 
-[node name="InteractBookShelf8" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf8" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 4.370365, 0, 5.802471)
+shelfGenre = 4
+Randomize = false
 
-[node name="InteractBookShelf9" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf9" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 8.8148155, 0, 5.802471)
+shelfGenre = 3
+Randomize = false
 
-[node name="InteractBookShelf10" parent="Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
+[node name="InteractBookShelf10" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(-1, 0, 8.742279e-08, 0, 1, 0, -8.742279e-08, 0, -1, 12.888889, 0, 5.802471)
+shelfGenre = 1
+Randomize = false
 
-[node name="Door3" parent="Level/Third" instance=ExtResource("8_l2k66")]
+[node name="Door3" parent="NavigationRegion3D/Level/Third" instance=ExtResource("8_l2k66")]
 transform = Transform3D(-1.0602186e-07, 0, -2.425497, 0, 1.668996, 0, 2.425497, 0, -1.0602186e-07, -92.22529, 0, 0)
 
-[node name="Left" type="StaticBody3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
+[node name="Left" type="StaticBody3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="0"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -4.2351647e-21, 3.112903e-22, 1, -1.9480524, 0, 0.5194805)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Left"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="Right" type="StaticBody3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
+[node name="Right" type="StaticBody3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="1"]
 transform = Transform3D(1, 0, -1.6940659e-21, 0, 1, 3.1129032e-22, -5.0821977e-21, 3.112903e-22, 1, 0.38961023, 0, 0.51948047)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/Right"]
 transform = Transform3D(1, 0, 0, 0, 1, 3.1129032e-22, 0, 3.1129012e-22, 1, 0, 0, 0.70000005)
 shape = SubResource("BoxShape3D_l2k66")
 
-[node name="EntranceDoorLeft" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
+[node name="EntranceDoorLeft" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="6"]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 2.6469778e-23, 0, -2.6469776e-23, 0.99999994, -1.4958994, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorLeft/EntranceDoorLeft_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(1, 1.030287e-13, 5.446422e-19, -1.030287e-13, 1, 3.1126644e-22, -1.6093626e-20, 3.1128949e-22, 1, 0.3189457, 0, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="EntranceDoorRight" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
+[node name="EntranceDoorRight" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame" index="7"]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 2.646978e-23, 0, -2.6469776e-23, 1, -0.15500003, 0, 1.099707)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/Door3/Sketchfab_model/00343f2033c446a1b955cbfe51e0120a_fbx/RootNode/EntranceDoorsFrame/EntranceDoorRight/EntranceDoorRight_EntranceDoorsMain_MTL_0/StaticBody3D"]
 transform = Transform3D(0.99999994, 9.947598e-14, 5.446422e-19, -9.947598e-14, 0.99999994, 3.112664e-22, -1.5246593e-20, 3.112894e-22, 0.9999999, -0.2918489, 3.7252903e-08, 0.100000024)
 shape = SubResource("BoxShape3D_tospq")
 
-[node name="WallDoor2" type="CSGBox3D" parent="Level/Third/Door3"]
+[node name="WallDoor2" type="CSGBox3D" parent="NavigationRegion3D/Level/Third/Door3"]
 transform = Transform3D(0.41225418, 0, 1.4050983e-12, 0, 0.59911555, 0, -1.4050983e-12, 0, 0.41225418, 7.0096885e-06, 2.8759277, 0.010946102)
 use_collision = true
 size = Vector3(8, 1.6, 0.7)
 material = SubResource("StandardMaterial3D_iol1o")
 
-[node name="DoorKnock" type="AudioStreamPlayer3D" parent="Level/Third/Door3"]
+[node name="DoorKnock" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Level/Third/Door3"]
 transform = Transform3D(0.5089958, 0, -1.7763568e-15, 0, 0.7397069, 0, 1.7763568e-15, 0, 0.5089958, 5.2724545e-09, 1.086761, 0.12062073)
 stream = ExtResource("15_35mx6")
 unit_size = 20.0
 max_db = 1.0
 bus = &"SFX"
 
-[node name="DoorBreak" type="AudioStreamPlayer3D" parent="Level/Third/Door3"]
+[node name="DoorBreak" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Level/Third/Door3"]
 transform = Transform3D(0.5089958, 0, -1.7763568e-15, 0, 0.7397069, 0, 1.7763568e-15, 0, 0.5089958, 5.2724545e-09, 1.086761, 0.12062073)
 stream = ExtResource("16_ku8a2")
 volume_db = -5.0
@@ -1746,25 +1916,46 @@ unit_size = 20.0
 max_db = 0.0
 bus = &"SFX"
 
-[node name="VOSEnding" type="VisibleOnScreenNotifier3D" parent="Level/Third/Door3"]
+[node name="VOSEnding" type="VisibleOnScreenNotifier3D" parent="NavigationRegion3D/Level/Third/Door3"]
 transform = Transform3D(-3.1218212e-09, 0, 0.07141895, 0, 0.10379082, 0, -0.07141895, 0, -3.1218212e-09, 2.3406983e-09, 1.1835308, 0.053554535)
 
-[node name="LightEnding" type="AnimationPlayer" parent="Level/Third"]
+[node name="LightEnding" type="AnimationPlayer" parent="NavigationRegion3D/Level/Third"]
 libraries = {
 &"": SubResource("AnimationLibrary_mj38t")
 }
 
-[node name="DoorKnock" type="AnimationPlayer" parent="Level/Third"]
+[node name="DoorKnock" type="AnimationPlayer" parent="NavigationRegion3D/Level/Third"]
 libraries = {
 &"": SubResource("AnimationLibrary_wdaxu")
 }
 
-[node name="DoorOpen" type="AnimationPlayer" parent="Level/Third"]
+[node name="DoorOpen" type="AnimationPlayer" parent="NavigationRegion3D/Level/Third"]
 libraries = {
 &"": SubResource("AnimationLibrary_qfmmv")
 }
 
-[node name="Light" type="SpotLight3D" parent="Level/Third"]
+[node name="Ending" type="AnimationPlayer" parent="NavigationRegion3D/Level/Third"]
+libraries = {
+&"": SubResource("AnimationLibrary_w7wr3")
+}
+
+[node name="EndingFade" type="AnimationPlayer" parent="NavigationRegion3D/Level/Third"]
+libraries = {
+&"": SubResource("AnimationLibrary_oowow")
+}
+
+[node name="EndingGate" type="MeshInstance3D" parent="NavigationRegion3D/Level/Third"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.59263, 2.4691362, 0)
+visible = false
+mesh = SubResource("BoxMesh_oowow")
+
+[node name="Area3D" type="Area3D" parent="NavigationRegion3D/Level/Third/EndingGate"]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/EndingGate/Area3D"]
+shape = SubResource("BoxShape3D_a8vmy")
+
+[node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(0.21438037, -4.459381e-08, 1.2158121, -1.2158121, -5.314483e-08, 0.21438037, 4.459381e-08, -1.2345679, -5.314483e-08, -80.74064, 3.1540358, 0)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 light_energy = 4.0
@@ -1774,33 +1965,30 @@ spot_attenuation = 0.5
 spot_angle = 0.0
 spot_angle_attenuation = 1.51571
 
-[node name="WithinEndingReach" type="Area3D" parent="Level/Third"]
+[node name="WithinEndingReach" type="Area3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(1.2345676, 0, 0, 0, 1.2345676, 0, 0, 0, 1.2345676, -88.88887, 1.2345676, 0)
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/WithinEndingReach"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/WithinEndingReach"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_mj38t")
 
-[node name="WithinKnockReach" type="Area3D" parent="Level/Third"]
+[node name="WithinKnockReach" type="Area3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(1.2345674, 0, 0, 0, 1.2345674, 0, 0, 0, 1.2345674, -65.30861, 1.2345674, 0)
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Third/WithinKnockReach"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/WithinKnockReach"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_mj38t")
 
-[node name="NPC" parent="Level/Third" instance=ExtResource("18_8n3fx")]
+[node name="NPC" parent="NavigationRegion3D/Level/Third" instance=ExtResource("18_8n3fx")]
 transform = Transform3D(-5.3964644e-08, 0, 1.234567, 0, 1.234567, 0, -1.234567, 0, -5.3964644e-08, -97.530846, 1.2345676, 0)
-
-[node name="Fourth" type="Node3D" parent="Level"]
-transform = Transform3D(1.2345679, 0, 0, 0, 1.2345679, 0, 0, 0, 1.2345679, -72.83951, 1.2345679, 0)
 
 [node name="Player" parent="." instance=ExtResource("5_tospq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 1, 0)
 
 [node name="BookBox" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.000001, 1, 0)
 Randomize = false
 
 [node name="BookBox2" parent="." instance=ExtResource("7_l2k66")]
@@ -1809,35 +1997,54 @@ bookGenre = 6
 Randomize = false
 
 [node name="BookBox3" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742277e-08, 0, -0.99999994, -26.999996, 0.99999994, -4)
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742277e-08, 0, -0.99999994, -26.999998, 0.99999994, -4)
 bookGenre = 8
 Randomize = false
 
 [node name="BookBox4" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-0.5, 0, -0.8660253, 0, 0.99999994, 0, 0.8660253, 0, -0.5, -37.999996, 0.99999994, -2)
+transform = Transform3D(-0.5, 0, -0.8660254, 0, 0.99999994, 0, 0.8660254, 0, -0.5, -38, 0.99999994, -2)
 bookGenre = 3
 Randomize = false
 
 [node name="BookBox5" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-0.9659258, 0, -0.258819, 0, 0.99999994, 0, 0.258819, 0, -0.9659258, -41.599995, 0.99999994, -1.1)
+transform = Transform3D(-0.9659259, 0, -0.258819, 0, 0.99999994, 0, 0.258819, 0, -0.9659259, -41.6, 0.99999994, -1.1)
 bookGenre = 7
 Randomize = false
 
 [node name="BookBox6" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 0.9999999, 0, 0.99999994, 0, -5.9604645e-08, -27.999996, 0.99999994, 0)
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 0.99999994, 0, 0.99999994, 0, -5.9604645e-08, -27.999998, 0.99999994, 0)
 bookGenre = 9
 Randomize = false
 
 [node name="BookBox7" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-4.3711378e-08, 0, -0.9999998, 0, 1, 0, 0.99999976, 0, -4.371138e-08, -72, 6, 0)
+transform = Transform3D(-4.3711378e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, -72, 6, 0)
 collision_mask = 137
 bookGenre = 9
 Randomize = false
 
-[connection signal="screen_entered" from="Level/Third/Door3/VOSEnding" to="." method="PlayLightEnding"]
-[connection signal="body_entered" from="Level/Third/WithinEndingReach" to="." method="NpcEntrance"]
-[connection signal="body_entered" from="Level/Third/WithinKnockReach" to="." method="PlayKnocking"]
+[node name="Fade" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[editable path="Level/First/Door1"]
-[editable path="Level/Second/Door2"]
-[editable path="Level/Third/Door3"]
+[node name="ColorRect" type="ColorRect" parent="Fade"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="screen_entered" from="NavigationRegion3D/Level/Third/Door3/VOSEnding" to="." method="PlayLightEnding"]
+[connection signal="body_entered" from="NavigationRegion3D/Level/Third/EndingGate/Area3D" to="." method="EndingEntrance"]
+[connection signal="body_entered" from="NavigationRegion3D/Level/Third/WithinEndingReach" to="." method="NpcEntrance"]
+[connection signal="body_entered" from="NavigationRegion3D/Level/Third/WithinKnockReach" to="." method="PlayKnocking"]
+
+[editable path="NavigationRegion3D/Level/First/Door1"]
+[editable path="NavigationRegion3D/Level/Second/Door2"]
+[editable path="NavigationRegion3D/Level/Third/Door3"]

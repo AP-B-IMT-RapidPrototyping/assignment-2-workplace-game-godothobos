@@ -24,6 +24,8 @@ public partial class MenuOptions : Node3D
 
     public override void _Ready()
     {
+        Input.MouseMode = Input.MouseModeEnum.Visible;
+    
         color = new Color(0.7f, 0.7f, 0.7f);
 
         // Start button

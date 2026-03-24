@@ -49,6 +49,7 @@ public partial class Player : CharacterBody3D
     /* STATE MACHINE */
     private PlayerState playerState = PlayerState.IDLE;
     private RigidBody3D picked_object;
+    private Npc _currentNpcInteraction;
 
 
     public override void _Ready()
@@ -135,6 +136,12 @@ public partial class Player : CharacterBody3D
     {
         if (Input.IsActionJustPressed("interact"))
         {
+            if (_currentNpcInteraction != null)
+            {
+                _currentNpcInteraction.Interact(this);
+                return;
+            }
+
             if (_playerRayCast.IsColliding())
             {
                 var collider = _playerRayCast.GetCollider() as Node;
@@ -227,6 +234,7 @@ public partial class Player : CharacterBody3D
     public void StartNpcInteraction(Npc npc)
     {
         _blockMovement = true;
+        _currentNpcInteraction = npc;
 
         int modelIndex = npc.GetChosenModel();
         SetupFakeModel(modelIndex);
@@ -240,6 +248,7 @@ public partial class Player : CharacterBody3D
         _npcJumpscare.PlayBackwards("play");
 
         HideFakeNpc();
+        _currentNpcInteraction = null;
     }
 
     /* ------------------------- */
