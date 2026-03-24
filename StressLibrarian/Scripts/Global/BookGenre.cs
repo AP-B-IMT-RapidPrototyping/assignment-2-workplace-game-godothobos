@@ -11,8 +11,14 @@ public enum BookGenre
     Romance,
     Comedy,
     Adventure,
-    Math,
+    action,
     Science,
-    Mystery
+    Mystery,
+    Dystopian,
+    Historical,
+    Humor,
+    GraphicNovel,
+    NonFiction,
+
 }
 
