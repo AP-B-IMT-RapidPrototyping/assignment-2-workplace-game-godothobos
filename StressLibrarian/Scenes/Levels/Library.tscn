@@ -354,12 +354,6 @@ _stressTimer = NodePath("StressTimer")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k48ua")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12, 0)
-visible = false
-light_color = Color(0.967519, 0.87495536, 0.76633126, 1)
-light_energy = 0.15
-
 [node name="StressTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
@@ -411,7 +405,6 @@ material = SubResource("StandardMaterial3D_oouob")
 
 [node name="Roof" type="CSGBox3D" parent="Map/NavigationRegion3D/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.750002, 4.7951207, -15.200001)
-visible = false
 material_override = SubResource("StandardMaterial3D_e7ixm")
 use_collision = true
 size = Vector3(54.3, 1.9050962, 73.4)
@@ -2959,28 +2952,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.5, 1.5999999)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8, 0.59999996, -9.900001)
 
 [node name="SpawnPoint3" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7, 0.4, -9.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7, 0.4, -17.5)
 
 [node name="SpawnPoint4" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9, 1, -31.199999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2, 1, -32.199997)
 
 [node name="SpawnPoint5" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.199999, 0.5, -44)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9, 0.5, -40.7)
 
 [node name="SpawnPoint6" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0.5, -45.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8000002, 0.5, -44.8)
 
 [node name="SpawnPoint7" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.900002, 0.5, -21.199997)
-
-[node name="SpawnPoint8" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0.5, -4.199999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.500002, 0.5, -17.699997)
 
 [node name="SpawnPoint9" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8999996, 0.5, -28.699999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9, 0.5, -27.699999)
 
 [node name="SpawnPoint10" type="Marker3D" parent="BoxSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0.5, -22.299997)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, -22.099997)
 
 [node name="SpawnPoint11" type="Marker3D" parent="BoxSpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.300001, 0.5, -25.799997)

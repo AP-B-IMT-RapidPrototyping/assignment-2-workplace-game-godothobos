@@ -99,8 +99,7 @@ public partial class Npc : CharacterBody3D
 
     private Vector3 _wanderTarget;
 
-    private float _moveSpeed = 6f;
-    private float _sprintSpeed = 9f;
+    private float _moveSpeed = 7f;
 
     public BookGenre RequestedGenre;
     [Export] private Control _subtitle;
@@ -118,7 +117,7 @@ public partial class Npc : CharacterBody3D
 
         GetRandomModel();
 
-        _spawnLock = (float)GD.RandRange(30f, 45f);
+        _spawnLock = (float)GD.RandRange(30f, 50f);
 
         _state = NPCState.IDLE;
         _player = GetTree().GetFirstNodeInGroup("player") as CharacterBody3D;
@@ -178,7 +177,7 @@ public partial class Npc : CharacterBody3D
 
     private void ShowCurrentDialogue()
     {
-        _subtitle.Visible =true;
+        _subtitle.Visible = true;
         _requestedGenreLabel.Text = tutorialDialogue[_dialogueIndex] + "\n\n[E]";
     }
 
@@ -210,7 +209,7 @@ public partial class Npc : CharacterBody3D
             player.EndNpcInteraction();
         }
 
-        _subtitle.Visible =false;
+        _DELETEME.Visible = false;
 
         _tutorialStep = TutorialStep.ASK;
         SetState(NPCState.ASKPLAYER);

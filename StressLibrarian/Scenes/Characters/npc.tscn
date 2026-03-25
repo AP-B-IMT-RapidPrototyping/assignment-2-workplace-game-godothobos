@@ -1225,10 +1225,6 @@ bind/27/name = &"mixamorig_LeftHandIndex3"
 bind/27/bone = -1
 bind/27/pose = Transform3D(0.031082736, 0.6282087, -0.7774238, -0.31337672, -0.73245704, -0.60440195, -0.94912004, 0.262413, 0.1740992, -2.165526, 0.9783451, -0.42555347)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85o64"]
-transparency = 1
-albedo_color = Color(1, 0, 0, 0.49411765)
-
 [sub_resource type="Animation" id="Animation_4ik2k"]
 resource_name = "Play"
 length = 2.0
@@ -1242,6 +1238,10 @@ _data = {
 &"Play": SubResource("Animation_4ik2k"),
 &"RESET": SubResource("Animation_0dw1j")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85o64"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.49411765)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oowow"]
 emission_enabled = true
@@ -1616,10 +1616,6 @@ visible = false
 mesh = SubResource("ArrayMesh_p3dyi")
 skin = SubResource("Skin_sks2s")
 
-[node name="DELETEME" type="CSGBox3D" parent="."]
-transform = Transform3D(0.21000001, 0, 0, 0, 0.21000001, 0, 0, 0, 0.21000001, 0, 0, 5.9)
-material = SubResource("StandardMaterial3D_85o64")
-
 [node name="Loud" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.4)
 stream = ExtResource("12_4ik2k")
@@ -1666,6 +1662,11 @@ vertical_alignment = 1
 [node name="StressTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
+
+[node name="DELETEME" type="CSGBox3D" parent="."]
+transform = Transform3D(0.21000001, 0, 0, 0, 0.21000001, 0, 0, 0, 0.21000001, 0, 0, 5.9)
+visible = false
+material = SubResource("StandardMaterial3D_85o64")
 
 [node name="DELETE ME" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.86602545, 0, -0.10000002, 0, 1, 0, 0.5000001, 0, 0.17320508, 1.2000014, 0.10000068, 0)
