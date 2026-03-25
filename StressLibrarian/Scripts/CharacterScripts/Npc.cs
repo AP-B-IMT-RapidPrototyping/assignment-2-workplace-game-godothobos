@@ -9,6 +9,8 @@ using System.Transactions;
 
 public partial class Npc : CharacterBody3D
 {
+    [Export] private MeshInstance3D _DELETEME;
+
     public enum NPCState
     {
         IDLE,
@@ -378,7 +380,14 @@ public partial class Npc : CharacterBody3D
         }
 
         /* NPC asks player where to go */
-        RequestedGenre = (BookGenre)GD.RandRange(0, Enum.GetValues(typeof(BookGenre)).Length - 1);
+        if (_isTutorial)
+        {
+            RequestedGenre = BookGenre.Action;
+        }
+        else
+        {
+            RequestedGenre = (BookGenre)GD.RandRange(0, Enum.GetValues(typeof(BookGenre)).Length - 1);
+        }
 
         if (_requestedGenreLabel.Visible == false)
         {
@@ -438,7 +447,7 @@ public partial class Npc : CharacterBody3D
     {
         if (_state != NPCState.ASKPLAYER)
             return;
-        
+
         if (genre == RequestedGenre)
         {
             _playerReachedCorrectBookshelf = true;
@@ -468,6 +477,7 @@ public partial class Npc : CharacterBody3D
 
     private void DoLoud(double delta)
     {
+        _DELETEME.Visible = true;
         if (_loudSFX.Playing == false)
             _loudSFX.Playing = true;
     }
@@ -546,6 +556,7 @@ public partial class Npc : CharacterBody3D
             case NPCState.LOUD:
                 SetState(NPCState.IDLE);
                 _loudSFX.Playing = false;
+                _DELETEME.Visible = false;
 
                 GameManager.Stress -= 7;
                 GameManager._npcShushed++;

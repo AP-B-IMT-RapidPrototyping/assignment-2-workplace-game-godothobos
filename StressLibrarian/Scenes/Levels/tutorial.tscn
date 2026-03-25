@@ -1069,6 +1069,45 @@ _data = {
 &"RESET": SubResource("Animation_o863f")
 }
 
+[sub_resource type="Animation" id="Animation_oowow"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndingGate:mesh:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EndingGate:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EndingGate/Area3D:collision_mask")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_wdaxu"]
 resource_name = "play"
 length = 2.0
@@ -1110,12 +1149,18 @@ tracks/2/keys = {
 "values": [0, 2]
 }
 
-[sub_resource type="Animation" id="Animation_oowow"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7wr3"]
+_data = {
+&"RESET": SubResource("Animation_oowow"),
+&"play": SubResource("Animation_wdaxu")
+}
+
+[sub_resource type="Animation" id="Animation_ckfad"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("EndingGate:mesh:material:albedo_color")
+tracks/0/path = NodePath("../../../Fade/ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1123,36 +1168,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("EndingGate:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("EndingGate/Area3D:collision_mask")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7wr3"]
-_data = {
-&"RESET": SubResource("Animation_oowow"),
-&"play": SubResource("Animation_wdaxu")
 }
 
 [sub_resource type="Animation" id="Animation_qfmmv"]
@@ -1170,21 +1185,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ckfad"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../../Fade/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oowow"]
@@ -1236,9 +1236,9 @@ transform = Transform3D(0.81000024, 0, 0, 0, 0.81000024, 0, 0, 0, 0.81000024, 0,
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Floor" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -34.50001, 0, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -30.000006, 0, 0)
 use_collision = true
-size = Vector3(135, 0, 15)
+size = Vector3(144, 0, 15)
 material = SubResource("StandardMaterial3D_idsh5")
 
 [node name="RoofSmallEnding" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
@@ -1292,7 +1292,7 @@ size = Vector3(32, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
 
 [node name="WallThirdLeft" type="CSGBox3D" parent="NavigationRegion3D/Level/Building"]
-transform = Transform3D(1.0000002, 0, 1.7484561e-07, 0, 1.0000002, 0, -1.7484561e-07, 0, 1.0000002, -45.512012, 2.8, 6.222223)
+transform = Transform3D(1.0000001, 0, 1.748456e-07, 0, 1.0000001, 0, -1.748456e-07, 0, 1.0000001, -45.51201, 2.7999997, 6.222222)
 use_collision = true
 size = Vector3(32, 5.6, 0.5)
 material = SubResource("StandardMaterial3D_iol1o")
@@ -1613,7 +1613,7 @@ spot_angle = 36.230724
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 5.13, 0)
 
 [node name="Light2" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -33.271595, 0, -4.938271)
+transform = Transform3D(0.61728406, 1.0691675, 4.6734794e-08, 0, -5.396469e-08, 1.2345682, 1.0691675, -0.61728406, -2.6982343e-08, -33.287033, 0, -3.6769688)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
 shadow_enabled = true
 spot_range = 10.0
@@ -1828,11 +1828,12 @@ Randomize = false
 
 [node name="InteractBookShelf4" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12346268, 0, -5.6790133)
-shelfGenre = 2
+shelfGenre = 11
 Randomize = false
 
 [node name="InteractBookShelf5" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1975403, 0, -5.6790133)
+shelfGenre = 12
 Randomize = false
 
 [node name="InteractBookShelf6" parent="NavigationRegion3D/Level/Third/Bookshelf" instance=ExtResource("6_mhlsa")]
@@ -1997,18 +1998,18 @@ bookGenre = 6
 Randomize = false
 
 [node name="BookBox3" parent="." instance=ExtResource("7_l2k66")]
-transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742277e-08, 0, -0.99999994, -26.999998, 0.99999994, -4)
-bookGenre = 8
+transform = Transform3D(-0.49999985, 0, 0.86602545, 0, 0.99999994, 0, -0.86602545, 0, -0.49999985, -26.987494, 1, -3.0216568)
+bookGenre = 3
 Randomize = false
 
 [node name="BookBox4" parent="." instance=ExtResource("7_l2k66")]
 transform = Transform3D(-0.5, 0, -0.8660254, 0, 0.99999994, 0, 0.8660254, 0, -0.5, -38, 0.99999994, -2)
-bookGenre = 3
+bookGenre = 8
 Randomize = false
 
 [node name="BookBox5" parent="." instance=ExtResource("7_l2k66")]
 transform = Transform3D(-0.9659259, 0, -0.258819, 0, 0.99999994, 0, 0.258819, 0, -0.9659259, -41.6, 0.99999994, -1.1)
-bookGenre = 7
+bookGenre = 11
 Randomize = false
 
 [node name="BookBox6" parent="." instance=ExtResource("7_l2k66")]

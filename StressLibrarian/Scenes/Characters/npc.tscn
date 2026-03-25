@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=21 format=3 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
@@ -36,10 +36,22 @@ _data = {
 &"RESET": SubResource("Animation_0dw1j")
 }
 
-[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_navAgent", "_models", "_raycastNpc", "_askAnimation", "_loudSFX", "_requestedGenreLabel") groups=["interact_npc"]]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oowow"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.15
+
+[sub_resource type="TextMesh" id="TextMesh_0dw1j"]
+material = SubResource("StandardMaterial3D_oowow")
+text = "press E on me"
+font = ExtResource("13_0dw1j")
+font_size = 25
+
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_DELETEME", "_navAgent", "_models", "_raycastNpc", "_askAnimation", "_loudSFX", "_requestedGenreLabel") groups=["interact_npc"]]
 collision_layer = 12
 collision_mask = 0
 script = ExtResource("1_85o64")
+_DELETEME = NodePath("DELETE ME")
 _navAgent = NodePath("NavigationAgent3D")
 _models = NodePath("Models")
 _raycastNpc = NodePath("NpcRaycast")
@@ -373,6 +385,11 @@ vertical_alignment = 1
 [node name="StressTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
+
+[node name="DELETE ME" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.86602545, 0, -0.10000002, 0, 1, 0, 0.5000001, 0, 0.17320508, 1.2000014, 0.10000068, 0)
+visible = false
+mesh = SubResource("TextMesh_0dw1j")
 
 [connection signal="timeout" from="StressTimer" to="." method="ExtraStress"]
 
