@@ -729,6 +729,7 @@ libraries = {
 autoplay = "Intro"
 
 [node name="Intro" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -814,8 +815,7 @@ offset_bottom = 257.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 85
-text = "Do you want to play
-the tutorial first?"
+text = "Gamemode Selection"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="AskTutorial"]
@@ -831,7 +831,7 @@ grow_vertical = 2
 pivot_offset = Vector2(75, 45)
 theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 64
-text = "Yes"
+text = "Tutorial"
 
 [node name="Tutorial" type="Button" parent="AskTutorial"]
 layout_mode = 1
@@ -849,7 +849,7 @@ grow_vertical = 2
 pivot_offset = Vector2(75, 45)
 theme_override_fonts/font = ExtResource("12_f0reb")
 theme_override_font_sizes/font_size = 64
-text = "No"
+text = "Game"
 
 [node name="Back" type="Button" parent="AskTutorial"]
 layout_mode = 1
