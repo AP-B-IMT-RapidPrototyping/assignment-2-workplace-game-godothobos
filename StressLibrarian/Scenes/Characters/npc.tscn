@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=64 format=4 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
@@ -1254,7 +1254,7 @@ text = "press E on me"
 font = ExtResource("13_0dw1j")
 font_size = 25
 
-[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_DELETEME", "_navAgent", "_models", "_raycastNpc", "_askAnimation", "_loudSFX", "_requestedGenreLabel") groups=["interact_npc"]]
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("_DELETEME", "_navAgent", "_models", "_raycastNpc", "_askAnimation", "_loudSFX", "_subtitle", "_requestedGenreLabel") groups=["interact_npc"]]
 collision_layer = 12
 collision_mask = 0
 script = ExtResource("1_85o64")
@@ -1264,7 +1264,8 @@ _models = NodePath("Models")
 _raycastNpc = NodePath("NpcRaycast")
 _askAnimation = NodePath("AskAnimation")
 _loudSFX = NodePath("Loud")
-_requestedGenreLabel = NodePath("RequestedGenre")
+_subtitle = NodePath("Subtitle")
+_requestedGenreLabel = NodePath("Subtitle/RequestedGenre")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -1310,13 +1311,13 @@ bones/30/rotation = Quaternion(0.37537718, -0.5664722, 0.31813723, 0.6610523)
 mesh = SubResource("ArrayMesh_lyn7i")
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char1/Skeleton3D" index="1"]
+visible = false
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_8kapu")
 skin = SubResource("Skin_5qkvj")
 
 [node name="Char2" parent="Models" instance=ExtResource("3_0dw1j")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char2" index="0"]
 bones/0/position = Vector3(3.831461e-06, 2.5809867, 0.023692677)
@@ -1344,12 +1345,12 @@ bones/29/rotation = Quaternion(-0.032134105, 0.00089899567, -0.025219793, 0.9991
 bones/30/rotation = Quaternion(0.39638898, -0.58907664, 0.34994203, 0.6110689)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char2/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_7tyd5")
 skin = SubResource("Skin_wovr8")
 
 [node name="Char3" parent="Models" instance=ExtResource("4_rjlom")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char3" index="0"]
 bones/0/position = Vector3(-1.2408476e-05, 2.8211753, 0.038522657)
@@ -1377,12 +1378,12 @@ bones/29/rotation = Quaternion(-0.008347427, -2.1456231e-05, -0.013582233, 0.999
 bones/30/rotation = Quaternion(0.39600852, -0.55335206, 0.33400878, 0.65224)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char3/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_ofx2l")
 skin = SubResource("Skin_3vwn8")
 
 [node name="Char4" parent="Models" instance=ExtResource("5_oyfms")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char4" index="0"]
 bones/0/position = Vector3(7.599592e-07, 2.6997433, -0.012326695)
@@ -1408,12 +1409,12 @@ bones/29/rotation = Quaternion(-0.019820813, -1.802211e-05, -0.015229251, 0.9996
 bones/30/rotation = Quaternion(0.4041996, -0.55557615, 0.35025313, 0.6366165)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char4/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_15765")
 skin = SubResource("Skin_q3vb0")
 
 [node name="Char5" parent="Models" instance=ExtResource("6_2jt1m")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char5" index="0"]
 bones/0/position = Vector3(0.00022095442, 2.4667993, 0.0026335097)
@@ -1441,12 +1442,12 @@ bones/29/rotation = Quaternion(-0.009096422, -0.00036279048, -0.040543865, 0.999
 bones/30/rotation = Quaternion(0.37930098, -0.5748501, 0.34085268, 0.63992)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char5/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_ibssm")
 skin = SubResource("Skin_t5oec")
 
 [node name="Char6" parent="Models" instance=ExtResource("7_al0u2")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char6" index="0"]
 bones/0/position = Vector3(0.000107862055, 2.394676, -0.011649611)
@@ -1480,12 +1481,12 @@ bones/37/rotation = Quaternion(0.008593705, 0.0004822071, -0.031720277, 0.999459
 bones/38/rotation = Quaternion(0.37237436, -0.62008435, 0.33810803, 0.60209274)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char6/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_nl285")
 skin = SubResource("Skin_s573s")
 
 [node name="Char7" parent="Models" instance=ExtResource("8_sw6lp")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char7" index="0"]
 bones/0/position = Vector3(-8.050352e-06, 2.7271376, -0.02147343)
@@ -1513,12 +1514,12 @@ bones/29/rotation = Quaternion(-0.013807208, 0.00057093246, -0.0473518, 0.998782
 bones/30/rotation = Quaternion(0.34852937, -0.5831009, 0.34270126, 0.64890414)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char7/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_gxkik")
 skin = SubResource("Skin_4m8iy")
 
 [node name="Char8" parent="Models" instance=ExtResource("9_ud82m")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char8" index="0"]
 bones/0/position = Vector3(-9.961426e-06, 2.5460727, 0.037563354)
@@ -1546,12 +1547,12 @@ bones/29/rotation = Quaternion(-0.014034206, 0.00053620886, -0.037436288, 0.9992
 bones/30/rotation = Quaternion(0.34523436, -0.5814796, 0.33641288, 0.65537864)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char8/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_fmffh")
 skin = SubResource("Skin_wbk4n")
 
 [node name="Char9" parent="Models" instance=ExtResource("10_vfvyv")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char9" index="0"]
 bones/0/position = Vector3(1.2112316e-05, 2.678435, 0.0114992615)
@@ -1579,12 +1580,12 @@ bones/29/rotation = Quaternion(-0.014612269, -0.00023361496, -0.019204669, 0.999
 bones/30/rotation = Quaternion(0.38844636, -0.5896866, 0.37017232, 0.6036154)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char9/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_530hf")
 skin = SubResource("Skin_d186p")
 
 [node name="Char10" parent="Models" instance=ExtResource("11_lpotm")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
-visible = false
 
 [node name="Skeleton3D" parent="Models/Char10" index="0"]
 bones/0/position = Vector3(3.0845404e-06, 2.5698898, -0.02316957)
@@ -1611,6 +1612,7 @@ bones/29/rotation = Quaternion(-0.010016722, 0.0005158436, -0.05638669, 0.998358
 bones/30/rotation = Quaternion(0.34997398, -0.57672435, 0.3407169, 0.654843)
 
 [node name="outline" type="MeshInstance3D" parent="Models/Char10/Skeleton3D" index="1"]
+visible = false
 mesh = SubResource("ArrayMesh_p3dyi")
 skin = SubResource("Skin_sks2s")
 
@@ -1630,8 +1632,27 @@ libraries = {
 &"": SubResource("AnimationLibrary_0dw1j")
 }
 
-[node name="RequestedGenre" type="Label" parent="."]
+[node name="Subtitle" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Subtitle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 537.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.32156864)
+
+[node name="RequestedGenre" type="Label" parent="Subtitle"]
+layout_mode = 0
 offset_left = 83.0
 offset_top = 573.0
 offset_right = 1163.0
@@ -1645,9 +1666,6 @@ vertical_alignment = 1
 [node name="StressTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 [node name="DELETE ME" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.86602545, 0, -0.10000002, 0, 1, 0, 0.5000001, 0, 0.17320508, 1.2000014, 0.10000068, 0)

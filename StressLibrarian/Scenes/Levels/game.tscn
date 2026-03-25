@@ -162,10 +162,6 @@ _navRegion = NodePath("../NavigationRegion3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -4)
 _navRegion = NodePath("../NavigationRegion3D")
 
-[node name="NPC6" parent="." node_paths=PackedStringArray("_navRegion") instance=ExtResource("8_ce5c8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -4)
-_navRegion = NodePath("../NavigationRegion3D")
-
 [node name="NPC7" parent="." node_paths=PackedStringArray("_navRegion") instance=ExtResource("8_ce5c8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -10)
 _navRegion = NodePath("../NavigationRegion3D")

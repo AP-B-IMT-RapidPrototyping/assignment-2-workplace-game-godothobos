@@ -103,6 +103,7 @@ public partial class Npc : CharacterBody3D
     private float _sprintSpeed = 9f;
 
     public BookGenre RequestedGenre;
+    [Export] private Control _subtitle;
     [Export] private Label _requestedGenreLabel;
     private bool _playerReachedCorrectBookshelf = false;
 
@@ -177,7 +178,7 @@ public partial class Npc : CharacterBody3D
 
     private void ShowCurrentDialogue()
     {
-        _requestedGenreLabel.Visible = true;
+        _subtitle.Visible =true;
         _requestedGenreLabel.Text = tutorialDialogue[_dialogueIndex] + "\n\n[E]";
     }
 
@@ -209,7 +210,7 @@ public partial class Npc : CharacterBody3D
             player.EndNpcInteraction();
         }
 
-        _requestedGenreLabel.Visible = false;
+        _subtitle.Visible =false;
 
         _tutorialStep = TutorialStep.ASK;
         SetState(NPCState.ASKPLAYER);
@@ -380,6 +381,12 @@ public partial class Npc : CharacterBody3D
         }
 
         /* NPC asks player where to go */
+        if (_subtitle.Visible == false)
+        {
+            _subtitle.Visible =true;
+            GameManager.Stress -= 5;
+        }
+
         if (_isTutorial)
         {
             RequestedGenre = BookGenre.Action;
@@ -387,12 +394,6 @@ public partial class Npc : CharacterBody3D
         else
         {
             RequestedGenre = (BookGenre)GD.RandRange(0, Enum.GetValues(typeof(BookGenre)).Length - 1);
-        }
-
-        if (_requestedGenreLabel.Visible == false)
-        {
-            _requestedGenreLabel.Visible = true;
-            GameManager.Stress -= 5;
         }
 
 
@@ -451,7 +452,7 @@ public partial class Npc : CharacterBody3D
         if (genre == RequestedGenre)
         {
             _playerReachedCorrectBookshelf = true;
-            _requestedGenreLabel.Visible = false;
+            _subtitle.Visible =false;
 
             GameManager._npcHelped++;
             GameManager.Stress -= 25;
