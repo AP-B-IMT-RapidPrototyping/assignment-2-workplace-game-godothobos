@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=32 format=4 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://clmc75a0tk8fw" path="res://Assets/Characters_psx/Models/Female/Character_Female_08.fbx" id="17_ojpki"]
 [ext_resource type="PackedScene" uid="uid://cess5bbncjard" path="res://Assets/Characters_psx/Models/Female/Character_Female_09.fbx" id="18_rv8bj"]
 [ext_resource type="PackedScene" uid="uid://bqh4qomiaafkb" path="res://Assets/Characters_psx/Models/Female/Character_Female_15.fbx" id="19_inlw8"]
+[ext_resource type="PackedScene" uid="uid://drwtuhd04v6f3" path="res://Scenes/UI/pause_menu.tscn" id="20_hy8lp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
 
@@ -66,6 +67,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fcmex")
 
+[sub_resource type="Animation" id="Animation_fcmex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera/DirectionArrow/Sketchfab_model/54b2761560d74cf7a540d3659ba46cd1_fbx/RootNode/Arrow/Arrow_Material_001_0:mesh:surface_0/material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.5294118, 0.99607843, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_xo8ps"]
 resource_name = "fade"
 length = 9.0
@@ -83,25 +99,49 @@ tracks/0/keys = {
 "values": [Color(0, 0.5294118, 0.99607843, 0), Color(0, 0.5294118, 0.99607843, 0.5254902), Color(0, 0.5294118, 0.99607843, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_fcmex"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25bbb"]
+_data = {
+&"RESET": SubResource("Animation_fcmex"),
+&"fade": SubResource("Animation_xo8ps")
+}
+
+[sub_resource type="Animation" id="Animation_hhnlt"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera/DirectionArrow/Sketchfab_model/54b2761560d74cf7a540d3659ba46cd1_fbx/RootNode/Arrow/Arrow_Material_001_0:mesh:surface_0/material:albedo_color")
+tracks/0/path = NodePath("Camera/Models:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0.5294118, 0.99607843, 0)]
+"values": [Vector3(0, -1.4, -0.345)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_25bbb"]
-_data = {
-&"RESET": SubResource("Animation_fcmex"),
-&"fade": SubResource("Animation_xo8ps")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera/Models:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.2915436, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera/Models:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_hwltk"]
@@ -145,52 +185,13 @@ tracks/2/keys = {
 "values": [false, true, true]
 }
 
-[sub_resource type="Animation" id="Animation_hhnlt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera/Models:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -1.4, -0.345)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera/Models:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.2915436, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera/Models:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m75h8"]
 _data = {
 &"RESET": SubResource("Animation_hhnlt"),
 &"play": SubResource("Animation_hwltk")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "_pauseMenu", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_40svl")
 _camera = NodePath("Camera")
@@ -202,6 +203,7 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 _stressView = NodePath("UI/StressView")
 _stressLabel = NodePath("UI/StressLabel")
+_pauseMenu = NodePath("Pause Menu")
 pickupSound = NodePath("pickup_sound")
 _npcJumpscare = NodePath("NpcInteractAnimation")
 _fakeNpcModels = NodePath("Camera/Models")
@@ -649,6 +651,8 @@ libraries = {
 libraries = {
 &"": SubResource("AnimationLibrary_m75h8")
 }
+
+[node name="Pause Menu" parent="." instance=ExtResource("20_hy8lp")]
 
 [connection signal="timeout" from="StressTimer" to="." method="ExtraStress"]
 

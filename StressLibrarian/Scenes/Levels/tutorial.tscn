@@ -1985,9 +1985,6 @@ shape = SubResource("BoxShape3D_mj38t")
 [node name="NPC" parent="NavigationRegion3D/Level/Third" instance=ExtResource("18_8n3fx")]
 transform = Transform3D(-5.3964644e-08, 0, 1.234567, 0, 1.234567, 0, -1.234567, 0, -5.3964644e-08, -97.530846, 1.2345676, 0)
 
-[node name="Player" parent="." instance=ExtResource("5_tospq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 1, 0)
-
 [node name="BookBox" parent="." instance=ExtResource("7_l2k66")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.000001, 1, 0)
 Randomize = false
@@ -2040,6 +2037,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("5_tospq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 1, 0)
 
 [connection signal="screen_entered" from="NavigationRegion3D/Level/Third/Door3/VOSEnding" to="." method="PlayLightEnding"]
 [connection signal="body_entered" from="NavigationRegion3D/Level/Third/EndingGate/Area3D" to="." method="EndingEntrance"]

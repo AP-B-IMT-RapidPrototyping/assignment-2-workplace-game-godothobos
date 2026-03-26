@@ -358,9 +358,6 @@ environment = SubResource("Environment_k48ua")
 wait_time = 1.5
 autostart = true
 
-[node name="Player" parent="." instance=ExtResource("2_u0u76")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68484807, 1, 6.807815)
-
 [node name="Map" type="Node3D" parent="."]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Map"]
@@ -3016,6 +3013,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9000006, 1, -26.199997)
 
 [node name="NPC8" parent="." instance=ExtResource("53_3liie")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.799999, 1, -13.799996)
+
+[node name="Player" parent="." instance=ExtResource("2_u0u76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68484807, 1, 6.807815)
 
 [connection signal="timeout" from="StressTimer" to="." method="OnStressTimerTimeout"]
 

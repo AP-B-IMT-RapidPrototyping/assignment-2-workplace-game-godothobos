@@ -254,15 +254,6 @@ public partial class Player : CharacterBody3D
     /* ------------------------- */
     /* PROCESS && PHYSICS PROCESS*/
     /* ------------------------- */
-    public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("escape"))
-        {
-            GetTree().Quit();
-        }
-    }
-
-
     public override void _PhysicsProcess(double delta)
     {
         Vector3 velocity = Velocity;
