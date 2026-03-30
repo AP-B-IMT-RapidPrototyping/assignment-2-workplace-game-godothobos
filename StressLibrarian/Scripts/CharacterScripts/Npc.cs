@@ -232,7 +232,7 @@ public partial class Npc : CharacterBody3D
         if (_state == NPCState.LOUD)
         {
             _loudExtraStress++;
-            if (_loudExtraStress >= 2)
+            if (_loudExtraStress >= 3)
             {
                 GameManager.Stress++;
                 _loudExtraStress = 0;
