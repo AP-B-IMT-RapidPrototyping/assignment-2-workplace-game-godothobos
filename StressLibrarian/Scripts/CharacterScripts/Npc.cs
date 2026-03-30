@@ -47,23 +47,32 @@ public partial class Npc : CharacterBody3D
 
     private string[] tutorialDialogue =
     {
-        "I haven't seen you before...",
-        "So you're the new librarian.",
+        "I haven't seen you here before...",
+        "So you're the new librarian, huh?",
         "Listen carefully.",
 
         "Customers can get loud.",
         "When they do, silence them with [E].",
+
+        "If the library gets too loud,",
+        "your stress will increase rapidly.",
 
         "Some customers will get lost.",
         "Guide them to the correct bookshelf.",
 
         "Helping them decreases stress.",
         "Too much stress... and you're done.",
+        "The insurance company won't cover your death.",
+        
+        "One more thing,",
+        "Don't sprint too much.",
+        "Sprinting raises your heart rate as well.",
 
         "Keep the library quiet.",
         "Keep it organized.",
+        "And stay calm.",
 
-        "Let's try it."
+        "Let's give it a try.",
     };
 
     private int _dialogueIndex = 0;
