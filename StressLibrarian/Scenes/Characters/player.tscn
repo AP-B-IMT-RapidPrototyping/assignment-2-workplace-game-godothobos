@@ -191,7 +191,7 @@ _data = {
 &"play": SubResource("Animation_hwltk")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "_pauseMenu", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_40svl")
 _camera = NodePath("Camera")
@@ -203,7 +203,6 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 _stressView = NodePath("UI/StressView")
 _stressLabel = NodePath("UI/StressLabel")
-_pauseMenu = NodePath("Pause Menu")
 pickupSound = NodePath("pickup_sound")
 _npcJumpscare = NodePath("NpcInteractAnimation")
 _fakeNpcModels = NodePath("Camera/Models")
