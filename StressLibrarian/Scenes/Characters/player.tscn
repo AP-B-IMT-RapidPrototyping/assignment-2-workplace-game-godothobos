@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c0yvu8hc2goqx"]
+[gd_scene load_steps=36 format=4 uid="uid://c0yvu8hc2goqx"]
 
 [ext_resource type="Script" uid="uid://be60jy1d8n7f2" path="res://Scripts/CharacterScripts/Player.cs" id="1_40svl"]
 [ext_resource type="Texture2D" uid="uid://br4yrv5lao2xi" path="res://Assets/UI/hand grab.png" id="2_al8ar"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://clmc75a0tk8fw" path="res://Assets/Characters_psx/Models/Female/Character_Female_08.fbx" id="17_ojpki"]
 [ext_resource type="PackedScene" uid="uid://cess5bbncjard" path="res://Assets/Characters_psx/Models/Female/Character_Female_09.fbx" id="18_rv8bj"]
 [ext_resource type="PackedScene" uid="uid://bqh4qomiaafkb" path="res://Assets/Characters_psx/Models/Female/Character_Female_15.fbx" id="19_inlw8"]
+[ext_resource type="Texture2D" uid="uid://cem0lwlpo61am" path="res://Assets/UI/Heart.png" id="19_uxymp"]
 [ext_resource type="PackedScene" uid="uid://drwtuhd04v6f3" path="res://Scenes/UI/pause_menu.tscn" id="20_hy8lp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j6hkg"]
@@ -66,6 +67,44 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fcmex")
+
+[sub_resource type="Animation" id="Animation_fepmq"]
+resource_name = "HeartLoop"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.205, 0.205), Vector2(0.35, 0.25), Vector2(0.205, 0.205)]
+}
+
+[sub_resource type="Animation" id="Animation_ddhxa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.205, 0.205)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3k74t"]
+_data = {
+&"HeartLoop": SubResource("Animation_fepmq"),
+&"RESET": SubResource("Animation_ddhxa")
+}
 
 [sub_resource type="Animation" id="Animation_fcmex"]
 length = 0.001
@@ -191,7 +230,7 @@ _data = {
 &"play": SubResource("Animation_hwltk")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_camera", "_playerRayCast", "_holdPointMarker", "_directionArrow", "_playerUI", "_grabUI", "_interactUI", "_stressView", "_stressLabel", "_heartAnimation", "pickupSound", "_npcJumpscare", "_fakeNpcModels") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_40svl")
 _camera = NodePath("Camera")
@@ -203,6 +242,7 @@ _grabUI = NodePath("UI/GrabUI")
 _interactUI = NodePath("UI/InteractUI")
 _stressView = NodePath("UI/StressView")
 _stressLabel = NodePath("UI/StressLabel")
+_heartAnimation = NodePath("UI/HeartAnimation")
 pickupSound = NodePath("pickup_sound")
 _npcJumpscare = NodePath("NpcInteractAnimation")
 _fakeNpcModels = NodePath("Camera/Models")
@@ -618,19 +658,40 @@ scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(100, 100)
 texture = ExtResource("3_gy20a")
 
+[node name="TextureRect" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -718.0
+offset_right = 499.0
+offset_bottom = 427.0
+grow_vertical = 0
+scale = Vector2(0.205, 0.205)
+pivot_offset = Vector2(368, 572)
+texture = ExtResource("19_uxymp")
+
+[node name="HeartAnimation" type="AnimationPlayer" parent="UI"]
+libraries = {
+&"": SubResource("AnimationLibrary_3k74t")
+}
+autoplay = "HeartLoop"
+
 [node name="StressLabel" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -73.0
-offset_right = 413.0
-offset_bottom = -9.0
+offset_left = 80.0
+offset_top = -173.0
+offset_right = 171.0
+offset_bottom = -108.99963
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_gy20a")
 theme_override_font_sizes/font_size = 56
-text = "S: 0123465789"
+text = "100"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="pickup_sound" type="AudioStreamPlayer3D" parent="."]

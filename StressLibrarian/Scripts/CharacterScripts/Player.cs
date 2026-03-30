@@ -40,6 +40,7 @@ public partial class Player : CharacterBody3D
     [Export] private TextureRect _interactUI;
     [Export] private Control _stressView;
     [Export] private Label _stressLabel;
+    [Export] private AnimationPlayer _heartAnimation;
 
     /* VISUAL EXPORTS */
     [Export] private AudioStreamPlayer3D pickupSound;
@@ -203,7 +204,8 @@ public partial class Player : CharacterBody3D
 
     private void UpdateStress()
     {
-        _stressLabel.Text = $"S: {GameManager.Stress}";
+        _stressLabel.Text = $"{GameManager.Stress}";
+        _heartAnimation.SpeedScale = (GameManager.Stress / 25) + 1;
 
         float stressToModulate = GameManager.Stress / 100;
         _stressView.Modulate = new Color(1f, 1f, 1f, stressToModulate);
