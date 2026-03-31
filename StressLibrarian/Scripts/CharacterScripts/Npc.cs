@@ -258,7 +258,7 @@ public partial class Npc : CharacterBody3D
 
         if (direction.Length() > 0.01f)
             Rotation = new Vector3(0, (float)Math.Atan2(direction.X, direction.Z), 0);
-
+            
         Velocity = direction * _moveSpeed;
         MoveAndSlide();
     }
