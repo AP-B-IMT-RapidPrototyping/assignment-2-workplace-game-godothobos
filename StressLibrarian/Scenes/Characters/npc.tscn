@@ -1,20 +1,28 @@
-[gd_scene load_steps=64 format=4 uid="uid://dcfbqrap3joop"]
+[gd_scene load_steps=72 format=4 uid="uid://dcfbqrap3joop"]
 
 [ext_resource type="Script" uid="uid://x7vosfcod83k" path="res://Scripts/CharacterScripts/Npc.cs" id="1_85o64"]
 [ext_resource type="PackedScene" uid="uid://bct7h34k22jtw" path="res://Assets/Characters_psx/Models/Male/Character_02.fbx" id="2_4ik2k"]
 [ext_resource type="PackedScene" uid="uid://5dtnvdgqvi6v" path="res://Assets/Characters_psx/Models/Male/Character_12.fbx" id="3_0dw1j"]
 [ext_resource type="Shader" uid="uid://ccd6p7bf3tbth" path="res://Assets/shader/npc.gdshader" id="3_j8w5y"]
 [ext_resource type="PackedScene" uid="uid://y4evg8ou8w4e" path="res://Assets/Characters_psx/Models/Male/Character_13.fbx" id="4_rjlom"]
+[ext_resource type="AnimationLibrary" uid="uid://ctoi7x4ugmrd2" path="res://Animation/character/Idle.fbx" id="4_u4ikb"]
 [ext_resource type="Texture2D" uid="uid://bi5u7vcueeu5l" path="res://Assets/Characters_psx/Textures/Character_12.png" id="5_5qnou"]
+[ext_resource type="AnimationLibrary" uid="uid://dareiqiixe7uy" path="res://Animation/character/Fly_Idle.fbx" id="5_c3xqq"]
 [ext_resource type="PackedScene" uid="uid://b023bauarmb3t" path="res://Assets/Characters_psx/Models/Male/Character_16.fbx" id="5_oyfms"]
 [ext_resource type="PackedScene" uid="uid://qhxn5g25f5ge" path="res://Assets/Characters_psx/Models/Male/Character_31.fbx" id="6_2jt1m"]
+[ext_resource type="AnimationLibrary" uid="uid://bws20o5jh1d7" path="res://Animation/character/Hot_Idle.fbx" id="6_oaquf"]
+[ext_resource type="AnimationLibrary" uid="uid://15ai1yrvqt3a" path="res://Animation/character/Nails_Idle.fbx" id="7_8kapu"]
 [ext_resource type="PackedScene" uid="uid://d0y5qr4na62fs" path="res://Assets/Characters_psx/Models/Female/Character_32_Female.fbx" id="7_al0u2"]
 [ext_resource type="Texture2D" uid="uid://cc2q4ik72o1ll" path="res://Assets/Characters_psx/Textures/Character_13.png" id="7_lyn7i"]
+[ext_resource type="AnimationLibrary" uid="uid://dru16ntuks76l" path="res://Animation/character/Loud.fbx" id="8_5etjl"]
 [ext_resource type="PackedScene" uid="uid://bakr83cbqiijw" path="res://Assets/Characters_psx/Models/Female/Character_Female_03.fbx" id="8_sw6lp"]
 [ext_resource type="Texture2D" uid="uid://bpqw0lvyhtqb5" path="res://Assets/Characters_psx/Textures/Character_16.png" id="9_2feg1"]
+[ext_resource type="AnimationLibrary" uid="uid://psdw7l2ph11h" path="res://Animation/character/Holding.fbx" id="9_i26q5"]
 [ext_resource type="PackedScene" uid="uid://clmc75a0tk8fw" path="res://Assets/Characters_psx/Models/Female/Character_Female_08.fbx" id="9_ud82m"]
+[ext_resource type="AnimationLibrary" uid="uid://j65r54atrfqo" path="res://Animation/character/Running.fbx" id="10_i8rak"]
 [ext_resource type="PackedScene" uid="uid://cess5bbncjard" path="res://Assets/Characters_psx/Models/Female/Character_Female_09.fbx" id="10_vfvyv"]
 [ext_resource type="Texture2D" uid="uid://cprfip3eojxoy" path="res://Assets/Characters_psx/Textures/Character_31.png" id="11_4app6"]
+[ext_resource type="AnimationLibrary" uid="uid://ji0l5plynxv5" path="res://Animation/character/Sniff_Running.fbx" id="11_6ke1w"]
 [ext_resource type="PackedScene" uid="uid://bqh4qomiaafkb" path="res://Assets/Characters_psx/Models/Female/Character_Female_15.fbx" id="11_lpotm"]
 [ext_resource type="AudioStream" uid="uid://cbs7lqoova7tc" path="res://Assets/Audio/sounds/soundreality-door-knock-175164.mp3" id="12_4ik2k"]
 [ext_resource type="FontFile" uid="uid://c8ws701ldai18" path="res://Assets/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf" id="13_0dw1j"]
@@ -1285,7 +1293,13 @@ transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 [node name="Skeleton3D" parent="Models/Char1" index="0"]
 bones/0/position = Vector3(4.8089772e-05, 2.6003327, -0.0038539881)
 bones/0/rotation = Quaternion(-0.0001251273, -0.70710254, -0.00012877038, 0.707111)
+bones/1/position = Vector3(0.12148429, 0.18146949, 0.007403633)
 bones/1/rotation = Quaternion(0.00017839111, -1.8508705e-05, 0.07032163, 0.9975244)
+bones/2/rotation = Quaternion(0.03040355, -0.0043065147, -0.014010086, 0.99943024)
+bones/3/rotation = Quaternion(0.030295799, -0.0033516388, -0.014076906, 0.9994363)
+bones/4/rotation = Quaternion(0.025711223, -0.025039408, -0.09180788, 0.9951298)
+bones/5/rotation = Quaternion(-0.025905771, -0.033376057, 0.108429916, 0.99320596)
+bones/6/rotation = Quaternion(-1.1641543e-10, -4.464527e-08, 8.7311464e-10, 1)
 bones/7/rotation = Quaternion(0.009680574, -0.6835683, 0.72982055, 0.001633903)
 bones/8/rotation = Quaternion(-0.0072389804, 0.99901515, -0.0328826, -0.028898675)
 bones/9/rotation = Quaternion(-3.4465427e-07, 0.0019019282, 2.2347376e-07, 0.9999982)
@@ -1293,6 +1307,7 @@ bones/10/rotation = Quaternion(1.3250968e-08, 6.205045e-05, 3.69647e-07, 1)
 bones/11/rotation = Quaternion(-3.2274846e-07, 0.002126454, 3.175301e-07, 0.9999978)
 bones/12/rotation = Quaternion(0.074181, -1.4349689e-07, 0.09952774, 0.9922658)
 bones/13/rotation = Quaternion(0.0030154965, -0.0027987352, -0.014379866, 0.99988824)
+bones/14/rotation = Quaternion(1.9437724e-08, 3.488094e-08, -1.3038516e-08, 1)
 bones/15/rotation = Quaternion(0.73047936, 0.0013701683, 0.003794932, 0.68292296)
 bones/16/rotation = Quaternion(-0.03366436, -0.033960957, -0.0006936065, 0.9988559)
 bones/17/rotation = Quaternion(-2.7616366e-07, -0.001577102, 1.7693311e-07, 0.9999988)
@@ -1303,9 +1318,11 @@ bones/21/rotation = Quaternion(-0.047146857, 0.019824183, -0.04506495, 0.9976740
 bones/23/rotation = Quaternion(0.0005292117, -0.0061201784, 0.9999803, -0.0013341755)
 bones/24/rotation = Quaternion(0.011405853, 0.00029072724, -0.03375317, 0.9993651)
 bones/25/rotation = Quaternion(0.31637257, -0.6639355, 0.37400377, 0.564995)
+bones/26/rotation = Quaternion(0.3152583, -0.015098108, 0.0027323833, 0.94888186)
 bones/28/rotation = Quaternion(-0.00048495745, 0.0057752645, 0.99998194, 0.0016261302)
 bones/29/rotation = Quaternion(-0.011431725, -0.00016364903, -0.025174806, 0.9996177)
 bones/30/rotation = Quaternion(0.37537718, -0.5664722, 0.31813723, 0.6610523)
+bones/31/rotation = Quaternion(0.31285784, 0.009855644, -0.00071416807, 0.94974864)
 
 [node name="Character_02" parent="Models/Char1/Skeleton3D" index="0"]
 mesh = SubResource("ArrayMesh_lyn7i")
@@ -1315,6 +1332,47 @@ visible = false
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_8kapu")
 skin = SubResource("Skin_5qkvj")
+
+[node name="Idle" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char1"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
 
 [node name="Char2" parent="Models" instance=ExtResource("3_0dw1j")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
@@ -1349,6 +1407,47 @@ visible = false
 mesh = SubResource("ArrayMesh_7tyd5")
 skin = SubResource("Skin_wovr8")
 
+[node name="Idle" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char2"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
+
 [node name="Char3" parent="Models" instance=ExtResource("4_rjlom")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 
@@ -1382,6 +1481,47 @@ visible = false
 mesh = SubResource("ArrayMesh_ofx2l")
 skin = SubResource("Skin_3vwn8")
 
+[node name="Idle" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char3"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
+
 [node name="Char4" parent="Models" instance=ExtResource("5_oyfms")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 
@@ -1412,6 +1552,47 @@ bones/30/rotation = Quaternion(0.4041996, -0.55557615, 0.35025313, 0.6366165)
 visible = false
 mesh = SubResource("ArrayMesh_15765")
 skin = SubResource("Skin_q3vb0")
+
+[node name="Idle" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char4"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
 
 [node name="Char5" parent="Models" instance=ExtResource("6_2jt1m")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
@@ -1445,6 +1626,47 @@ bones/30/rotation = Quaternion(0.37930098, -0.5748501, 0.34085268, 0.63992)
 visible = false
 mesh = SubResource("ArrayMesh_ibssm")
 skin = SubResource("Skin_t5oec")
+
+[node name="Idle" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char5"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
 
 [node name="Char6" parent="Models" instance=ExtResource("7_al0u2")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
@@ -1485,6 +1707,47 @@ visible = false
 mesh = SubResource("ArrayMesh_nl285")
 skin = SubResource("Skin_s573s")
 
+[node name="Idle" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char6"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
+
 [node name="Char7" parent="Models" instance=ExtResource("8_sw6lp")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 
@@ -1517,6 +1780,47 @@ bones/30/rotation = Quaternion(0.34852937, -0.5831009, 0.34270126, 0.64890414)
 visible = false
 mesh = SubResource("ArrayMesh_gxkik")
 skin = SubResource("Skin_4m8iy")
+
+[node name="Idle" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char7"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
 
 [node name="Char8" parent="Models" instance=ExtResource("9_ud82m")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
@@ -1551,6 +1855,47 @@ visible = false
 mesh = SubResource("ArrayMesh_fmffh")
 skin = SubResource("Skin_wbk4n")
 
+[node name="Idle" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char8"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
+
 [node name="Char9" parent="Models" instance=ExtResource("10_vfvyv")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 
@@ -1584,6 +1929,47 @@ visible = false
 mesh = SubResource("ArrayMesh_530hf")
 skin = SubResource("Skin_d186p")
 
+[node name="Idle" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char9"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
+
 [node name="Char10" parent="Models" instance=ExtResource("11_lpotm")]
 transform = Transform3D(0.4752, 0, 0, 0, 0.43199998, 0, 0, 0, 0.4752, 0, -1, 0)
 
@@ -1615,6 +2001,47 @@ bones/30/rotation = Quaternion(0.34997398, -0.57672435, 0.3407169, 0.654843)
 visible = false
 mesh = SubResource("ArrayMesh_p3dyi")
 skin = SubResource("Skin_sks2s")
+
+[node name="Idle" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Idle": ExtResource("4_u4ikb")
+}
+
+[node name="Fly_Idle" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Fly_Idle": ExtResource("5_c3xqq")
+}
+
+[node name="Hot_Idle" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Hot_Idle": ExtResource("6_oaquf")
+}
+
+[node name="Nails_Idle" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Nails_Idle": ExtResource("7_8kapu")
+}
+
+[node name="Loud" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Loud": ExtResource("8_5etjl")
+}
+
+[node name="Holding" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Holding": ExtResource("9_i26q5")
+}
+
+[node name="Running" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Running": ExtResource("10_i8rak")
+}
+speed_scale = 0.7
+
+[node name="Sniff_Running" type="AnimationPlayer" parent="Models/Char10"]
+libraries = {
+&"Sniff_Running": ExtResource("11_6ke1w")
+}
 
 [node name="Loud" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.4)
