@@ -63,7 +63,7 @@ public partial class Npc : CharacterBody3D
         "Helping them decreases stress.",
         "Too much stress... and you're done.",
         "The insurance company won't cover your death.",
-        
+
         "One more thing,",
         "Don't sprint too much.",
         "Sprinting raises your heart rate as well.",
@@ -116,6 +116,28 @@ public partial class Npc : CharacterBody3D
     private bool _playerReachedCorrectBookshelf = false;
 
 
+    /* ANIMATION PLAYERS (RUNTIME) */
+    // Idle variants
+    private AnimationPlayer _animIdle;
+    private AnimationPlayer _animFlyIdle;
+    private AnimationPlayer _animHotIdle;
+    private AnimationPlayer _animNailsIdle;
+
+    private AnimationPlayer _animRun;
+    private AnimationPlayer _animSniffRun;
+    private AnimationPlayer _animLoud;
+    private AnimationPlayer _animHolding;
+
+    private AnimationPlayer _currentAnimPlayer = null;
+    private AnimationPlayer _chosenIdleAnim;
+
+    private float _idleTimer = 0f;
+    private float _idleInterval = 0f;
+
+    private bool _isPlayingSpecialIdle = false;
+    private float _specialIdleDuration = 0f;
+
+
 
     public override void _Ready()
     {
@@ -131,6 +153,8 @@ public partial class Npc : CharacterBody3D
         _state = NPCState.IDLE;
         _player = GetTree().GetFirstNodeInGroup("player") as CharacterBody3D;
         _actionCooldown = (float)GD.RandRange(1f, 6f);
+
+        _idleInterval = (float)GD.RandRange(4f, 10f);
     }
 
 
@@ -227,6 +251,135 @@ public partial class Npc : CharacterBody3D
     /* -------------------- */
     /* EVERY FUNCTION LOLOL */
     /* -------------------- */
+
+    private void PlayAnim(AnimationPlayer animPlayer)
+    {
+        if (animPlayer == null)
+            return;
+
+        if (_currentAnimPlayer == animPlayer)
+            return;
+
+        // stop previous animation  
+        if (_currentAnimPlayer != null)
+            _currentAnimPlayer.Stop();
+
+        _currentAnimPlayer = animPlayer;
+
+        // each player only has 1 animation
+        string animName = animPlayer.GetAnimationList()[0];
+        animPlayer.Play(animName);
+    }
+
+    private void HandleIdleAnimation(double delta)
+    {
+        // If playing special idle
+        if (_isPlayingSpecialIdle)
+        {
+            _specialIdleDuration -= (float)delta;
+
+            if (_specialIdleDuration <= 0f)
+            {
+                _isPlayingSpecialIdle = false;
+                _chosenIdleAnim = null;
+                PlayAnim(_animIdle);
+
+                _idleTimer = 0f;
+                _idleInterval = (float)GD.RandRange(5f, 12f);
+            }
+
+            return;
+        }
+
+        // Normal idle
+        PlayAnim(_animIdle);
+
+        _idleTimer += (float)delta;
+
+        if (_idleTimer >= _idleInterval)
+        {
+            StartSpecialIdle();
+        }
+    }
+
+    private void StartSpecialIdle()
+    {
+        AnimationPlayer[] idles =
+        {
+        _animFlyIdle,
+        _animHotIdle,
+        _animNailsIdle
+    };
+
+        _chosenIdleAnim = idles[GD.RandRange(0, idles.Length - 1)];
+
+        _isPlayingSpecialIdle = true;
+        _specialIdleDuration = (float)GD.RandRange(2f, 4f);
+
+        PlayAnim(_chosenIdleAnim);
+    }
+
+    private AnimationPlayer GetRandomIdleAnim()
+    {
+        if (_chosenIdleAnim != null)
+            return _chosenIdleAnim;
+
+        AnimationPlayer[] idles =
+        {
+        _animIdle,
+        _animFlyIdle,
+        _animHotIdle,
+        _animNailsIdle
+    };
+
+        _chosenIdleAnim = idles[GD.RandRange(0, idles.Length - 1)];
+        return _chosenIdleAnim;
+    }
+
+    private void UpdateAnimation(double delta)
+{
+    // Block during ask animation
+    if (_isAsking)
+        return;
+
+    bool isMovingToPlayer =
+        _state == NPCState.ASKPLAYER &&
+        !_isFollowingPlayer &&
+        _player != null &&
+        !_navAgent.IsNavigationFinished();
+
+    // ANY movement towards player = sniff animation
+    if (_isFollowingPlayer || isMovingToPlayer)
+    {
+        PlayAnim(_animSniffRun);
+        return;
+    }
+
+    switch (_state)
+    {
+        case NPCState.IDLE:
+            HandleIdleAnimation(delta);
+            return;
+
+        case NPCState.WANDER:
+            PlayAnim(_animRun);
+            return;
+
+        case NPCState.LOUD:
+            PlayAnim(_animLoud);
+            return;
+
+        case NPCState.SNIFFPLAYER:
+            PlayAnim(_animSniffRun);
+            return;
+
+        case NPCState.ASKPLAYER:
+            // standing still waiting to talk
+            PlayAnim(_animIdle);
+            return;
+    }
+}
+
     private void ExtraStress()
     {
         if (_state == NPCState.LOUD)
@@ -258,7 +411,7 @@ public partial class Npc : CharacterBody3D
 
         if (direction.Length() > 0.01f)
             Rotation = new Vector3(0, (float)Math.Atan2(direction.X, direction.Z), 0);
-            
+
         Velocity = direction * _moveSpeed;
         MoveAndSlide();
     }
@@ -268,16 +421,36 @@ public partial class Npc : CharacterBody3D
         int count = _models.GetChildCount();
         int chosen = GD.RandRange(0, count - 1);
 
+        Node3D chosenModel = null;
+
         for (int i = 0; i < count; i++)
         {
             Node3D model = _models.GetChild<Node3D>(i);
             model.Visible = i == chosen;
 
-            if (i != chosen)
+            if (i == chosen)
+                chosenModel = model;
+            else
                 model.QueueFree();
         }
 
         _chosenModel = chosen;
+
+        if (chosenModel != null)
+            CacheAnimations(chosenModel);
+    }
+
+    private void CacheAnimations(Node model)
+    {
+        _animIdle = model.GetNode<AnimationPlayer>("Idle");
+        _animFlyIdle = model.GetNode<AnimationPlayer>("Fly_Idle");
+        _animHotIdle = model.GetNode<AnimationPlayer>("Hot_Idle");
+        _animNailsIdle = model.GetNode<AnimationPlayer>("Nails_Idle");
+
+        _animRun = model.GetNode<AnimationPlayer>("Running");
+        _animSniffRun = model.GetNode<AnimationPlayer>("Sniff_Running");
+        _animLoud = model.GetNode<AnimationPlayer>("Loud");
+        _animHolding = model.GetNode<AnimationPlayer>("Holding");
     }
 
     public int GetChosenModel()
@@ -323,6 +496,14 @@ public partial class Npc : CharacterBody3D
             return;
 
         /* exit old states */
+        if (_state == NPCState.IDLE && newState != NPCState.IDLE)
+        {
+            _isPlayingSpecialIdle = false;
+            _chosenIdleAnim = null;
+            _idleTimer = 0f;
+
+        }
+
         if (_state == NPCState.LOUD)
         {
             GameManager.ActiveLoudNPC--;
@@ -391,7 +572,7 @@ public partial class Npc : CharacterBody3D
         /* NPC asks player where to go */
         if (_subtitle.Visible == false)
         {
-            _subtitle.Visible =true;
+            _subtitle.Visible = true;
             GameManager.Stress -= 5;
         }
 
@@ -460,7 +641,7 @@ public partial class Npc : CharacterBody3D
         if (genre == RequestedGenre)
         {
             _playerReachedCorrectBookshelf = true;
-            _subtitle.Visible =false;
+            _subtitle.Visible = false;
 
             GameManager._npcHelped++;
             GameManager.Stress -= 25;
@@ -636,5 +817,7 @@ public partial class Npc : CharacterBody3D
                     DoMoveToPlayer(delta);
                 break;
         }
+
+        UpdateAnimation(delta);
     }
 }
