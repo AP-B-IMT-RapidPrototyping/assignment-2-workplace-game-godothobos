@@ -54,3 +54,4 @@ You are a librarian with stress. You must keep the library sorted and quiet, or 
 ## Level design
 - One library
 - Short tutorial to teach controls, stress and npc system
+ 
