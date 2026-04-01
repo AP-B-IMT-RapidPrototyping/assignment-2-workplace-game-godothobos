@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Net;
 
 public partial class GameManager : Node
 {
@@ -30,6 +31,11 @@ public partial class GameManager : Node
 
     private void OnDead()
     {
+        if (GetTree().CurrentScene.Name == "Tutorial")
+        {
+            Stress = 0;
+            return;
+        }
         GetTree().ChangeSceneToPacked(_deathScene);
     }
 

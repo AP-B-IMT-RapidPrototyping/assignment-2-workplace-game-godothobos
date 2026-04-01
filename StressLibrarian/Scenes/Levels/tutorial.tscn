@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://jmbcto18oc6l"]
+[gd_scene load_steps=86 format=3 uid="uid://jmbcto18oc6l"]
 
 [ext_resource type="Texture2D" uid="uid://ti1ex0qy0mhr" path="res://Assets/Textures/RedCarpet.jpg" id="1_302wg"]
 [ext_resource type="Script" uid="uid://cvsv3icmb46ma" path="res://Scripts/SceneScripts/Tutorial.cs" id="1_tospq"]
@@ -1107,6 +1107,66 @@ tracks/2/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9999998, 0.7976571, 0.30179617, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Light:light_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Lights/Light11:light_energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Lights/Light10:light_energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Lights/Light9:light_energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
 
 [sub_resource type="Animation" id="Animation_wdaxu"]
 resource_name = "play"
@@ -1147,6 +1207,66 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.9999998, 0.7976571, 0.30179617, 1), Color(0.99999994, 0.8153109, 0.38830906, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Light:light_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 10.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Lights/Light11:light_energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 6.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Lights/Light10:light_energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 5.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Lights/Light9:light_energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 4.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w7wr3"]
@@ -1198,19 +1318,24 @@ transparency = 1
 albedo_color = Color(1, 1, 1, 0)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 8.0
+emission_energy_multiplier = 16.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_oowow"]
 material = SubResource("StandardMaterial3D_ckfad")
+flip_faces = true
 size = Vector3(0.2, 6, 9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a8vmy"]
-size = Vector3(0.2, 6, 9)
+size = Vector3(0.025146484, 6, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oowow"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.14901961)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mj38t"]
 size = Vector3(6, 4, 10)
 
-[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorKnock", "_doorOpen", "_ending", "_endingFade", "_bookBox", "_npc")]
+[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("_door1", "_door2", "_lightEnding", "_doorKnock", "_doorOpen", "_ending", "_endingFade", "_endingWall", "_bookBox", "_npc")]
 script = ExtResource("1_tospq")
 _door1 = NodePath("NavigationRegion3D/Level/First/Door1/DoorAnim")
 _door2 = NodePath("NavigationRegion3D/Level/Second/Door2/DoorAnim")
@@ -1219,6 +1344,7 @@ _doorKnock = NodePath("NavigationRegion3D/Level/Third/DoorKnock")
 _doorOpen = NodePath("NavigationRegion3D/Level/Third/DoorOpen")
 _ending = NodePath("NavigationRegion3D/Level/Third/Ending")
 _endingFade = NodePath("NavigationRegion3D/Level/Third/EndingFade")
+_endingWall = NodePath("NavigationRegion3D/Level/Third/EndingWall")
 _bookBox = NodePath("BookBox")
 _npc = NodePath("NavigationRegion3D/Level/Third/NPC")
 
@@ -1678,7 +1804,6 @@ spot_angle_attenuation = 3.1383579
 [node name="Light9" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -61.296272, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
-light_energy = 0.0
 shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.8
@@ -1688,7 +1813,6 @@ spot_angle_attenuation = 6.7272015
 [node name="Light10" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -69.93825, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
-light_energy = 0.0
 shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.8
@@ -1698,7 +1822,6 @@ spot_angle_attenuation = 6.7272015
 [node name="Light11" type="SpotLight3D" parent="NavigationRegion3D/Level/Third/Lights"]
 transform = Transform3D(1.2345681, 0, 0, 0, -5.396469e-08, 1.2345681, 0, -1.2345681, -5.396469e-08, -78.58022, 0, 1.4717193e-06)
 light_color = Color(0.9999998, 0.7976571, 0.30179617, 1)
-light_energy = 0.0
 shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.8
@@ -1946,15 +2069,23 @@ libraries = {
 }
 
 [node name="EndingGate" type="MeshInstance3D" parent="NavigationRegion3D/Level/Third"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.59263, 2.4691362, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.80965, 2.7412963, 0.013240762)
 visible = false
 mesh = SubResource("BoxMesh_oowow")
 
 [node name="Area3D" type="Area3D" parent="NavigationRegion3D/Level/Third/EndingGate"]
+transform = Transform3D(227.414, 0, 0, 0, 0.90700006, 0, 0, 0, 0.76796824, 8.97448, 0, 9.313226e-10)
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/EndingGate/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -0.031885833, 0, 0)
 shape = SubResource("BoxShape3D_a8vmy")
+
+[node name="EndingWall" type="CSGBox3D" parent="NavigationRegion3D/Level/Third"]
+transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, -92.782555, 2.4691362, 0)
+use_collision = true
+size = Vector3(0.2, 6, 9)
+material = SubResource("StandardMaterial3D_oowow")
 
 [node name="Light" type="SpotLight3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(0.21438037, -4.459381e-08, 1.2158121, -1.2158121, -5.314483e-08, 0.21438037, 4.459381e-08, -1.2345679, -5.314483e-08, -80.74064, 3.1540358, 0)
@@ -1973,6 +2104,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/WithinEndingReach"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_mj38t")
+debug_color = Color(0.94418937, 8.95232e-06, 0.60046446, 0.41960785)
 
 [node name="WithinKnockReach" type="Area3D" parent="NavigationRegion3D/Level/Third"]
 transform = Transform3D(1.2345674, 0, 0, 0, 1.2345674, 0, 0, 0, 1.2345674, -65.30861, 1.2345674, 0)
@@ -1981,6 +2113,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Level/Third/WithinKnockReach"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_mj38t")
+debug_color = Color(0.94418937, 8.95232e-06, 0.60046446, 0.41960785)
 
 [node name="NPC" parent="NavigationRegion3D/Level/Third" instance=ExtResource("18_8n3fx")]
 transform = Transform3D(-5.3964644e-08, 0, 1.234567, 0, 1.234567, 0, -1.234567, 0, -5.3964644e-08, -97.530846, 1.2345676, 0)

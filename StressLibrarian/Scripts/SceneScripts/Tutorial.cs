@@ -13,6 +13,7 @@ public partial class Tutorial : Node3D
     [Export] private AnimationPlayer _doorOpen;
     [Export] private AnimationPlayer _ending;
     [Export] private AnimationPlayer _endingFade;
+    [Export] private CsgBox3D _endingWall;
     [Export] private RigidBody3D _bookBox;
     [Export] private Npc _npc;
 
@@ -78,6 +79,7 @@ public partial class Tutorial : Node3D
     {
         _ending.Play("play");
         _endingAvailable = true;
+        _endingWall.UseCollision = false;
     }
 
     private async void EndingEntrance(Node3D body)
